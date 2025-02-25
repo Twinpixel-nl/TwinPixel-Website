@@ -45,6 +45,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
+    // Highlight active page in navigation
+    highlightActivePage();
+    
     // Initialize animations
     initAnimations();
     
@@ -62,6 +65,29 @@ document.addEventListener('DOMContentLoaded', function() {
         initTestimonialSlider();
     }
 });
+
+// Highlight the active page in the navigation menu
+function highlightActivePage() {
+    const currentPage = window.location.pathname.split('/').pop();
+    
+    // Default to index.html if no page is specified
+    const activePage = currentPage || 'index.html';
+    
+    // Find the corresponding navigation link and add the active class
+    const navLinks = document.querySelectorAll('.nav-links a');
+    navLinks.forEach(link => {
+        const linkHref = link.getAttribute('href');
+        
+        // Check if the link href matches the current page
+        if (linkHref === activePage || 
+            (activePage === 'index.html' && linkHref === 'index.html') ||
+            (linkHref.includes(activePage) && activePage !== 'index.html')) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+}
 
 // Initialize fade-in animations
 function initAnimations() {
@@ -98,6 +124,11 @@ function initSmoothScrolling() {
         link.addEventListener('click', function(e) {
             // Don't prevent default for language hash links
             if (this.getAttribute('href') === '#en' || this.getAttribute('href') === '#nl') {
+                return;
+            }
+            
+            // Don't prevent default for links to other pages
+            if (this.getAttribute('href').includes('.html')) {
                 return;
             }
             
