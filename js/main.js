@@ -12,13 +12,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // If no language in URL hash, try to get from localStorage as fallback
+    // If no language in URL hash, try to get from cookies as fallback
     if (!savedLanguage) {
-        try {
-            savedLanguage = localStorage.getItem('preferredLanguage');
-        } catch (e) {
-            console.log('localStorage not available:', e);
-        }
+        savedLanguage = getCookie('preferredLanguage');
     }
     
     // Apply the saved language if it exists
@@ -475,14 +471,33 @@ const translations = {
     }
 };
 
+// Helper function to set a cookie
+function setCookie(name, value, days) {
+    let expires = "";
+    if (days) {
+        const date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+    }
+    document.cookie = name + "=" + (value || "") + expires + "; path=/";
+}
+
+// Helper function to get a cookie
+function getCookie(name) {
+    const nameEQ = name + "=";
+    const ca = document.cookie.split(';');
+    for(let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+}
+
 // Language switcher functionality
 function switchLanguage(lang, updateHash = true) {
-    // Store the selected language in localStorage as a fallback
-    try {
-        localStorage.setItem('preferredLanguage', lang);
-    } catch (e) {
-        console.log('localStorage not available:', e);
-    }
+    // Store the selected language in a cookie (valid for 30 days)
+    setCookie('preferredLanguage', lang, 30);
     
     // Update URL hash if needed
     if (updateHash) {
