@@ -4,12 +4,368 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TwinPixel</title>
+    <meta name="description" content="TwinPixel - Modern webdesignbureau voor ZZP'ers en MKB. Snelle, op maat gemaakte websites met een professionele uitstraling tegen betaalbare prijzen.">
+    <meta name="keywords" content="webdesign, website, webdevelopment, SEO, UX/UI, responsive, maatwerk, betaalbaar">
+    <title>TwinPixel | Modern Webdesignbureau</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <h1>Welkom bij TwinPixel!</h1>
-    <p>Als je dit ziet, werkt je Netlify deploy correct.</p>
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay"></div>
+    
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo-container">
+                    <img src="Images/Logo donkere achtergrond.png" alt="TwinPixel Logo" class="logo">
+                </a>
+                
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#over-ons">Over ons</a></li>
+                    <li><a href="#diensten">Diensten</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#prijzen">Prijzen</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                
+                <div class="language-switcher">
+                    <select onchange="switchLanguage(this.value)">
+                        <option value="nl" selected>NL</option>
+                        <option value="en">EN</option>
+                    </select>
+                </div>
+                
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <h1>Jouw <span>unieke</span> website.<br>Snel, op maat & betaalbaar.</h1>
+                <p>TwinPixel levert professionele websites die perfect aansluiten bij jouw bedrijf. Geen standaard templates, maar maatwerk met persoonlijke aandacht.</p>
+                <a href="#contact" class="btn btn-large glow-effect">Vraag een gratis consult aan</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Over Ons Section -->
+    <section id="over-ons" class="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>Over TwinPixel</h2>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text fade-in">
+                    <h3>Het verhaal achter TwinPixel</h3>
+                    <p>TwinPixel is opgericht door twee studenten met een passie voor webdesign en development. Wij combineren onze technische kennis met een creatieve blik om websites te maken die niet alleen mooi zijn, maar ook functioneel en gebruiksvriendelijk.</p>
+                    
+                    <h3>Waarom wij uniek zijn</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> <strong>Snelle levering</strong> - Geen lange wachttijden, wij leveren binnen afgesproken deadlines.</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>100% maatwerk</strong> - Geen standaard templates, maar een uniek design dat past bij jouw merk.</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Scherpe prijzen</strong> - Professionele kwaliteit zonder de hoge kosten van grote bureaus.</li>
+                        <li><i class="fas fa-check-circle"></i> <strong>Persoonlijke aanpak</strong> - Direct contact met de designers en developers die aan jouw project werken.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Diensten Section -->
+    <section id="diensten" class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Onze Diensten</h2>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card fade-in delay-1">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Webdesign</h3>
+                    <p>Op maat gemaakte websites die perfect aansluiten bij jouw merk en doelstellingen. Modern, responsive en gebruiksvriendelijk.</p>
+                </div>
+                
+                <div class="service-card fade-in delay-2">
+                    <div class="service-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>SEO-optimalisatie</h3>
+                    <p>Zorg dat je gevonden wordt door potentiële klanten. Wij optimaliseren je website voor zoekmachines met snelle laadtijden en mobile-first design.</p>
+                </div>
+                
+                <div class="service-card fade-in delay-3">
+                    <div class="service-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>UX/UI-Design</h3>
+                    <p>Gebruiksvriendelijke en visueel aantrekkelijke interfaces die bezoekers omzetten in klanten. Intuïtief, toegankelijk en conversiegericht.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>Wat Klanten Zeggen</h2>
+            </div>
+            
+            <div class="testimonial-slider fade-in">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"TwinPixel heeft onze verwachtingen overtroffen. Ze hebben niet alleen een prachtige website opgeleverd, maar ook meegedacht over onze online strategie. De website is snel, gebruiksvriendelijk en ziet er fantastisch uit!"</p>
+                    <p class="testimonial-author">Lisa Jansen</p>
+                    <p class="testimonial-company">Eigenaar, Bloemen & Zo</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Als ZZP'er had ik een professionele website nodig, maar ik had een beperkt budget. TwinPixel heeft me een website op maat gegeven die er professioneel uitziet zonder de hoge kosten. Ik krijg regelmatig complimenten over mijn site!"</p>
+                    <p class="testimonial-author">Mark de Vries</p>
+                    <p class="testimonial-company">Freelance Fotograaf</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"De snelheid waarmee TwinPixel werkt is indrukwekkend. Binnen twee weken hadden we een volledig functionerende webshop die er geweldig uitziet. De communicatie was uitstekend en ze waren altijd bereid om aanpassingen te maken."</p>
+                    <p class="testimonial-author">Sandra Bakker</p>
+                    <p class="testimonial-company">Oprichter, EcoStyle</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-title">
+                <h2>Ons Portfolio</h2>
+            </div>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item fade-in">
+                    <img src="https://via.placeholder.com/600x400/121212/0066ff?text=Website+1" alt="Portfolio Project 1" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">EcoStyle Webshop</h3>
+                        <p class="portfolio-category">E-commerce</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item fade-in">
+                    <img src="https://via.placeholder.com/600x400/121212/0066ff?text=Website+2" alt="Portfolio Project 2" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Fotografie Portfolio</h3>
+                        <p class="portfolio-category">Portfolio Website</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item fade-in">
+                    <img src="https://via.placeholder.com/600x400/121212/0066ff?text=Website+3" alt="Portfolio Project 3" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Restaurant De Smaak</h3>
+                        <p class="portfolio-category">Horeca Website</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item fade-in">
+                    <img src="https://via.placeholder.com/600x400/121212/0066ff?text=Website+4" alt="Portfolio Project 4" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Advocatenkantoor Recht</h3>
+                        <p class="portfolio-category">Zakelijke Website</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item fade-in">
+                    <img src="https://via.placeholder.com/600x400/121212/0066ff?text=Website+5" alt="Portfolio Project 5" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Fitness Studio Flex</h3>
+                        <p class="portfolio-category">Sport & Gezondheid</p>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item fade-in">
+                    <img src="https://via.placeholder.com/600x400/121212/0066ff?text=Website+6" alt="Portfolio Project 6" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Reisblog Wereldreis</h3>
+                        <p class="portfolio-category">Blog Website</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Prijzen Section -->
+    <section id="prijzen" class="pricing">
+        <div class="container">
+            <div class="section-title">
+                <h2>Onze Prijzen</h2>
+            </div>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card fade-in">
+                    <h3 class="pricing-title">Starter</h3>
+                    <div class="pricing-price">€499 <span>eenmalig</span></div>
+                    <ul class="pricing-features">
+                        <li>Responsive website (5 pagina's)</li>
+                        <li>SEO-basisoptimalisatie</li>
+                        <li>Contactformulier</li>
+                        <li>Google Maps integratie</li>
+                        <li>Social media links</li>
+                        <li>1 revisieronde</li>
+                    </ul>
+                    <a href="#contact" class="btn">Offerte aanvragen</a>
+                </div>
+                
+                <div class="pricing-card featured fade-in delay-1">
+                    <h3 class="pricing-title">Professional</h3>
+                    <div class="pricing-price">€799 <span>eenmalig</span></div>
+                    <ul class="pricing-features">
+                        <li>Responsive website (10 pagina's)</li>
+                        <li>Uitgebreide SEO-optimalisatie</li>
+                        <li>Geavanceerd contactformulier</li>
+                        <li>Google Analytics integratie</li>
+                        <li>Social media integratie</li>
+                        <li>Content management systeem</li>
+                        <li>2 revisierondes</li>
+                        <li>3 maanden gratis ondersteuning</li>
+                    </ul>
+                    <a href="#contact" class="btn">Offerte aanvragen</a>
+                </div>
+                
+                <div class="pricing-card fade-in delay-2">
+                    <h3 class="pricing-title">Enterprise</h3>
+                    <div class="pricing-price">€1299 <span>eenmalig</span></div>
+                    <ul class="pricing-features">
+                        <li>Responsive website (onbeperkt pagina's)</li>
+                        <li>Geavanceerde SEO-optimalisatie</li>
+                        <li>E-commerce functionaliteit</li>
+                        <li>Betalingssysteem integratie</li>
+                        <li>Nieuwsbrief integratie</li>
+                        <li>Uitgebreid content management</li>
+                        <li>Onbeperkte revisierondes</li>
+                        <li>6 maanden gratis ondersteuning</li>
+                        <li>Maandelijks onderhoudspakket beschikbaar</li>
+                    </ul>
+                    <a href="#contact" class="btn">Offerte aanvragen</a>
+                </div>
+            </div>
+            
+            <div class="pricing-note fade-in">
+                <p>Alle prijzen zijn exclusief BTW. Heb je specifieke wensen of past geen van bovenstaande pakketten bij jouw behoeften? Neem contact met ons op voor een op maat gemaakte offerte.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Neem Contact Op</h2>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info fade-in">
+                    <h3>Laten we samenwerken</h3>
+                    <p>Heb je vragen of wil je een offerte aanvragen? Vul het formulier in of neem direct contact met ons op.</p>
+                    
+                    <ul class="contact-details">
+                        <li>
+                            <span class="contact-icon"><i class="fas fa-envelope"></i></span>
+                            <span>info@twinpixel.nl</span>
+                        </li>
+                        <li>
+                            <span class="contact-icon"><i class="fas fa-phone"></i></span>
+                            <span>+31 6 12345678</span>
+                        </li>
+                        <li>
+                            <span class="contact-icon"><i class="fas fa-map-marker-alt"></i></span>
+                            <span>Amsterdam, Nederland</span>
+                        </li>
+                    </ul>
+                    
+                    <div class="social-links">
+                        <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="contact-form fade-in delay-1">
+                    <form onsubmit="return validateContactForm(this)">
+                        <div class="form-group">
+                            <label for="name">Naam</label>
+                            <input type="text" id="name" name="name" placeholder="Jouw naam">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" placeholder="Jouw e-mailadres">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Onderwerp</label>
+                            <input type="text" id="subject" name="subject" placeholder="Onderwerp van je bericht">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Bericht</label>
+                            <textarea id="message" name="message" placeholder="Jouw bericht"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-large">Verstuur bericht</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <img src="Images/Logo donkere achtergrond.png" alt="TwinPixel Logo" class="footer-logo">
+            
+            <ul class="footer-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#over-ons">Over ons</a></li>
+                <li><a href="#diensten">Diensten</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#prijzen">Prijzen</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            
+            <ul class="social-links">
+                <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+            </ul>
+            
+            <p class="copyright">&copy; 2025 TwinPixel. Alle rechten voorbehouden.</p>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bekijk het portfolio van TwinPixel: moderne, op maat gemaakte websites voor diverse branches. Ontdek onze projecten en laat je inspireren.">
+    <meta name="keywords" content="portfolio, webdesign, website voorbeelden, projecten, webdevelopment, responsive design">
+    <title>Portfolio | TwinPixel</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay"></div>
+    
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo-container">
+                    <img src="Images/Logo donkere achtergrond.png" alt="TwinPixel Logo" class="logo">
+                </a>
+                
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">Over ons</a></li>
+                    <li><a href="services.html">Diensten</a></li>
+                    <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                    <li><a href="pricing.html">Prijzen</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                
+                <div class="language-switcher">
+                    <select onchange="switchLanguage(this.value)">
+                        <option value="nl" selected>NL</option>
+                        <option value="en">EN</option>
+                    </select>
+                </div>
+                
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="fade-in">Ons Portfolio</h1>
+        </div>
+    </section>
+    
+    <!-- Portfolio Intro -->
+    <section class="portfolio-intro">
+        <div class="container">
+            <div class="intro-content fade-in">
+                <h2>Ontdek onze projecten</h2>
+                <p>Bij TwinPixel zijn we trots op de websites die we hebben ontworpen en ontwikkeld voor onze klanten. Elk project is uniek en op maat gemaakt om aan de specifieke behoeften en doelstellingen van onze klanten te voldoen.</p>
+                <p>Bekijk hieronder een selectie van onze recente projecten en laat je inspireren door wat wij voor jou kunnen betekenen.</p>
+            </div>
+            
+            <div class="portfolio-filters fade-in">
+                <button class="filter-btn active" data-filter="all">Alle projecten</button>
+                <button class="filter-btn" data-filter="webshop">Webshops</button>
+                <button class="filter-btn" data-filter="zakelijk">Zakelijke websites</button>
+                <button class="filter-btn" data-filter="portfolio">Portfolio websites</button>
+                <button class="filter-btn" data-filter="blog">Blogs</button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Portfolio Grid -->
+    <section class="portfolio-showcase">
+        <div class="container">
+            <div class="portfolio-grid">
+                <!-- Project 1 -->
+                <div class="portfolio-item fade-in" data-category="webshop">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="https://via.placeholder.com/800x600/121212/0066ff?text=EcoStyle+Webshop" alt="EcoStyle Webshop">
+                            <div class="portfolio-overlay">
+                                <a href="#project1" class="view-project-btn">Bekijk project</a>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>EcoStyle Webshop</h3>
+                            <p class="portfolio-category">E-commerce</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="portfolio-item fade-in" data-category="portfolio">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="https://via.placeholder.com/800x600/121212/0066ff?text=Fotografie+Portfolio" alt="Fotografie Portfolio">
+                            <div class="portfolio-overlay">
+                                <a href="#project2" class="view-project-btn">Bekijk project</a>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>Fotografie Portfolio</h3>
+                            <p class="portfolio-category">Portfolio Website</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="portfolio-item fade-in" data-category="zakelijk">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="https://via.placeholder.com/800x600/121212/0066ff?text=Restaurant+De+Smaak" alt="Restaurant De Smaak">
+                            <div class="portfolio-overlay">
+                                <a href="#project3" class="view-project-btn">Bekijk project</a>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>Restaurant De Smaak</h3>
+                            <p class="portfolio-category">Horeca Website</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="portfolio-item fade-in" data-category="zakelijk">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="https://via.placeholder.com/800x600/121212/0066ff?text=Advocatenkantoor+Recht" alt="Advocatenkantoor Recht">
+                            <div class="portfolio-overlay">
+                                <a href="#project4" class="view-project-btn">Bekijk project</a>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>Advocatenkantoor Recht</h3>
+                            <p class="portfolio-category">Zakelijke Website</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="portfolio-item fade-in" data-category="zakelijk">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="https://via.placeholder.com/800x600/121212/0066ff?text=Fitness+Studio+Flex" alt="Fitness Studio Flex">
+                            <div class="portfolio-overlay">
+                                <a href="#project5" class="view-project-btn">Bekijk project</a>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>Fitness Studio Flex</h3>
+                            <p class="portfolio-category">Sport & Gezondheid</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <div class="portfolio-item fade-in" data-category="blog">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="https://via.placeholder.com/800x600/121212/0066ff?text=Reisblog+Wereldreis" alt="Reisblog Wereldreis">
+                            <div class="portfolio-overlay">
+                                <a href="#project6" class="view-project-btn">Bekijk project</a>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>Reisblog Wereldreis</h3>
+                            <p class="portfolio-category">Blog Website</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 7 -->
+                <div class="portfolio-item fade-in" data-category="webshop">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="https://via.placeholder.com/800x600/121212/0066ff?text=Juwelier+Goud" alt="Juwelier Goud">
+                            <div class="portfolio-overlay">
+                                <a href="#project7" class="view-project-btn">Bekijk project</a>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>Juwelier Goud</h3>
+                            <p class="portfolio-category">E-commerce</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 8 -->
+                <div class="portfolio-item fade-in" data-category="portfolio">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="https://via.placeholder.com/800x600/121212/0066ff?text=Architectenbureau+Bouw" alt="Architectenbureau Bouw">
+                            <div class="portfolio-overlay">
+                                <a href="#project8" class="view-project-btn">Bekijk project</a>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>Architectenbureau Bouw</h3>
+                            <p class="portfolio-category">Portfolio Website</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 9 -->
+                <div class="portfolio-item fade-in" data-category="blog">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="https://via.placeholder.com/800x600/121212/0066ff?text=Foodblog+Lekker+Eten" alt="Foodblog Lekker Eten">
+                            <div class="portfolio-overlay">
+                                <a href="#project9" class="view-project-btn">Bekijk project</a>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <h3>Foodblog Lekker Eten</h3>
+                            <p class="portfolio-category">Blog Website</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Project Details Modals -->
+    <!-- Project 1 Modal -->
+    <div id="project1" class="project-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="project-details">
+                <div class="project-images">
+                    <img src="https://via.placeholder.com/1200x800/121212/0066ff?text=EcoStyle+Webshop+Screenshot+1" alt="EcoStyle Webshop Screenshot 1">
+                    <img src="https://via.placeholder.com/1200x800/121212/0066ff?text=EcoStyle+Webshop+Screenshot+2" alt="EcoStyle Webshop Screenshot 2">
+                    <img src="https://via.placeholder.com/1200x800/121212/0066ff?text=EcoStyle+Webshop+Screenshot+3" alt="EcoStyle Webshop Screenshot 3">
+                </div>
+                <div class="project-info">
+                    <h2>EcoStyle Webshop</h2>
+                    <p class="project-category">E-commerce</p>
+                    <div class="project-description">
+                        <p>EcoStyle is een webshop gespecialiseerd in duurzame mode en accessoires. De eigenaar wilde een moderne, gebruiksvriendelijke webshop die de duurzame waarden van het merk weerspiegelt.</p>
+                        <p>We hebben een volledig responsive webshop ontwikkeld met een intuïtief bestelproces, veilige betalingsintegratie en een gebruiksvriendelijk beheerssysteem. Het design is minimalistisch en clean, met subtiele animaties en een focus op de producten.</p>
+                    </div>
+                    <div class="project-details-list">
+                        <div class="detail-item">
+                            <h3>Klant</h3>
+                            <p>EcoStyle</p>
+                        </div>
+                        <div class="detail-item">
+                            <h3>Datum</h3>
+                            <p>Maart 2024</p>
+                        </div>
+                        <div class="detail-item">
+                            <h3>Diensten</h3>
+                            <p>Webdesign, E-commerce Development, SEO</p>
+                        </div>
+                    </div>
+                    <div class="project-testimonial">
+                        <p>"TwinPixel heeft onze verwachtingen overtroffen. Ze hebben niet alleen een prachtige webshop opgeleverd, maar ook meegedacht over onze online strategie. De webshop is snel, gebruiksvriendelijk en ziet er fantastisch uit!"</p>
+                        <p class="testimonial-author">- Sandra Bakker, Oprichter EcoStyle</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Additional Project Modals would be added here in the same format -->
+    
+    <!-- Case Studies Section -->
+    <section class="case-studies">
+        <div class="container">
+            <h2 class="section-title fade-in">Uitgelichte Case Studies</h2>
+            
+            <div class="case-study fade-in">
+                <div class="case-study-content">
+                    <h3>Van idee naar succesvolle webshop: EcoStyle</h3>
+                    <p>Ontdek hoe we EcoStyle hebben geholpen om hun online verkoop met 150% te verhogen door een gebruiksvriendelijke webshop te ontwikkelen die perfect aansluit bij hun doelgroep.</p>
+                    <a href="#project1" class="btn btn-outline">Lees de case study</a>
+                </div>
+                <div class="case-study-image glow-effect">
+                    <img src="https://via.placeholder.com/800x500/121212/0066ff?text=EcoStyle+Case+Study" alt="EcoStyle Case Study">
+                </div>
+            </div>
+            
+            <div class="case-study reverse fade-in">
+                <div class="case-study-content">
+                    <h3>Een nieuwe online identiteit voor Advocatenkantoor Recht</h3>
+                    <p>Lees hoe we Advocatenkantoor Recht hebben geholpen om hun professionele uitstraling te versterken met een moderne website die vertrouwen uitstraalt en nieuwe klanten aantrekt.</p>
+                    <a href="#project4" class="btn btn-outline">Lees de case study</a>
+                </div>
+                <div class="case-study-image glow-effect">
+                    <img src="https://via.placeholder.com/800x500/121212/0066ff?text=Advocatenkantoor+Case+Study" alt="Advocatenkantoor Case Study">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section class="portfolio-testimonials">
+        <div class="container">
+            <h2 class="section-title fade-in">Wat onze klanten zeggen</h2>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial-card fade-in delay-1">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">"TwinPixel heeft onze verwachtingen overtroffen. Ze hebben niet alleen een prachtige website opgeleverd, maar ook meegedacht over onze online strategie. De website is snel, gebruiksvriendelijk en ziet er fantastisch uit!"</p>
+                        <div class="testimonial-author-info">
+                            <div class="testimonial-author-image">
+                                <img src="https://via.placeholder.com/100x100/121212/0066ff?text=SB" alt="Sandra Bakker">
+                            </div>
+                            <div class="testimonial-author-details">
+                                <p class="testimonial-author">Sandra Bakker</p>
+                                <p class="testimonial-company">Oprichter, EcoStyle</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card fade-in delay-2">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">"Als ZZP'er had ik een professionele website nodig, maar ik had een beperkt budget. TwinPixel heeft me een website op maat gegeven die er professioneel uitziet zonder de hoge kosten. Ik krijg regelmatig complimenten over mijn site!"</p>
+                        <div class="testimonial-author-info">
+                            <div class="testimonial-author-image">
+                                <img src="https://via.placeholder.com/100x100/121212/0066ff?text=MV" alt="Mark de Vries">
+                            </div>
+                            <div class="testimonial-author-details">
+                                <p class="testimonial-author">Mark de Vries</p>
+                                <p class="testimonial-company">Freelance Fotograaf</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card fade-in delay-3">
+                    <div class="testimonial-content">
+                        <p class="testimonial-text">"De snelheid waarmee TwinPixel werkt is indrukwekkend. Binnen twee weken hadden we een volledig functionerende website die er geweldig uitziet. De communicatie was uitstekend en ze waren altijd bereid om aanpassingen te maken."</p>
+                        <div class="testimonial-author-info">
+                            <div class="testimonial-author-image">
+                                <img src="https://via.placeholder.com/100x100/121212/0066ff?text=JR" alt="Jan Ruiter">
+                            </div>
+                            <div class="testimonial-author-details">
+                                <p class="testimonial-author">Jan Ruiter</p>
+                                <p class="testimonial-company">Eigenaar, Restaurant De Smaak</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="cta-section fade-in">
+        <div class="container">
+            <h2>Klaar voor jouw eigen unieke website?</h2>
+            <p>Laat ons je helpen om jouw online aanwezigheid naar een hoger niveau te tillen.</p>
+            <a href="contact.html" class="btn btn-large glow-effect">Neem contact op</a>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <img src="Images/Logo donkere achtergrond.png" alt="TwinPixel Logo" class="footer-logo">
+            
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Over ons</a></li>
+                <li><a href="services.html">Diensten</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="pricing.html">Prijzen</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            
+            <ul class="social-links">
+                <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+            </ul>
+            
+            <p class="copyright">&copy; 2025 TwinPixel. Alle rechten voorbehouden.</p>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    
+    <!-- Portfolio Specific JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Portfolio Filtering
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+            
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    // Get filter value
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    // Filter portfolio items
+                    portfolioItems.forEach(item => {
+                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // Modal Functionality
+            const projectLinks = document.querySelectorAll('.view-project-btn');
+            const closeModalBtns = document.querySelectorAll('.close-modal');
+            
+            projectLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const modalId = this.getAttribute('href');
+                    document.querySelector(modalId).style.display = 'flex';
+                    document.body.style.overflow = 'hidden';
+                });
+            });
+            
+            closeModalBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    this.closest('.project-modal').style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                });
+            });
+            
+            // Close modal when clicking outside of modal content
+            window.addEventListener('click', function(e) {
+                if (e.target.classList.contains('project-modal')) {
+                    e.target.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
