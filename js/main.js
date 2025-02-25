@@ -17,28 +17,23 @@ document.addEventListener('DOMContentLoaded', function() {
         savedLanguage = getCookie('preferredLanguage');
     }
     
-    // Apply the saved language if it exists
-    if (savedLanguage) {
-        // Apply the saved language
-        switchLanguage(savedLanguage, false);
+    // Default to 'nl' if no language is saved
+    if (!savedLanguage) {
+        savedLanguage = 'nl';
+    }
+    
+    // Apply the saved language
+    switchLanguage(savedLanguage, false);
+    
+    // Update language selector UI and add event listener
+    const languageSelector = document.querySelector('.language-switcher select');
+    if (languageSelector) {
+        languageSelector.value = savedLanguage;
         
-        // Update language selector UI
-        const languageSelector = document.querySelector('.language-switcher select');
-        if (languageSelector) {
-            languageSelector.value = savedLanguage;
-        }
-        
-        // Update language buttons UI
-        const langButtons = document.querySelectorAll('.lang-btn');
-        if (langButtons.length > 0) {
-            langButtons.forEach(btn => {
-                if (btn.textContent.toLowerCase() === savedLanguage.toUpperCase()) {
-                    btn.classList.add('active');
-                } else {
-                    btn.classList.remove('active');
-                }
-            });
-        }
+        // Add event listener to the select dropdown
+        languageSelector.addEventListener('change', function() {
+            switchLanguage(this.value);
+        });
     }
     
     // Highlight active page in navigation
@@ -496,6 +491,8 @@ function getCookie(name) {
 
 // Language switcher functionality
 function switchLanguage(lang, updateHash = true) {
+    console.log('Switching language to:', lang);
+    
     // Store the selected language in a cookie (valid for 30 days)
     setCookie('preferredLanguage', lang, 30);
     
@@ -506,12 +503,13 @@ function switchLanguage(lang, updateHash = true) {
     
     // Update the HTML lang attribute
     document.documentElement.lang = lang;
+    console.log('Updated HTML lang attribute to:', document.documentElement.lang);
     
     // Update the active state of language buttons if they exist
     const langButtons = document.querySelectorAll('.lang-btn');
     if (langButtons.length > 0) {
         langButtons.forEach(btn => {
-            if (btn.textContent.toLowerCase() === lang.toUpperCase()) {
+            if (btn.textContent.toLowerCase() === lang.toLowerCase()) {
                 btn.classList.add('active');
             } else {
                 btn.classList.remove('active');
@@ -523,6 +521,7 @@ function switchLanguage(lang, updateHash = true) {
     const langSelect = document.querySelector('.language-switcher select');
     if (langSelect) {
         langSelect.value = lang;
+        console.log('Updated select dropdown value to:', langSelect.value);
     }
     
     // Update the content on the page
@@ -608,11 +607,38 @@ function updatePageContent(lang) {
         });
     }
     
-    // Update services section
-    const servicesTitle = document.querySelector('#diensten .section-title h2');
-    const serviceCards = document.querySelectorAll('.service-card');
+    // Update all section titles
+    const sectionTitles = document.querySelectorAll('.section-title h2');
+    sectionTitles.forEach(title => {
+        if (title.textContent.includes('TwinPixel') || title.textContent.includes('About')) {
+            title.textContent = t.about_title;
+        } else if (title.textContent.includes('Diensten') || title.textContent.includes('Services')) {
+            title.textContent = t.services_title;
+        } else if (title.textContent.includes('Klanten') || title.textContent.includes('Clients')) {
+            title.textContent = t.testimonials_title;
+        } else if (title.textContent.includes('Portfolio')) {
+            title.textContent = t.portfolio_title;
+        } else if (title.textContent.includes('Prijzen') || title.textContent.includes('Pricing')) {
+            title.textContent = t.pricing_title;
+        } else if (title.textContent.includes('Contact') || title.textContent.includes('Touch')) {
+            title.textContent = t.contact_title;
+        }
+    });
     
-    if (servicesTitle) servicesTitle.textContent = t.services_title;
+    // Update CTA buttons
+    const ctaButtons = document.querySelectorAll('.btn.btn-large');
+    ctaButtons.forEach(button => {
+        if (button.textContent.includes('consult') || button.textContent.includes('consultation')) {
+            button.textContent = t.hero_cta;
+        } else if (button.textContent.includes('contact') || button.textContent.includes('Contact')) {
+            button.textContent = lang === 'nl' ? 'Neem contact op' : 'Contact us';
+        } else if (button.textContent.includes('prijzen') || button.textContent.includes('pricing')) {
+            button.textContent = lang === 'nl' ? 'Bekijk alle prijzen en pakketten' : 'View all pricing and packages';
+        }
+    });
+    
+    // Update services section
+    const serviceCards = document.querySelectorAll('.service-card');
     if (serviceCards.length >= 3) {
         const serviceItems = [
             { title: 'service1_title', desc: 'service1_desc' },
@@ -631,152 +657,262 @@ function updatePageContent(lang) {
         });
     }
     
-    // Update testimonials section
-    const testimonialsTitle = document.querySelector('#testimonials .section-title h2');
-    if (testimonialsTitle) testimonialsTitle.textContent = t.testimonials_title;
-    
-    // Update testimonial cards
-    const testimonialCards = document.querySelectorAll('.testimonial-card');
-    if (testimonialCards.length >= 3) {
-        const testimonialItems = [
-            { text: 'testimonial1_text', author: 'testimonial1_author', company: 'testimonial1_company' },
-            { text: 'testimonial2_text', author: 'testimonial2_author', company: 'testimonial2_company' },
-            { text: 'testimonial3_text', author: 'testimonial3_author', company: 'testimonial3_company' }
-        ];
-        
-        testimonialCards.forEach((card, index) => {
-            if (index < testimonialItems.length) {
-                const text = card.querySelector('.testimonial-text');
-                const author = card.querySelector('.testimonial-author');
-                const company = card.querySelector('.testimonial-company');
-                
-                if (text) text.textContent = t[testimonialItems[index].text];
-                if (author) author.textContent = t[testimonialItems[index].author];
-                if (company) company.textContent = t[testimonialItems[index].company];
-            }
-        });
-    }
-    
-    // Update portfolio section
-    const portfolioTitle = document.querySelector('#portfolio .section-title h2');
-    if (portfolioTitle) portfolioTitle.textContent = t.portfolio_title;
-    
-    // Update portfolio items
-    const portfolioItems = document.querySelectorAll('.portfolio-item');
-    if (portfolioItems.length >= 3) {
-        const portfolioTitles = [
-            { title: 'portfolio1_title', category: 'portfolio1_category' },
-            { title: 'portfolio2_title', category: 'portfolio2_category' },
-            { title: 'portfolio3_title', category: 'portfolio3_category' }
-        ];
-        
-        portfolioItems.forEach((item, index) => {
-            if (index < portfolioTitles.length) {
-                const title = item.querySelector('.portfolio-title');
-                const category = item.querySelector('.portfolio-category');
-                
-                if (title) title.textContent = t[portfolioTitles[index].title];
-                if (category) category.textContent = t[portfolioTitles[index].category];
-            }
-        });
-    }
-    
     // Update pricing section
-    const pricingTitle = document.querySelector('#prijzen .section-title h2');
-    const pricingCards = document.querySelectorAll('.pricing-card');
-    const pricingNote = document.querySelector('.pricing-note p');
+    const pricingTitle = document.querySelector('.page-header h1');
+    if (pricingTitle && (pricingTitle.textContent.includes('Prijzen') || pricingTitle.textContent.includes('Pricing'))) {
+        pricingTitle.textContent = t.pricing_title;
+    }
     
-    if (pricingTitle) pricingTitle.textContent = t.pricing_title;
-    if (pricingCards.length >= 3) {
-        const pricingItems = ['pricing_starter', 'pricing_professional', 'pricing_enterprise'];
-        pricingCards.forEach((card, index) => {
-            if (index < pricingItems.length) {
-                const title = card.querySelector('.pricing-title');
-                const price = card.querySelector('.pricing-price span');
-                const cta = card.querySelector('.btn');
-                
-                if (title) title.textContent = t[pricingItems[index]];
-                if (price) price.textContent = t.pricing_once;
-                if (cta) cta.textContent = t.pricing_cta;
-                
-                // Update pricing features
-                const features = card.querySelectorAll('.pricing-features li');
-                if (features.length > 0) {
-                    // Define the starting index for each pricing card
-                    let startIndex = 1;
-                    if (index === 1) startIndex = 7; // Professional card starts at feature 7
-                    if (index === 2) startIndex = 15; // Enterprise card starts at feature 15
+    // Update pricing intro text
+    const pricingIntroTitle = document.querySelector('.pricing-intro h2');
+    if (pricingIntroTitle) {
+        pricingIntroTitle.textContent = lang === 'nl' ? 
+            'Transparante prijzen, geen verborgen kosten' : 
+            'Transparent pricing, no hidden costs';
+    }
+    
+    const pricingIntroParagraphs = document.querySelectorAll('.pricing-intro p');
+    if (pricingIntroParagraphs.length >= 2) {
+        if (pricingIntroParagraphs[0]) {
+            pricingIntroParagraphs[0].textContent = lang === 'nl' ? 
+                'Bij TwinPixel werken we met een hybride prijsmodel: een eenmalig bedrag voor het maken van je website, en daarna een maandelijks bedrag voor hosting en kleine updates. Zo weet je precies waar je aan toe bent, zonder verrassingen achteraf.' : 
+                'At TwinPixel, we work with a hybrid pricing model: a one-time fee for creating your website, and then a monthly fee for hosting and small updates. This way, you know exactly what to expect, with no surprises afterward.';
+        }
+        if (pricingIntroParagraphs[1]) {
+            pricingIntroParagraphs[1].textContent = lang === 'nl' ? 
+                'We bieden verschillende pakketten aan die aansluiten bij verschillende behoeften en budgetten. Heb je specifieke wensen of past geen van onze pakketten bij jouw behoeften? Kies dan voor ons maatwerk pakket of neem contact met ons op voor een persoonlijke offerte.' : 
+                'We offer different packages that cater to different needs and budgets. Do you have specific requirements or does none of our packages meet your needs? Then choose our custom package or contact us for a personalized quote.';
+        }
+    }
+    
+    // Update pricing model section
+    const pricingModelTitle = document.querySelector('.pricing-info h3');
+    if (pricingModelTitle) {
+        pricingModelTitle.textContent = lang === 'nl' ? 
+            'Ons hybride prijsmodel' : 
+            'Our hybrid pricing model';
+    }
+    
+    const pricingModelLabels = document.querySelectorAll('.pricing-info h4');
+    if (pricingModelLabels.length >= 2) {
+        if (pricingModelLabels[0]) {
+            pricingModelLabels[0].textContent = lang === 'nl' ? 
+                'Eenmalig bedrag' : 
+                'One-time fee';
+        }
+        if (pricingModelLabels[1]) {
+            pricingModelLabels[1].textContent = lang === 'nl' ? 
+                'Maandelijks bedrag' : 
+                'Monthly fee';
+        }
+    }
+    
+    const pricingModelDescriptions = document.querySelectorAll('.pricing-info p');
+    if (pricingModelDescriptions.length >= 2) {
+        if (pricingModelDescriptions[0]) {
+            pricingModelDescriptions[0].textContent = lang === 'nl' ? 
+                'Voor het ontwerpen en bouwen van je website' : 
+                'For designing and building your website';
+        }
+        if (pricingModelDescriptions[1]) {
+            pricingModelDescriptions[1].textContent = lang === 'nl' ? 
+                'Voor hosting en kleine updates' : 
+                'For hosting and small updates';
+        }
+    }
+    
+    // Update pricing cards
+    const pricingCards = document.querySelectorAll('.pricing-card');
+    if (pricingCards.length > 0) {
+        pricingCards.forEach(card => {
+            const title = card.querySelector('.pricing-title');
+            const period = card.querySelector('.period');
+            const cta = card.querySelector('.btn');
+            const hostingText = card.querySelector('.pricing-price div:nth-of-type(2)');
+            const note = card.querySelector('.pricing-note p');
+            const features = card.querySelectorAll('.pricing-features li');
+            
+            if (title && title.textContent.includes('Starter')) {
+                title.textContent = t.pricing_starter;
+            } else if (title && (title.textContent.includes('Standaard') || title.textContent.includes('Standard'))) {
+                title.textContent = lang === 'nl' ? 'Standaard' : 'Standard';
+            } else if (title && title.textContent.includes('Premium')) {
+                title.textContent = 'Premium';
+            } else if (title && (title.textContent.includes('Maatwerk') || title.textContent.includes('Custom'))) {
+                title.textContent = lang === 'nl' ? 'Maatwerk' : 'Custom';
+            }
+            
+            if (period) period.textContent = t.pricing_once;
+            if (cta) cta.textContent = t.pricing_cta;
+            
+            if (hostingText) {
+                hostingText.textContent = lang === 'nl' ? 
+                    'voor hosting & updates' : 
+                    'for hosting & updates';
+            }
+            
+            // Translate features
+            if (features && features.length > 0) {
+                features.forEach(feature => {
+                    // Check if it's an available or unavailable feature
+                    const isAvailable = !feature.classList.contains('unavailable');
                     
-                    features.forEach((feature, featureIndex) => {
-                        const featureKey = `pricing_feature${startIndex + featureIndex}`;
-                        if (t[featureKey]) {
-                            feature.textContent = t[featureKey];
-                        }
-                    });
+                    // Get the feature text (without the icon)
+                    const featureText = feature.textContent.trim().replace(/^[✓✕]\s*/, '');
+                    
+                    // Translate common features
+                    if (featureText.includes('One-page website') || featureText.includes('One-page')) {
+                        feature.innerHTML = isAvailable ? 
+                            `<i class="fas fa-check"></i> ${lang === 'nl' ? 'One-page website' : 'One-page website'}` : 
+                            `<i class="fas fa-times"></i> ${lang === 'nl' ? 'One-page website' : 'One-page website'}`;
+                    } else if (featureText.includes('Responsive design')) {
+                        feature.innerHTML = isAvailable ? 
+                            `<i class="fas fa-check"></i> ${lang === 'nl' ? 'Responsive design' : 'Responsive design'}` : 
+                            `<i class="fas fa-times"></i> ${lang === 'nl' ? 'Responsive design' : 'Responsive design'}`;
+                    } else if (featureText.includes('Basis-SEO') || featureText.includes('Basic SEO')) {
+                        feature.innerHTML = isAvailable ? 
+                            `<i class="fas fa-check"></i> ${lang === 'nl' ? 'Basis-SEO' : 'Basic SEO optimization'}` : 
+                            `<i class="fas fa-times"></i> ${lang === 'nl' ? 'Basis-SEO' : 'Basic SEO optimization'}`;
+                    } else if (featureText.includes('Contactformulier') || featureText.includes('Contact form')) {
+                        feature.innerHTML = isAvailable ? 
+                            `<i class="fas fa-check"></i> ${lang === 'nl' ? 'Contactformulier' : 'Contact form'}` : 
+                            `<i class="fas fa-times"></i> ${lang === 'nl' ? 'Contactformulier' : 'Contact form'}`;
+                    } else if (featureText.includes('Social media links')) {
+                        feature.innerHTML = isAvailable ? 
+                            `<i class="fas fa-check"></i> ${lang === 'nl' ? 'Social media links' : 'Social media links'}` : 
+                            `<i class="fas fa-times"></i> ${lang === 'nl' ? 'Social media links' : 'Social media links'}`;
+                    } else if (featureText.includes('Mobiel-vriendelijk design') || featureText.includes('Mobile-friendly design')) {
+                        feature.innerHTML = isAvailable ? 
+                            `<i class="fas fa-check"></i> ${lang === 'nl' ? 'Mobiel-vriendelijk design' : 'Mobile-friendly design'}` : 
+                            `<i class="fas fa-times"></i> ${lang === 'nl' ? 'Mobiel-vriendelijk design' : 'Mobile-friendly design'}`;
+                    } else if (featureText.includes('revisieronde') || featureText.includes('revision round')) {
+                        feature.innerHTML = isAvailable ? 
+                            `<i class="fas fa-check"></i> ${lang === 'nl' ? '1 revisieronde' : '1 revision round'}` : 
+                            `<i class="fas fa-times"></i> ${lang === 'nl' ? '1 revisieronde' : '1 revision round'}`;
+                    } else if (featureText.includes('Portfolio of blog-optie') || featureText.includes('Portfolio or blog option')) {
+                        feature.innerHTML = isAvailable ? 
+                            `<i class="fas fa-check"></i> ${lang === 'nl' ? 'Portfolio of blog-optie' : 'Portfolio or blog option'}` : 
+                            `<i class="fas fa-times"></i> ${lang === 'nl' ? 'Portfolio of blog-optie' : 'Portfolio or blog option'}`;
+                    } else if (featureText.includes('Content management systeem') || featureText.includes('Content management system')) {
+                        feature.innerHTML = isAvailable ? 
+                            `<i class="fas fa-check"></i> ${lang === 'nl' ? 'Content management systeem' : 'Content management system'}` : 
+                            `<i class="fas fa-times"></i> ${lang === 'nl' ? 'Content management systeem' : 'Content management system'}`;
+                    } else if (featureText.includes('E-commerce functionaliteit') || featureText.includes('E-commerce functionality')) {
+                        feature.innerHTML = isAvailable ? 
+                            `<i class="fas fa-check"></i> ${lang === 'nl' ? 'E-commerce functionaliteit' : 'E-commerce functionality'}` : 
+                            `<i class="fas fa-times"></i> ${lang === 'nl' ? 'E-commerce functionaliteit' : 'E-commerce functionality'}`;
+                    } else if (featureText.includes('Meerdere pagina\'s') || featureText.includes('Multiple pages')) {
+                        feature.innerHTML = isAvailable ? 
+                            `<i class="fas fa-check"></i> ${lang === 'nl' ? 'Meerdere pagina\'s' : 'Multiple pages'}` : 
+                            `<i class="fas fa-times"></i> ${lang === 'nl' ? 'Meerdere pagina\'s' : 'Multiple pages'}`;
+                    } else if (featureText.includes('SEO-optimalisatie') || featureText.includes('SEO optimization')) {
+                        feature.innerHTML = isAvailable ? 
+                            `<i class="fas fa-check"></i> ${lang === 'nl' ? 'SEO-optimalisatie' : 'SEO optimization'}` : 
+                            `<i class="fas fa-times"></i> ${lang === 'nl' ? 'SEO-optimalisatie' : 'SEO optimization'}`;
+                    } else if (featureText.includes('Google Analytics integratie') || featureText.includes('Google Analytics integration')) {
+                        feature.innerHTML = isAvailable ? 
+                            `<i class="fas fa-check"></i> ${lang === 'nl' ? 'Google Analytics integratie' : 'Google Analytics integration'}` : 
+                            `<i class="fas fa-times"></i> ${lang === 'nl' ? 'Google Analytics integratie' : 'Google Analytics integration'}`;
+                    } else if (featureText.includes('Social media integratie') || featureText.includes('Social media integration')) {
+                        feature.innerHTML = isAvailable ? 
+                            `<i class="fas fa-check"></i> ${lang === 'nl' ? 'Social media integratie' : 'Social media integration'}` : 
+                            `<i class="fas fa-times"></i> ${lang === 'nl' ? 'Social media integratie' : 'Social media integration'}`;
+                    } else if (featureText.includes('revisierondes') || featureText.includes('revision rounds')) {
+                        feature.innerHTML = isAvailable ? 
+                            `<i class="fas fa-check"></i> ${lang === 'nl' ? '2 revisierondes' : '2 revision rounds'}` : 
+                            `<i class="fas fa-times"></i> ${lang === 'nl' ? '2 revisierondes' : '2 revision rounds'}`;
+                    } else if (featureText.includes('Snelle oplevering') || featureText.includes('Fast delivery')) {
+                        feature.innerHTML = isAvailable ? 
+                            `<i class="fas fa-check"></i> ${lang === 'nl' ? 'Snelle oplevering' : 'Fast delivery'}` : 
+                            `<i class="fas fa-times"></i> ${lang === 'nl' ? 'Snelle oplevering' : 'Fast delivery'}`;
+                    } else if (featureText.includes('Maatwerk functionaliteiten') || featureText.includes('Custom functionalities')) {
+                        feature.innerHTML = isAvailable ? 
+                            `<i class="fas fa-check"></i> ${lang === 'nl' ? 'Maatwerk functionaliteiten' : 'Custom functionalities'}` : 
+                            `<i class="fas fa-times"></i> ${lang === 'nl' ? 'Maatwerk functionaliteiten' : 'Custom functionalities'}`;
+                    }
+                });
+            }
+            
+            if (note) {
+                if (title && title.textContent.includes('Starter')) {
+                    note.textContent = lang === 'nl' ? 
+                        'Ideaal voor ZZP\'ers en starters die een professionele online aanwezigheid willen.' : 
+                        'Ideal for freelancers and startups who want a professional online presence.';
+                } else if (title && (title.textContent.includes('Standaard') || title.textContent.includes('Standard'))) {
+                    note.textContent = lang === 'nl' ? 
+                        'Perfect voor groeiende bedrijven die meer controle willen over hun website.' : 
+                        'Perfect for growing businesses that want more control over their website.';
+                } else if (title && title.textContent.includes('Premium')) {
+                    note.textContent = lang === 'nl' ? 
+                        'De professionele oplossing voor bedrijven die een uitgebreide online aanwezigheid nodig hebben.' : 
+                        'The professional solution for businesses that need an extensive online presence.';
+                } else if (title && (title.textContent.includes('Maatwerk') || title.textContent.includes('Custom'))) {
+                    note.textContent = lang === 'nl' ? 
+                        'Voor bedrijven met specifieke wensen en behoeften die een unieke website nodig hebben.' : 
+                        'For businesses with specific wishes and needs that require a unique website.';
                 }
             }
         });
     }
-    if (pricingNote) pricingNote.textContent = t.pricing_note;
     
-    // Update contact section
-    const contactTitle = document.querySelector('#contact .section-title h2');
-    const contactSubtitle = document.querySelector('.contact-info h3');
-    const contactText = document.querySelector('.contact-info p');
-    const contactForm = document.querySelector('.contact-form form');
+    // Update pricing disclaimer
+    const pricingDisclaimer = document.querySelector('.pricing-disclaimer p');
+    if (pricingDisclaimer) {
+        pricingDisclaimer.textContent = lang === 'nl' ? 
+            'Alle prijzen zijn exclusief BTW. Ons hybride prijsmodel bestaat uit een eenmalig bedrag voor het ontwerp en de ontwikkeling van je website, plus een maandelijks bedrag voor hosting en kleine updates. Zo heb je geen onverwachte kosten en blijft je website altijd up-to-date.' : 
+            'All prices exclude VAT. Our hybrid pricing model consists of a one-time fee for the design and development of your website, plus a monthly fee for hosting and small updates. This way, you have no unexpected costs and your website always stays up-to-date.';
+    }
     
-    if (contactTitle) contactTitle.textContent = t.contact_title;
-    if (contactSubtitle) contactSubtitle.textContent = t.contact_subtitle;
-    if (contactText) contactText.textContent = t.contact_text;
-    
-    if (contactForm) {
-        const nameLabel = contactForm.querySelector('label[for="name"]');
-        const emailLabel = contactForm.querySelector('label[for="email"]');
-        const subjectLabel = contactForm.querySelector('label[for="subject"]');
-        const messageLabel = contactForm.querySelector('label[for="message"]');
-        const submitButton = contactForm.querySelector('button[type="submit"]');
-        
-        if (nameLabel) nameLabel.textContent = t.contact_name;
-        if (emailLabel) emailLabel.textContent = t.contact_email;
-        if (subjectLabel) subjectLabel.textContent = t.contact_subject;
-        if (messageLabel) messageLabel.textContent = t.contact_message;
-        if (submitButton) submitButton.textContent = t.contact_send;
-        
-        // Update form placeholders
-        const nameInput = contactForm.querySelector('input[name="name"]');
-        const emailInput = contactForm.querySelector('input[name="email"]');
-        const subjectInput = contactForm.querySelector('input[name="subject"]');
-        const messageInput = contactForm.querySelector('textarea[name="message"]');
-        
-        if (nameInput) nameInput.placeholder = t.contact_placeholder_name;
-        if (emailInput) emailInput.placeholder = t.contact_placeholder_email;
-        if (subjectInput) subjectInput.placeholder = t.contact_placeholder_subject;
-        if (messageInput) messageInput.placeholder = t.contact_placeholder_message;
-        
-        // Update success message if it exists
-        const successMessage = document.querySelector('.success-message');
-        if (successMessage) {
-            successMessage.textContent = t.contact_success;
-        }
+    // Update additional services section
+    const additionalServicesTitle = document.querySelector('.additional-pricing h2');
+    if (additionalServicesTitle) {
+        additionalServicesTitle.textContent = lang === 'nl' ? 
+            'Aanvullende Diensten' : 
+            'Additional Services';
     }
     
     // Update footer
     const copyright = document.querySelector('.copyright');
     if (copyright) copyright.textContent = t.copyright;
-    
-    // Update footer links
-    const footerLinks = document.querySelectorAll('.footer-links li a');
-    if (footerLinks.length > 0) {
-        const navItems = ['nav_home', 'nav_about', 'nav_services', 'nav_portfolio', 'nav_pricing', 'nav_contact'];
-        footerLinks.forEach((link, index) => {
-            if (index < navItems.length) {
-                link.textContent = t[navItems[index]];
-            }
-        });
-    }
 }
 
 // Form validation for contact form
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.querySelector('.contact-form form');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            if (validateContactForm(this)) {
+                // In a real implementation, you would send the form data to a server
+                // For now, we'll just show a success message
+                const formData = new FormData(this);
+                const formValues = {};
+                
+                for (let [key, value] of formData.entries()) {
+                    formValues[key] = value;
+                }
+                
+                console.log('Form submitted:', formValues);
+                
+                // Get current language for success message
+                const currentLang = document.documentElement.lang || 'nl';
+                const t = translations[currentLang];
+                
+                // Show success message
+                const successMessage = document.createElement('div');
+                successMessage.className = 'success-message';
+                successMessage.textContent = t.contact_success;
+                
+                // Replace form with success message
+                this.innerHTML = '';
+                this.appendChild(successMessage);
+            }
+        });
+    }
+});
+
 function validateContactForm(form) {
     const nameInput = form.querySelector('input[name="name"]');
     const emailInput = form.querySelector('input[name="email"]');
@@ -844,79 +980,6 @@ function markValid(field) {
         errorElement.remove();
     }
 }
-
-// Handle form submission
-document.addEventListener('DOMContentLoaded', function() {
-    const contactForm = document.querySelector('.contact-form form');
-    
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            if (validateContactForm(this)) {
-                // In a real implementation, you would send the form data to a server
-                // For now, we'll just show a success message
-                const formData = new FormData(this);
-                const formValues = {};
-                
-                for (let [key, value] of formData.entries()) {
-                    formValues[key] = value;
-                }
-                
-                console.log('Form submitted:', formValues);
-                
-                // Get current language for success message
-                const currentLang = document.documentElement.lang || 'nl';
-                const t = translations[currentLang];
-                
-                // Show success message
-                const successMessage = document.createElement('div');
-                successMessage.className = 'success-message';
-                successMessage.textContent = t.contact_success;
-                
-                // Replace form with success message
-                this.innerHTML = '';
-                this.appendChild(successMessage);
-            }
-        });
-    }
-});
-
-// Portfolio item hover effect enhancement
-document.addEventListener('DOMContentLoaded', function() {
-    const portfolioItems = document.querySelectorAll('.portfolio-item');
-    
-    portfolioItems.forEach(item => {
-        item.addEventListener('mouseenter', function() {
-            this.querySelector('.portfolio-overlay').style.opacity = '1';
-            this.querySelector('.portfolio-img').style.transform = 'scale(1.1)';
-        });
-        
-        item.addEventListener('mouseleave', function() {
-            this.querySelector('.portfolio-overlay').style.opacity = '0';
-            this.querySelector('.portfolio-img').style.transform = 'scale(1)';
-        });
-    });
-});
-
-// Service card hover effect enhancement
-document.addEventListener('DOMContentLoaded', function() {
-    const serviceCards = document.querySelectorAll('.service-card');
-    
-    serviceCards.forEach(card => {
-        card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-10px)';
-            this.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.5)';
-            this.querySelector('.service-icon').style.color = 'var(--secondary-color)';
-        });
-        
-        card.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0)';
-            this.style.boxShadow = 'none';
-            this.querySelector('.service-icon').style.color = 'var(--primary-color)';
-        });
-    });
-});
 
 // Listen for hash changes to update language
 window.addEventListener('hashchange', function() {

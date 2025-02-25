@@ -42,10 +42,10 @@
                 </ul>
                 
                 <div class="language-switcher">
-                    <select onchange="switchLanguage(this.value)">
-                        <option value="nl" selected>NL</option>
-                        <option value="en">EN</option>
-                    </select>
+                    <div class="language-buttons">
+                        <a href="#nl" class="lang-btn active" onclick="switchLanguage('nl'); return false;">NL</a>
+                        <a href="#en" class="lang-btn" onclick="switchLanguage('en'); return false;">EN</a>
+                    </div>
                 </div>
                 
                 <button class="mobile-menu-btn">
