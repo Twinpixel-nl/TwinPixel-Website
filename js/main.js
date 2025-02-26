@@ -688,6 +688,11 @@ function updateHomePage(lang) {
             starterTitle.textContent = lang === 'nl' ? 'Starter' : 'Starter';
         }
         
+        const starterPrice = pricingCards[0].querySelector('.pricing-price span');
+        if (starterPrice) {
+            starterPrice.textContent = lang === 'nl' ? 'eenmalig' : 'one-time';
+        }
+        
         const starterHosting = pricingCards[0].querySelector('div[style*="margin-top: 5px"]');
         if (starterHosting) {
             starterHosting.textContent = lang === 'nl'
@@ -722,6 +727,11 @@ function updateHomePage(lang) {
             standardTitle.textContent = lang === 'nl' ? 'Standaard' : 'Standard';
         }
         
+        const standardPrice = pricingCards[1].querySelector('.pricing-price span');
+        if (standardPrice) {
+            standardPrice.textContent = lang === 'nl' ? 'eenmalig' : 'one-time';
+        }
+        
         const standardHosting = pricingCards[1].querySelector('div[style*="margin-top: 5px"]');
         if (standardHosting) {
             standardHosting.textContent = lang === 'nl'
@@ -754,6 +764,11 @@ function updateHomePage(lang) {
         const premiumTitle = pricingCards[2].querySelector('.pricing-title');
         if (premiumTitle) {
             premiumTitle.textContent = lang === 'nl' ? 'Premium' : 'Premium';
+        }
+        
+        const premiumPrice = pricingCards[2].querySelector('.pricing-price span');
+        if (premiumPrice) {
+            premiumPrice.textContent = lang === 'nl' ? 'eenmalig' : 'one-time';
         }
         
         const premiumHosting = pricingCards[2].querySelector('div[style*="margin-top: 5px"]');
@@ -2126,6 +2141,34 @@ function updateContactPage(lang) {
         introText.textContent = lang === 'nl'
             ? 'Heb je vragen over onze diensten of wil je een offerte aanvragen? Vul het formulier in of neem direct contact met ons op. We reageren binnen 24 uur op je bericht.'
             : 'Do you have questions about our services or would you like to request a quote? Fill out the form or contact us directly. We will respond to your message within 24 hours.';
+    }
+    
+    // Update contact info section
+    const emailTitle = document.querySelector('.contact-info .info-card:nth-of-type(1) h3');
+    if (emailTitle) {
+        emailTitle.textContent = lang === 'nl' ? 'E-mail' : 'Email';
+    }
+    
+    const phoneTitle = document.querySelector('.contact-info .info-card:nth-of-type(2) h3');
+    if (phoneTitle) {
+        phoneTitle.textContent = lang === 'nl' ? 'Telefoon' : 'Phone';
+    }
+    
+    const locationTitle = document.querySelector('.contact-info .info-card:nth-of-type(3) h3');
+    if (locationTitle) {
+        locationTitle.textContent = lang === 'nl' ? 'Locatie' : 'Location';
+    }
+    
+    const hoursTitle = document.querySelector('.contact-info .info-card:nth-of-type(4) h3');
+    if (hoursTitle) {
+        hoursTitle.textContent = lang === 'nl' ? 'Openingstijden' : 'Opening Hours';
+    }
+    
+    const hoursText = document.querySelector('.contact-info .info-card:nth-of-type(4) p');
+    if (hoursText) {
+        hoursText.textContent = lang === 'nl' 
+            ? 'Maandag - Vrijdag: 9:00 - 17:00' 
+            : 'Monday - Friday: 9:00 - 17:00';
     }
     
     // Update contact form
