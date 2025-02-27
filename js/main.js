@@ -343,6 +343,12 @@ function updatePageContent(lang) {
     const t = translations[lang];
     if (!t) return; // If translations for this language don't exist, do nothing
     
+    // Skip translation for SEO-specific elements
+    const seoElements = document.querySelectorAll('.seo-no-translate, a[href="webdesign-wageningen.html"], p > a[href*="webdesign-wageningen.html"]');
+    seoElements.forEach(element => {
+        element.setAttribute('data-no-translate', 'true');
+    });
+    
     // Update navigation links
     const navLinks = document.querySelectorAll('.nav-links li a');
     if (navLinks.length > 0) {
@@ -580,7 +586,7 @@ function updateHomePage(lang) {
         }
         
         const seoDesc = serviceCards[1].querySelector('p');
-        if (seoDesc) {
+        if (seoDesc && !seoDesc.querySelector('[data-no-translate="true"]')) {
             seoDesc.textContent = lang === 'nl'
                 ? 'Zorg dat je gevonden wordt door potentiële klanten. Wij optimaliseren je website voor zoekmachines met snelle laadtijden en mobile-first design.'
                 : 'Make sure you are found by potential customers. We optimize your website for search engines with fast loading times and mobile-first design.';

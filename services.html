@@ -4,9 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ontdek de webdesign en development diensten van TwinPixel: op maat gemaakte websites, SEO-optimalisatie en UX/UI-design voor ZZP'ers en MKB.">
-    <meta name="keywords" content="webdesign, website, webdevelopment, SEO, UX/UI, responsive, maatwerk, betaalbaar">
-    <title>Diensten | TwinPixel</title>
+    <meta name="description" content="Ontdek de webdesign en development diensten van TwinPixel in Wageningen: op maat gemaakte websites, SEO-optimalisatie en UX/UI-design voor ZZP'ers en MKB in de regio.">
+    <meta name="keywords" content="webdesign Wageningen, website laten maken, webdevelopment, SEO-optimalisatie Wageningen, responsive website, maatwerk website, betaalbare website, ZZP website, MKB website">
+    <title>Webdesign & SEO Diensten | TwinPixel Wageningen</title>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://twinpixel.nl/services.html">
+    <meta property="og:title" content="Webdesign & SEO Diensten | TwinPixel Wageningen">
+    <meta property="og:description" content="Ontdek de webdesign en development diensten van TwinPixel in Wageningen: op maat gemaakte websites, SEO-optimalisatie en UX/UI-design voor ZZP'ers en MKB in de regio.">
+    <meta property="og:image" content="https://twinpixel.nl/Images/Logo%20donkere%20achtergrond.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://twinpixel.nl/services.html">
+    <meta property="twitter:title" content="Webdesign & SEO Diensten | TwinPixel Wageningen">
+    <meta property="twitter:description" content="Ontdek de webdesign en development diensten van TwinPixel in Wageningen: op maat gemaakte websites, SEO-optimalisatie en UX/UI-design voor ZZP'ers en MKB in de regio.">
+    <meta property="twitter:image" content="https://twinpixel.nl/Images/Logo%20donkere%20achtergrond.png">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://twinpixel.nl/services.html">
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/style.css">
@@ -23,7 +40,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="Icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="Icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="Icons/favicon-16x16.png">
-    <link rel="manifest" href="/">
+    <link rel="manifest" href="/site.webmanifest">
 </head>
 
 <body>
@@ -82,7 +99,7 @@
     <!-- Main Services -->
     <section class="main-services">
         <div class="container">
-            <div class="service-item fade-in">
+            <div id="webdesign" class="service-item fade-in">
                 <div class="service-content">
                     <div class="service-icon">
                         <i class="fas fa-laptop-code"></i>
@@ -116,7 +133,7 @@
                 </div>
             </div>
             
-            <div class="service-item reverse fade-in">
+            <div id="seo" class="service-item reverse fade-in">
                 <div class="service-content">
                     <div class="service-icon">
                         <i class="fas fa-search"></i>
@@ -144,6 +161,8 @@
                             <li><strong>Content Strategie</strong> - We ontwikkelen een strategie voor relevante en waardevolle content.</li>
                             <li><strong>Monitoring & Rapportage</strong> - We houden je resultaten bij en passen onze strategie indien nodig aan.</li>
                         </ol>
+                        
+                        <p><strong>Lokale ondernemers:</strong> Bekijk onze speciale pagina over <a href="webdesign-wageningen.html">lokale SEO voor bedrijven in Wageningen</a> om te zien hoe we je kunnen helpen beter gevonden te worden in jouw regio.</p>
                     </div>
                 </div>
                 <div class="service-image glow-effect fade-in delay-1">
@@ -151,7 +170,7 @@
                 </div>
             </div>
             
-            <div class="service-item fade-in">
+            <div id="uxui" class="service-item fade-in">
                 <div class="service-content">
                     <div class="service-icon">
                         <i class="fas fa-paint-brush"></i>
@@ -352,6 +371,115 @@
     
     <!-- JavaScript -->
     <script src="js/main.js"></script>
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "Service",
+            "name": "Webdesign",
+            "url": "https://twinpixel.nl/services.html#webdesign",
+            "provider": {
+              "@type": "LocalBusiness",
+              "name": "TwinPixel",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Wageningen",
+                "addressRegion": "Gelderland",
+                "addressCountry": "NL"
+              }
+            },
+            "description": "Op maat gemaakte websites die perfect aansluiten bij jouw merk en doelstellingen. Modern, responsive en gebruiksvriendelijk.",
+            "areaServed": {
+              "@type": "GeoCircle",
+              "geoMidpoint": {
+                "@type": "GeoCoordinates",
+                "latitude": 51.9691078,
+                "longitude": 5.6463139
+              },
+              "geoRadius": 50000
+            },
+            "audience": {
+              "@type": "Audience",
+              "audienceType": "ZZP'ers en MKB-bedrijven"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Service",
+            "name": "SEO-optimalisatie",
+            "url": "https://twinpixel.nl/services.html#seo",
+            "provider": {
+              "@type": "LocalBusiness",
+              "name": "TwinPixel",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Wageningen",
+                "addressRegion": "Gelderland",
+                "addressCountry": "NL"
+              }
+            },
+            "description": "Zorg dat je gevonden wordt door potentiële klanten. Wij optimaliseren je website voor zoekmachines met snelle laadtijden en mobile-first design.",
+            "areaServed": {
+              "@type": "GeoCircle",
+              "geoMidpoint": {
+                "@type": "GeoCoordinates",
+                "latitude": 51.9691078,
+                "longitude": 5.6463139
+              },
+              "geoRadius": 50000
+            },
+            "audience": {
+              "@type": "Audience",
+              "audienceType": "ZZP'ers en MKB-bedrijven"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Service",
+            "name": "UX/UI-Design",
+            "url": "https://twinpixel.nl/services.html#uxui",
+            "provider": {
+              "@type": "LocalBusiness",
+              "name": "TwinPixel",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Wageningen",
+                "addressRegion": "Gelderland",
+                "addressCountry": "NL"
+              }
+            },
+            "description": "Gebruiksvriendelijke en visueel aantrekkelijke interfaces die bezoekers omzetten in klanten. Intuïtief, toegankelijk en conversiegericht.",
+            "areaServed": {
+              "@type": "GeoCircle",
+              "geoMidpoint": {
+                "@type": "GeoCoordinates",
+                "latitude": 51.9691078,
+                "longitude": 5.6463139
+              },
+              "geoRadius": 50000
+            },
+            "audience": {
+              "@type": "Audience",
+              "audienceType": "ZZP'ers en MKB-bedrijven"
+            }
+          }
+        }
+      ]
+    }
+    </script>
 </body>
 
 </html>
