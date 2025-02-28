@@ -2165,6 +2165,13 @@ function updateContactPage(lang) {
         locationTitle.textContent = lang === 'nl' ? 'Locatie' : 'Location';
     }
     
+    const locationText = document.querySelector('.contact-info .info-card:nth-of-type(3) p');
+    if (locationText) {
+        locationText.textContent = lang === 'nl' 
+            ? 'Oude Diedenweg 16, Wageningen' 
+            : 'Oude Diedenweg 16, Wageningen';
+    }
+    
     const hoursTitle = document.querySelector('.contact-info .info-card:nth-of-type(4) h3');
     if (hoursTitle) {
         hoursTitle.textContent = lang === 'nl' ? 'Openingstijden' : 'Opening Hours';
