@@ -88,7 +88,49 @@ section {
   padding: 5rem 0;
 }
 
-/* Button Styles */
+button {
+  padding: 0.8em 1.8em;
+  border: 2px solid #0066ff;
+  border-radius: 9em;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  z-index: 1;
+  font-family: inherit;
+  color: #0066ff;
+  cursor: pointer;
+}
+
+/* Achtergrond die uit het midden groeit */
+button::before {
+  content: "";
+  width: 0%;
+  height: 0%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: #0066ff;
+  transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+/* Bij hover wordt de knop volledig gevuld */
+button:hover::before {
+  width: 300%;
+  height: 300%;
+}
+
+/* Glow-effect */
+button:hover {
+  color: white;
+  box-shadow: 0 0 20px #0066ff;
+}
 .btn {
   display: inline-block;
   padding: 0.8rem 2rem;
@@ -243,6 +285,38 @@ header.scrolled {
   color: var(--text-secondary);
 }
 
+/* From Uiverse.io by Tiagoadag */
+
+.cardboxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  width: 190px;
+  height: 254px;
+  background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+  border-radius: 20px;
+  transition: all 0.3s;
+}
+
+.card2 {
+  width: 190px;
+  height: 254px;
+  background-color: #1a1a1a;
+  border-radius: ;
+  transition: all 0.2s;
+}
+
+.card2:hover {
+  transform: scale(0.98);
+  border-radius: 20px;
+}
+
+.card:hover {
+  box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.3);
+}
 /* Services Section */
 .services {
   background-color: var(--dark-surface);
@@ -279,8 +353,8 @@ header.scrolled {
   background-color: rgba(18, 18, 18, 0.5);
   border-radius: var(--border-radius);
   padding: 2rem;
-  transition: transform var(--transition-speed) ease;
   border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   position: relative;
   overflow: hidden;
 }
@@ -296,11 +370,6 @@ header.scrolled {
   opacity: 0;
   transition: opacity var(--transition-speed) ease;
   z-index: -1;
-}
-
-.service-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .service-card:hover::before {
@@ -751,9 +820,46 @@ footer {
 
 /* Unique Features Grid */
 .unique-title {
-  margin-top: 2.5rem;
-  margin-bottom: 1.5rem;
+  margin-top: 4rem; /* Niet nodig als deze gecentreerd is */
+  margin-bottom: 2rem;
   position: relative;
+  text-align: center;
+}
+
+.unique-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.unique-card {
+  flex: 1;
+  min-width: 190px;
+  background-image: linear-gradient(163deg,rgb(0, 171, 37) 0%, #3700ff 100%);
+  border-radius: 20px;
+  transition: all 0.3s;
+  padding: 0;
+  overflow: hidden;
+}
+
+.unique-card-inner {
+  width: 100%;
+  height: 100%;
+  background-color: #1a1a1a;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.unique-card:hover {
+  box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
+}
+
+.unique-card:hover .unique-card-inner {
+  transform: scale(0.98);
+  border-radius: 20px;
 }
 
 .unique-features-grid {
@@ -1129,5 +1235,3 @@ footer {
 
 .language-switcher select:focus {
   outline: none;
-  border-color: var(--primary-color);
-}
