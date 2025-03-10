@@ -1,157 +1,227 @@
 <!DOCTYPE html>
 <html lang="nl">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Bekijk het portfolio van TwinPixel: moderne, op maat gemaakte websites voor diverse branches. Ontdek onze projecten en laat je inspireren.">
-    <meta name="keywords" content="portfolio, webdesign, website voorbeelden, projecten, webdevelopment, responsive design">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Bekijk het portfolio van TwinPixel: moderne, op maat gemaakte websites voor diverse branches. Ontdek onze projecten en laat je inspireren."
+    />
+    <meta
+      name="keywords"
+      content="portfolio, webdesign, website voorbeelden, projecten, webdevelopment, responsive design"
+    />
     <title>Portfolio | TwinPixel</title>
-    
+
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/style.css">
-    
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/language-switcher.css" />
+
     <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Fav icons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="Icons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="Icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="Icons/favicon-16x16.png">
-    <link rel="manifest" href="/">
-</head>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="Icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="Icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="Icons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/" />
+  </head>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y0TE68DKL1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-Y0TE68DKL1"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-  gtag('config', 'G-Y0TE68DKL1');
-</script>
+    gtag("config", "G-Y0TE68DKL1");
+  </script>
 
-<body>
+  <body>
     <!-- Mobile Menu Overlay -->
     <div class="mobile-menu-overlay"></div>
-    
+
     <!-- Header -->
     <header>
-        <div class="container">
-            <nav class="navbar">
-                <a href="index.html" class="logo-container">
-                    <img src="Images/Logo donkere achtergrond.png" alt="TwinPixel Logo" class="logo">
-                </a>
-                
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">Over ons</a></li>
-                    <li><a href="services.html">Diensten</a></li>
-                    <li><a href="portfolio.html" class="active">Portfolio</a></li>
-                    <li><a href="pricing.html">Prijzen</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-                
-                <div class="language-switcher">
-                    <div class="language-buttons">
-                        <a href="#nl" class="lang-btn active" onclick="switchLanguage('nl'); return false;">NL</a>
-                        <a href="#en" class="lang-btn" onclick="switchLanguage('en'); return false;">EN</a>
-                    </div>
-                </div>
-                
-                <button class="mobile-menu-btn">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </nav>
-        </div>
+      <div class="container">
+        <nav class="navbar">
+          <a href="index.html" class="logo-container">
+            <img
+              src="Images/Logo donkere achtergrond.png"
+              alt="TwinPixel Logo"
+              class="logo"
+            />
+          </a>
+
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Over ons</a></li>
+            <li><a href="services.html">Diensten</a></li>
+            <li><a href="portfolio.html" class="active">Portfolio</a></li>
+            <li><a href="pricing.html">Prijzen</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+
+          <div class="language-switcher">
+            <div class="language-buttons">
+              <a
+                href="#nl"
+                class="lang-btn active"
+                onclick="switchLanguage('nl'); return false;"
+                >NL</a
+              >
+              <a
+                href="#en"
+                class="lang-btn"
+                onclick="switchLanguage('en'); return false;"
+                >EN</a
+              >
+            </div>
+          </div>
+
+          <button class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+          </button>
+        </nav>
+      </div>
     </header>
-    
+
     <!-- Page Header -->
     <section class="page-header">
-        <div class="container">
-            <h1 class="fade-in">Ons Portfolio</h1>
-        </div>
+      <div class="container">
+        <h1 class="fade-in">Ons Portfolio</h1>
+      </div>
     </section>
-    
+
     <!-- Portfolio Intro -->
     <section class="portfolio-intro">
-        <div class="container">
-            <div class="intro-content fade-in">
-                <h2>Ontdek onze projecten</h2>
-                <p>Bij TwinPixel zijn we trots op de websites die we hebben ontworpen en ontwikkeld voor onze klanten. Elk project is uniek en op maat gemaakt om aan de specifieke behoeften en doelstellingen van onze klanten te voldoen.</p>
-                <p>Bekijk hieronder een selectie van onze recente projecten en laat je inspireren door wat wij voor jou kunnen betekenen.</p>
-            </div>
-            
-            <div class="portfolio-filters fade-in">
-                <button class="filter-btn active" data-filter="all">Alle projecten</button>
-                <button class="filter-btn" data-filter="webshop">Webshops</button>
-                <button class="filter-btn" data-filter="zakelijk">Zakelijke websites</button>
-                <button class="filter-btn" data-filter="portfolio">Portfolio websites</button>
-                <button class="filter-btn" data-filter="blog">Blogs</button>
-            </div>
+      <div class="container">
+        <div class="intro-content fade-in">
+          <h2>Ontdek onze projecten</h2>
+          <p>
+            Bij TwinPixel zijn we trots op de websites die we hebben ontworpen
+            en ontwikkeld voor onze klanten. Elk project is uniek en op maat
+            gemaakt om aan de specifieke behoeften en doelstellingen van onze
+            klanten te voldoen.
+          </p>
+          <p>
+            Bekijk hieronder een selectie van onze recente projecten en laat je
+            inspireren door wat wij voor jou kunnen betekenen.
+          </p>
         </div>
+
+        <div class="portfolio-filters fade-in">
+          <button class="filter-btn active" data-filter="all">
+            Alle projecten
+          </button>
+          <button class="filter-btn" data-filter="webshop">Webshops</button>
+          <button class="filter-btn" data-filter="zakelijk">
+            Zakelijke websites
+          </button>
+          <button class="filter-btn" data-filter="portfolio">
+            Portfolio websites
+          </button>
+          <button class="filter-btn" data-filter="blog">Blogs</button>
+        </div>
+      </div>
     </section>
-    
+
     <!-- Portfolio Grid -->
     <section class="portfolio-showcase">
-        <div class="container">
-            <div class="portfolio-grid">
-                <!-- Project 1 -->
-                <div class="portfolio-item fade-in" data-category="zakelijk">
-                    <div class="portfolio-card">
-                        <div class="portfolio-image">
-                            <img src="Images/Website-dewetvanstaal.png" alt="De wet van staal" class="portfolio-img">
-                            <div class="portfolio-overlay">
-                                <a href="#project1" class="view-project-btn"></a>
-                            </div>
-                        </div>
-                        <div class="portfolio-info">
-                            <h3>De wet van staal</h3>
-                            <p class="portfolio-category"></p>
-                        </div>
-                    </div>
+      <div class="container">
+        <div class="portfolio-grid">
+          <!-- Project 1 -->
+          <div class="portfolio-item fade-in" data-category="zakelijk">
+            <div class="portfolio-card">
+              <div class="portfolio-image">
+                <img
+                  src="Images/Website-dewetvanstaal.png"
+                  alt="De wet van staal"
+                  class="portfolio-img"
+                />
+                <div class="portfolio-overlay">
+                  <a href="#project1" class="view-project-btn"></a>
                 </div>
-                
-                <!-- Project 2 -->
-                <div class="portfolio-item fade-in" data-category="zakelijk">
-                    <div class="portfolio-card">
-                        <div class="portfolio-image">
-                            <img src="Images/Website-svnull.png" alt="studievereniging NULL" class="portfolio-img">
-                            <div class="portfolio-overlay">
-                                <a href="#project2" class="view-project-btn"></a>
-                            </div>
-                        </div>
-                        <div class="portfolio-info">
-                            <h3>studievereniging NULL</h3>
-                            <p class="portfolio-category"></p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 3 -->
-                <div class="portfolio-item fade-in" data-category="zakelijk">
-                    <div class="portfolio-card">
-                        <div class="portfolio-image">
-                            <img src="https://via.placeholder.com/800x600/121212/0066ff?text=Restaurant+De+Smaak" alt="By Britt Nails">
-                            <div class="portfolio-overlay">
-                                <a href="#project3" class="view-project-btn"></a>
-                            </div>
-                        </div>
-                        <div class="portfolio-info">
-                            <h3>By Britt Nails</h3>
-                            <p class="portfolio-category"></p>
-                        </div>
-                    </div>
-                </div>
+              </div>
+              <div class="portfolio-info">
+                <h3>De wet van staal</h3>
+                <p class="portfolio-category"></p>
+              </div>
             </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="portfolio-item fade-in" data-category="zakelijk">
+            <div class="portfolio-card">
+              <div class="portfolio-image">
+                <img
+                  src="Images/Website-svnull.png"
+                  alt="studievereniging NULL"
+                  class="portfolio-img"
+                />
+                <div class="portfolio-overlay">
+                  <a href="#project2" class="view-project-btn"></a>
+                </div>
+              </div>
+              <div class="portfolio-info">
+                <h3>studievereniging NULL</h3>
+                <p class="portfolio-category"></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="portfolio-item fade-in" data-category="zakelijk">
+            <div class="portfolio-card">
+              <div class="portfolio-image">
+                <img
+                  src="https://via.placeholder.com/800x600/121212/0066ff?text=Restaurant+De+Smaak"
+                  alt="By Britt Nails"
+                />
+                <div class="portfolio-overlay">
+                  <a href="#project3" class="view-project-btn"></a>
+                </div>
+              </div>
+              <div class="portfolio-info">
+                <h3>By Britt Nails</h3>
+                <p class="portfolio-category"></p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
-    
+
     <!-- Project Details Modals -->
     <!-- Project 1 Modal -->
     <!-- <div id="project1" class="project-modal">
@@ -192,9 +262,9 @@
             </div>
         </div>
     </div> -->
-    
+
     <!-- Additional Project Modals would be added here in the same format -->
-    
+
     <!-- Case Studies Section -->
     <!-- <section class="case-studies">
         <div class="container">
@@ -280,98 +350,117 @@
      -->
     <!-- CTA Section -->
     <section class="cta-section fade-in">
-        <div class="container">
-            <h2>Klaar voor jouw eigen unieke website?</h2>
-            <p>Laat ons je helpen om jouw online aanwezigheid naar een hoger niveau te tillen.</p>
-            <a href="contact.html" class="btn btn-large glow-effect">Neem contact op</a>
-        </div>
+      <div class="container">
+        <h2>Klaar voor jouw eigen unieke website?</h2>
+        <p>
+          Laat ons je helpen om jouw online aanwezigheid naar een hoger niveau
+          te tillen.
+        </p>
+        <a href="contact.html" class="btn btn-large glow-effect"
+          >Neem contact op</a
+        >
+      </div>
     </section>
-    
+
     <!-- Footer -->
     <footer>
-        <div class="container">
-            <img src="Images/Logo donkere achtergrond.png" alt="TwinPixel Logo" class="footer-logo">
-            
-            <ul class="footer-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">Over ons</a></li>
-                <li><a href="services.html">Diensten</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="pricing.html">Prijzen</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-            
-            <ul class="social-links">
-                <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-            </ul>
-            
-            <p class="copyright">&copy; 2025 TwinPixel. Alle rechten voorbehouden.</p>
-        </div>
+      <div class="container">
+        <img
+          src="Images/Logo donkere achtergrond.png"
+          alt="TwinPixel Logo"
+          class="footer-logo"
+        />
+
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">Over ons</a></li>
+          <li><a href="services.html">Diensten</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="pricing.html">Prijzen</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <ul class="social-links">
+          <li>
+            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          </li>
+          <li>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+          </li>
+          <li>
+            <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          </li>
+        </ul>
+
+        <p class="copyright">
+          &copy; 2025 TwinPixel. Alle rechten voorbehouden.
+        </p>
+      </div>
     </footer>
-    
+
     <!-- JavaScript -->
     <script src="js/main.js"></script>
-    
+
     <!-- Portfolio Specific JavaScript -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Portfolio Filtering
-            const filterBtns = document.querySelectorAll('.filter-btn');
-            const portfolioItems = document.querySelectorAll('.portfolio-item');
-            
-            filterBtns.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    // Remove active class from all buttons
-                    filterBtns.forEach(btn => btn.classList.remove('active'));
-                    
-                    // Add active class to clicked button
-                    this.classList.add('active');
-                    
-                    // Get filter value
-                    const filterValue = this.getAttribute('data-filter');
-                    
-                    // Filter portfolio items
-                    portfolioItems.forEach(item => {
-                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-                            item.style.display = 'block';
-                        } else {
-                            item.style.display = 'none';
-                        }
-                    });
-                });
-            });
-            
-            // Modal Functionality
-            const projectLinks = document.querySelectorAll('.view-project-btn');
-            const closeModalBtns = document.querySelectorAll('.close-modal');
-            
-            projectLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const modalId = this.getAttribute('href');
-                    document.querySelector(modalId).style.display = 'flex';
-                    document.body.style.overflow = 'hidden';
-                });
-            });
-            
-            closeModalBtns.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    this.closest('.project-modal').style.display = 'none';
-                    document.body.style.overflow = 'auto';
-                });
-            });
-            
-            // Close modal when clicking outside of modal content
-            window.addEventListener('click', function(e) {
-                if (e.target.classList.contains('project-modal')) {
-                    e.target.style.display = 'none';
-                    document.body.style.overflow = 'auto';
-                }
-            });
-        });
-    </script>
-</body>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Portfolio Filtering
+        const filterBtns = document.querySelectorAll(".filter-btn");
+        const portfolioItems = document.querySelectorAll(".portfolio-item");
 
+        filterBtns.forEach((btn) => {
+          btn.addEventListener("click", function () {
+            // Remove active class from all buttons
+            filterBtns.forEach((btn) => btn.classList.remove("active"));
+
+            // Add active class to clicked button
+            this.classList.add("active");
+
+            // Get filter value
+            const filterValue = this.getAttribute("data-filter");
+
+            // Filter portfolio items
+            portfolioItems.forEach((item) => {
+              if (
+                filterValue === "all" ||
+                item.getAttribute("data-category") === filterValue
+              ) {
+                item.style.display = "block";
+              } else {
+                item.style.display = "none";
+              }
+            });
+          });
+        });
+
+        // Modal Functionality
+        const projectLinks = document.querySelectorAll(".view-project-btn");
+        const closeModalBtns = document.querySelectorAll(".close-modal");
+
+        projectLinks.forEach((link) => {
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
+            const modalId = this.getAttribute("href");
+            document.querySelector(modalId).style.display = "flex";
+            document.body.style.overflow = "hidden";
+          });
+        });
+
+        closeModalBtns.forEach((btn) => {
+          btn.addEventListener("click", function () {
+            this.closest(".project-modal").style.display = "none";
+            document.body.style.overflow = "auto";
+          });
+        });
+
+        // Close modal when clicking outside of modal content
+        window.addEventListener("click", function (e) {
+          if (e.target.classList.contains("project-modal")) {
+            e.target.style.display = "none";
+            document.body.style.overflow = "auto";
+          }
+        });
+      });
+    </script>
+  </body>
 </html>

@@ -331,13 +331,37 @@ function switchLanguage(lang, updateHash = true) {
   // Update the active state of language buttons if they exist
   const langButtons = document.querySelectorAll(".lang-btn");
   if (langButtons.length > 0) {
+    // First remove active class from all buttons
     langButtons.forEach((btn) => {
-      if (btn.textContent.toLowerCase() === lang.toLowerCase()) {
-        btn.classList.add("active");
-      } else {
-        btn.classList.remove("active");
-      }
+      btn.classList.remove("active");
     });
+
+    // Then add active class to the selected language button
+    const activeButton = Array.from(langButtons).find(
+      (btn) => btn.textContent.toLowerCase() === lang.toLowerCase()
+    );
+
+    if (activeButton) {
+      // Add active class with animation
+      activeButton.classList.add("active");
+
+      // Add animation effect
+      activeButton.style.animation = "none";
+      setTimeout(() => {
+        activeButton.style.animation = "pulse 1.5s";
+      }, 10);
+
+      // Update the indicator position
+      const languageButtons = activeButton.closest(".language-buttons");
+      if (languageButtons) {
+        // Apply a transition effect to the indicator
+        if (lang.toLowerCase() === "en") {
+          languageButtons.classList.add("en-active");
+        } else {
+          languageButtons.classList.remove("en-active");
+        }
+      }
+    }
   }
 
   // Update the select dropdown if it exists
@@ -347,8 +371,17 @@ function switchLanguage(lang, updateHash = true) {
     console.log("Updated select dropdown value to:", langSelect.value);
   }
 
-  // Update the content on the page
-  updatePageContent(lang);
+  // Add a subtle page transition effect
+  const body = document.body;
+  body.style.opacity = "0.8";
+  setTimeout(() => {
+    // Update the content on the page
+    updatePageContent(lang);
+
+    // Fade back in
+    body.style.opacity = "1";
+    body.style.transition = "opacity 0.5s ease";
+  }, 100);
 }
 
 // Function to update the content on the page based on the selected language
