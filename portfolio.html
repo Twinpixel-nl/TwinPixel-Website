@@ -382,7 +382,7 @@
 
         <ul class="social-links">
           <li>
-            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61574036669497" target="_blank"><i class="fab fa-facebook-f"></i></a>
           </li>
           <li>
             <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -461,6 +461,82 @@
           }
         });
       });
+    </script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": "https://twinpixel.nl/portfolio.html",
+        "url": "https://twinpixel.nl/portfolio.html",
+        "name": "Portfolio | TwinPixel",
+        "description": "Bekijk het portfolio van TwinPixel: moderne, op maat gemaakte websites voor diverse branches. Ontdek onze projecten en laat je inspireren.",
+        "isPartOf": {
+          "@id": "https://twinpixel.nl/#website"
+        },
+        "about": {
+          "@id": "https://twinpixel.nl/#business"
+        }
+      }
+    </script>
+    
+    <!-- Portfolio Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "@id": "https://twinpixel.nl/portfolio.html#collection",
+        "name": "TwinPixel Portfolio",
+        "description": "Bekijk onze recente projecten en laat je inspireren door wat wij voor jou kunnen betekenen.",
+        "isPartOf": {
+          "@id": "https://twinpixel.nl/#website"
+        },
+        "mainEntity": {
+          "@type": "ItemList",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "@type": "CreativeWork",
+                "name": "De wet van staal",
+                "url": "https://twinpixel.nl/portfolio.html#project1",
+                "image": "https://twinpixel.nl/Images/Website-dewetvanstaal.png",
+                "creator": {
+                  "@id": "https://twinpixel.nl/#business"
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "@type": "CreativeWork",
+                "name": "studievereniging NULL",
+                "url": "https://twinpixel.nl/portfolio.html#project2",
+                "image": "https://twinpixel.nl/Images/Website-svnull.png",
+                "creator": {
+                  "@id": "https://twinpixel.nl/#business"
+                }
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "item": {
+                "@type": "CreativeWork",
+                "name": "By Britt Nails",
+                "url": "https://twinpixel.nl/portfolio.html#project3",
+                "image": "https://via.placeholder.com/800x600/121212/0066ff?text=Restaurant+De+Smaak",
+                "creator": {
+                  "@id": "https://twinpixel.nl/#business"
+                }
+              }
+            }
+          ]
+        }
+      }
     </script>
   </body>
 </html>

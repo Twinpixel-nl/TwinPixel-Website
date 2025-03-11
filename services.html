@@ -646,7 +646,7 @@
 
         <ul class="social-links">
           <li>
-            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61574036669497" target="_blank"><i class="fab fa-facebook-f"></i></a>
           </li>
           <li>
             <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -666,10 +666,32 @@
     <script src="js/main.js"></script>
 
     <!-- Structured Data -->
+    <!-- WebPage Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": "https://twinpixel.nl/services.html",
+        "url": "https://twinpixel.nl/services.html",
+        "name": "Webdesign & SEO Diensten | TwinPixel Wageningen",
+        "description": "Ontdek de webdesign en development diensten van TwinPixel in Wageningen: op maat gemaakte websites, SEO-optimalisatie en UX/UI-design voor ZZP'ers en MKB in de regio.",
+        "isPartOf": {
+          "@id": "https://twinpixel.nl/#website"
+        },
+        "about": {
+          "@id": "https://twinpixel.nl/#business"
+        }
+      }
+    </script>
+    
+    <!-- Services Structured Data -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "ItemList",
+        "@id": "https://twinpixel.nl/services.html#services",
+        "name": "TwinPixel Diensten",
+        "description": "Webdesign, SEO-optimalisatie en UX/UI-design diensten van TwinPixel in Wageningen",
         "itemListElement": [
           {
             "@type": "ListItem",
@@ -679,14 +701,7 @@
               "name": "Webdesign",
               "url": "https://twinpixel.nl/services.html#webdesign",
               "provider": {
-                "@type": "LocalBusiness",
-                "name": "TwinPixel",
-                "address": {
-                  "@type": "PostalAddress",
-                  "addressLocality": "Wageningen",
-                  "addressRegion": "Gelderland",
-                  "addressCountry": "NL"
-                }
+                "@id": "https://twinpixel.nl/#business"
               },
               "description": "Op maat gemaakte websites die perfect aansluiten bij jouw merk en doelstellingen. Modern, responsive en gebruiksvriendelijk.",
               "areaServed": {
@@ -701,6 +716,13 @@
               "audience": {
                 "@type": "Audience",
                 "audienceType": "ZZP'ers en MKB-bedrijven"
+              },
+              "offers": {
+                "@type": "Offer",
+                "price": "449",
+                "priceCurrency": "EUR",
+                "description": "Professionele website op maat, inclusief responsive design en SEO-optimalisatie",
+                "url": "https://twinpixel.nl/pricing.html"
               }
             }
           },
@@ -712,14 +734,7 @@
               "name": "SEO-optimalisatie",
               "url": "https://twinpixel.nl/services.html#seo",
               "provider": {
-                "@type": "LocalBusiness",
-                "name": "TwinPixel",
-                "address": {
-                  "@type": "PostalAddress",
-                  "addressLocality": "Wageningen",
-                  "addressRegion": "Gelderland",
-                  "addressCountry": "NL"
-                }
+                "@id": "https://twinpixel.nl/#business"
               },
               "description": "Zorg dat je gevonden wordt door potentiële klanten. Wij optimaliseren je website voor zoekmachines met snelle laadtijden en mobile-first design.",
               "areaServed": {
@@ -734,6 +749,13 @@
               "audience": {
                 "@type": "Audience",
                 "audienceType": "ZZP'ers en MKB-bedrijven"
+              },
+              "offers": {
+                "@type": "Offer",
+                "price": "99",
+                "priceCurrency": "EUR",
+                "description": "SEO-optimalisatie voor betere vindbaarheid in zoekmachines",
+                "url": "https://twinpixel.nl/pricing.html"
               }
             }
           },
@@ -745,14 +767,7 @@
               "name": "UX/UI-Design",
               "url": "https://twinpixel.nl/services.html#uxui",
               "provider": {
-                "@type": "LocalBusiness",
-                "name": "TwinPixel",
-                "address": {
-                  "@type": "PostalAddress",
-                  "addressLocality": "Wageningen",
-                  "addressRegion": "Gelderland",
-                  "addressCountry": "NL"
-                }
+                "@id": "https://twinpixel.nl/#business"
               },
               "description": "Gebruiksvriendelijke en visueel aantrekkelijke interfaces die bezoekers omzetten in klanten. Intuïtief, toegankelijk en conversiegericht.",
               "areaServed": {
@@ -767,6 +782,13 @@
               "audience": {
                 "@type": "Audience",
                 "audienceType": "ZZP'ers en MKB-bedrijven"
+              },
+              "offers": {
+                "@type": "Offer",
+                "price": "149",
+                "priceCurrency": "EUR",
+                "description": "Professioneel UX/UI-design voor een optimale gebruikerservaring",
+                "url": "https://twinpixel.nl/pricing.html"
               }
             }
           }

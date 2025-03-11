@@ -505,11 +505,11 @@
           <li><a href="contact.html">Contact</a></li>
         </ul>
 
-        <!-- <ul class="social-links">
-                <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+        <ul class="social-links">
+                <li><a href="https://www.facebook.com/profile.php?id=61574036669497" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
                 <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
                 <li><a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-            </ul> -->
+            </ul>
 
         <p class="copyright">
           &copy; 2025 TwinPixel. Alle rechten voorbehouden.
@@ -521,14 +521,16 @@
     <script src="js/main.js"></script>
 
     <!-- Structured Data -->
+    <!-- LocalBusiness Structured Data -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
+        "@id": "https://twinpixel.nl/#business",
         "name": "TwinPixel",
         "image": "https://twinpixel.nl/Images/Logo donkere achtergrond.png",
         "url": "https://twinpixel.nl",
-        "telephone": "+31682579179",
+        "telephone": "+31 6 82579179",
         "email": "info@twinpixel.nl",
         "description": "Modern webdesignbureau in Wageningen voor ZZP'ers en MKB. Professionele websites met SEO-optimalisatie, op maat gemaakt en betaalbaar.",
         "address": {
@@ -542,45 +544,149 @@
           "latitude": 51.9691078,
           "longitude": 5.6463139
         },
-        "openingHoursSpecification": {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-          "opens": "09:00",
-          "closes": "17:00"
-        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "09:00",
+            "closes": "17:00"
+          }
+        ],
         "priceRange": "€€",
         "sameAs": [
-          "https://www.linkedin.com/in/twan-meurs/",
-          "https://www.instagram.com/twanmeurs/",
-          "https://www.linkedin.com/in/emma-de-heer-56826824b/",
-          "https://www.instagram.com/3mma_dh/"
+          "https://www.facebook.com/profile.php?id=61574036669497",
+          "https://www.linkedin.com/company/twinpixel/",
+          "https://www.instagram.com/twinpixel.nl/"
         ],
-        "serviceArea": {
-          "@type": "GeoCircle",
-          "geoMidpoint": {
-            "@type": "GeoCoordinates",
-            "latitude": 51.9691078,
-            "longitude": 5.6463139
+        "serviceArea": [
+          {
+            "@type": "GeoCircle",
+            "geoMidpoint": {
+              "@type": "GeoCoordinates",
+              "latitude": 51.9691078,
+              "longitude": 5.6463139
+            },
+            "geoRadius": 50000
           },
-          "geoRadius": 50000
-        },
+          {
+            "@type": "Place",
+            "name": "Amsterdam",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Amsterdam",
+              "addressCountry": "NL"
+            }
+          },
+          {
+            "@type": "Place",
+            "name": "Utrecht",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Utrecht",
+              "addressCountry": "NL"
+            }
+          }
+        ],
         "makesOffer": [
           {
             "@type": "Offer",
             "name": "Webdesign",
-            "description": "Op maat gemaakte websites die perfect aansluiten bij jouw merk en doelstellingen."
+            "description": "Op maat gemaakte websites die perfect aansluiten bij jouw merk en doelstellingen.",
+            "url": "https://twinpixel.nl/webdesign",
+            "price": "999",
+            "priceCurrency": "EUR"
           },
           {
             "@type": "Offer",
             "name": "SEO-optimalisatie",
-            "description": "Optimalisatie van je website voor zoekmachines met snelle laadtijden en mobile-first design."
+            "description": "Optimalisatie van je website voor zoekmachines met snelle laadtijden en mobile-first design.",
+            "url": "https://twinpixel.nl/seo-optimalisatie",
+            "price": "499",
+            "priceCurrency": "EUR"
           },
           {
             "@type": "Offer",
             "name": "UX/UI-Design",
-            "description": "Gebruiksvriendelijke en visueel aantrekkelijke interfaces die bezoekers omzetten in klanten."
+            "description": "Gebruiksvriendelijke en visueel aantrekkelijke interfaces die bezoekers omzetten in klanten.",
+            "url": "https://twinpixel.nl/ux-ui-design",
+            "price": "799",
+            "priceCurrency": "EUR"
           }
         ]
+      }
+    </script>
+    
+    <!-- WebSite Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://twinpixel.nl/#website",
+        "url": "https://twinpixel.nl",
+        "name": "TwinPixel",
+        "publisher": {
+          "@id": "https://twinpixel.nl/#business"
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://twinpixel.nl/?s={search_term}",
+          "query-input": "required name=search_term"
+        },
+        "hasPart": [
+          {
+            "@type": "WebPage",
+            "@id": "https://twinpixel.nl/about.html",
+            "url": "https://twinpixel.nl/about.html",
+            "name": "Over Ons | TwinPixel",
+            "description": "Leer meer over TwinPixel, een modern webdesignbureau opgericht door twee studenten met een passie voor webdesign en development."
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://twinpixel.nl/services.html",
+            "url": "https://twinpixel.nl/services.html",
+            "name": "Webdesign & SEO Diensten | TwinPixel Wageningen",
+            "description": "Ontdek de webdesign en development diensten van TwinPixel in Wageningen: op maat gemaakte websites, SEO-optimalisatie en UX/UI-design voor ZZP'ers en MKB in de regio."
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://twinpixel.nl/portfolio.html",
+            "url": "https://twinpixel.nl/portfolio.html",
+            "name": "Portfolio | TwinPixel",
+            "description": "Bekijk het portfolio van TwinPixel: moderne, op maat gemaakte websites voor diverse branches. Ontdek onze projecten en laat je inspireren."
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://twinpixel.nl/pricing.html",
+            "url": "https://twinpixel.nl/pricing.html",
+            "name": "Prijzen | TwinPixel",
+            "description": "Bekijk de transparante prijzen van TwinPixel voor webdesign en development. Betaalbare pakketten voor ZZP'ers en MKB, zonder verborgen kosten."
+          },
+          {
+            "@type": "ContactPage",
+            "@id": "https://twinpixel.nl/contact.html",
+            "url": "https://twinpixel.nl/contact.html",
+            "name": "Contact | TwinPixel Webdesign Wageningen",
+            "description": "Neem contact op met TwinPixel in Wageningen voor een gratis consult of offerte. Wij helpen ZZP'ers en MKB'ers met professionele websites en SEO-optimalisatie."
+          }
+        ]
+      }
+    </script>
+    
+    <!-- WebPage Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": "https://twinpixel.nl/#webpage",
+        "url": "https://twinpixel.nl",
+        "name": "TwinPixel | Professionele Websites & SEO-optimalisatie in Wageningen",
+        "description": "Modern webdesignbureau in Wageningen voor ZZP'ers en MKB. Professionele websites met SEO-optimalisatie, op maat gemaakt en betaalbaar.",
+        "isPartOf": {
+          "@id": "https://twinpixel.nl/#website"
+        },
+        "about": {
+          "@id": "https://twinpixel.nl/#business"
+        }
       }
     </script>
   </body>

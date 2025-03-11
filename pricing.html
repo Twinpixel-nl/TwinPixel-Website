@@ -588,7 +588,7 @@
 
         <ul class="social-links">
           <li>
-            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61574036669497" target="_blank"><i class="fab fa-facebook-f"></i></a>
           </li>
           <li>
             <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -607,6 +607,106 @@
     <!-- JavaScript -->
     <script src="js/main.js"></script>
 
-    <!-- No pricing toggle needed for hybrid pricing model -->
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": "https://twinpixel.nl/pricing.html",
+        "url": "https://twinpixel.nl/pricing.html",
+        "name": "Prijzen | TwinPixel",
+        "description": "Bekijk de transparante prijzen van TwinPixel voor webdesign en development. Betaalbare pakketten voor ZZP'ers en MKB, zonder verborgen kosten.",
+        "isPartOf": {
+          "@id": "https://twinpixel.nl/#website"
+        },
+        "about": {
+          "@id": "https://twinpixel.nl/#business"
+        }
+      }
+    </script>
+    
+    <!-- Pricing Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "PriceSpecification",
+        "@id": "https://twinpixel.nl/pricing.html#pricing",
+        "name": "TwinPixel Prijzen",
+        "description": "Transparante prijzen voor webdesign en development diensten van TwinPixel",
+        "isPartOf": {
+          "@id": "https://twinpixel.nl/#website"
+        },
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "Starter Pakket",
+            "description": "One-page website met responsive design, basis-SEO en contactformulier",
+            "price": "299",
+            "priceCurrency": "EUR",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "price": "5",
+              "priceCurrency": "EUR",
+              "unitText": "maand",
+              "description": "Maandelijkse kosten voor hosting en updates"
+            },
+            "offeredBy": {
+              "@id": "https://twinpixel.nl/#business"
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Standaard Pakket",
+            "description": "Meerdere pagina's met responsive design, SEO-optimalisatie, contactformulier en meer",
+            "price": "449",
+            "priceCurrency": "EUR",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "price": "10",
+              "priceCurrency": "EUR",
+              "unitText": "maand",
+              "description": "Maandelijkse kosten voor hosting en updates"
+            },
+            "offeredBy": {
+              "@id": "https://twinpixel.nl/#business"
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Premium Pakket",
+            "description": "High-end design, responsive website, geavanceerde SEO, maatwerk functionaliteiten en meer",
+            "price": "599",
+            "priceCurrency": "EUR",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "price": "20",
+              "priceCurrency": "EUR",
+              "unitText": "maand",
+              "description": "Maandelijkse kosten voor hosting en updates"
+            },
+            "offeredBy": {
+              "@id": "https://twinpixel.nl/#business"
+            }
+          },
+          {
+            "@type": "Offer",
+            "name": "Maatwerk Pakket",
+            "description": "Volledig op maat gemaakte website met uniek design, geavanceerde functionaliteiten en meer",
+            "price": "799",
+            "priceCurrency": "EUR",
+            "priceSpecification": {
+              "@type": "UnitPriceSpecification",
+              "price": "30",
+              "priceCurrency": "EUR",
+              "unitText": "maand",
+              "description": "Maandelijkse kosten voor hosting en updates"
+            },
+            "offeredBy": {
+              "@id": "https://twinpixel.nl/#business"
+            }
+          }
+        ]
+      }
+    </script>
   </body>
 </html>

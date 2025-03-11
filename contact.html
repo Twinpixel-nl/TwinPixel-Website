@@ -440,7 +440,7 @@
 
         <ul class="social-links">
           <li>
-            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61574036669497" target="_blank"><i class="fab fa-facebook-f"></i></a>
           </li>
           <li>
             <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -460,39 +460,55 @@
     <script src="js/main.js"></script>
 
     <!-- Structured Data -->
+    <!-- WebPage Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": "https://twinpixel.nl/contact.html",
+        "url": "https://twinpixel.nl/contact.html",
+        "name": "Contact | TwinPixel Webdesign Wageningen",
+        "description": "Neem contact op met TwinPixel in Wageningen voor een gratis consult of offerte. Wij helpen ZZP'ers en MKB'ers met professionele websites en SEO-optimalisatie.",
+        "isPartOf": {
+          "@id": "https://twinpixel.nl/#website"
+        },
+        "about": {
+          "@id": "https://twinpixel.nl/#business"
+        }
+      }
+    </script>
+    
+    <!-- ContactPage Structured Data -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "ContactPage",
+        "@id": "https://twinpixel.nl/contact.html#contactpage",
         "name": "Contact TwinPixel",
         "description": "Neem contact op met TwinPixel in Wageningen voor een gratis consult of offerte. Wij helpen ZZP'ers en MKB'ers met professionele websites en SEO-optimalisatie.",
+        "isPartOf": {
+          "@id": "https://twinpixel.nl/#website"
+        },
         "mainEntity": {
-          "@type": "LocalBusiness",
-          "name": "TwinPixel",
-          "image": "https://twinpixel.nl/Images/Logo donkere achtergrond.png",
-          "url": "https://twinpixel.nl",
-          "telephone": "+31682579179",
-          "email": "info@twinpixel.nl",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Oude Diedenweg 16",
-            "addressLocality": "Wageningen",
-            "postalCode": "6704 AD",
-            "addressRegion": "Gelderland",
-            "addressCountry": "NL"
+          "@id": "https://twinpixel.nl/#business"
+        },
+        "mainContentOfPage": {
+          "@type": "WebPageElement",
+          "isPartOf": {
+            "@id": "https://twinpixel.nl/contact.html"
           },
-          "openingHoursSpecification": {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": [
-              "Monday",
-              "Tuesday",
-              "Wednesday",
-              "Thursday",
-              "Friday"
-            ],
-            "opens": "09:00",
-            "closes": "17:00"
+          "speakable": {
+            "@type": "SpeakableSpecification",
+            "cssSelector": [".contact-intro", ".contact-info"]
           }
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+31 6 82579179",
+          "email": "info@twinpixel.nl",
+          "contactType": "customer service",
+          "availableLanguage": ["Dutch", "English"],
+          "areaServed": "Netherlands"
         }
       }
     </script>
