@@ -121,7 +121,7 @@ button {
   margin: 3rem auto; /* Extra marge aan de onderkant & horizontaal centreren */
   justify-content: center;
   align-items: center;
-  padding: 0.5em 2.5em; /* Kleinere padding */
+  padding: 0.8em 2.5em; /* Kleinere padding */
   font-size: 14px; /* Kleinere tekst */
   font-weight: 500;
   color: white;
@@ -1289,6 +1289,7 @@ footer {
   object-fit: cover;
 }
 
+
 .team-role {
   color: var(--primary-color);
   font-weight: 500;
@@ -1317,3 +1318,30 @@ footer {
   transition: all var(--transition-speed) ease;
 }
 
+/* Webkit Browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 25px; /* Breedte van de scrollbar */
+}
+
+/* Achtergrond van de scrollbar (zwart) */
+::-webkit-scrollbar-track {
+  background: black; 
+}
+
+/* Scrollbar "knop" (blauw) */
+::-webkit-scrollbar-thumb {
+  background: #0066ff; /* Blauwe knop */
+  border-radius: 10px; /* Ronde randen */
+  border: 2px solid black; /* Zwarte rand om de knop */
+}
+
+/* Hover-effect voor de knop */
+::-webkit-scrollbar-thumb:hover {
+  background: #00ccff; /* Lichtere blauwe tint bij hover */
+}
+
+/* Firefox Scrollbar (Beperkte styling) */
+* {
+  scrollbar-color: #0066ff black;
+  scrollbar-width: thin;
+}
