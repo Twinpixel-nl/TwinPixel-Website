@@ -333,6 +333,8 @@ header.scrolled {
 
 /* From Uiverse.io by Tiagoadag */
 
+
+
 .cardboxes {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -1101,4 +1103,217 @@ footer {
   }
 
   .mobile-menu-overlay {
-    position: fixe
+    position: fixed
+        position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-speed) ease;
+  }
+
+  .mobile-menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .btn-large {
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+  }
+
+  .section-title {
+    margin-bottom: 2rem;
+  }
+}
+
+/* Unique Features Grid */
+.unique-title {
+  margin-top: 4rem; /* Niet nodig als deze gecentreerd is */
+  margin-bottom: 2rem;
+  position: relative;
+  text-align: center;
+}
+
+.unique-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.unique-card {
+  flex: 1;
+  min-width: 190px;
+  background-image: linear-gradient(163deg, rgb(0, 171, 37) 0%, #3700ff 100%);
+  border-radius: 20px;
+  transition: all 0.3s;
+  padding: 0;
+  overflow: hidden;
+}
+
+.unique-card-inner {
+  width: 100%;
+  height: 100%;
+  background-color: #1a1a1a;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.unique-card:hover {
+  box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.3);
+}
+
+.unique-card:hover .unique-card-inner {
+  transform: scale(0.98);
+  border-radius: 20px;
+}
+
+.unique-features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.feature-box {
+  background-color: rgba(18, 18, 18, 0.5);
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  transition: all var(--transition-speed) ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  text-align: center;
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  border-color: var(--primary-color);
+}
+
+.feature-icon {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  transition: all var(--transition-speed) ease;
+}
+
+.feature-box:hover .feature-icon {
+  transform: scale(1.2);
+}
+
+.feature-box h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  color: var(--primary-color);
+}
+
+.feature-box p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.cta-hover {
+  transition: all var(--transition-speed) ease;
+}
+
+.cta-hover:hover {
+  transform: scale(1.05);
+  box-shadow: var(--primary-glow);
+}
+
+@media (max-width: 768px) {
+  .unique-features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Team Section */
+.team-section {
+  margin-top: 4rem;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.team-member {
+  background-color: var(--dark-surface);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform var(--transition-speed) ease;
+}
+
+.team-member:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.team-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 1.5rem;
+  border: 3px solid var(--primary-color);
+}
+
+.team-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.team-role {
+  color: var(--primary-color);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.team-bio {
+  margin-bottom: 1.5rem;
+  color: var(--text-secondary);
+}
+
+.team-social {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.team-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  transition: all var(--transition-speed) ease;
+}
+
