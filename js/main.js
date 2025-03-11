@@ -45,7 +45,20 @@ function validateContactForm(form) {
   return true;
 }
 
+// Function to handle form submission when the anchor tag is clicked
 document.addEventListener("DOMContentLoaded", function () {
+  // Add event listener to the form submit button (anchor tag)
+  const formSubmitBtn = document.querySelector('.form-submit-btn');
+  if (formSubmitBtn) {
+    formSubmitBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      const form = document.querySelector('.contact-form');
+      if (form && validateContactForm(form)) {
+        form.submit();
+      }
+    });
+  }
+  
   // Check for language in URL hash first
   let savedLanguage = null;
 

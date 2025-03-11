@@ -1,0 +1,67 @@
+/* Success Page Styles */
+.success-section {
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.success-content {
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: var(--dark-surface);
+  border-radius: var(--border-radius);
+  padding: 3rem 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.success-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+}
+
+.success-icon {
+  font-size: 5rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  animation: success-pulse 2s infinite;
+}
+
+.success-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+@keyframes success-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .success-actions {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .success-actions .btn {
+    width: 100%;
+  }
+}
