@@ -234,8 +234,12 @@
 
             <form
               class="contact-form"
+              name="contact"
+              method="POST"
+              data-netlify="true"
               onsubmit="return validateContactForm(this)"
             >
+              <input type="hidden" name="form-name" value="contact" />
               <div class="form-group">
                 <label for="name">Naam *</label>
                 <input
@@ -290,7 +294,7 @@
               </div>
 
               <div class="form-group">
-                <a type="submit" class="form-submit-btn"> Verstuur bericht </a>
+                <button type="submit" class="form-submit-btn">Verstuur bericht</button>
               </div>
             </form>
           </div>

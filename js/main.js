@@ -1,5 +1,50 @@
 // TwinPixel Website JavaScript
 
+// Form validation function for the contact form
+function validateContactForm(form) {
+  // Get form fields
+  const name = form.querySelector('#name');
+  const email = form.querySelector('#email');
+  const subject = form.querySelector('#subject');
+  const message = form.querySelector('#message');
+  
+  // Validate required fields
+  if (!name.value.trim()) {
+    alert('Vul alstublieft uw naam in.');
+    name.focus();
+    return false;
+  }
+  
+  if (!email.value.trim()) {
+    alert('Vul alstublieft uw e-mailadres in.');
+    email.focus();
+    return false;
+  }
+  
+  // Basic email validation
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRegex.test(email.value.trim())) {
+    alert('Vul alstublieft een geldig e-mailadres in.');
+    email.focus();
+    return false;
+  }
+  
+  if (!subject.value.trim()) {
+    alert('Vul alstublieft een onderwerp in.');
+    subject.focus();
+    return false;
+  }
+  
+  if (!message.value.trim()) {
+    alert('Vul alstublieft een bericht in.');
+    message.focus();
+    return false;
+  }
+  
+  // If all validations pass, return true to submit the form
+  return true;
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   // Check for language in URL hash first
   let savedLanguage = null;
