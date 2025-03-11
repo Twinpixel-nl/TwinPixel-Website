@@ -598,7 +598,7 @@ header.scrolled {
 
 .service-cta:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 0 15px rgba(0, 102, 255, 0.5);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Detailed Service Items */
@@ -651,7 +651,6 @@ header.scrolled {
   left: 0;
   width: 50px;
   height: 3px;
-  background-color: var(--primary-color);
 }
 
 .service-text p {
