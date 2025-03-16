@@ -1,0 +1,18 @@
+# Enable URL rewriting
+RewriteEngine On
+
+# 301 Redirects for non-existent pages
+RewriteRule ^webdesign$ /services.html [R=301,L]
+RewriteRule ^seo-optimalisatie$ /services.html#seo [R=301,L]
+RewriteRule ^ux-ui-design$ /services.html#uxui [R=301,L]
+
+# Ensure www prefix
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule ^(.*)$ https://www.%{HTTP_HOST}/$1 [R=301,L]
+
+# Ensure HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Custom error pages
+ErrorDocument 404 /404.html
