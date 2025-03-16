@@ -3,44 +3,44 @@
 // Form validation function for the contact form
 function validateContactForm(form) {
   // Get form fields
-  const name = form.querySelector('#name');
-  const email = form.querySelector('#email');
-  const subject = form.querySelector('#subject');
-  const message = form.querySelector('#message');
-  
+  const name = form.querySelector("#name");
+  const email = form.querySelector("#email");
+  const subject = form.querySelector("#subject");
+  const message = form.querySelector("#message");
+
   // Validate required fields
   if (!name.value.trim()) {
-    alert('Vul alstublieft uw naam in.');
+    alert("Vul alstublieft uw naam in.");
     name.focus();
     return false;
   }
-  
+
   if (!email.value.trim()) {
-    alert('Vul alstublieft uw e-mailadres in.');
+    alert("Vul alstublieft uw e-mailadres in.");
     email.focus();
     return false;
   }
-  
+
   // Basic email validation
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email.value.trim())) {
-    alert('Vul alstublieft een geldig e-mailadres in.');
+    alert("Vul alstublieft een geldig e-mailadres in.");
     email.focus();
     return false;
   }
-  
+
   if (!subject.value.trim()) {
-    alert('Vul alstublieft een onderwerp in.');
+    alert("Vul alstublieft een onderwerp in.");
     subject.focus();
     return false;
   }
-  
+
   if (!message.value.trim()) {
-    alert('Vul alstublieft een bericht in.');
+    alert("Vul alstublieft een bericht in.");
     message.focus();
     return false;
   }
-  
+
   // If all validations pass, return true to submit the form
   return true;
 }
@@ -48,17 +48,17 @@ function validateContactForm(form) {
 // Function to handle form submission when the anchor tag is clicked
 document.addEventListener("DOMContentLoaded", function () {
   // Add event listener to the form submit button (anchor tag)
-  const formSubmitBtn = document.querySelector('.form-submit-btn');
+  const formSubmitBtn = document.querySelector(".form-submit-btn");
   if (formSubmitBtn) {
-    formSubmitBtn.addEventListener('click', function(e) {
+    formSubmitBtn.addEventListener("click", function (e) {
       e.preventDefault();
-      const form = document.querySelector('.contact-form');
+      const form = document.querySelector(".contact-form");
       if (form && validateContactForm(form)) {
         form.submit();
       }
     });
   }
-  
+
   // Check for language in URL hash first
   let savedLanguage = null;
 
@@ -143,6 +143,13 @@ function highlightActivePage() {
 
   // Default to index.html if no page is specified
   const activePage = currentPage || "index.html";
+
+  // Add a class to the body element to identify the current page
+  if (activePage === "index.html" || activePage === "") {
+    document.body.classList.add("home-page");
+  } else {
+    document.body.classList.add("inner-page");
+  }
 
   // Find the corresponding navigation link and add the active class
   const navLinks = document.querySelectorAll(".nav-links a");
