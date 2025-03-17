@@ -1949,6 +1949,55 @@ footer {
   }
 }
 
+.faq-section {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  box-sizing: border-box;
+}
+.faq-container {
+  width: 100%;
+  max-width: 800px;
+}
+.faq-item {
+  border-bottom: 1px solid #444;
+  padding: 15px 0;
+}
+.faq-item:last-child {
+  border-bottom: none;
+}
+.faq-question {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question:hover {
+  filter: drop-shadow(0 0 20px rgb(0, 102, 255));
+}
+
+.faq-answer {
+  display: none;
+  padding-top: 10px;
+  color: #ccc;
+  font-size: 1.2em;
+}
+.faq-question::after {
+  content: "+";
+  font-size: 1.5em;
+  transition: transform 0.3s;
+}
+.faq-item.active .faq-answer {
+  display: block;
+}
+.faq-item.active .faq-question::after {
+  content: "-";
+  transform: rotate(180deg);
+}
+
 /* Unique Features Grid */
 .unique-title {
   margin-top: 4rem; /* Niet nodig als deze gecentreerd is */
@@ -2091,6 +2140,51 @@ footer {
     opacity: 0.3;
     transform: scale(1);
   }
+}
+
+.process-list {
+  list-style: none;
+  padding: 0;
+  max-width: 400px;
+  width: 100%;
+}
+.process-list li {
+  display: flex;
+  align-items: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+  padding: 15px;
+  background: #ffffff;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s, background 0.3s, scale 0.3s;
+  cursor: pointer;
+}
+.step-number {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1em;
+  font-weight: bold;
+  color: #fff;
+  background: #007bff;
+  border-radius: 50%;
+  margin-right: 15px;
+  transition: background 0.3s, transform 0.3s;
+}
+.process-list li:hover {
+  transform: translateX(10px) scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: #fff;
+}
+.process-list li:hover .step-number {
+  background: linear-gradient(135deg, #ff8c00, #ff4500);
+  transform: scale(1.2);
 }
 
 .about-story-section,

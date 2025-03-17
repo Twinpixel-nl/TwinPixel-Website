@@ -278,6 +278,13 @@ function initMobileMenu() {
   }
 }
 
+document.querySelectorAll(".faq-question").forEach((item) => {
+  item.addEventListener("click", () => {
+    const parent = item.parentElement;
+    parent.classList.toggle("active");
+  });
+});
+
 // Initialize header scroll effect
 function initHeaderScroll() {
   const header = document.querySelector("header");
