@@ -278,6 +278,20 @@ function initMobileMenu() {
   }
 }
 
+const lightbox = document.querySelector(".lightbox");
+const images = document.querySelectorAll(".portfolio-img");
+
+images.forEach((img) => {
+  img.addEventListener("click", () => {
+    lightbox.classList.add("active");
+    lightbox.innerHTML = `<img src="${img.src}" alt="Project">`;
+  });
+});
+
+lightbox.addEventListener("click", () => {
+  lightbox.classList.remove("active");
+});
+
 document.querySelectorAll(".faq-question").forEach((item) => {
   item.addEventListener("click", () => {
     const parent = item.parentElement;
@@ -2927,6 +2941,21 @@ function updateContactPage(lang) {
           ? "Hoe werkt het proces van offerte tot oplevering?"
           : "How does the process work from quote to delivery?";
     }
+    document.addEventListener("DOMContentLoaded", function () {
+      const fadeElements = document.querySelectorAll(".fade-in");
+
+      function checkVisibility() {
+        fadeElements.forEach((element) => {
+          const rect = element.getBoundingClientRect();
+          if (rect.top < window.innerHeight - 100) {
+            element.classList.add("visible");
+          }
+        });
+      }
+
+      window.addEventListener("scroll", checkVisibility);
+      checkVisibility();
+    });
 
     const faq4Answer = faqItems[3].querySelector("p");
     if (faq4Answer) {
