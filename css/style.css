@@ -1983,7 +1983,6 @@ footer {
   display: none;
   padding-top: 10px;
   color: #ccc;
-  font-size: 1.2em;
 }
 .faq-question::after {
   content: "+";
