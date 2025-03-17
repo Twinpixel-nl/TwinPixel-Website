@@ -63,11 +63,16 @@ h3 {
   font-size: 1.75rem;
   font-weight: 600;
 }
+
 /* Page Header Section */
 .page-header {
   position: relative;
   padding: 8rem 0 4rem;
-  background: linear-gradient(to right, rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.7));
+  background: linear-gradient(
+    to right,
+    rgba(10, 10, 10, 0.9),
+    rgba(10, 10, 10, 0.7)
+  );
   overflow: hidden;
   text-align: center;
   margin-bottom: 0;
@@ -80,7 +85,11 @@ h3 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at top right, rgba(0, 102, 255, 0.2), transparent 70%);
+  background: radial-gradient(
+    circle at top right,
+    rgba(0, 102, 255, 0.2),
+    transparent 70%
+  );
   z-index: 0;
 }
 
@@ -91,7 +100,12 @@ h3 {
   left: 0;
   width: 100%;
   height: 1px;
-  background: linear-gradient(to right, transparent, var(--primary-color), transparent);
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--primary-color),
+    transparent
+  );
   opacity: 0.5;
 }
 
@@ -113,7 +127,11 @@ h3 {
   transform: translateX(-50%);
   width: 80px;
   height: 4px;
-  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  background: linear-gradient(
+    to right,
+    var(--primary-color),
+    var(--secondary-color)
+  );
   border-radius: 2px;
 }
 
@@ -164,28 +182,25 @@ button {
 }
 
 .click {
-   position: relative; /* Zorgt ervoor dat hij binnen de flow blijft */
+  position: relative; /* Changed from fixed to relative for better responsiveness */
   display: block;
   text-align: center;
-  margin: 3rem auto; /* Extra marge aan de onderkant & horizontaal centreren */
+  margin: 2rem auto; /* Centered horizontally */
   justify-content: center;
   align-items: center;
-  padding: 0.8em 2.5em; /* Kleinere padding */
-  font-size: 14px; /* Kleinere tekst */
+  padding: 0.8em 2.5em;
+  font-size: 14px;
   font-weight: 500;
   color: white;
   text-transform: uppercase;
-  background: linear-gradient(45deg, #0066ff 70% ,var(--secondary-color));
+  background: linear-gradient(45deg, #0066ff 70%, var(--secondary-color));
   border: none;
   border-radius: 40px;
-  margin: 30px;
-  margin-left: 400px;
-  margin-bottom: 2rem;
   box-shadow: 0 5px 10px rgba(0, 102, 255, 0.3);
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  position: fixed; /* Vaste positie op het scherm */
-  width: 350px; /* Breedte */
+  width: 100%;
+  max-width: 350px; /* Maximum width */
 }
 
 /* Hover effect */
@@ -326,6 +341,41 @@ header.scrolled {
   color: var(--text-primary);
   font-size: 1.5rem;
   cursor: pointer;
+  padding: 0.5rem;
+  margin-left: 1rem;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 576px) {
+  header {
+    padding: 0.3rem 0; /* Even smaller padding */
+  }
+
+  .logo {
+    height: 30px; /* Further reduce logo size */
+  }
+
+  .nav-links {
+    font-size: 0.9rem; /* Reduce font size */
+  }
+
+  .nav-links a {
+    padding: 0.4rem 0.8rem; /* Reduce link padding */
+  }
+
+  .mobile-menu-btn {
+    font-size: 1rem; /* Adjust icon size */
+    top: 30px;
+  }
+}
+@media (max-width: 768px) {
+  header {
+    padding: 0.5rem 0; /* Minder ruimte boven en onder */
+  }
+  .mobile-menu-btn {
+    font-size: 1rem; /* Adjust icon size */
+    top: 30px;
+  }
 }
 
 /* Hero Section */
@@ -376,8 +426,6 @@ header.scrolled {
 
 /* From Uiverse.io by Tiagoadag */
 
-
-
 .cardboxes {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -387,7 +435,11 @@ header.scrolled {
 .card {
   width: 190px;
   height: 254px;
-  background-image: linear-gradient(163deg,var(--secondary-color) 0%, #3700ff 100%);
+  background-image: linear-gradient(
+    163deg,
+    var(--secondary-color) 0%,
+    #3700ff 100%
+  );
   border-radius: 20px;
   transition: all 0.3s;
 }
@@ -502,7 +554,11 @@ header.scrolled {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at top right, rgba(0, 102, 255, 0.1), transparent 60%);
+  background: radial-gradient(
+    circle at top right,
+    rgba(0, 102, 255, 0.1),
+    transparent 60%
+  );
   z-index: -1;
 }
 
@@ -520,11 +576,11 @@ header.scrolled {
 
 .service-grid-item:hover {
   transform: translateY(-10px);
-  }
+}
 
 .pricing-subtext {
   font-size: 0.9em;
-  color: #fff;  
+  color: #fff;
   text-align: center;
   margin-bottom: 10px; /* Adds space before the price */
 }
@@ -553,7 +609,11 @@ header.scrolled {
   left: 0;
   width: 100%;
   height: 5px;
-  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  background: linear-gradient(
+    90deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.4s ease;
@@ -652,7 +712,8 @@ header.scrolled {
 }
 
 /* Detailed Service Items */
-.detailed-service-item, .service-item {
+.detailed-service-item,
+.service-item {
   display: grid;
   grid-template-columns: 1fr;
   gap: 2rem;
@@ -661,19 +722,23 @@ header.scrolled {
 }
 
 @media (min-width: 992px) {
-  .detailed-service-item, .service-item {
+  .detailed-service-item,
+  .service-item {
     grid-template-columns: 1.5fr 1fr;
   }
-  
-  .detailed-service-item.reverse, .service-item.reverse {
+
+  .detailed-service-item.reverse,
+  .service-item.reverse {
     grid-template-columns: 1fr 1.5fr;
   }
-  
-  .detailed-service-item.reverse .service-content, .service-item.reverse .service-content {
+
+  .detailed-service-item.reverse .service-content,
+  .service-item.reverse .service-content {
     order: 2;
   }
-  
-  .detailed-service-item.reverse .service-image, .service-item.reverse .service-image {
+
+  .detailed-service-item.reverse .service-image,
+  .service-item.reverse .service-image {
     order: 1;
   }
 }
@@ -707,12 +772,14 @@ header.scrolled {
   margin-bottom: 1.5rem;
 }
 
-.service-text ul, .service-text ol {
+.service-text ul,
+.service-text ol {
   margin-bottom: 2rem;
   padding-left: 1.5rem;
 }
 
-.service-text ul li, .service-text ol li {
+.service-text ul li,
+.service-text ol li {
   margin-bottom: 0.7rem;
 }
 
@@ -720,7 +787,7 @@ header.scrolled {
   border-radius: var(--border-radius);
   overflow: hidden;
   position: relative;
-   margin: 0;
+  margin: 0;
   padding: 0;
   border: none;
 }
@@ -736,7 +803,6 @@ header.scrolled {
   transform: scale(1.05);
 }
 
-
 /* Enhanced Glow Effect */
 .glow-effect {
   position: relative;
@@ -750,7 +816,11 @@ header.scrolled {
   right: -2px;
   bottom: -2px;
   border-radius: calc(var(--border-radius) + 2px);
-  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  background: linear-gradient(
+    45deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
   z-index: -1;
   opacity: 0;
   transition: opacity var(--transition-speed) ease;
@@ -778,7 +848,7 @@ header.scrolled {
   .services-grid-container {
     grid-template-columns: 1fr;
   }
-  
+
   .service-grid-item {
     max-width: 450px;
     margin: 0 auto;
@@ -912,7 +982,7 @@ header.scrolled {
 }
 
 .maatwerk {
-margin: 3rem;
+  margin: 3rem;
 }
 
 pricing-card.maatwerk {
@@ -942,7 +1012,11 @@ pricing-card.maatwerk {
   left: 0;
   width: 4px;
   height: 0;
-  background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+  background: linear-gradient(
+    to bottom,
+    var(--primary-color),
+    var(--secondary-color)
+  );
   transition: height 0.5s ease;
 }
 
@@ -955,7 +1029,11 @@ pricing-card.maatwerk {
 }
 
 .pricing-card:hover .btn {
-  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  background: linear-gradient(
+    45deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
   box-shadow: 0 5px 15px rgba(0, 102, 255, 0.4);
 }
 
@@ -992,7 +1070,11 @@ pricing-card.maatwerk {
   position: absolute;
   top: 70px;
   left: 35px;
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
   color: white;
   padding: 8px 30px;
   font-size: 0.85rem;
@@ -1162,13 +1244,14 @@ pricing-card.maatwerk {
 /* Contact Form with Gradient Border */
 .contact-form-container {
   background: linear-gradient(#1a1a1a, #1a1a1a) padding-box,
-    linear-gradient(145deg, transparent 35%, #0066ff,var(--secondary-color)) border-box;
+    linear-gradient(145deg, transparent 35%, #0066ff, var(--secondary-color))
+      border-box;
   border: 2px solid transparent;
   padding: 32px 24px;
   font-size: 14px;
   font-family: inherit;
   color: white;
-display: flex;
+  display: flex;
   flex-direction: column;
   gap: 20px;
   box-sizing: border-box;
@@ -1258,7 +1341,6 @@ display: flex;
   scale: 0.95;
 }
 
-
 /* Footer */
 footer {
   background-color: var(--dark-surface);
@@ -1345,6 +1427,7 @@ footer {
 .language-switcher {
   margin-left: 1.5rem;
   position: relative;
+  z-index: 1002; /* Ensure it's above the mobile menu */
 }
 
 .language-buttons {
@@ -1366,7 +1449,11 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(45deg, rgba(0, 102, 255, 0.1), rgba(0, 204, 255, 0.1));
+  background: linear-gradient(
+    45deg,
+    rgba(0, 102, 255, 0.1),
+    rgba(0, 204, 255, 0.1)
+  );
   opacity: 0;
   transition: opacity 0.4s ease;
   z-index: 0;
@@ -1395,7 +1482,11 @@ footer {
 
 .lang-btn.active {
   color: white;
-  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  background: linear-gradient(
+    45deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
   box-shadow: 0 2px 10px rgba(0, 102, 255, 0.5);
   animation: pulse 2s infinite;
 }
@@ -1436,6 +1527,20 @@ footer {
 }
 
 /* Responsive Styles */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 95%;
+    padding: 0 1rem;
+  }
+
+  .click {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 300px;
+  }
+}
+
 @media (max-width: 992px) {
   h1 {
     font-size: 3rem;
@@ -1456,6 +1561,38 @@ footer {
   .pricing-card.featured:hover {
     transform: translateY(-10px);
   }
+
+  .services-grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .portfolio-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  .pricing-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .info-card {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .click {
+    width: 250px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1469,6 +1606,10 @@ footer {
 
   h2 {
     font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
   }
 
   .hero h1 {
@@ -1493,6 +1634,8 @@ footer {
     align-items: center;
     transition: right var(--transition-speed) ease;
     z-index: 1001;
+    padding: 2rem;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.3);
   }
 
   .nav-links.active {
@@ -1503,19 +1646,35 @@ footer {
     margin: 1.5rem 0;
   }
 
+  .nav-links li a {
+    font-size: 1.2rem;
+    display: block;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    text-align: center;
+    border-radius: var(--border-radius);
+    transition: all 0.3s ease;
+  }
+
+  .nav-links li a:hover {
+    background-color: rgba(0, 102, 255, 0.1);
+    color: var(--primary-color);
+  }
+
   .mobile-menu-btn {
     display: block;
     z-index: 1002;
   }
 
   .mobile-menu-overlay {
-    position: fixed
-        position: fixed;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
     z-index: 1000;
     opacity: 0;
     visibility: hidden;
@@ -1525,6 +1684,57 @@ footer {
   .mobile-menu-overlay.active {
     opacity: 1;
     visibility: visible;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .unique-cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .unique-card {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 1.5rem;
+  }
+
+  .testimonial-card {
+    padding: 1.5rem;
+  }
+
+  .detailed-service-item,
+  .service-item {
+    grid-template-columns: 1fr;
+  }
+
+  .service-image {
+    order: -1;
+    margin-bottom: 1.5rem;
+  }
+
+  .process-steps {
+    padding-left: 1rem;
+  }
+
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .click {
+    width: 200px;
   }
 }
 
@@ -1537,8 +1747,16 @@ footer {
     font-size: 1.8rem;
   }
 
+  h3 {
+    font-size: 1.3rem;
+  }
+
   .hero h1 {
     font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
   }
 
   .btn-large {
@@ -1548,6 +1766,186 @@ footer {
 
   .section-title {
     margin-bottom: 2rem;
+  }
+
+  .page-header {
+    padding: 6rem 0 3rem;
+  }
+
+  .page-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .nav-links {
+    width: 85%;
+  }
+
+  .language-switcher {
+    margin-left: 0.5rem;
+  }
+
+  .lang-btn {
+    padding: 5px 10px;
+    font-size: 0.8rem;
+  }
+
+  .service-card-glass {
+    padding: 1.5rem;
+  }
+
+  .service-price {
+    margin: 1rem 0;
+  }
+
+  .price-amount {
+    font-size: 1.8rem;
+  }
+
+  .service-features li {
+    font-size: 0.9rem;
+  }
+
+  .process-step {
+    padding-left: 0;
+  }
+
+  .step-number {
+    position: relative;
+    margin-bottom: 0.5rem;
+    left: 0;
+    transform: none;
+  }
+
+  .faq-item {
+    padding: 1.2rem;
+  }
+
+  .faq-item h3 {
+    font-size: 1.1rem;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+  }
+
+  .footer-links li {
+    margin: 0.5rem;
+  }
+
+  .click {
+    width: 180px;
+    font-size: 12px;
+    padding: 0.7em 1.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 0.8rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  button,
+  .btn {
+    padding: 0.7em 1.5em;
+    font-size: 14px;
+  }
+
+  .logo {
+    height: 30px;
+  }
+
+  .service-icon {
+    font-size: 2rem;
+  }
+
+  .service-card-glass h3 {
+    font-size: 1.3rem;
+  }
+
+  .service-card-glass p {
+    font-size: 0.9rem;
+  }
+
+  .social-links a {
+    width: 35px;
+    height: 35px;
+  }
+
+  .copyright {
+    font-size: 0.8rem;
+  }
+
+  .click {
+    width: 160px;
+    font-size: 11px;
+    padding: 0.6em 1.2em;
+  }
+
+  /* Adjust form elements for small screens */
+  .form-submit-btn {
+    width: 100%;
+  }
+
+  .info-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .info-icon {
+    margin: 0 auto 1rem;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 360px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .container {
+    padding: 0 0.5rem;
+  }
+
+  .nav-links li a {
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .pricing-price {
+    font-size: 2.5rem;
+  }
+
+  .popular-choice {
+    font-size: 0.7rem;
+    width: 150px;
   }
 }
 
@@ -1570,7 +1968,11 @@ footer {
 .unique-card {
   flex: 1;
   min-width: 190px;
-  background-image: linear-gradient(163deg,var(--secondary-color) 0%, #3700ff 100%);
+  background-image: linear-gradient(
+    163deg,
+    var(--secondary-color) 0%,
+    #3700ff 100%
+  );
   border-radius: 20px;
   transition: all 0.3s;
   padding: 0;
@@ -1667,7 +2069,11 @@ footer {
   right: -50%;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at center, rgba(0, 102, 255, 0.1), transparent 70%);
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 102, 255, 0.1),
+    transparent 70%
+  );
   z-index: -1;
   animation: pulse-glow 8s infinite alternate;
 }
@@ -1708,7 +2114,11 @@ footer {
   left: 0;
   width: 100%;
   height: 5px;
-  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  background: linear-gradient(
+    90deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.6s ease;
@@ -1813,7 +2223,11 @@ footer {
   left: 0;
   width: 3px;
   height: 0;
-  background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+  background: linear-gradient(
+    to bottom,
+    var(--primary-color),
+    var(--secondary-color)
+  );
   transition: height 0.4s ease;
 }
 
@@ -1869,7 +2283,8 @@ footer {
   margin: 0 auto 1.5rem;
   border: 3px solid transparent;
   background: linear-gradient(white, white) padding-box,
-    linear-gradient(45deg, var(--primary-color), var(--secondary-color)) border-box;
+    linear-gradient(45deg, var(--primary-color), var(--secondary-color))
+      border-box;
   position: relative;
   transition: all 0.4s ease;
 }
@@ -1882,7 +2297,11 @@ footer {
   right: -3px;
   bottom: -3px;
   border-radius: 50%;
-  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  background: linear-gradient(
+    45deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
   z-index: -1;
   opacity: 0;
   transition: opacity 0.4s ease;
@@ -1954,7 +2373,11 @@ footer {
 }
 
 .social-icon:hover {
-  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  background: linear-gradient(
+    45deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
   transform: translateY(-5px);
   box-shadow: 0 5px 15px rgba(0, 102, 255, 0.4);
   color: white;
@@ -1968,7 +2391,8 @@ footer {
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   border: 1px solid rgba(0, 102, 255, 0.2);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), inset 0 0 20px rgba(0, 102, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3),
+    inset 0 0 20px rgba(0, 102, 255, 0.1);
   position: relative;
   overflow: hidden;
   z-index: 1;
@@ -1981,7 +2405,11 @@ footer {
   left: -50%;
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle at center, rgba(0, 102, 255, 0.1), transparent 70%);
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 102, 255, 0.1),
+    transparent 70%
+  );
   z-index: -1;
   animation: rotate-glow 15s linear infinite;
 }
@@ -2003,13 +2431,16 @@ footer {
   width: 100%;
   margin-top: 2rem; /* Zorgt voor wat ruimte boven de knop */
   margin-bottom: 0; /* Verwijdert extra ruimte onder de knop */
-  
 }
 
 .neon-button {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(45deg, var(--primary-color) 60%, var(--secondary-color));
+  background: linear-gradient(
+    45deg,
+    var(--primary-color) 60%,
+    var(--secondary-color)
+  );
   border: none;
   color: white;
   padding: 0.8rem 2rem; /* Maak de padding iets kleiner */
@@ -2034,7 +2465,11 @@ footer {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+  background: linear-gradient(
+    45deg,
+    var(--secondary-color),
+    var(--primary-color)
+  );
   opacity: 0;
   transition: opacity 0.4s ease;
   z-index: -1;
@@ -2054,12 +2489,12 @@ footer {
 
 /* Webkit Browsers (Chrome, Edge, Safari) */
 ::-webkit-scrollbar {
-  width: 25px; /* Breedte van de scrollbar */
+  width: 15px; /* Reduced width for better mobile experience */
 }
 
 /* Achtergrond van de scrollbar (zwart) */
 ::-webkit-scrollbar-track {
-  background: black; 
+  background: black;
 }
 
 /* Scrollbar "knop" (blauw) */
@@ -2080,6 +2515,13 @@ footer {
   scrollbar-width: thin;
 }
 
+/* Hide scrollbar on small screens */
+@media (max-width: 576px) {
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+}
+
 /* Page Header Section */
 .page-header {
   padding: 8rem 0 4rem;
@@ -2091,7 +2533,11 @@ footer {
 
 /* Enhanced page header for all pages except index.html */
 body.inner-page .page-header {
-  background: linear-gradient(to right, rgba(10, 10, 10, 0.95), rgba(18, 18, 18, 0.9));
+  background: linear-gradient(
+    to right,
+    rgba(10, 10, 10, 0.95),
+    rgba(18, 18, 18, 0.9)
+  );
   position: relative;
   overflow: hidden;
 }
@@ -2103,7 +2549,11 @@ body.inner-page .page-header::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at top right, rgba(0, 102, 255, 0.15), transparent 70%);
+  background: radial-gradient(
+    circle at top right,
+    rgba(0, 102, 255, 0.15),
+    transparent 70%
+  );
   z-index: 0;
 }
 
@@ -2115,7 +2565,11 @@ body.inner-page .page-header::after {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  background: linear-gradient(
+    45deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
   filter: blur(40px);
   opacity: 0.5;
   z-index: 0;
@@ -2131,12 +2585,12 @@ body.inner-page .page-header .container {
   .about-card {
     padding: 2rem;
   }
-  
+
   .team-photo {
     width: 150px;
     height: 150px;
   }
-  
+
   body.inner-page .page-header {
     padding: 7rem 0 3rem;
   }
@@ -2146,16 +2600,16 @@ body.inner-page .page-header .container {
   .about-content-wrapper {
     grid-template-columns: 1fr;
   }
-  
+
   .about-image-container {
     order: -1;
     margin-bottom: 2rem;
   }
-  
+
   .about-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .team-grid {
     grid-template-columns: 1fr;
     max-width: 450px;
@@ -2168,11 +2622,11 @@ body.inner-page .page-header .container {
   .about-card {
     padding: 1.5rem;
   }
-  
+
   .feature-card-glass {
     padding: 1.5rem;
   }
-  
+
   .team-photo {
     width: 120px;
     height: 120px;
