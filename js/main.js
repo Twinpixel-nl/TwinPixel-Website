@@ -456,26 +456,79 @@ function initMobileMenu() {
   }
 }
 
+// Lightbox functionality - only initialize if elements exist
 const lightbox = document.querySelector(".lightbox");
 const images = document.querySelectorAll(".portfolio-img");
 
-images.forEach((img) => {
-  img.addEventListener("click", () => {
-    lightbox.classList.add("active");
-    lightbox.innerHTML = `<img src="${img.src}" alt="Project">`;
+if (images.length > 0 && lightbox) {
+  images.forEach((img) => {
+    img.addEventListener("click", () => {
+      lightbox.classList.add("active");
+      lightbox.innerHTML = `<img src="${img.src}" alt="Project">`;
+    });
   });
-});
 
-lightbox.addEventListener("click", () => {
-  lightbox.classList.remove("active");
-});
+  lightbox.addEventListener("click", () => {
+    lightbox.classList.remove("active");
+  });
+}
 
+// Enhanced FAQ functionality with animation
 document.querySelectorAll(".faq-question").forEach((item) => {
   item.addEventListener("click", () => {
     const parent = item.parentElement;
+    const isActive = parent.classList.contains("active");
+    
+    // Close all other FAQ items first
+    document.querySelectorAll(".faq-item.active").forEach((activeItem) => {
+      if (activeItem !== parent) {
+        activeItem.classList.remove("active");
+      }
+    });
+    
+    // Toggle the clicked item
     parent.classList.toggle("active");
+    
+    // Add ripple effect on click
+    const ripple = document.createElement("span");
+    ripple.classList.add("faq-ripple");
+    ripple.style.position = "absolute";
+    ripple.style.borderRadius = "50%";
+    ripple.style.backgroundColor = "rgba(0, 102, 255, 0.2)";
+    ripple.style.width = "100px";
+    ripple.style.height = "100px";
+    ripple.style.transform = "translate(-50%, -50%) scale(0)";
+    ripple.style.animation = "ripple 0.6s linear";
+    
+    // Position the ripple at click position
+    parent.style.position = "relative";
+    parent.appendChild(ripple);
+    
+    // Remove ripple after animation
+    setTimeout(() => {
+      ripple.remove();
+    }, 600);
   });
 });
+
+// Add ripple animation to CSS
+if (!document.querySelector("style#faq-animations")) {
+  const style = document.createElement("style");
+  style.id = "faq-animations";
+  style.textContent = `
+    @keyframes ripple {
+      0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 1;
+      }
+      100% {
+        transform: translate(-50%, -50%) scale(3);
+        opacity: 0;
+      }
+    }
+  `;
+  document.head.appendChild(style);
+}
 
 // Initialize header scroll effect
 function initHeaderScroll() {
