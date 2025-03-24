@@ -1,5 +1,43 @@
 // TwinPixel Website JavaScript
 
+// Translations for the website
+const translations = {
+  nl: {
+    // Navigation
+    nav_home: "Home",
+    nav_about: "Over ons",
+    nav_services: "Diensten",
+    nav_portfolio: "Portfolio",
+    nav_pricing: "Prijzen",
+    nav_contact: "Contact",
+
+    // Common elements
+    cta_title:
+      "Klaar om je online aanwezigheid naar een hoger niveau te tillen?",
+    cta_subtitle:
+      "Neem contact met ons op voor een vrijblijvend gesprek over hoe wij je kunnen helpen.",
+    cta_button: "Neem contact op",
+    copyright: "© 2025 TwinPixel. Alle rechten voorbehouden.",
+  },
+  en: {
+    // Navigation
+    nav_home: "Home",
+    nav_about: "About us",
+    nav_services: "Services",
+    nav_portfolio: "Portfolio",
+    nav_pricing: "Pricing",
+    nav_contact: "Contact",
+
+    // Common elements
+    cta_title: "Ready to take your online presence to the next level?",
+    cta_subtitle:
+      "Contact us for a free consultation about how we can help you.",
+    cta_button: "Contact us",
+    copyright: "© 2025 TwinPixel. All rights reserved.",
+  },
+};
+
+
 // Form validation function for the contact form
 function validateContactForm(form) {
   // Get form fields
@@ -338,42 +376,6 @@ function initTestimonialSlider() {
   setInterval(nextSlide, 5000);
 }
 
-// Translations for the website
-const translations = {
-  nl: {
-    // Navigation
-    nav_home: "Home",
-    nav_about: "Over ons",
-    nav_services: "Diensten",
-    nav_portfolio: "Portfolio",
-    nav_pricing: "Prijzen",
-    nav_contact: "Contact",
-
-    // Common elements
-    cta_title:
-      "Klaar om je online aanwezigheid naar een hoger niveau te tillen?",
-    cta_subtitle:
-      "Neem contact met ons op voor een vrijblijvend gesprek over hoe wij je kunnen helpen.",
-    cta_button: "Neem contact op",
-    copyright: "© 2025 TwinPixel. Alle rechten voorbehouden.",
-  },
-  en: {
-    // Navigation
-    nav_home: "Home",
-    nav_about: "About us",
-    nav_services: "Services",
-    nav_portfolio: "Portfolio",
-    nav_pricing: "Pricing",
-    nav_contact: "Contact",
-
-    // Common elements
-    cta_title: "Ready to take your online presence to the next level?",
-    cta_subtitle:
-      "Contact us for a free consultation about how we can help you.",
-    cta_button: "Contact us",
-    copyright: "© 2025 TwinPixel. All rights reserved.",
-  },
-};
 
 // Helper function to set a cookie
 function setCookie(name, value, days) {
@@ -423,29 +425,28 @@ function switchLanguage(lang, updateHash = true) {
     });
 
     // Then add active class to the selected language button
-    const activeButton = Array.from(langButtons).find(
-      (btn) => btn.textContent.toLowerCase() === lang.toLowerCase()
-    );
+    langButtons.forEach((btn) => {
+      const btnLang = btn.getAttribute("href").substring(1); // Remove the # symbol
+      if (btnLang.toLowerCase() === lang.toLowerCase()) {
+        // Add active class with animation
+        btn.classList.add("active");
 
-    if (activeButton) {
-      // Add active class with animation
-      activeButton.classList.add("active");
+        // Add animation effect
+        btn.style.animation = "none";
+        setTimeout(() => {
+          btn.style.animation = "pulse 1.5s";
+        }, 10);
+      }
+    });
 
-      // Add animation effect
-      activeButton.style.animation = "none";
-      setTimeout(() => {
-        activeButton.style.animation = "pulse 1.5s";
-      }, 10);
-
-      // Update the indicator position
-      const languageButtons = activeButton.closest(".language-buttons");
-      if (languageButtons) {
-        // Apply a transition effect to the indicator
-        if (lang.toLowerCase() === "en") {
-          languageButtons.classList.add("en-active");
-        } else {
-          languageButtons.classList.remove("en-active");
-        }
+    // Update the indicator position
+    const languageButtons = document.querySelector(".language-buttons");
+    if (languageButtons) {
+      // Apply a transition effect to the indicator
+      if (lang.toLowerCase() === "en") {
+        languageButtons.classList.add("en-active");
+      } else {
+        languageButtons.classList.remove("en-active");
       }
     }
   }
