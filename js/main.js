@@ -18,6 +18,73 @@ const translations = {
       "Neem contact met ons op voor een vrijblijvend gesprek over hoe wij je kunnen helpen.",
     cta_button: "Neem contact op",
     copyright: "© 2025 TwinPixel. Alle rechten voorbehouden.",
+    
+    // Form validation messages
+    form_name_required: "Vul alstublieft uw naam in.",
+    form_email_required: "Vul alstublieft uw e-mailadres in.",
+    form_email_invalid: "Vul alstublieft een geldig e-mailadres in.",
+    form_subject_required: "Vul alstublieft een onderwerp in.",
+    form_message_required: "Vul alstublieft een bericht in.",
+    
+    // Common buttons and actions
+    button_send: "Verstuur",
+    button_submit: "Verzenden",
+    button_read_more: "Lees meer",
+    button_view_more: "Bekijk meer",
+    button_learn_more: "Meer informatie",
+    button_contact: "Contact opnemen",
+    button_schedule: "Afspraak maken",
+    
+    // Common website sections
+    section_services: "Diensten",
+    section_portfolio: "Portfolio",
+    section_about: "Over ons",
+    section_team: "Ons team",
+    section_testimonials: "Wat klanten zeggen",
+    section_faq: "Veelgestelde vragen",
+    section_contact: "Contact",
+    section_pricing: "Prijzen",
+    
+    // Alert and notification messages
+    alert_success: "Succes! Uw bericht is verzonden.",
+    alert_error: "Er is een fout opgetreden. Probeer het opnieuw.",
+    
+    // Time-related terms
+    time_days: "dagen",
+    time_hours: "uren",
+    time_minutes: "minuten",
+    time_seconds: "seconden",
+    
+    // Generic website terms
+    term_loading: "Laden...",
+    term_search: "Zoeken",
+    term_filter: "Filteren",
+    term_sort: "Sorteren",
+    term_share: "Delen",
+    term_follow: "Volgen",
+    term_like: "Vind ik leuk",
+    term_comment: "Reageren",
+    
+    // SEO and meta descriptions
+    meta_description: "TwinPixel levert professionele websites die perfect aansluiten bij jouw bedrijf. Geen standaard templates, maar maatwerk met persoonlijke aandacht.",
+    
+    // Error pages
+    error_404_title: "Pagina niet gevonden",
+    error_404_message: "De pagina die u zoekt bestaat niet of is verplaatst.",
+    error_404_button: "Terug naar home",
+    
+    // Unique selling points
+    usp_fast_delivery: "Geen lange wachttijden, wij leveren binnen afgesproken deadlines.",
+    usp_custom_design: "Geen standaard templates, maar een uniek design dat past bij jouw merk.",
+    usp_competitive_prices: "Professionele kwaliteit zonder de hoge kosten van grote bureaus.",
+    usp_personal_approach: "Persoonlijke aanpak",
+    usp_direct_contact: "Direct contact met de designers en developers die aan jouw project werken.",
+    
+    // Call to action buttons
+    cta_read_more_about: "LEES MEER OVER ONS",
+    cta_view_services: "BEKIJK AL ONZE DIENSTEN",
+    cta_view_portfolio: "BEKIJK ONS VOLLEDIGE PORTFOLIO",
+    cta_view_pricing: "BEKIJK ALLE PRIJZEN EN PAKKETTEN",
   },
   en: {
     // Navigation
@@ -34,6 +101,73 @@ const translations = {
       "Contact us for a free consultation about how we can help you.",
     cta_button: "Contact us",
     copyright: "© 2025 TwinPixel. All rights reserved.",
+    
+    // Form validation messages
+    form_name_required: "Please enter your name.",
+    form_email_required: "Please enter your email address.",
+    form_email_invalid: "Please enter a valid email address.",
+    form_subject_required: "Please enter a subject.",
+    form_message_required: "Please enter a message.",
+    
+    // Common buttons and actions
+    button_send: "Send",
+    button_submit: "Submit",
+    button_read_more: "Read more",
+    button_view_more: "View more",
+    button_learn_more: "Learn more",
+    button_contact: "Contact us",
+    button_schedule: "Schedule appointment",
+    
+    // Common website sections
+    section_services: "Services",
+    section_portfolio: "Portfolio",
+    section_about: "About us",
+    section_team: "Our team",
+    section_testimonials: "What clients say",
+    section_faq: "Frequently asked questions",
+    section_contact: "Contact",
+    section_pricing: "Pricing",
+    
+    // Alert and notification messages
+    alert_success: "Success! Your message has been sent.",
+    alert_error: "An error occurred. Please try again.",
+    
+    // Time-related terms
+    time_days: "days",
+    time_hours: "hours",
+    time_minutes: "minutes",
+    time_seconds: "seconds",
+    
+    // Generic website terms
+    term_loading: "Loading...",
+    term_search: "Search",
+    term_filter: "Filter",
+    term_sort: "Sort",
+    term_share: "Share",
+    term_follow: "Follow",
+    term_like: "Like",
+    term_comment: "Comment",
+    
+    // SEO and meta descriptions
+    meta_description: "TwinPixel delivers professional websites that perfectly match your business. No standard templates, but custom work with personal attention.",
+    
+    // Error pages
+    error_404_title: "Page not found",
+    error_404_message: "The page you are looking for does not exist or has been moved.",
+    error_404_button: "Back to home",
+    
+    // Unique selling points
+    usp_fast_delivery: "No long waiting times, we deliver within agreed deadlines.",
+    usp_custom_design: "No standard templates, but a unique design that matches your brand.",
+    usp_competitive_prices: "Professional quality without the high costs of large agencies.",
+    usp_personal_approach: "Personal approach",
+    usp_direct_contact: "Direct contact with the designers and developers working on your project.",
+    
+    // Call to action buttons
+    cta_read_more_about: "READ MORE ABOUT US",
+    cta_view_services: "VIEW ALL OUR SERVICES",
+    cta_view_portfolio: "VIEW OUR FULL PORTFOLIO",
+    cta_view_pricing: "VIEW ALL PRICES AND PACKAGES",
   },
 };
 
@@ -45,16 +179,22 @@ function validateContactForm(form) {
   const email = form.querySelector("#email");
   const subject = form.querySelector("#subject");
   const message = form.querySelector("#message");
+  
+  // Get current language
+  const currentLang = document.documentElement.lang || "nl";
+  
+  // Get translations for the current language
+  const t = translations[currentLang] || translations.nl;
 
   // Validate required fields
   if (!name.value.trim()) {
-    alert("Vul alstublieft uw naam in.");
+    alert(t.form_name_required);
     name.focus();
     return false;
   }
 
   if (!email.value.trim()) {
-    alert("Vul alstublieft uw e-mailadres in.");
+    alert(t.form_email_required);
     email.focus();
     return false;
   }
@@ -62,19 +202,19 @@ function validateContactForm(form) {
   // Basic email validation
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailRegex.test(email.value.trim())) {
-    alert("Vul alstublieft een geldig e-mailadres in.");
+    alert(t.form_email_invalid);
     email.focus();
     return false;
   }
 
   if (!subject.value.trim()) {
-    alert("Vul alstublieft een onderwerp in.");
+    alert(t.form_subject_required);
     subject.focus();
     return false;
   }
 
   if (!message.value.trim()) {
-    alert("Vul alstublieft een bericht in.");
+    alert(t.form_message_required);
     message.focus();
     return false;
   }
@@ -541,6 +681,10 @@ function updatePageContent(lang) {
   if (copyright) {
     copyright.textContent = t.copyright;
   }
+  
+  // Translate all text elements on the page that aren't already handled
+  // This will catch any text that isn't specifically targeted above
+  translateAllTextElements(lang);
 
   // Update page-specific content based on the current page
   const currentPage = window.location.pathname.split("/").pop() || "index.html";
@@ -564,6 +708,242 @@ function updatePageContent(lang) {
     updateHomePage(lang);
     console.log("No specific page matched, defaulting to home page");
   }
+}
+
+// New function to translate all text elements on the page
+function translateAllTextElements(lang) {
+  const t = translations[lang];
+  if (!t) return;
+  
+  // Get all text-containing elements
+  const textElements = document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, span, a, button, li, label, figcaption, blockquote');
+  
+  // Specific translations for unique selling points - try different selectors
+  // First attempt with feature-card selectors
+  let uspFastDelivery = document.querySelector('.feature-card:nth-of-type(1) p');
+  if (!uspFastDelivery) {
+    // Try alternative selectors
+    const allParagraphs = document.querySelectorAll('p');
+    for (const p of allParagraphs) {
+      if (p.textContent.includes('Geen lange wachttijden') || 
+          p.textContent.includes('No long waiting times')) {
+        uspFastDelivery = p;
+        break;
+      }
+    }
+  }
+  if (uspFastDelivery) {
+    uspFastDelivery.textContent = t.usp_fast_delivery;
+    uspFastDelivery.setAttribute('data-translated', 'true');
+  }
+  
+  // For the second unique selling point (custom design)
+  let uspCustomDesign = document.querySelector('.feature-card:nth-of-type(2) p');
+  if (!uspCustomDesign) {
+    // Try alternative selectors
+    const allParagraphs = document.querySelectorAll('p');
+    for (const p of allParagraphs) {
+      if (p.textContent.includes('Geen standaard templates') || 
+          p.textContent.includes('No standard templates') ||
+          p.textContent.includes('uniek design')) {
+        uspCustomDesign = p;
+        break;
+      }
+    }
+  }
+  if (uspCustomDesign) {
+    uspCustomDesign.textContent = t.usp_custom_design;
+    uspCustomDesign.setAttribute('data-translated', 'true');
+  }
+  
+  let uspCompetitivePrices = document.querySelector('.feature-card:nth-of-type(3) p');
+  if (!uspCompetitivePrices) {
+    // Try alternative selectors
+    const allParagraphs = document.querySelectorAll('p');
+    for (const p of allParagraphs) {
+      if (p.textContent.includes('Professionele kwaliteit') || 
+          p.textContent.includes('Professional quality')) {
+        uspCompetitivePrices = p;
+        break;
+      }
+    }
+  }
+  if (uspCompetitivePrices) {
+    uspCompetitivePrices.textContent = t.usp_competitive_prices;
+    uspCompetitivePrices.setAttribute('data-translated', 'true');
+  }
+  
+  // For the fourth unique selling point (personal approach)
+  let uspPersonalApproach = document.querySelector('.feature-card:nth-of-type(4) h3');
+  if (!uspPersonalApproach) {
+    // Try alternative selectors with broader matching
+    const allHeadings = document.querySelectorAll('h3');
+    for (const h of allHeadings) {
+      if (h.textContent.includes('Persoonlijke') || 
+          h.textContent.includes('Personal') ||
+          h.textContent.toLowerCase() === 'persoonlijke aanpak') {
+        uspPersonalApproach = h;
+        break;
+      }
+    }
+  }
+  if (uspPersonalApproach) {
+    uspPersonalApproach.textContent = t.usp_personal_approach;
+    uspPersonalApproach.setAttribute('data-translated', 'true');
+  }
+  
+  let uspDirectContact = document.querySelector('.feature-card:nth-of-type(4) p');
+  if (!uspDirectContact) {
+    // Try alternative selectors
+    const allParagraphs = document.querySelectorAll('p');
+    for (const p of allParagraphs) {
+      if (p.textContent.includes('Direct contact met') || 
+          p.textContent.includes('Direct contact with')) {
+        uspDirectContact = p;
+        break;
+      }
+    }
+  }
+  if (uspDirectContact) {
+    uspDirectContact.textContent = t.usp_direct_contact;
+    uspDirectContact.setAttribute('data-translated', 'true');
+  }
+  
+  // Translate CTA buttons
+  const readMoreAboutBtn = document.querySelector('#over-ons-preview .cta-button .btn');
+  if (readMoreAboutBtn) {
+    readMoreAboutBtn.textContent = t.button_read_more;
+    readMoreAboutBtn.setAttribute('data-translated', 'true');
+  }
+  
+  const viewServicesBtn = document.querySelector('#diensten-preview .cta-button .btn');
+  if (viewServicesBtn) {
+    viewServicesBtn.textContent = t.cta_view_services;
+    viewServicesBtn.setAttribute('data-translated', 'true');
+  }
+  
+  const viewPortfolioBtn = document.querySelector('#portfolio-preview .cta-button .btn');
+  if (viewPortfolioBtn) {
+    viewPortfolioBtn.textContent = t.cta_view_portfolio;
+    viewPortfolioBtn.setAttribute('data-translated', 'true');
+  }
+  
+  const viewPricingBtn = document.querySelector('#prijzen-preview .cta-button .btn');
+  if (viewPricingBtn) {
+    viewPricingBtn.textContent = t.cta_view_pricing;
+    viewPricingBtn.setAttribute('data-translated', 'true');
+  }
+  
+  // Additional direct translations for specific elements that might be missed
+  // Try to find and translate the second unique selling point if it wasn't caught earlier
+  if (!uspCustomDesign) {
+    const allElements = document.querySelectorAll('*');
+    for (const el of allElements) {
+      if (el.textContent && el.textContent.includes('Geen standaard templates')) {
+        el.textContent = t.usp_custom_design;
+        el.setAttribute('data-translated', 'true');
+        break;
+      }
+    }
+  }
+  
+  // Try to find and translate the personal approach heading if it wasn't caught earlier
+  if (!uspPersonalApproach) {
+    const allElements = document.querySelectorAll('*');
+    for (const el of allElements) {
+      if (el.textContent && el.textContent === 'Persoonlijke aanpak') {
+        el.textContent = t.usp_personal_approach;
+        el.setAttribute('data-translated', 'true');
+        break;
+      }
+    }
+  }
+  
+  // Process all other text elements
+  textElements.forEach(element => {
+    // Skip elements that have already been translated or marked as no-translate
+    if (element.hasAttribute('data-translated') || 
+        element.hasAttribute('data-no-translate') || 
+        element.closest('[data-no-translate]')) {
+      return;
+    }
+    
+    // Special case for "Geen standaard templates" text
+    if (element.textContent && element.textContent.includes('Geen standaard templates')) {
+      element.textContent = t.usp_custom_design;
+      element.setAttribute('data-translated', 'true');
+      return;
+    }
+    
+    // Special case for "Persoonlijke aanpak" text
+    if (element.textContent && element.textContent === 'Persoonlijke aanpak') {
+      element.textContent = t.usp_personal_approach;
+      element.setAttribute('data-translated', 'true');
+      return;
+    }
+    
+    // Skip empty elements or those with only whitespace
+    if (!element.textContent.trim()) {
+      return;
+    }
+    
+    // Skip elements with only numbers or special characters
+    if (/^[\d\s\W]+$/.test(element.textContent.trim())) {
+      return;
+    }
+    
+    // Check if we have a direct translation for this element's text
+    const text = element.textContent.trim();
+    const translationKey = `text_${text.toLowerCase().replace(/[^\w]+/g, '_')}`;
+    
+    if (t[translationKey]) {
+      // If we have a direct translation, use it
+      element.textContent = t[translationKey];
+    } else if (element.children.length === 0) {
+      // For elements without children, we can try to auto-translate common phrases
+      // This is a simple example - in a real implementation, you might use a more sophisticated approach
+      
+      // Auto-translate common button texts
+      if (element.tagName === 'BUTTON' || 
+          (element.tagName === 'A' && element.classList.contains('btn'))) {
+        if (text.toLowerCase().includes('meer') && lang === 'en') {
+          element.textContent = text.replace(/meer/i, 'more');
+        } else if (text.toLowerCase().includes('more') && lang === 'nl') {
+          element.textContent = text.replace(/more/i, 'meer');
+        }
+        
+        if (text.toLowerCase().includes('lees') && lang === 'en') {
+          element.textContent = text.replace(/lees/i, 'read');
+        } else if (text.toLowerCase().includes('read') && lang === 'nl') {
+          element.textContent = text.replace(/read/i, 'lees');
+        }
+        
+        if (text.toLowerCase().includes('bekijk') && lang === 'en') {
+          element.textContent = text.replace(/bekijk/i, 'view');
+        } else if (text.toLowerCase().includes('view') && lang === 'nl') {
+          element.textContent = text.replace(/view/i, 'bekijk');
+        }
+      }
+      
+      // Check for specific text patterns that need translation
+      if (text.toUpperCase() === "LEES MEER OVER ONS" && lang === "en") {
+        element.textContent = t.cta_read_more_about;
+      } else if (text.toUpperCase() === "READ MORE ABOUT US" && lang === "nl") {
+        element.textContent = t.cta_read_more_about;
+      }
+    }
+    
+    // Mark as translated to avoid processing again
+    element.setAttribute('data-translated', 'true');
+  });
+  
+  // After translation is complete, remove the data-translated attributes
+  // so elements can be translated again if language changes
+  setTimeout(() => {
+    document.querySelectorAll('[data-translated]').forEach(el => {
+      el.removeAttribute('data-translated');
+    });
+  }, 100);
 }
 
 // Function to update the home page content
