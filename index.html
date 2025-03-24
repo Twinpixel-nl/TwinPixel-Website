@@ -687,12 +687,32 @@
         }
       }
     </script>
-    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-    <df-messenger
-      chat-title="Pixie"
-      agent-id="dce6508a-1cc9-40cf-933d-a75707da044d"
-      language-code="nl"
-    ></df-messenger>
+   <!-- Laad Dialogflow Messenger -->
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+
+<!-- Styling buiten df-messenger -->
+<style>
+  df-messenger {
+    --df-messenger-bot-message: #0050ff;
+    --df-messenger-user-message: #000000;
+    --df-messenger-button-titlebar-color: #000000;
+    --df-messenger-button-titlebar-font-color: #ffffff;
+    --df-messenger-chat-background-color: #f9f9f9;
+    --df-messenger-font-color: #ffffff;
+    --df-messenger-input-box-color: #ffffff;
+    --df-messenger-send-icon: #0050ff;
+    --df-messenger-chip-color: #0050ff;
+    --df-messenger-chip-font-color: #ffffff;
+  }
+</style>
+
+<df-messenger
+intent="WELCOME"
+  chat-title="Pixie"
+  agent-id="dce6508a-1cc9-40cf-933d-a75707da044d"
+  language-code="nl"
+  chat-icon="images/pixie.png">
+</df-messenger>
     
   </body>
 </html>
