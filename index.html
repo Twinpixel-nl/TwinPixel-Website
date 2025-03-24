@@ -739,23 +739,29 @@
       if (!messenger) return;
 
       const iframeCheck = setInterval(() => {
-        const iframe = messenger.shadowRoot?.querySelector("iframe");
-        if (iframe) {
-          iframe.contentWindow.postMessage(
-            { event: "df-messenger-open" },
-            "*"
-          );
-          clearInterval(iframeCheck);
-        }
-      }, 300);
-    }
+  const iframe = messenger.shadowRoot?.querySelector("iframe");
+  if (iframe) {
+    // Open de chat
+    iframe.contentWindow.postMessage(
+      { event: "df-messenger-open" },
+      "*"
+    );
 
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 100) {
-        triggerWelcomeEvent();
-      }
-    });
-  });
+    // Na klein beetje delay: stuur de WELCOME intent
+    setTimeout(() => {
+      iframe.contentWindow.postMessage(
+        {
+          event: "df-event",
+          eventName: "WELCOME", // Let op: dit moet een event zijn in Dialogflow
+          languageCode: "nl"
+        },
+        "*"
+      );
+    }, 500);
+
+    clearInterval(iframeCheck);
+  }
+}, 300);
 </script>
   </body>
 </html>
