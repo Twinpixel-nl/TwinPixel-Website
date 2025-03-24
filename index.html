@@ -685,45 +685,33 @@
         }
       }
     </script>
-    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+   <!-- Laad Dialogflow Messenger -->
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
 
-    <df-messenger
-      chat-title="Pixie"
-      agent-id="dce6508a-1cc9-40cf-933d-a75707da044d"
-      language-code="nl"
-      chat-icon="image/pixie.png"
-      wait-open="false">
-      <style>
-        df-messenger {
-          --df-messenger-bot-message: #0050ff;           /* blauwe bubbel */
-          --df-messenger-user-message: #000000;          /* zwart voor gebruiker */
-          --df-messenger-button-titlebar-color: #000000; /* zwarte header */
-          --df-messenger-button-titlebar-font-color: #ffffff;
-          --df-messenger-chat-background-color: #f9f9f9;
-          --df-messenger-font-color: #ffffff;            /* witte tekst in bubbels */
-          --df-messenger-input-box-color: #ffffff;
-          --df-messenger-send-icon: #0050ff;
-          --df-messenger-chip-color: #0050ff;
-          --df-messenger-chip-font-color: #ffffff;
-        }
-      </style>
-    </df-messenger>
-    
-    <script>
-      window.addEventListener('dfMessengerLoaded', function (event) {
-        const messenger = document.querySelector("df-messenger");
-        const iframe = messenger.shadowRoot.querySelector("iframe");
-        iframe.addEventListener("load", () => {
-          const innerDoc = iframe.contentDocument || iframe.contentWindow.document;
-          const input = innerDoc.querySelector("input.chat-input");
-          if (input) {
-            input.value = "start";
-            const event = new KeyboardEvent('keydown', { key: 'Enter', keyCode: 13, which: 13 });
-            input.dispatchEvent(event);
-          }
-        });
-      });
-    </script>
+<!-- Styling buiten df-messenger -->
+<style>
+  df-messenger {
+    --df-messenger-bot-message: #0050ff;
+    --df-messenger-user-message: #000000;
+    --df-messenger-button-titlebar-color: #000000;
+    --df-messenger-button-titlebar-font-color: #ffffff;
+    --df-messenger-chat-background-color: #f9f9f9;
+    --df-messenger-font-color: #ffffff;
+    --df-messenger-input-box-color: #ffffff;
+    --df-messenger-send-icon: #0050ff;
+    --df-messenger-chip-color: #0050ff;
+    --df-messenger-chip-font-color: #ffffff;
+  }
+</style>
+
+<df-messenger
+  chat-title="Pixie"
+  agent-id="dce6508a-1cc9-40cf-933d-a75707da044d"
+  language-code="nl"
+  chat-icon="image/pixie.png"
+  wait-open="false"
+  trigger-event="WELCOME">
+</df-messenger>
     
     
   </body>
