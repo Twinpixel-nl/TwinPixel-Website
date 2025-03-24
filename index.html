@@ -728,6 +728,39 @@
   trigger-event="WELCOME">
 </df-messenger>
 
+
+<script>
+  window.addEventListener('dfMessengerLoaded', function () {
+    let triggered = false;
+
+    function triggerWelcomeEvent() {
+      if (triggered) return;
+      triggered = true;
+
+      const messenger = document.querySelector("df-messenger");
+      if (!messenger) return;
+
+      const iframeCheck = setInterval(() => {
+        const iframe = messenger.shadowRoot?.querySelector("iframe");
+        if (iframe) {
+          iframe.contentWindow.postMessage(
+            { event: "df-messenger-open" },
+            "*"
+          );
+          clearInterval(iframeCheck);
+        }
+      }, 300);
+    }
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        triggerWelcomeEvent();
+      }
+    });
+  });
+</script>
   </body>
 </html>
+
+
  
