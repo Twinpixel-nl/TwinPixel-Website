@@ -690,7 +690,27 @@
       chat-title="Pixie"
       agent-id="dce6508a-1cc9-40cf-933d-a75707da044d"
       language-code="nl"
-    ></df-messenger>
+      chat-icon="image/pixie.png"
+      intent="Default Welcome Intent"
+      wait-open="false"
+    >
+      <style>
+        df-messenger {
+          --df-messenger-bot-message: #000000;
+          --df-messenger-user-message: #0050ff;
+          --df-messenger-button-titlebar-color: #000000;
+          --df-messenger-button-titlebar-font-color: #ffffff;
+          --df-messenger-chat-background-color: #f9f9f9;
+          --df-messenger-font-color: #000000;
+          --df-messenger-input-box-color: #ffffff;
+          --df-messenger-send-icon: #0050ff;
+          --df-messenger-chip-border-color: #e0e0e0;
+          --df-messenger-chip-color: #0050ff;
+          --df-messenger-chip-font-color: #ffffff;
+        }
+      </style>
+    </df-messenger>
+    
     
   </body>
 </html>
