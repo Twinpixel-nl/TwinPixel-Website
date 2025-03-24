@@ -685,32 +685,42 @@
         }
       }
     </script>
-   <!-- Laad Dialogflow Messenger -->
+ <!-- Laad Dialogflow Messenger -->
 <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
 
 <!-- Styling buiten df-messenger -->
 <style>
   df-messenger {
-    --df-messenger-bot-message: #0050ff;
-    --df-messenger-user-message: #000000;
-    --df-messenger-button-titlebar-color: #000000;
-    --df-messenger-button-titlebar-font-color: #ffffff;
-    --df-messenger-chat-background-color: #f9f9f9;
-    --df-messenger-font-color: #ffffff;
-    --df-messenger-input-box-color: #ffffff;
-    --df-messenger-send-icon: #0050ff;
-    --df-messenger-chip-color: #0050ff;
-    --df-messenger-chip-font-color: #ffffff;
+    /* Kleuren */
+    --df-messenger-bot-message: rgba(0, 80, 255, 0.85);       /* semi-transparant blauw */
+    --df-messenger-user-message: rgba(0, 0, 0, 0.8);           /* subtiele zwart */
+    --df-messenger-button-titlebar-color: #000000;            /* zwarte header */
+    --df-messenger-button-titlebar-font-color: #ffffff;       /* witte tekst header */
+    --df-messenger-chat-background-color: rgba(255, 255, 255, 0.05); /* vrijwel transparant */
+    --df-messenger-font-color: #ffffff;                       /* witte tekst in bubbels */
+    --df-messenger-input-box-color: rgba(255, 255, 255, 0.9); /* lichte input */
+
+    /* Stijl details */
+    border-radius: 16px !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px);
+  }
+
+  /* Zorg dat iframe zelf ook geen witte achtergrond heeft */
+  df-messenger iframe {
+    background: transparent !important;
   }
 </style>
 
 <df-messenger
-intent="WELCOME"
+  intent="WELCOME"
   chat-title="Pixie"
   agent-id="dce6508a-1cc9-40cf-933d-a75707da044d"
   language-code="nl"
-  chat-icon="images/pixie.png">
+  chat-icon="images/pixie.png"
+  wait-open="false"
+  trigger-event="WELCOME">
 </df-messenger>
-    
+
   </body>
 </html>
