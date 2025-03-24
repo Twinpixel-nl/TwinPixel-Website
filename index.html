@@ -686,14 +686,13 @@
       }
     </script>
     <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+
     <df-messenger
       chat-title="Pixie"
       agent-id="dce6508a-1cc9-40cf-933d-a75707da044d"
       language-code="nl"
       chat-icon="image/pixie.png"
-      intent="Default Welcome Intent"
-      wait-open="false"
-    >
+      wait-open="false">
       <style>
         df-messenger {
           --df-messenger-bot-message: #000000;
@@ -704,12 +703,25 @@
           --df-messenger-font-color: #000000;
           --df-messenger-input-box-color: #ffffff;
           --df-messenger-send-icon: #0050ff;
-          --df-messenger-chip-border-color: #e0e0e0;
-          --df-messenger-chip-color: #0050ff;
-          --df-messenger-chip-font-color: #ffffff;
         }
       </style>
     </df-messenger>
+    
+    <script>
+      window.addEventListener('dfMessengerLoaded', function (event) {
+        const messenger = document.querySelector("df-messenger");
+        const iframe = messenger.shadowRoot.querySelector("iframe");
+        iframe.addEventListener("load", () => {
+          const innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+          const input = innerDoc.querySelector("input.chat-input");
+          if (input) {
+            input.value = "start";
+            const event = new KeyboardEvent('keydown', { key: 'Enter', keyCode: 13, which: 13 });
+            input.dispatchEvent(event);
+          }
+        });
+      });
+    </script>
     
     
   </body>
