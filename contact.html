@@ -396,20 +396,26 @@
          </div>
      </section>
  
+<!-- Map + Weer Container -->
+<section class="map-weather-wrapper fade-in">
+  <!-- Map Section -->
+  <div class="map-container">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2456.5887685021!2d5.6603978!3d51.9747693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c7a43c5c5e2d8f%3A0x9d5c9d83f0ac497a!2sOude%20Diedenweg%2016%2C%206704%20AD%20Wageningen!5e0!3m2!1snl!2snl!4v1645542345678!5m2!1snl!2snl"
+      width="100%"
+      height="450"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+    ></iframe>
+  </div>
 
-    <!-- Map Section -->
-    <section class="map-section fade-in">
-      <div class="map-container">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2456.5887685021!2d5.6603978!3d51.9747693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c7a43c5c5e2d8f%3A0x9d5c9d83f0ac497a!2sOude%20Diedenweg%2016%2C%206704%20AD%20Wageningen!5e0!3m2!1snl!2snl!4v1645542345678!5m2!1snl!2snl"
-          width="100%"
-          height="450"
-          style="border: 0"
-          allowfullscreen=""
-          loading="lazy"
-        ></iframe>
-      </div>
-    </section>
+  <!-- Weerblok -->
+  <div id="weerblok" class="weer">
+    <h2>🌦 Huidig weer in Ede</h2>
+    <div id="weerdata">Laden...</div>
+  </div>
+</section>
 
     <!-- Footer -->
     <footer>
@@ -503,5 +509,42 @@
         }
       }
     </script>
+
+
+    <script>
+      const API_KEY = 'df9943d235db91f43563747e06a57e99';
+      const STAD = 'Wageningen';
+  
+      async function laadWeer() {
+          const url = `https://api.openweathermap.org/data/2.5/weather?q=${STAD}&units=metric&appid=${API_KEY}&lang=nl`;
+  
+          try {
+              const response = await fetch(url);
+              const data = await response.json();
+              console.log("Weerdata:", data);
+  
+              // ❗ Check of er echt data is
+              if (!data || data.cod !== 200) {
+                  throw new Error(data.message || "Onbekende fout");
+              }
+  
+              const temp = data.main.temp;
+              const beschrijving = data.weather[0].description;
+              const icoon = data.weather[0].icon;
+              const icoonUrl = `https://openweathermap.org/img/wn/${icoon}@2x.png`;
+  
+              document.getElementById('weerdata').innerHTML = `
+                  <img src="${icoonUrl}" alt="Weer icoon" class="mx-auto">
+                  <p class="font-bold text-xl">${temp}°C</p>
+                  <p class="capitalize">${beschrijving}</p>
+              `;
+          } catch (err) {
+              console.error("Weer laden mislukt:", err);
+              document.getElementById('weerdata').textContent = "⚠️ Weerdata kon niet geladen worden.";
+          }
+      }
+  
+      laadWeer();
+  </script>
   </body>
 </html>
