@@ -1119,8 +1119,8 @@ function updateHomePage(lang) {
     if (testimonial1Text) {
       testimonial1Text.textContent =
         lang === "nl"
-          ? '"TwinPixel heeft onze verwachtingen overtroffen. Ze hebben niet alleen een prachtige website opgeleverd, maar ook meegedacht over onze online strategie. De website is snel, gebruiksvriendelijk en ziet er fantastisch uit!"'
-          : '"TwinPixel exceeded our expectations. They not only delivered a beautiful website, but also thought along with our online strategy. The website is fast, user-friendly, and looks fantastic!"';
+          ? '"TwinPixel heeft mijn verwachtingen overtroffen. Ze hebben niet alleen een prachtige website opgeleverd, maar dit ook binnen een week gedaan! De website is snel, gebruiksvriendelijk en ziet er fantastisch uit!"'
+          : '"TwinPixel exceeded my expectations. They not only delivered a beautiful website, but did so within a week! The website is fast, user-friendly, and looks fantastic!"';
     }
 
     const testimonial1Author = testimonialCards[0].querySelector(
@@ -1128,7 +1128,7 @@ function updateHomePage(lang) {
     );
     if (testimonial1Author) {
       testimonial1Author.textContent =
-        lang === "nl" ? "Lisa Jansen" : "Lisa Jansen";
+        lang === "nl" ? "Harvey Meurs" : "Harvey Meurs";
     }
 
     const testimonial1Company = testimonialCards[0].querySelector(
@@ -1136,7 +1136,7 @@ function updateHomePage(lang) {
     );
     if (testimonial1Company) {
       testimonial1Company.textContent =
-        lang === "nl" ? "Eigenaar, Bloemen & Zo" : "Owner, Bloemen & Zo";
+        lang === "nl" ? "Eigenaar, De wet van staal" : "Owner, De wet van staal";
     }
 
     // Second testimonial
@@ -1171,8 +1171,8 @@ function updateHomePage(lang) {
     if (testimonial3Text) {
       testimonial3Text.textContent =
         lang === "nl"
-          ? '"De snelheid waarmee TwinPixel werkt is indrukwekkend. Binnen twee weken hadden we een volledig functionerende webshop die er geweldig uitziet. De communicatie was uitstekend en ze waren altijd bereid om aanpassingen te maken."'
-          : '"The speed at which TwinPixel works is impressive. Within two weeks, we had a fully functioning webshop that looks great. The communication was excellent, and they were always willing to make adjustments."';
+          ? '"Twinpixel heeft mij geholpen met het bouwen van mijn eerste website.Door de professionele hulp van Twan en Emma hebben zij mijn perfecte website gecreëerd! Doordat zij goede feedback momenten inplannen is er ruimte om mijn feedback met hun te delen en andersom. Ook leggen zij goed uit waarom ze bepaalde elementen in de website hebben verwerkt, omdat dit beter oogt, sneller werkt of door andere redenen. Kan niets anders zeggen dat ik een fijne samenwerking heb gehad wat heeft geleid tot een mooi resultaat."'
+          : '"Twinpixel helped me build my first website. Thanks to the professional help of Twan and Emma, they created my perfect website! Because they schedule good feedback moments, there is room to share my feedback with them and vice versa. They also explain well why they have incorporated certain elements into the website, because it looks better, works faster, or for other reasons. I can only say that I have had a good collaboration that has resulted in a beautiful result."';
     }
 
     const testimonial3Author = testimonialCards[2].querySelector(
@@ -1180,7 +1180,7 @@ function updateHomePage(lang) {
     );
     if (testimonial3Author) {
       testimonial3Author.textContent =
-        lang === "nl" ? "Sandra Bakker" : "Sandra Bakker";
+        lang === "nl" ? "Britt Leander" : "Britt Leander";
     }
 
     const testimonial3Company = testimonialCards[2].querySelector(
@@ -1188,7 +1188,7 @@ function updateHomePage(lang) {
     );
     if (testimonial3Company) {
       testimonial3Company.textContent =
-        lang === "nl" ? "Oprichter, EcoStyle" : "Founder, EcoStyle";
+        lang === "nl" ? "Eigenaar, By Britt Nails" : "Owner, By Britt Nails";
     }
   }
 
