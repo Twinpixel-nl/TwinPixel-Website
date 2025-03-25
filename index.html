@@ -752,17 +752,6 @@
   chat-icon="Images/pixie.png">
 </df-messenger>
 
-<script>
-  window.addEventListener('load', () => {
-    const interval = setInterval(() => {
-      const iframe = document.querySelector('df-messenger iframe');
-      if (iframe) {
-        iframe.style.zIndex = '8999'; // lager dan menu
-        clearInterval(interval);
-      }
-    }, 500);
-  });
-</script>
     <!-- JavaScript -->
     <script src="js/main.js"></script>
   </body>
