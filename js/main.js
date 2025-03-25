@@ -1010,7 +1010,7 @@ function updateHomePage(lang) {
         : "Your <span>unique</span> website.<br>Fast, custom & affordable.";
   }
 
-  const heroText = document.querySelector(".hero-content p");
+  const heroText = document.querySelector(".hero-content .p1");
   if (heroText) {
     heroText.textContent =
       lang === "nl"
@@ -1685,7 +1685,7 @@ function updateAboutPage(lang) {
   const featureCards = document.querySelectorAll(".feature-card");
   if (featureCards.length >= 6) {
     // Fast delivery
-    const fastDeliveryTitle = featureCards[0].querySelector("h3");
+    const fastDeliveryTitle = featureCards[0].querySelector("h4");
     if (fastDeliveryTitle) {
       fastDeliveryTitle.textContent =
         lang === "nl" ? "Snelle levering" : "Fast delivery";
@@ -1700,7 +1700,7 @@ function updateAboutPage(lang) {
     }
 
     // 100% custom
-    const customTitle = featureCards[1].querySelector("h3");
+    const customTitle = featureCards[1].querySelector("h4");
     if (customTitle) {
       customTitle.textContent = lang === "nl" ? "100% maatwerk" : "100% custom";
     }
@@ -1714,7 +1714,7 @@ function updateAboutPage(lang) {
     }
 
     // Competitive prices
-    const pricesTitle = featureCards[2].querySelector("h3");
+    const pricesTitle = featureCards[2].querySelector("h4");
     if (pricesTitle) {
       pricesTitle.textContent =
         lang === "nl" ? "Scherpe prijzen" : "Competitive prices";
@@ -1729,7 +1729,7 @@ function updateAboutPage(lang) {
     }
 
     // Personal approach
-    const approachCardTitle = featureCards[3].querySelector("h3");
+    const approachCardTitle = featureCards[3].querySelector("h4");
     if (approachCardTitle) {
       approachCardTitle.textContent =
         lang === "nl" ? "Persoonlijke aanpak" : "Personal approach";
