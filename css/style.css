@@ -1778,9 +1778,15 @@ footer {
 
   .mobile-menu-btn {
     display: block;
-    z-index: 10005;
+    z-index: 1002;
   }
 
+  @media (max-width: 768px) {
+    df-messenger {
+      z-index: 9000 !important;
+    }
+  }
+  
   .mobile-menu-overlay {
     position: fixed;
     top: 0;
