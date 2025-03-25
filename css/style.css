@@ -79,6 +79,19 @@
 }
 
 
+df-messenger {
+  all: unset !important;
+  z-index: 1 !important;
+}
+
+df-messenger iframe {
+  position: fixed !important;
+  bottom: 24px !important;
+  right: 24px !important;
+  z-index: 1 !important;
+  pointer-events: auto !important;
+}
+
 
 /* Responsive voor schermen smaller dan 768px */
 @media (max-width: 768px) {
