@@ -725,20 +725,21 @@
   }
 
   /* Fix voor mobiel: forceer hoogte */
-  @media screen and (max-width: 768px) {
-    df-messenger {
-      width: 100% !important;
-      max-width: none;
-      left: 0 !important;
-      right: 0 !important;
-      bottom: 0 !important;
-      border-radius: 0 !important;
-    }
+  @media (max-width: 768px) {
+  df-messenger {
+    bottom: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 100% !important;
+    border-radius: 0 !important;
+  }
 
-    df-messenger iframe {
-      height: 90vh !important;
-      max-height: 90vh !important;
-    }
+  df-messenger iframe {
+    width: 100% !important;
+    height: 100% !important;
+    background: transparent !important;
+  }
   }
 </style>
 
