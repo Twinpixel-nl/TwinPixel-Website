@@ -1238,16 +1238,15 @@ function updateHomePage(lang) {
     // UX/UI card
     const uxTitle = serviceCards[2].querySelector("h3");
     if (uxTitle) {
-      uxTitle.textContent = lang === "nl" ? "UX/UI-Design" : "UX/UI Design";
+      uxTitle.textContent = lang === "nl" ? "Logo & branding" : "Logo & Branding";
     }
 
     const uxDesc = serviceCards[2].querySelector("p");
     if (uxDesc) {
       uxDesc.textContent =
         lang === "nl"
-          ? "Gebruiksvriendelijke en visueel aantrekkelijke interfaces die bezoekers omzetten in klanten. Intuïtief, toegankelijk en conversiegericht."
-          : "User-friendly and visually appealing interfaces that convert visitors into customers. Intuitive, accessible, and conversion-oriented.";
-    }
+          ? "Professioneel logo en branding ontwerp om je bedrijfsidentiteit te versterken."
+          : "Professional logo and branding design to strengthen your corporate identity.";
   }
 
   const servicesButton = document.querySelector(
@@ -3399,4 +3398,5 @@ function updateContactPage(lang) {
           : "After an initial conversation, we prepare a detailed quote. After approval, we start with the design, followed by development, testing, and launch. Throughout the entire process, we keep you informed and regularly ask for feedback.";
     }
   }
+}
 }
