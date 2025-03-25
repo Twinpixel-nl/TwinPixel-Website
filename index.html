@@ -727,21 +727,27 @@
   /* Fix voor mobiel: forceer hoogte */
   @media (max-width: 768px) {
   df-messenger {
+    all: unset !important;
+    position: fixed !important;
     bottom: 0 !important;
     right: 0 !important;
     width: 100% !important;
-    max-width: 100% !important;
     height: 100% !important;
-    border-radius: 0 !important;
-    backdrop-filter: none !important; /* <-- hier moet 'ie! */
+    z-index: 9999 !important;
   }
 
   df-messenger iframe {
+    position: fixed !important;
+    bottom: 0 !important;
+    right: 0 !important;
     width: 100% !important;
     height: 100% !important;
-    background: transparent !important;
+    border: none !important;
+    background: #000 !important; /* of transparent */
+    z-index: 9999 !important;
   }
-  }
+}
+
 </style>
 
 <df-messenger
