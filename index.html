@@ -725,62 +725,11 @@
 
 <df-messenger
   chat-title="Pixie"
+  intent="WELCOME"
   agent-id="dce6508a-1cc9-40cf-933d-a75707da044d"
   language-code="nl"
   chat-icon="Images/pixie.png">
 </df-messenger>
-
-
-<script>
-  window.addEventListener('dfMessengerLoaded', function () {
-    let triggered = false;
-
-    function triggerWelcomeEvent() {
-      if (triggered) return;
-      triggered = true;
-
-      const messenger = document.querySelector("df-messenger");
-      if (!messenger) return;
-
-      const iframeCheck = setInterval(() => {
-        const iframe = messenger.shadowRoot?.querySelector("iframe");
-        if (iframe) {
-          // Open chat
-          iframe.contentWindow.postMessage(
-            { event: "df-messenger-open" },
-            "*"
-          );
-
-          // Stuur WELCOME event na korte delay
-          setTimeout(() => {
-            iframe.contentWindow.postMessage(
-              {
-                event: "df-event",
-                eventName: "WELCOME",
-                languageCode: "nl"
-              },
-              "*"
-            );
-          }, 500);
-
-          clearInterval(iframeCheck);
-        }
-      }, 300);
-    }
-
-    // Scroll listener
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 100) {
-        triggerWelcomeEvent();
-      }
-    });
-  });
-</script>
-
-
-
- 
-
   </body>
 </html>
 
