@@ -694,7 +694,7 @@
 <!-- Styling buiten df-messenger -->
 <style>
   df-messenger {
-    /* Kleuren */
+    /* Basis styling */
     --df-messenger-chat-background-color: rgba(10, 10, 10, 0.95);
     --df-messenger-bot-message: rgba(0, 80, 255, 0.85);
     --df-messenger-user-message: rgba(0, 0, 0, 0.8);
@@ -704,22 +704,42 @@
     --df-messenger-input-box-color: rgba(255, 255, 255, 0.9);
     --df-messenger-chip-color: #0050ff;
     --df-messenger-chip-font-color: #ffffff;
+    
     border-radius: 16px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(8px);
 
-    /* Stijl details */
     position: fixed !important;
     bottom: 24px;
     right: 24px;
-    z-index: 999;
+    z-index: 9999;
+
+    /* Maximale hoogte en breedte op mobiel */
+    max-height: 80vh;
+    max-width: 90vw;
   }
 
   /* Zorg dat iframe zelf ook geen witte achtergrond heeft */
   df-messenger iframe {
-  background: transparent !important;
-}
+    background: transparent !important;
+  }
 
+  /* Fix voor mobiel: forceer hoogte */
+  @media screen and (max-width: 768px) {
+    df-messenger {
+      width: 100% !important;
+      max-width: none;
+      left: 0 !important;
+      right: 0 !important;
+      bottom: 0 !important;
+      border-radius: 0 !important;
+    }
+
+    df-messenger iframe {
+      height: 90vh !important;
+      max-height: 90vh !important;
+    }
+  }
 </style>
 
 <df-messenger
@@ -729,6 +749,7 @@
   language-code="nl"
   chat-icon="Images/pixie.png">
 </df-messenger>
+
   </body>
 </html>
 
