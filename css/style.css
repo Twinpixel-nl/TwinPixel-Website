@@ -26,30 +26,58 @@
   min-width: 300px;
 }
 
-
 .weer {
   flex: 1;
-  background: linear-gradient(to bottom right, #0a0a0a, #1c1f26); /* diepzwart met subtiel blauwgrijs */
+  background: linear-gradient(to bottom right, #0a0a0a, #1c1f26);
   color: #ffffff;
   padding: 20px;
   border-radius: 12px;
   height: 450px;
   box-sizing: border-box;
-  overflow: auto;
-  box-shadow: 0 0 10px rgba(0, 153, 255, 0.3); /* blauwe glow */
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 153, 255, 0.2);
   font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .weer h2 {
-  font-size: 1.4em;
-  margin-bottom: 15px;
+  font-size: 1.6em;
+  margin-bottom: 20px;
   color: #00aaff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 #weerdata {
-  font-size: 1.2em;
-  line-height: 1.6;
+  font-size: 1.4em;
+  line-height: 1.4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
+
+#weerdata span.temp {
+  font-size: 2.4em;
+  font-weight: bold;
+}
+
+#weerdata span.desc {
+  font-size: 1.2em;
+  color: #cccccc;
+}
+
+/* Subtiele animatie (optioneel) */
+.weer:hover {
+  box-shadow: 0 0 25px rgba(0, 153, 255, 0.4);
+  transition: box-shadow 0.3s ease;
+}
+
 
 
 /* Responsive voor schermen smaller dan 768px */
