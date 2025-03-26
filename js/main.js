@@ -1324,6 +1324,50 @@ function updatePortfolioPage(lang) {
   }
 }
 
+// ✅ Dynamische vertaling voor pricing.html
+function updatePricingPage(lang) {
+  const header = document.querySelector(".page-header h1");
+  if (header) header.textContent = lang === "nl" ? "Onze Prijzen" : "Our Pricing";
+
+  const introTitle = document.querySelector(".pricing-intro h3");
+  const introParagraphs = document.querySelectorAll(".pricing-intro p");
+  if (introTitle) {
+    introTitle.textContent =
+      lang === "nl"
+        ? "Transparante prijzen, geen verborgen kosten"
+        : "Transparent pricing, no hidden costs";
+  }
+  if (introParagraphs.length >= 2) {
+    introParagraphs[0].textContent =
+      lang === "nl"
+        ? "Bij TwinPixel werken we met een hybride prijsmodel: een eenmalig bedrag voor het maken van je website, en daarna een maandelijks bedrag voor hosting en kleine updates."
+        : "At TwinPixel, we use a hybrid pricing model: a one-time fee for building your website, followed by a monthly fee for hosting and minor updates.";
+
+    introParagraphs[1].textContent =
+      lang === "nl"
+        ? "We bieden verschillende pakketten aan die aansluiten bij verschillende behoeften en budgetten."
+        : "We offer various packages that cater to different needs and budgets.";
+  }
+
+  const modelTitle = document.querySelector(".pricing-info h3");
+  if (modelTitle)
+    modelTitle.textContent = lang === "nl" ? "Ons hybride prijsmodel" : "Our Hybrid Pricing Model";
+
+  const cards = document.querySelectorAll(".pricing-card");
+  const pricingData = {
+    nl: ["Starter", "Standaard", "Premium", "Maatwerk"],
+    en: ["Starter", "Standard", "Premium", "Custom"]
+  };
+  cards.forEach((card, i) => {
+    const title = card.querySelector(".pricing-title");
+    if (title) title.textContent = pricingData[lang][i];
+  });
+
+  const additionalSection = document.querySelector(".additional-pricing .section-title");
+  if (additionalSection)
+    additionalSection.textContent = lang === "nl" ? "Aanvullende Diensten" : "Additional Services";
+}
+
 // Function to update the home page content
 function updateHomePage(lang) {
   // Update hero section
