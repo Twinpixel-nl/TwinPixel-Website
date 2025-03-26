@@ -1002,6 +1002,22 @@ function translateAllTextElements(lang) {
 // Function to update the home page content
 function updateHomePage(lang) {
   // Update hero section
+
+  const featureCards = document.querySelectorAll(".unique-card");
+
+  // ✅ Vertaal titels van de feature cards
+  const cardTitles = {
+    nl: ["Snelle levering", "Maatwerk", "Scherpe prijzen", "Betrouwbare service"],
+    en: ["Fast delivery", "Custom solutions", "Competitive prices", "Reliable service"]
+  };
+
+  featureCards.forEach((card, index) => {
+    const titleElement = card.querySelector("h4");
+    if (titleElement && cardTitles[lang] && cardTitles[lang][index]) {
+      titleElement.textContent = cardTitles[lang][index];
+    }
+  });
+
   const heroTitle = document.querySelector(".hero-content h1");
   if (heroTitle) {
     heroTitle.innerHTML =
@@ -1249,12 +1265,11 @@ function updateHomePage(lang) {
           : "Professional logo and branding design to strengthen your corporate identity.";
   }
 
-  const servicesButton = document.querySelector(
-    ".btn .neon-button"
-  );
+  const servicesButton = document.querySelector(".btn .neon-button");
   if (servicesButton) {
-    servicesButton.textContent =
-      lang === "nl" ? "Bekijk al onze diensten" : "View all our services";
+    servicesButton.textContent = lang === "nl"
+      ? "Bekijk al onze diensten"
+      : "View all our services";
   }
 
   // Update portfolio section
