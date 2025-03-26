@@ -970,11 +970,6 @@ function translateAllTextElements(lang) {
         } else if (text.toLowerCase().includes('read') && lang === 'nl') {
           element.textContent = text.replace(/read/i, 'lees');
         }
-        if (text.toLowerCase().includes('bekijk al onze diensten') && lang === 'en') {
-          element.textContent = text.replace(/bekijk al onze diensten/i, 'view all our services');
-        } else if (text.toLowerCase().includes('view all our services') && lang === 'nl') {
-          element.textContent = text.replace(/view all our services/i, 'bekijk al onze diensten');
-        }
         
         if (text.toLowerCase().includes('bekijk') && lang === 'en') {
           element.textContent = text.replace(/bekijk/i, 'view');
@@ -1119,6 +1114,16 @@ function updateHomePage(lang) {
     aboutButton.textContent =
       lang === "nl" ? "Lees meer over ons" : "Read more about us";
   }
+
+  const ServicesButton = document.querySelector(
+    "#diensten-preview .btn .neon-button"
+  );
+  if (ServicesButton) {
+    ServicesButton.textContent =
+      lang === "nl" ? "Bekijk al onze diensten" : "view all our services";
+  }
+
+
 
   // Update testimonials section
   const testimonialsTitle = document.querySelector(
