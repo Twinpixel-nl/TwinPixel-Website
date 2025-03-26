@@ -740,7 +740,7 @@ function updatePageContent(lang) {
   translateAllTextElements(lang);
 
   // Update page-specific content based on the current page
-  const currentPage = window.location.pathname.split("/").pop() || "index.html";
+  const currentPage = window.location.pathname.toLowerCase();
   console.log("Current page:", currentPage);
 
   if (currentPage.includes("portfolio")) {
@@ -762,6 +762,102 @@ function updatePageContent(lang) {
     console.log("No specific page matched, defaulting to home page");
   }
 }
+
+function updateAboutPage(lang) {
+  if (lang === "en") {
+    // Paginaheader
+    const header = document.querySelector(".page-header h1");
+    if (header) header.textContent = "About TwinPixel";
+
+    // Verhaal achter TwinPixel
+    const storyTitle = document.querySelector(".about-story-section .section-title");
+    if (storyTitle) storyTitle.textContent = "The Story Behind TwinPixel";
+
+    const storyParagraphs = document.querySelectorAll(".about-story-section .about-content p");
+    if (storyParagraphs.length >= 3) {
+      storyParagraphs[0].textContent =
+        "TwinPixel was founded by Emma de Heer (UX designer) and Twan Meurs (developer), two students with a passion for web design and development. Together, we also have extensive business expertise, allowing us to build not only technically strong websites, but also websites that truly contribute to the success of your business.";
+      storyParagraphs[1].textContent =
+        "What started as a hobby during our studies has grown into a professional web design agency with a clear mission: to deliver affordable, high-quality websites to freelancers and small businesses.";
+      storyParagraphs[2].textContent =
+        "We believe every entrepreneur deserves a professional online presence, without the high costs that large agencies often charge. Thanks to our efficient way of working and focus on what truly matters, we can deliver high-quality websites at affordable prices.";
+    }
+
+    // Visie & Aanpak
+    const visionTitle = document.querySelector(".about-vision-section .section-title");
+    if (visionTitle) visionTitle.textContent = "Our Vision & Approach";
+
+    const visionHeadings = document.querySelectorAll(".about-vision-card h3");
+    const visionParagraphs = document.querySelectorAll(".about-vision-card p");
+    if (visionHeadings.length === 2 && visionParagraphs.length === 3) {
+      visionHeadings[0].textContent = "Our Vision";
+      visionHeadings[1].textContent = "Our Approach";
+
+      visionParagraphs[0].textContent =
+        "We envision a world where every entrepreneur, big or small, has access to professional web design services that help grow their business. No generic templates, but tailor-made websites that perfectly match the identity and goals of your business.";
+      visionParagraphs[1].textContent =
+        "At TwinPixel, we believe in a personal approach. We take the time to understand your business, target audience, and objectives before getting started. This allows us to create a website that is not only beautiful but also effective in achieving your goals.";
+      visionParagraphs[2].textContent =
+        "Our working method is transparent and direct. You always have direct contact with the designers and developers working on your project, without middlemen or account managers. This ensures faster communication, shorter lines, and ultimately a better result.";
+    }
+
+    // Waarom kiezen voor TwinPixel
+    const featuresTitle = document.querySelector(".about-features-section .section-title");
+    if (featuresTitle) featuresTitle.textContent = "Why Choose TwinPixel?";
+
+    const featureTitles = [
+      "Fast delivery",
+      "100% custom",
+      "Competitive prices",
+      "Personal approach",
+      "Responsive design",
+      "SEO optimized"
+    ];
+
+    const featureDescriptions = [
+      "No long waiting times. We deliver within agreed deadlines, so you can go online quickly.",
+      "No standard templates, but a unique design that perfectly fits your brand and goals.",
+      "Professional quality without the high costs of large agencies. Transparent pricing, no hidden costs.",
+      "Direct contact with the designers and developers working on your project. Short lines, fast communication.",
+      "All websites are fully responsive and work perfectly on all devices, from desktop to smartphone.",
+      "All websites are optimized for search engines, so you are better found by potential customers."
+    ];
+
+    document.querySelectorAll(".feature-card-glass").forEach((card, i) => {
+      const h3 = card.querySelector("h3");
+      const p = card.querySelector("p");
+      if (h3) h3.textContent = featureTitles[i];
+      if (p) p.textContent = featureDescriptions[i];
+    });
+
+    // Team sectie
+    const teamTitle = document.querySelector(".team-section .section-title");
+    if (teamTitle) teamTitle.textContent = "Our Team";
+
+    const roles = document.querySelectorAll(".team-role");
+    if (roles.length >= 2) {
+      roles[0].textContent = "Co-founder & Web Developer";
+      roles[1].textContent = "Co-founder & UX/UI Designer";
+    }
+
+    const bios = document.querySelectorAll(".team-bio");
+    if (bios.length >= 2) {
+      bios[0].textContent =
+        "Twan is our technical expert. He ensures all websites are not only beautiful but also fast, secure, and technically flawless.";
+      bios[1].textContent =
+        "Emma specializes in user-friendly and visually appealing design. She ensures that every website is not only beautiful but also intuitive to use.";
+    }
+
+    // CTA
+    const ctaTitle = document.querySelector(".cta-card h2");
+    const ctaText = document.querySelector(".cta-card p");
+    const ctaButton = document.querySelector(".cta-card .btn");
+    if (ctaTitle) ctaTitle.textContent = "Ready to Collaborate?";
+    if (ctaText) ctaText.textContent = "Let us help you elevate your online presence to the next level.";
+    if (ctaButton) ctaButton.textContent = "Contact Us";
+  }
+}
+
 
 // New function to translate all text elements on the page
 function translateAllTextElements(lang) {
@@ -1700,262 +1796,6 @@ function updatePortfolioPage(lang) {
   }
 }
 
-// Function to update the about page content
-function updateAboutPage(lang) {
-  // Update page title
-  const pageHeader = document.querySelector(".page-header h1");
-  if (pageHeader) {
-    pageHeader.textContent =
-      lang === "nl" ? "Over TwinPixel" : "About TwinPixel";
-  }
-
-  // Update story section
-  const storyTitle = document.querySelector(".about-content h2:first-of-type");
-  if (storyTitle) {
-    storyTitle.textContent =
-      lang === "nl"
-        ? "Het verhaal achter TwinPixel"
-        : "The story behind TwinPixel";
-  }
-
-  const storyParagraphs = document.querySelectorAll(".about-content p");
-  if (storyParagraphs.length >= 6) {
-    // First paragraph
-    if (storyParagraphs[0]) {
-      storyParagraphs[0].textContent =
-        lang === "nl"
-          ? "TwinPixel is opgericht door Emma de Heer (UX designer) en Twan Meurs (developer), twee studenten met een passie voor webdesign en development. Samen hebben we ook uitgebreide business expertise, waardoor we niet alleen technisch sterke websites bouwen, maar ook websites die echt bijdragen aan het succes van jouw bedrijf."
-          : "TwinPixel was founded by Emma de Heer (UX designer) and Twan Meurs (developer), two students with a passion for web design and development. Together we also have extensive business expertise, which means we not only build technically strong websites, but also websites that truly contribute to the success of your business.";
-    }
-
-    // Second paragraph
-    if (storyParagraphs[1]) {
-      storyParagraphs[1].textContent =
-        lang === "nl"
-          ? "Wat begon als een hobby tijdens onze studie, is uitgegroeid tot een professioneel webdesignbureau met een duidelijke missie: betaalbare, hoogwaardige websites leveren aan ZZP'ers en MKB'ers."
-          : "What started as a hobby during our studies has grown into a professional web design agency with a clear mission: to deliver affordable, high-quality websites to freelancers and small businesses.";
-    }
-
-    // Third paragraph
-    if (storyParagraphs[2]) {
-      storyParagraphs[2].textContent =
-        lang === "nl"
-          ? "Wij geloven dat elke ondernemer recht heeft op een professionele online aanwezigheid, zonder de hoge kosten die grote bureaus vaak rekenen. Door onze efficiënte werkwijze en focus op wat écht belangrijk is, kunnen wij kwalitatief hoogwaardige websites leveren tegen betaalbare prijzen."
-          : "We believe that every entrepreneur deserves a professional online presence, without the high costs that large agencies often charge. Through our efficient way of working and focus on what really matters, we can deliver high-quality websites at affordable prices.";
-    }
-  }
-
-  // Update vision section
-  const visionTitle = document.querySelector(
-    ".about-content h2:nth-of-type(2)"
-  );
-  if (visionTitle) {
-    visionTitle.textContent = lang === "nl" ? "Onze visie" : "Our vision";
-  }
-
-  const visionParagraph = document.querySelector(
-    ".about-content h2:nth-of-type(2) + p"
-  );
-  if (visionParagraph) {
-    visionParagraph.textContent =
-      lang === "nl"
-        ? "Wij zien een wereld waarin elke ondernemer, groot of klein, toegang heeft tot professionele webdesign diensten die hun bedrijf helpen groeien. Geen generieke templates, maar op maat gemaakte websites die perfect aansluiten bij de identiteit en doelstellingen van jouw bedrijf."
-        : "We envision a world where every entrepreneur, big or small, has access to professional web design services that help their business grow. No generic templates, but custom-made websites that perfectly match the identity and objectives of your business.";
-  }
-
-  // Update approach section
-  const approachTitle = document.querySelector(
-    ".about-content h2:nth-of-type(3)"
-  );
-  if (approachTitle) {
-    approachTitle.textContent = lang === "nl" ? "Onze aanpak" : "Our approach";
-  }
-
-  const approachParagraphs = document.querySelectorAll(
-    ".about-content h2:nth-of-type(3) ~ p"
-  );
-  if (approachParagraphs.length >= 2) {
-    if (approachParagraphs[0]) {
-      approachParagraphs[0].textContent =
-        lang === "nl"
-          ? "Bij TwinPixel geloven we in een persoonlijke aanpak. We nemen de tijd om jouw bedrijf, doelgroep en doelstellingen te begrijpen voordat we aan de slag gaan. Dit stelt ons in staat om een website te creëren die niet alleen mooi is, maar ook effectief in het bereiken van jouw doelen."
-          : "At TwinPixel, we believe in a personal approach. We take the time to understand your business, target audience, and objectives before we get started. This allows us to create a website that is not only beautiful, but also effective in achieving your goals.";
-    }
-
-    if (approachParagraphs[1]) {
-      approachParagraphs[1].textContent =
-        lang === "nl"
-          ? "Onze werkwijze is transparant en direct. Je hebt altijd rechtstreeks contact met de designers en developers die aan jouw project werken, zonder tussenlagen of account managers. Dit zorgt voor snellere communicatie, kortere lijnen en uiteindelijk een beter eindresultaat."
-          : "Our way of working is transparent and direct. You always have direct contact with the designers and developers working on your project, without intermediate layers or account managers. This ensures faster communication, shorter lines, and ultimately a better end result.";
-    }
-  }
-
-  // Update "Why choose TwinPixel?" section
-  const whyChooseTitle = document.querySelector(
-    ".about-features .section-title"
-  );
-  if (whyChooseTitle) {
-    whyChooseTitle.textContent =
-      lang === "nl" ? "Waarom kiezen voor TwinPixel?" : "Why choose TwinPixel?";
-  }
-
-  // Update feature cards
-  const featureCards = document.querySelectorAll(".unique-card .unique-cards-container");
-  if (featureCards.length >= 4) {
-    // Fast delivery
-    const fastDeliveryTitle = featureCards[0].querySelector("h4");
-    if (fastDeliveryTitle) {
-      fastDeliveryTitle.textContent =
-        lang === "nl" ? "Snelle levering" : "Fast delivery";
-    }
-
-    const fastDeliveryDesc = featureCards[0].querySelector("p");
-    if (fastDeliveryDesc) {
-      fastDeliveryDesc.textContent =
-        lang === "nl"
-          ? "Geen lange wachttijden. Wij leveren binnen afgesproken deadlines, zodat jij snel online kunt gaan."
-          : "No long waiting times. We deliver within agreed deadlines, so you can go online quickly.";
-    }
-
-    // 100% custom
-    const customTitle = featureCards[1].querySelector("h4");
-    if (customTitle) {
-      customTitle.textContent = lang === "nl" ? "100% maatwerk" : "100% custom";
-    }
-
-    const customDesc = featureCards[1].querySelector("p");
-    if (customDesc) {
-      customDesc.textContent =
-        lang === "nl"
-          ? "Geen standaard templates, maar een uniek design dat perfect past bij jouw merk en doelstellingen."
-          : "No standard templates, but a unique design that perfectly matches your brand and objectives.";
-    }
-
-    // Competitive prices
-    const pricesTitle = featureCards[2].querySelector("h4");
-    if (pricesTitle) {
-      pricesTitle.textContent =
-        lang === "nl" ? "Scherpe prijzen" : "Competitive prices";
-    }
-
-    const pricesDesc = featureCards[2].querySelector("p");
-    if (pricesDesc) {
-      pricesDesc.textContent =
-        lang === "nl"
-          ? "Professionele kwaliteit zonder de hoge kosten van grote bureaus. Transparante prijzen, geen verborgen kosten."
-          : "Professional quality without the high costs of large agencies. Transparent pricing, no hidden costs.";
-    }
-
-    // Personal approach
-    const approachCardTitle = featureCards[3].querySelector("h4");
-    if (approachCardTitle) {
-      approachCardTitle.textContent =
-        lang === "nl" ? "Persoonlijke aanpak" : "Personal approach";
-    }
-
-    const approachCardDesc = featureCards[3].querySelector("p");
-    if (approachCardDesc) {
-      approachCardDesc.textContent =
-        lang === "nl"
-          ? "Direct contact met de designers en developers die aan jouw project werken. Korte lijnen, snelle communicatie."
-          : "Direct contact with the designers and developers working on your project. Short lines, fast communication.";
-    }
-
-    // Responsive design
-    const responsiveTitle = featureCards[4].querySelector("h3");
-    if (responsiveTitle) {
-      responsiveTitle.textContent =
-        lang === "nl" ? "Responsive design" : "Responsive design";
-    }
-
-    const responsiveDesc = featureCards[4].querySelector("p");
-    if (responsiveDesc) {
-      responsiveDesc.textContent =
-        lang === "nl"
-          ? "Alle websites zijn volledig responsive en werken perfect op alle apparaten, van desktop tot smartphone."
-          : "All websites are fully responsive and work perfectly on all devices, from desktop to smartphone.";
-    }
-
-    // SEO optimized
-    const seoTitle = featureCards[5].querySelector("h3");
-    if (seoTitle) {
-      seoTitle.textContent =
-        lang === "nl" ? "SEO-geoptimaliseerd" : "SEO optimized";
-    }
-
-    const seoDesc = featureCards[5].querySelector("p");
-    if (seoDesc) {
-      seoDesc.textContent =
-        lang === "nl"
-          ? "Alle websites worden geoptimaliseerd voor zoekmachines, zodat jij beter gevonden wordt door potentiële klanten."
-          : "All websites are optimized for search engines, so you can be found better by potential customers.";
-    }
-  }
-
-  // Update team section
-  const teamTitle = document.querySelector(".team-section .section-title");
-  if (teamTitle) {
-    teamTitle.textContent = lang === "nl" ? "Ons Team" : "Our Team";
-  }
-
-  // Update team members
-  const teamMembers = document.querySelectorAll(".team-member");
-  if (teamMembers.length >= 2) {
-    // Twan Meurs
-    const twanRole = teamMembers[0].querySelector(".team-role");
-    if (twanRole) {
-      twanRole.textContent =
-        lang === "nl"
-          ? "Mede-oprichter & Web Developer"
-          : "Co-founder & Web Developer";
-    }
-
-    const twanBio = teamMembers[0].querySelector(".team-bio");
-    if (twanBio) {
-      twanBio.textContent =
-        lang === "nl"
-          ? "Twan is onze technische expert. Hij zorgt ervoor dat alle websites niet alleen mooi zijn, maar ook snel, veilig en technisch perfect werken."
-          : "Twan is our technical expert. He ensures that all websites are not only beautiful, but also fast, secure, and technically perfect.";
-    }
-
-    // Emma de Heer
-    const emmaRole = teamMembers[1].querySelector(".team-role");
-    if (emmaRole) {
-      emmaRole.textContent =
-        lang === "nl"
-          ? "Mede-oprichter & UX/UI Designer"
-          : "Co-founder & UX/UI Designer";
-    }
-
-    const emmaBio = teamMembers[1].querySelector(".team-bio");
-    if (emmaBio) {
-      emmaBio.textContent =
-        lang === "nl"
-          ? "Emma is gespecialiseerd in gebruiksvriendelijk en visueel aantrekkelijk design. Zij zorgt ervoor dat elke website niet alleen mooi is, maar ook intuïtief in gebruik."
-          : "Emma specializes in user-friendly and visually appealing design. She ensures that every website is not only beautiful, but also intuitive to use.";
-    }
-  }
-
-  // Update CTA section
-  const ctaTitle = document.querySelector(".about-section .cta-section h2");
-  if (ctaTitle) {
-    ctaTitle.textContent =
-      lang === "nl" ? "Klaar om samen te werken?" : "Ready to work together?";
-  }
-
-  const ctaText = document.querySelector(".about-section .cta-section p");
-  if (ctaText) {
-    ctaText.textContent =
-      lang === "nl"
-        ? "Laat ons je helpen om jouw online aanwezigheid naar een hoger niveau te tillen."
-        : "Let us help you take your online presence to the next level.";
-  }
-
-  const ctaButton = document.querySelector(".about-section .cta-section .btn");
-  if (ctaButton) {
-    ctaButton.textContent = lang === "nl" ? "Neem contact op" : "Contact us";
-  }
-}
 
 // Function to update the services page content
 function updateServicesPage(lang) {
