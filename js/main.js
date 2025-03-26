@@ -846,9 +846,94 @@ function updateAboutPage(lang) {
         "Twan is our technical expert. He ensures all websites are not only beautiful but also fast, secure, and technically flawless.";
       bios[1].textContent =
         "Emma specializes in user-friendly and visually appealing design. She ensures that every website is not only beautiful but also intuitive to use.";
+            // ... [alles wat je al had voor Engels]
+          } else if (lang === "nl") {
+            // Paginaheader
+            const header = document.querySelector(".page-header h1");
+            if (header) header.textContent = "Over TwinPixel";
+        
+            // Verhaal achter TwinPixel
+            const storyTitle = document.querySelector(".about-story-section .section-title");
+            if (storyTitle) storyTitle.textContent = "Het verhaal achter TwinPixel";
+        
+            const storyParagraphs = document.querySelectorAll(".about-story-section .about-content p");
+            if (storyParagraphs.length >= 3) {
+              storyParagraphs[0].textContent =
+                "TwinPixel is opgericht door Emma de Heer (UX-designer) en Twan Meurs (developer), twee studenten met een passie voor webdesign en development. Samen hebben we ook veel bedrijfskundige kennis, waardoor we niet alleen technisch sterke websites bouwen, maar ook websites die écht bijdragen aan het succes van jouw onderneming.";
+              storyParagraphs[1].textContent =
+                "Wat begon als een hobby tijdens onze studie is uitgegroeid tot een professioneel webdesignbureau met een duidelijke missie: betaalbare, kwalitatieve websites leveren aan freelancers en kleine bedrijven.";
+              storyParagraphs[2].textContent =
+                "Wij vinden dat elke ondernemer recht heeft op een professionele online uitstraling, zonder de hoge kosten die grote bureaus rekenen. Dankzij onze efficiënte werkwijze en focus op wat echt belangrijk is, kunnen wij websites van hoge kwaliteit leveren voor een betaalbare prijs.";
+            }
+        
+            // Visie & Aanpak
+            const visionTitle = document.querySelector(".about-vision-section .section-title");
+            if (visionTitle) visionTitle.textContent = "Onze Visie & Aanpak";
+        
+            const visionHeadings = document.querySelectorAll(".about-vision-card h3");
+            const visionParagraphs = document.querySelectorAll(".about-vision-card p");
+            if (visionHeadings.length === 2 && visionParagraphs.length === 3) {
+              visionHeadings[0].textContent = "Onze Visie";
+              visionHeadings[1].textContent = "Onze Aanpak";
+        
+              visionParagraphs[0].textContent =
+                "Wij zien een wereld voor ons waarin elke ondernemer, groot of klein, toegang heeft tot professionele webdesign diensten die helpen bij het laten groeien van hun bedrijf. Geen standaard templates, maar op maat gemaakte websites die perfect aansluiten bij de identiteit en doelen van je bedrijf.";
+              visionParagraphs[1].textContent =
+                "Bij TwinPixel geloven we in een persoonlijke aanpak. We nemen de tijd om jouw bedrijf, doelgroep en doelen te begrijpen voordat we aan de slag gaan. Zo maken we een website die niet alleen mooi is, maar ook effectief bijdraagt aan jouw succes.";
+              visionParagraphs[2].textContent =
+                "Onze werkwijze is transparant en direct. Je hebt altijd direct contact met de ontwerpers en ontwikkelaars van jouw project, zonder tussenpersonen of accountmanagers. Dat zorgt voor snellere communicatie, korte lijnen en uiteindelijk een beter resultaat.";
+            }
+        
+            // Waarom kiezen voor TwinPixel
+            const featuresTitle = document.querySelector(".about-features-section .section-title");
+            if (featuresTitle) featuresTitle.textContent = "Waarom kiezen voor TwinPixel?";
+        
+            const featureTitles = [
+              "Snelle oplevering",
+              "100% maatwerk",
+              "Scherpe prijzen",
+              "Persoonlijke aanpak",
+              "Responsive design",
+              "SEO geoptimaliseerd"
+            ];
+        
+            const featureDescriptions = [
+              "Geen lange wachttijden. We leveren binnen de afgesproken deadlines, zodat je snel online kunt.",
+              "Geen standaard templates, maar een uniek ontwerp dat perfect past bij jouw merk en doelen.",
+              "Professionele kwaliteit zonder de hoge kosten van grote bureaus. Transparante prijzen, geen verborgen kosten.",
+              "Direct contact met de ontwerpers en ontwikkelaars van je project. Korte lijnen, snelle communicatie.",
+              "Alle websites zijn volledig responsive en werken perfect op alle apparaten, van desktop tot smartphone.",
+              "Alle websites zijn geoptimaliseerd voor zoekmachines, zodat je beter gevonden wordt door potentiële klanten."
+            ];
+        
+            document.querySelectorAll(".feature-card-glass").forEach((card, i) => {
+              const h3 = card.querySelector("h3");
+              const p = card.querySelector("p");
+              if (h3) h3.textContent = featureTitles[i];
+              if (p) p.textContent = featureDescriptions[i];
+            });
+        
+            // Team sectie
+            const teamTitle = document.querySelector(".team-section .section-title");
+            if (teamTitle) teamTitle.textContent = "Ons Team";
+        
+            const roles = document.querySelectorAll(".team-role");
+            if (roles.length >= 2) {
+              roles[0].textContent = "Mede-oprichter & Webdeveloper";
+              roles[1].textContent = "Mede-oprichter & UX/UI Designer";
+            }
+        
+            const bios = document.querySelectorAll(".team-bio");
+            if (bios.length >= 2) {
+              bios[0].textContent =
+                "Twan is onze technische expert. Hij zorgt ervoor dat alle websites niet alleen mooi zijn, maar ook snel, veilig en technisch perfect.";
+              bios[1].textContent =
+                "Emma is gespecialiseerd in gebruiksvriendelijk en aantrekkelijk design. Zij zorgt ervoor dat elke website niet alleen mooi is, maar ook intuïtief in gebruik.";
+            }
+          }
+        }
+        
     }
-  }
-}
 
 
 // New function to translate all text elements on the page
