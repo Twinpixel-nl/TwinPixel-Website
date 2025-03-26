@@ -501,74 +501,55 @@
           </div>
         </div>
 
-    <!-- Process Section -->
-    <section class="process-section">
-      <div class="container">
-        <h2 class="section-title fade-in">Ons Werkproces</h2>
+<!-- Process Section -->
+<section class="process-section">
+  <div class="container">
+    <h2 class="section-title fade-in">Ons Werkproces</h2>
 
-        <div class="process-steps">
-          <div class="process-step fade-in delay-1">
-            <div class="step-number">1</div>
-            <div class="step-content">
-              <h3>Kennismaking & Analyse</h3>
-              <p>
-                We beginnen met een uitgebreid gesprek om je bedrijf,
-                doelstellingen en verwachtingen te begrijpen. We analyseren je
-                huidige situatie en identificeren verbeterpunten.
-              </p>
-            </div>
-          </div>
-
-          <div class="process-step fade-in delay-2">
-            <div class="step-number">2</div>
-            <div class="step-content">
-              <h3>Strategie & Planning</h3>
-              <p>
-                Op basis van onze analyse ontwikkelen we een strategie en
-                planning. We definiëren de scope, tijdlijn en deliverables van
-                het project.
-              </p>
-            </div>
-          </div>
-
-          <div class="process-step fade-in delay-3">
-            <div class="step-number">3</div>
-            <div class="step-content">
-              <h3>Design & Development</h3>
-              <p>
-                We ontwerpen en ontwikkelen je website of digitale product. Je
-                wordt regelmatig op de hoogte gehouden en hebt de mogelijkheid
-                om feedback te geven.
-              </p>
-            </div>
-          </div>
-
-          <div class="process-step fade-in delay-4">
-            <div class="step-number">4</div>
-            <div class="step-content">
-              <h3>Testen & Optimaliseren</h3>
-              <p>
-                We testen je website grondig op verschillende apparaten en
-                browsers. We optimaliseren de prestaties en lost eventuele
-                problemen op.
-              </p>
-            </div>
-          </div>
-
-          <div class="process-step fade-in delay-5">
-            <div class="step-number">5</div>
-            <div class="step-content">
-              <h3>Lancering & Ondersteuning</h3>
-              <p>
-                We lanceren je website en zorgen ervoor dat alles soepel
-                verloopt. Na de lancering kun je kiezen voor een onderhouds- en ondersteuningspakket van €10 per maand, 
-                waar we ondersteuning en onderhoud bieden zodat je website altijd optimaal blijft presteren.
-              </p>
-            </div>
-          </div>
+    <div class="timeline">
+      <div class="timeline-step">
+        <div class="timeline-marker">1</div>
+        <div class="timeline-content">
+          <h3>Kennismaking & Analyse</h3>
+          <p>We beginnen met een uitgebreid gesprek om je bedrijf, doelstellingen en verwachtingen te begrijpen...</p>
         </div>
       </div>
-    </section>
+
+      <div class="timeline-step">
+        <div class="timeline-marker">2</div>
+        <div class="timeline-content">
+          <h3>Strategie & Planning</h3>
+          <p>Op basis van onze analyse ontwikkelen we een strategie en planning...</p>
+        </div>
+      </div>
+
+      <div class="timeline-step">
+        <div class="timeline-marker">3</div>
+        <div class="timeline-content">
+          <h3>Design & Development</h3>
+          <p>We ontwerpen en ontwikkelen je website of digitale product...</p>
+        </div>
+      </div>
+
+      <div class="timeline-step">
+        <div class="timeline-marker">4</div>
+        <div class="timeline-content">
+          <h3>Testen & Optimaliseren</h3>
+          <p>We testen je website grondig op verschillende apparaten en browsers...</p>
+        </div>
+      </div>
+
+      <div class="timeline-step">
+        <div class="timeline-marker">5</div>
+        <div class="timeline-content">
+          <h3>Lancering & Ondersteuning</h3>
+          <p>We lanceren je website en zorgen ervoor dat alles soepel verloopt...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
     <!-- FAQ Section -->
     <section class="faq-section">
@@ -804,5 +785,25 @@
         ]
       }
     </script>
+    <script>
+      // Animate timeline when it's in view
+      document.addEventListener("DOMContentLoaded", () => {
+        const timeline = document.querySelector(".timeline");
+    
+        const observer = new IntersectionObserver(
+          ([entry]) => {
+            if (entry.isIntersecting) {
+              timeline.classList.add("scrolled");
+            }
+          },
+          {
+            threshold: 0.3,
+          }
+        );
+    
+        if (timeline) observer.observe(timeline);
+      });
+    </script>
+    
   </body>
 </html>

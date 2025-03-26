@@ -2306,21 +2306,114 @@ footer {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s, background 0.3s, scale 0.3s;
   cursor: pointer;
+}.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 100px auto;
+  padding-left: 80px;
 }
-.step-number {
-  width: 40px;
-  height: 40px;
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 40px;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: repeating-linear-gradient(
+    to bottom,
+    #007bff,
+    #007bff 12px,
+    transparent 12px,
+    transparent 24px
+  );
+  opacity: 0.4;
+  animation: growLine 1.5s ease-in-out forwards;
+}
+
+@keyframes growLine {
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
+}
+
+.timeline-step {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 80px;
+  position: relative;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(0, 0);
+  width: 55px;
+  height: 55px;
+  background: linear-gradient(145deg, #007bff, #3399ff);
+  color: white;
+  font-weight: bold;
+  font-size: 1.3rem;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1em;
-  font-weight: bold;
-  color: #fff;
-  background: #007bff;
-  border-radius: 50%;
-  margin-right: 15px;
-  transition: background 0.3s, transform 0.3s;
+  box-shadow: 0 0 15px rgba(0, 123, 255, 0.5);
+  z-index: 2;
 }
+
+.timeline-content {
+  margin-left: 100px;
+  max-width: 800px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.timeline-content h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.timeline-content p {
+  color: #aaa;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+/* Hover effect (optioneel) */
+.timeline-content:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+@media (max-width: 768px) {
+  .timeline {
+    padding-left: 30px;
+  }
+
+  .timeline-step {
+    flex-direction: column;
+    margin-left: 10px;
+  }
+
+  .timeline-marker {
+    left: 0;
+    margin-bottom: 1rem;
+  }
+
+  .timeline-content {
+    margin-left: 0;
+    padding: 1rem;
+  }
+}
+
 .process-list li:hover {
   transform: translateX(10px) scale(1.05);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
