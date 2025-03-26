@@ -1141,8 +1141,188 @@ function updateAboutPage(lang) {
     if (t.teamBios[i]) bio.textContent = t.teamBios[i];
   });
 }
+// Dit script vertaalt dynamisch de content op services.html naar Engels of Nederlands
+// Het script pakt ook de service grid én de "detailed-services" secties mee
+
+// Volledige dynamische vertaling voor services.html
+
+function updateServicesPage(lang) {
+  const translations = {
+    nl: {
+      pageTitle: "Onze Diensten",
+      introHeading: "Wat kunnen we voor je betekenen?",
+      introText: [
+        "Bij TwinPixel bieden we een breed scala aan webdesign en development diensten aan. Of je nu een volledig nieuwe website nodig hebt, je bestaande site wilt verbeteren of je online zichtbaarheid wilt vergroten, wij hebben de expertise om je te helpen.",
+        "Al onze diensten worden op maat gemaakt om aan jouw specifieke behoeften en doelstellingen te voldoen. We werken nauw met je samen om ervoor te zorgen dat het eindresultaat niet alleen aan je verwachtingen voldoet, maar deze overtreft."
+      ],
+      ctaTitle: "Klaar om samen te werken?",
+      ctaText: "Laat ons je helpen om jouw online aanwezigheid naar een hoger niveau te tillen.",
+      ctaBtn: "Neem contact op",
+      faqTitle: "Veelgestelde Vragen",
+      faq: [
+        ["Zijn er verborgen kosten?", "Nee, bij TwinPixel geloven we in volledige transparantie. De prijs die we opgeven is de prijs die je betaalt. Er zijn geen verborgen kosten of verrassingen achteraf."],
+        ["Wat als ik specifieke wensen heb die niet in een pakket passen?", "Geen probleem! We bieden ook op maat gemaakte oplossingen aan en aanvullende diensten die je altijd met pakketten kan combineren. Neem contact met ons op om je specifieke wensen te bespreken en we stellen een offerte op maat voor je op."],
+        ["Hoe zit het met hosting en domeinregistratie?", "Hosting is inbegrepen in het maandelijkse bedrag van ons hybride prijsmodel. Domeinregistratie wordt apart gefactureerd tegen kostprijs. We kunnen je domein registreren of helpen bij het overzetten van een bestaand domein."],
+        ["Kan ik later upgraden naar een ander pakket?", "Ja, je kunt altijd upgraden naar een uitgebreider pakket. We berekenen dan alleen het verschil tussen je huidige pakket en het nieuwe pakket, plus eventuele extra werkzaamheden die nodig zijn."],
+        ["Hoe lang duurt het voordat mijn website klaar is?", "De doorlooptijd hangt af van het gekozen pakket en de complexiteit van je website. Een Starter website kan binnen 2-3 weken klaar zijn, terwijl een Enterprise website 4-6 weken kan duren. We stellen altijd een realistische tijdlijn op aan het begin van het project. Daarnaast kan je voor 99 euro extra snel de website opgeleverd krijgen."],
+        ["Wat houdt het hybride prijsmodel precies in?", "Ons hybride prijsmodel bestaat uit twee delen: een eenmalig bedrag voor het ontwerpen en bouwen van je website, en een maandelijks bedrag voor hosting en kleine updates. Dit zorgt ervoor dat je website niet alleen professioneel wordt opgezet, maar ook goed blijft draaien en up-to-date blijft zonder onverwachte kosten."],
+        ["Wat als ik nog geen logo of huisstijl heb?", "Geen zorgen! We bieden ook logo- en huisstijlontwerp aan als aparte dienst. We kunnen je helpen met het ontwerpen van een professioneel logo en bijpassende huisstijl die perfect aansluiten bij je merk en doelgroep."],
+        ["Wat als ik zelf teksten, afbeeldingen of updates wil toevoegen?", "We bieden pakketten aan met een Content Management Systeem (CMS), zodat je zelf eenvoudig teksten, afbeeldingen en updates kan toevoegen. We geven je een korte training zodat je zelf aan de slag kan met je website."]
+      ]
+    },
+    en: {
+      pageTitle: "Our Services",
+      introHeading: "How can we help you?",
+      introText: [
+        "At TwinPixel, we offer a wide range of web design and development services. Whether you need a brand new website, want to improve your existing one, or increase your online visibility, we have the expertise to help.",
+        "All our services are tailored to your specific needs and goals. We work closely with you to ensure that the end result not only meets but exceeds your expectations."
+      ],
+      ctaTitle: "Ready to collaborate?",
+      ctaText: "Let us help elevate your online presence to the next level.",
+      ctaBtn: "Contact us",
+      faqTitle: "Frequently Asked Questions",
+      faq: [
+        ["Are there hidden costs?", "No, at TwinPixel we believe in full transparency. The price we quote is the price you pay. There are no hidden fees or surprises."],
+        ["What if I have specific needs that don’t fit a package?", "No problem! We also offer custom solutions and additional services that can always be combined with packages. Contact us to discuss your specific wishes and we'll create a tailored offer."],
+        ["What about hosting and domain registration?", "Hosting is included in the monthly amount of our hybrid pricing model. Domain registration is invoiced separately at cost. We can register your domain or help you transfer an existing one."],
+        ["Can I upgrade to another package later?", "Yes, you can always upgrade to a more extensive package. We only charge the difference between your current and new package, plus any additional work required."],
+        ["How long does it take to complete my website?", "The timeline depends on the chosen package and the complexity of your website. A Starter site can be ready within 2-3 weeks, while an Enterprise site may take 4-6 weeks. We always provide a realistic timeline at the start of the project. For an extra €99, you can request express delivery."],
+        ["What exactly is the hybrid pricing model?", "Our hybrid pricing model consists of two parts: a one-time fee for designing and building your website, and a monthly fee for hosting and small updates. This ensures your website is not only professionally set up but also runs smoothly and stays up-to-date without unexpected costs."],
+        ["What if I don’t have a logo or brand identity yet?", "No worries! We also offer logo and branding design as a separate service. We can help you design a professional logo and matching identity that perfectly aligns with your brand and target audience."],
+        ["What if I want to add content or updates myself?", "We offer packages with a Content Management System (CMS), so you can easily add text, images, and updates yourself. We’ll provide a short training so you can manage your website independently."]
+      ]
+    }
+  };
+
+  const t = translations[lang];
+
+  // Page header
+  const pageHeader = document.querySelector(".page-header h1");
+  if (pageHeader) pageHeader.textContent = t.pageTitle;
+
+  // Intro
+  const introHeading = document.querySelector(".services-intro h3");
+  const introParagraphs = document.querySelectorAll(".services-intro p");
+  if (introHeading) introHeading.textContent = t.introHeading;
+  if (introParagraphs.length >= 2) {
+    introParagraphs[0].textContent = t.introText[0];
+    introParagraphs[1].textContent = t.introText[1];
+  }
+
+  // FAQ
+  const faqTitle = document.querySelector(".faq-section h2");
+  if (faqTitle) faqTitle.textContent = t.faqTitle;
+
+  const faqItems = document.querySelectorAll(".faq-item");
+  faqItems.forEach((item, index) => {
+    const q = item.querySelector(".faq-question");
+    const a = item.querySelector(".faq-answer");
+    if (t.faq[index]) {
+      q.textContent = t.faq[index][0];
+      a.textContent = t.faq[index][1];
+    }
+  });
+
+  // CTA
+  const ctaSection = document.querySelector(".cta-section");
+  if (ctaSection) {
+    const ctaH2 = ctaSection.querySelector("h2");
+    const ctaP = ctaSection.querySelector("p");
+    const ctaBtn = ctaSection.querySelector(".btn");
+    if (ctaH2) ctaH2.textContent = t.ctaTitle;
+    if (ctaP) ctaP.textContent = t.ctaText;
+    if (ctaBtn) ctaBtn.textContent = t.ctaBtn;
+  }
 
 
+
+  // TODO: voeg hier de logica toe voor services-grid, detailed services, werkproces, etc.
+}
+
+// ✅ Volledige dynamische vertaling voor portfolio.html
+function updatePortfolioPage(lang) {
+  const h3 = document.querySelector(".portfolio-intro h3");
+  const paragraphs = document.querySelectorAll(".portfolio-intro p");
+
+  if (h3) {
+    h3.textContent =
+      lang === "nl"
+        ? "Ontdek onze projecten"
+        : "Discover our projects";
+  }
+
+  if (paragraphs.length >= 2) {
+    paragraphs[0].textContent =
+      lang === "nl"
+        ? "Bij TwinPixel zijn we trots op de websites die we hebben ontworpen en ontwikkeld voor onze klanten. Elk project is uniek en op maat gemaakt om aan de specifieke behoeften en doelstellingen van onze klanten te voldoen."
+        : "At TwinPixel, we take pride in the websites we have designed and developed for our clients. Each project is unique and tailor-made to meet the specific needs and goals of our clients.";
+
+    paragraphs[1].textContent =
+      lang === "nl"
+        ? "Bekijk hieronder een selectie van onze recente projecten en laat je inspireren door wat wij voor jou kunnen betekenen."
+        : "Below you’ll find a selection of our recent projects — let yourself be inspired by what we can do for you.";
+  }
+
+  // ✅ Portfolio-sectie vertalen
+  const portfolioSection = document.querySelector(".portfolio");
+  if (portfolioSection) {
+    const title = portfolioSection.querySelector(".portfolio-title");
+    if (title) {
+      title.textContent = lang === "nl" ? "Ons Werk" : "Our Work";
+    }
+
+    const items = portfolioSection.querySelectorAll(".portfolio-item");
+
+    const portfolioData = {
+      nl: [
+        {
+          title: "De wet van staal",
+          text: "Professioneel laswerk en technisch onderhoud.",
+          button: "Bekijk project",
+        },
+        {
+          title: "Studievereniging NULL",
+          text: "De vereniging die ergens voor staat!",
+          button: "Bekijk project",
+        },
+        {
+          title: "By Britt Nails",
+          text: "Een stijlvolle nagelstudio website.",
+          button: "Bekijk project",
+        },
+      ],
+      en: [
+        {
+          title: "De wet van staal",
+          text: "Professional welding and technical maintenance.",
+          button: "View project",
+        },
+        {
+          title: "Student Association NULL",
+          text: "The association that stands for something!",
+          button: "View project",
+        },
+        {
+          title: "By Britt Nails",
+          text: "A stylish nail studio website.",
+          button: "View project",
+        },
+      ],
+    };
+
+    items.forEach((item, index) => {
+      const h3 = item.querySelector("h3");
+      const p = item.querySelector("p");
+      const btn = item.querySelector("a.portfolio-btn");
+
+      const content = portfolioData[lang][index];
+
+      if (h3) h3.textContent = content.title;
+      if (p) p.textContent = content.text;
+      if (btn) btn.textContent = content.button;
+    });
+  }
+}
 
 // Function to update the home page content
 function updateHomePage(lang) {
