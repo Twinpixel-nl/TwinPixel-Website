@@ -291,7 +291,22 @@
         </div>
         <div class="button-container fade-in">
           <a href="services.html" class="btn neon-button">Bekijk al onze diensten</a>
-        </div>
+// js script beacause it would'nt work otherwise Im sorry
+<script>
+  function vertaalKnop(href, tekstNl, tekstEn, lang) {
+    const knop = document.querySelector(`a[href="${href}"].btn.neon-button`);
+    console.log("Gevonden knop:", knop);
+    if (knop) {
+      knop.innerText = lang === "nl" ? tekstNl : tekstEn;
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const lang = "en"; // of "nl"
+    vertaalKnop("services.html", "Bekijk al onze diensten", "View all our services", lang);
+  });
+</script>
+
         </div>
       </div>
     </section>

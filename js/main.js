@@ -1017,6 +1017,7 @@ function updateHomePage(lang) {
       titleElement.textContent = cardTitles[lang][index];
     }
   });
+  
 
   const heroTitle = document.querySelector(".hero-content h1");
   if (heroTitle) {
