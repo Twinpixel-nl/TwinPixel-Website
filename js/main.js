@@ -1123,6 +1123,32 @@ function updateHomePage(lang) {
       lang === "nl" ? "Bekijk al onze diensten" : "view all our services";
   }
 
+  const introContent = document.querySelector(".intro-content");
+  if (introContent) {
+    const h3 = introContent.querySelector("h3");
+    const paragraphs = introContent.querySelectorAll("p");
+
+    if (h3) {
+      h3.textContent =
+        lang === "nl"
+          ? "Ontdek onze projecten"
+          : "Discover our projects";
+    }
+
+    if (paragraphs.length >= 2) {
+      paragraphs[0].textContent =
+        lang === "nl"
+          ? "Bij TwinPixel zijn we trots op de websites die we hebben ontworpen en ontwikkeld voor onze klanten. Elk project is uniek en op maat gemaakt om aan de specifieke behoeften en doelstellingen van onze klanten te voldoen."
+          : "At TwinPixel, we take pride in the websites we have designed and developed for our clients. Each project is unique and tailor-made to meet the specific needs and goals of our clients.";
+
+      paragraphs[1].textContent =
+        lang === "nl"
+          ? "Bekijk hieronder een selectie van onze recente projecten en laat je inspireren door wat wij voor jou kunnen betekenen."
+          : "Below you’ll find a selection of our recent projects — let yourself be inspired by what we can do for you.";
+    }
+  }
+
+
 
 
   // Update testimonials section
