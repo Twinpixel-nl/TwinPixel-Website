@@ -1250,7 +1250,7 @@ function updateHomePage(lang) {
   }
 
   const servicesButton = document.querySelector(
-    "#diensten-preview .cta-button .btn"
+    ".btn .neon-button"
   );
   if (servicesButton) {
     servicesButton.textContent =
@@ -1682,7 +1682,7 @@ function updateAboutPage(lang) {
   }
 
   // Update feature cards
-  const featureCards = document.querySelectorAll(".unique-cards-container");
+  const featureCards = document.querySelectorAll(".unique-card .unique-cards-container");
   if (featureCards.length >= 4) {
     // Fast delivery
     const fastDeliveryTitle = featureCards[0].querySelector("h4");
