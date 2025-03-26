@@ -1270,6 +1270,12 @@ function updatePortfolioPage(lang) {
     if (title) {
       title.textContent = lang === "nl" ? "Ons Werk" : "Our Work";
     }
+    const portfolioHeader = document.querySelector(".page-header h1");
+if (portfolioHeader) {
+  portfolioHeader.textContent =
+    lang === "nl" ? "Ons Portfolio" : "Our Portfolio";
+}
+
 
     const items = portfolioSection.querySelectorAll(".portfolio-item");
 
