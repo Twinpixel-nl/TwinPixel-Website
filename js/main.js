@@ -1629,15 +1629,17 @@ function updateHomePage(lang) {
     }
   }
 
-  const pricingButton = document.querySelector(
-    "#prijzen-preview .cta-button .btn"
-  );
-  if (pricingButton) {
-    pricingButton.textContent =
-      lang === "nl"
-        ? "Bekijk alle prijzen en pakketten"
-        : "View all prices and packages";
-  }
+// ✅ "Bekijk alle prijzen en pakketten" vertalen
+const pricingButton = document.querySelector(
+  '.pricing .button-container .btn.neon-button'
+);
+if (pricingButton) {
+  pricingButton.textContent =
+    lang === "nl"
+      ? "Bekijk alle prijzen en pakketten"
+      : "View all prices and packages";
+}
+
 }
 
 // Function to update the portfolio page content
