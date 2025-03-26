@@ -847,14 +847,6 @@ function updateAboutPage(lang) {
       bios[1].textContent =
         "Emma specializes in user-friendly and visually appealing design. She ensures that every website is not only beautiful but also intuitive to use.";
     }
-
-    // CTA
-    const ctaTitle = document.querySelector(".cta-card h2");
-    const ctaText = document.querySelector(".cta-card p");
-    const ctaButton = document.querySelector(".cta-card .btn");
-    if (ctaTitle) ctaTitle.textContent = "Ready to Collaborate?";
-    if (ctaText) ctaText.textContent = "Let us help you elevate your online presence to the next level.";
-    if (ctaButton) ctaButton.textContent = "Contact Us";
   }
 }
 
