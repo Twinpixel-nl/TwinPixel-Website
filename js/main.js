@@ -1148,6 +1148,65 @@ function updateHomePage(lang) {
     }
   }
 
+  // ✅ Portfolio-sectie vertalen
+  const portfolioSection = document.querySelector(".portfolio");
+  if (portfolioSection) {
+    const title = portfolioSection.querySelector(".portfolio-title");
+    if (title) {
+      title.textContent = lang === "nl" ? "Ons Werk" : "Our Work";
+    }
+
+    const items = portfolioSection.querySelectorAll(".portfolio-item");
+
+    const portfolioData = {
+      nl: [
+        {
+          title: "De wet van staal",
+          text: "Professioneel laswerk en technisch onderhoud.",
+          button: "Bekijk project",
+        },
+        {
+          title: "Studievereniging NULL",
+          text: "De vereniging die ergens voor staat!",
+          button: "Bekijk project",
+        },
+        {
+          title: "By Britt Nails",
+          text: "Een stijlvolle nagelstudio website.",
+          button: "Bekijk project",
+        },
+      ],
+      en: [
+        {
+          title: "De wet van staal",
+          text: "Professional welding and technical maintenance.",
+          button: "View project",
+        },
+        {
+          title: "Student Association NULL",
+          text: "The association that stands for something!",
+          button: "View project",
+        },
+        {
+          title: "By Britt Nails",
+          text: "A stylish nail studio website.",
+          button: "View project",
+        },
+      ],
+    };
+
+    items.forEach((item, index) => {
+      const h3 = item.querySelector("h3");
+      const p = item.querySelector("p");
+      const btn = item.querySelector("a.portfolio-btn");
+
+      const content = portfolioData[lang][index];
+
+      if (h3) h3.textContent = content.title;
+      if (p) p.textContent = content.text;
+      if (btn) btn.textContent = content.button;
+    });
+  }
 
 
 
