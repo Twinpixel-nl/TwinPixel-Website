@@ -1,0 +1,342 @@
+/* TwinPixel Werkproces (Work Process) Animations */
+
+.werkproces-section {
+  position: relative;
+  padding: 6rem 0;
+  overflow: hidden;
+}
+
+.werkproces-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at top right,
+    rgba(0, 102, 255, 0.1),
+    transparent 60%
+  );
+  z-index: -1;
+}
+
+/* Path container */
+.process-path {
+  position: relative;
+  max-width: 1000px;
+  margin: 4rem auto;
+  padding: 2rem 0;
+}
+
+/* The main path line */
+.process-path::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 4px;
+  height: 0; /* Will be animated to 100% */
+  background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+  transform: translateX(-50%);
+  z-index: 1;
+  animation: growPath 2s ease-out forwards 0.5s;
+  box-shadow: 0 0 15px rgba(0, 102, 255, 0.5);
+}
+
+@keyframes growPath {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+/* Process steps container */
+.process-steps {
+  position: relative;
+  z-index: 2;
+}
+
+/* Individual step */
+.process-step {
+  display: flex;
+  margin-bottom: 5rem;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInStep 0.8s ease-out forwards;
+  animation-delay: calc(var(--step-index) * 0.3s + 0.8s);
+}
+
+/* Alternate steps layout */
+.process-step:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+@keyframes fadeInStep {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Step marker (circle with number) */
+.step-marker {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+  z-index: 3;
+  box-shadow: 0 0 20px rgba(0, 102, 255, 0.6);
+  transition: all 0.4s ease;
+  animation: pulseMarker 2s infinite alternate;
+  flex-shrink: 0;
+}
+
+@keyframes pulseMarker {
+  0% {
+    box-shadow: 0 0 15px rgba(0, 102, 255, 0.5);
+    transform: scale(1);
+  }
+  100% {
+    box-shadow: 0 0 25px rgba(0, 102, 255, 0.8);
+    transform: scale(1.05);
+  }
+}
+
+/* Connector lines from marker to content */
+.step-connector {
+  position: absolute;
+  top: 50%;
+  width: 0; /* Will be animated */
+  height: 3px;
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  z-index: 2;
+  animation: growConnector 1s ease-out forwards;
+  animation-delay: calc(var(--step-index) * 0.3s + 1.3s);
+}
+
+.process-step:nth-child(odd) .step-connector {
+  left: 70px;
+  transform: translateY(-50%);
+}
+
+.process-step:nth-child(even) .step-connector {
+  right: 70px;
+  transform: translateY(-50%);
+}
+
+@keyframes growConnector {
+  0% {
+    width: 0;
+    opacity: 0;
+  }
+  100% {
+    width: 50px;
+    opacity: 1;
+  }
+}
+
+/* Step content */
+.step-content {
+  flex: 1;
+  background: rgba(18, 18, 18, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  margin: 0 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.step-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 0;
+  background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
+  transition: height 0.5s ease;
+}
+
+.process-step:hover .step-content {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 102, 255, 0.2);
+  border-color: rgba(0, 102, 255, 0.3);
+}
+
+.process-step:hover .step-content::before {
+  height: 100%;
+}
+
+.process-step:hover .step-marker {
+  transform: scale(1.1) rotate(10deg);
+  box-shadow: 0 0 30px rgba(0, 102, 255, 0.8);
+}
+
+.step-content h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  transition: color 0.3s ease;
+  text-align: left;
+}
+
+.process-step:hover .step-content h3 {
+  color: var(--primary-color);
+}
+
+.step-content p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  text-align: left;
+}
+
+/* Floating particles */
+.particle-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  border-radius: 50%;
+  opacity: 0.1;
+  animation: particle-float linear infinite;
+}
+
+@keyframes particle-float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(-100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .process-path {
+    max-width: 800px;
+  }
+  
+  .step-marker {
+    width: 60px;
+    height: 60px;
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .process-path {
+    padding-left: 0;
+  }
+  
+  .process-path::before {
+    left: 30px;
+  }
+  
+  .process-step,
+  .process-step:nth-child(even) {
+    flex-direction: row;
+    margin-left: 30px;
+  }
+  
+  .step-marker {
+    width: 50px;
+    height: 50px;
+    font-size: 1.4rem;
+    margin-right: 1rem;
+  }
+  
+  .step-content {
+    margin-left: 1.5rem;
+    margin-right: 0;
+  }
+  
+  .process-step:nth-child(odd) .step-connector,
+  .process-step:nth-child(even) .step-connector {
+    left: 50px;
+    width: 30px;
+  }
+  
+  @keyframes growConnector {
+    0% {
+      width: 0;
+      opacity: 0;
+    }
+    100% {
+      width: 30px;
+      opacity: 1;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .step-marker {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+  
+  .step-content {
+    padding: 1.5rem;
+  }
+  
+  .step-content h3 {
+    font-size: 1.4rem;
+  }
+  
+  .process-path::before {
+    left: 20px;
+  }
+  
+  .process-step {
+    margin-left: 20px;
+  }
+  
+  .process-step:nth-child(odd) .step-connector,
+  .process-step:nth-child(even) .step-connector {
+    left: 40px;
+    width: 20px;
+  }
+  
+  @keyframes growConnector {
+    0% {
+      width: 0;
+      opacity: 0;
+    }
+    100% {
+      width: 20px;
+      opacity: 1;
+    }
+  }
+}

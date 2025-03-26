@@ -584,17 +584,6 @@ header.scrolled {
   position: relative;
 }
 
-.section-title h2::after {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 50px;
-  height: 3px;
-  background-color: var(--primary-color);
-}
-
 /* Services Grid Layout */
 .services-grid {
   display: grid;
@@ -2858,37 +2847,15 @@ footer {
   z-index: 1;
 }
 
-.section-title {
-  font-size: 2.8rem;
-  margin-bottom: 1.5rem;
-  color: #fff;
-  text-shadow: 0 0 15px rgba(0, 102, 255, 0.5);
-  animation: fade-in-up 0.8s ease-out forwards;
-  position: relative;
-}
-
-.section-title::after {
+.section-title h2::after {
   content: "";
   position: absolute;
-  bottom: -15px;
+  bottom: -10px;
   left: 50%;
   transform: translateX(-50%);
-  width: 80px;
-  height: 4px;
-  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
-  border-radius: 2px;
-  animation: expand-line 1.2s ease-out forwards;
-}
-
-@keyframes expand-line {
-  0% {
-    width: 0;
-    opacity: 0;
-  }
-  100% {
-    width: 80px;
-    opacity: 1;
-  }
+  width: 50px;
+  height: 3px;
+  background-color: var(--primary-color);
 }
 
 .section-subtitle {
