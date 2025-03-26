@@ -1208,7 +1208,12 @@ function updateHomePage(lang) {
     });
   }
 
-
+    // ✅ "Populaire keuze" vertalen
+    const popularChoice = document.querySelector(".popular-choice");
+    if (popularChoice) {
+      popularChoice.textContent =
+        lang === "nl" ? "Populaire keuze" : "Popular choice";
+    }
 
   // Update testimonials section
   const testimonialsTitle = document.querySelector(
