@@ -763,179 +763,6 @@ function updatePageContent(lang) {
   }
 }
 
-function updateAboutPage(lang) {
-  if (lang === "en") {
-    // Paginaheader
-    const header = document.querySelector(".page-header h1");
-    if (header) header.textContent = "About TwinPixel";
-
-    // Verhaal achter TwinPixel
-    const storyTitle = document.querySelector(".about-story-section .section-title");
-    if (storyTitle) storyTitle.textContent = "The Story Behind TwinPixel";
-
-    const storyParagraphs = document.querySelectorAll(".about-story-section .about-content p");
-    if (storyParagraphs.length >= 3) {
-      storyParagraphs[0].textContent =
-        "TwinPixel was founded by Emma de Heer (UX designer) and Twan Meurs (developer), two students with a passion for web design and development. Together, we also have extensive business expertise, allowing us to build not only technically strong websites, but also websites that truly contribute to the success of your business.";
-      storyParagraphs[1].textContent =
-        "What started as a hobby during our studies has grown into a professional web design agency with a clear mission: to deliver affordable, high-quality websites to freelancers and small businesses.";
-      storyParagraphs[2].textContent =
-        "We believe every entrepreneur deserves a professional online presence, without the high costs that large agencies often charge. Thanks to our efficient way of working and focus on what truly matters, we can deliver high-quality websites at affordable prices.";
-    }
-
-    // Visie & Aanpak
-    const visionTitle = document.querySelector(".about-vision-section .section-title");
-    if (visionTitle) visionTitle.textContent = "Our Vision & Approach";
-
-    const visionHeadings = document.querySelectorAll(".about-vision-card h3");
-    const visionParagraphs = document.querySelectorAll(".about-vision-card p");
-    if (visionHeadings.length === 2 && visionParagraphs.length === 3) {
-      visionHeadings[0].textContent = "Our Vision";
-      visionHeadings[1].textContent = "Our Approach";
-
-      visionParagraphs[0].textContent =
-        "We envision a world where every entrepreneur, big or small, has access to professional web design services that help grow their business. No generic templates, but tailor-made websites that perfectly match the identity and goals of your business.";
-      visionParagraphs[1].textContent =
-        "At TwinPixel, we believe in a personal approach. We take the time to understand your business, target audience, and objectives before getting started. This allows us to create a website that is not only beautiful but also effective in achieving your goals.";
-      visionParagraphs[2].textContent =
-        "Our working method is transparent and direct. You always have direct contact with the designers and developers working on your project, without middlemen or account managers. This ensures faster communication, shorter lines, and ultimately a better result.";
-    }
-
-    // Waarom kiezen voor TwinPixel
-    const featuresTitle = document.querySelector(".about-features-section .section-title");
-    if (featuresTitle) featuresTitle.textContent = "Why Choose TwinPixel?";
-
-    const featureTitles = [
-      "Fast delivery",
-      "100% custom",
-      "Competitive prices",
-      "Personal approach",
-      "Responsive design",
-      "SEO optimized"
-    ];
-
-    const featureDescriptions = [
-      "No long waiting times. We deliver within agreed deadlines, so you can go online quickly.",
-      "No standard templates, but a unique design that perfectly fits your brand and goals.",
-      "Professional quality without the high costs of large agencies. Transparent pricing, no hidden costs.",
-      "Direct contact with the designers and developers working on your project. Short lines, fast communication.",
-      "All websites are fully responsive and work perfectly on all devices, from desktop to smartphone.",
-      "All websites are optimized for search engines, so you are better found by potential customers."
-    ];
-
-    document.querySelectorAll(".feature-card-glass").forEach((card, i) => {
-      const h3 = card.querySelector("h3");
-      const p = card.querySelector("p");
-      if (h3) h3.textContent = featureTitles[i];
-      if (p) p.textContent = featureDescriptions[i];
-    });
-
-    // Team sectie
-    const teamTitle = document.querySelector(".team-section .section-title");
-    if (teamTitle) teamTitle.textContent = "Our Team";
-
-    const roles = document.querySelectorAll(".team-role");
-    if (roles.length >= 2) {
-      roles[0].textContent = "Co-founder & Web Developer";
-      roles[1].textContent = "Co-founder & UX/UI Designer";
-    }
-
-    const bios = document.querySelectorAll(".team-bio");
-    if (bios.length >= 2) {
-      bios[0].textContent =
-        "Twan is our technical expert. He ensures all websites are not only beautiful but also fast, secure, and technically flawless.";
-      bios[1].textContent =
-        "Emma specializes in user-friendly and visually appealing design. She ensures that every website is not only beautiful but also intuitive to use.";
-            // ... [alles wat je al had voor Engels]
-          } else if (lang === "nl") {
-            // Paginaheader
-            const header = document.querySelector(".page-header h1");
-            if (header) header.textContent = "Over TwinPixel";
-        
-            // Verhaal achter TwinPixel
-            const storyTitle = document.querySelector(".about-story-section .section-title");
-            if (storyTitle) storyTitle.textContent = "Het verhaal achter TwinPixel";
-        
-            const storyParagraphs = document.querySelectorAll(".about-story-section .about-content p");
-            if (storyParagraphs.length >= 3) {
-              storyParagraphs[0].textContent =
-                "TwinPixel is opgericht door Emma de Heer (UX-designer) en Twan Meurs (developer), twee studenten met een passie voor webdesign en development. Samen hebben we ook veel bedrijfskundige kennis, waardoor we niet alleen technisch sterke websites bouwen, maar ook websites die écht bijdragen aan het succes van jouw onderneming.";
-              storyParagraphs[1].textContent =
-                "Wat begon als een hobby tijdens onze studie is uitgegroeid tot een professioneel webdesignbureau met een duidelijke missie: betaalbare, kwalitatieve websites leveren aan freelancers en kleine bedrijven.";
-              storyParagraphs[2].textContent =
-                "Wij vinden dat elke ondernemer recht heeft op een professionele online uitstraling, zonder de hoge kosten die grote bureaus rekenen. Dankzij onze efficiënte werkwijze en focus op wat echt belangrijk is, kunnen wij websites van hoge kwaliteit leveren voor een betaalbare prijs.";
-            }
-        
-            // Visie & Aanpak
-            const visionTitle = document.querySelector(".about-vision-section .section-title");
-            if (visionTitle) visionTitle.textContent = "Onze Visie & Aanpak";
-        
-            const visionHeadings = document.querySelectorAll(".about-vision-card h3");
-            const visionParagraphs = document.querySelectorAll(".about-vision-card p");
-            if (visionHeadings.length === 2 && visionParagraphs.length === 3) {
-              visionHeadings[0].textContent = "Onze Visie";
-              visionHeadings[1].textContent = "Onze Aanpak";
-        
-              visionParagraphs[0].textContent =
-                "Wij zien een wereld voor ons waarin elke ondernemer, groot of klein, toegang heeft tot professionele webdesign diensten die helpen bij het laten groeien van hun bedrijf. Geen standaard templates, maar op maat gemaakte websites die perfect aansluiten bij de identiteit en doelen van je bedrijf.";
-              visionParagraphs[1].textContent =
-                "Bij TwinPixel geloven we in een persoonlijke aanpak. We nemen de tijd om jouw bedrijf, doelgroep en doelen te begrijpen voordat we aan de slag gaan. Zo maken we een website die niet alleen mooi is, maar ook effectief bijdraagt aan jouw succes.";
-              visionParagraphs[2].textContent =
-                "Onze werkwijze is transparant en direct. Je hebt altijd direct contact met de ontwerpers en ontwikkelaars van jouw project, zonder tussenpersonen of accountmanagers. Dat zorgt voor snellere communicatie, korte lijnen en uiteindelijk een beter resultaat.";
-            }
-        
-            // Waarom kiezen voor TwinPixel
-            const featuresTitle = document.querySelector(".about-features-section .section-title");
-            if (featuresTitle) featuresTitle.textContent = "Waarom kiezen voor TwinPixel?";
-        
-            const featureTitles = [
-              "Snelle oplevering",
-              "100% maatwerk",
-              "Scherpe prijzen",
-              "Persoonlijke aanpak",
-              "Responsive design",
-              "SEO geoptimaliseerd"
-            ];
-        
-            const featureDescriptions = [
-              "Geen lange wachttijden. We leveren binnen de afgesproken deadlines, zodat je snel online kunt.",
-              "Geen standaard templates, maar een uniek ontwerp dat perfect past bij jouw merk en doelen.",
-              "Professionele kwaliteit zonder de hoge kosten van grote bureaus. Transparante prijzen, geen verborgen kosten.",
-              "Direct contact met de ontwerpers en ontwikkelaars van je project. Korte lijnen, snelle communicatie.",
-              "Alle websites zijn volledig responsive en werken perfect op alle apparaten, van desktop tot smartphone.",
-              "Alle websites zijn geoptimaliseerd voor zoekmachines, zodat je beter gevonden wordt door potentiële klanten."
-            ];
-        
-            document.querySelectorAll(".feature-card-glass").forEach((card, i) => {
-              const h3 = card.querySelector("h3");
-              const p = card.querySelector("p");
-              if (h3) h3.textContent = featureTitles[i];
-              if (p) p.textContent = featureDescriptions[i];
-            });
-        
-            // Team sectie
-            const teamTitle = document.querySelector(".team-section .section-title");
-            if (teamTitle) teamTitle.textContent = "Ons Team";
-        
-            const roles = document.querySelectorAll(".team-role");
-            if (roles.length >= 2) {
-              roles[0].textContent = "Mede-oprichter & Webdeveloper";
-              roles[1].textContent = "Mede-oprichter & UX/UI Designer";
-            }
-        
-            const bios = document.querySelectorAll(".team-bio");
-            if (bios.length >= 2) {
-              bios[0].textContent =
-                "Twan is onze technische expert. Hij zorgt ervoor dat alle websites niet alleen mooi zijn, maar ook snel, veilig en technisch perfect.";
-              bios[1].textContent =
-                "Emma is gespecialiseerd in gebruiksvriendelijk en aantrekkelijk design. Zij zorgt ervoor dat elke website niet alleen mooi is, maar ook intuïtief in gebruik.";
-            }
-          }
-        }
-        
-    }
-
-
 // New function to translate all text elements on the page
 function translateAllTextElements(lang) {
   const t = translations[lang];
@@ -1171,6 +998,151 @@ function translateAllTextElements(lang) {
     });
   }, 100);
 }
+function updateAboutPage(lang) {
+  const translations = {
+    nl: {
+      header: "Over TwinPixel",
+      storyTitle: "Het verhaal achter TwinPixel",
+      storyParagraphs: [
+        "TwinPixel is opgericht door Emma de Heer (UX-designer) en Twan Meurs (developer), twee studenten met een passie voor webdesign en development. Samen hebben we ook veel bedrijfskundige kennis, waardoor we niet alleen technisch sterke websites bouwen, maar ook websites die écht bijdragen aan het succes van jouw onderneming.",
+        "Wat begon als een hobby tijdens onze studie is uitgegroeid tot een professioneel webdesignbureau met een duidelijke missie: betaalbare, kwalitatieve websites leveren aan freelancers en kleine bedrijven.",
+        "Wij vinden dat elke ondernemer recht heeft op een professionele online uitstraling, zonder de hoge kosten die grote bureaus rekenen. Dankzij onze efficiënte werkwijze en focus op wat echt belangrijk is, kunnen wij websites van hoge kwaliteit leveren voor een betaalbare prijs."
+      ],
+      visionTitle: "Onze Visie & Aanpak",
+      visionHeadings: ["Onze Visie", "Onze Aanpak"],
+      visionParagraphs: [
+        "Wij zien een wereld voor ons waarin elke ondernemer, groot of klein, toegang heeft tot professionele webdesign diensten die helpen bij het laten groeien van hun bedrijf. Geen standaard templates, maar op maat gemaakte websites die perfect aansluiten bij de identiteit en doelen van je bedrijf.",
+        "Bij TwinPixel geloven we in een persoonlijke aanpak. We nemen de tijd om jouw bedrijf, doelgroep en doelen te begrijpen voordat we aan de slag gaan. Zo maken we een website die niet alleen mooi is, maar ook effectief bijdraagt aan jouw succes.",
+        "Onze werkwijze is transparant en direct. Je hebt altijd direct contact met de ontwerpers en ontwikkelaars van jouw project, zonder tussenpersonen of accountmanagers. Dat zorgt voor snellere communicatie, korte lijnen en uiteindelijk een beter resultaat."
+      ],
+      featuresTitle: "Waarom kiezen voor TwinPixel?",
+      featureTitles: [
+        "Snelle levering",
+        "100% maatwerk",
+        "Scherpe prijzen",
+        "Persoonlijke aanpak",
+        "Responsive design",
+        "SEO geoptimaliseerd"
+      ],
+      featureDescriptions: [
+        "Geen lange wachttijden. We leveren binnen de afgesproken deadlines, zodat je snel online kunt.",
+        "Geen standaard templates, maar een uniek ontwerp dat perfect past bij jouw merk en doelen.",
+        "Professionele kwaliteit zonder de hoge kosten van grote bureaus. Transparante prijzen, geen verborgen kosten.",
+        "Direct contact met de ontwerpers en ontwikkelaars van je project. Korte lijnen, snelle communicatie.",
+        "Alle websites zijn volledig responsive en werken perfect op alle apparaten, van desktop tot smartphone.",
+        "Alle websites zijn geoptimaliseerd voor zoekmachines, zodat je beter gevonden wordt door potentiële klanten."
+      ],
+      teamTitle: "Ons Team",
+      teamRoles: [
+        "Mede-oprichter & Webdeveloper",
+        "Mede-oprichter & UX/UI Designer"
+      ],
+      teamBios: [
+        "Twan is onze technische expert. Hij zorgt ervoor dat alle websites niet alleen mooi zijn, maar ook snel, veilig en technisch perfect.",
+        "Emma is gespecialiseerd in gebruiksvriendelijk en aantrekkelijk design. Zij zorgt ervoor dat elke website niet alleen mooi is, maar ook intuïtief in gebruik."
+      ]
+    },
+    en: {
+      header: "About TwinPixel",
+      storyTitle: "The Story Behind TwinPixel",
+      storyParagraphs: [
+        "TwinPixel was founded by Emma de Heer (UX designer) and Twan Meurs (developer), two students with a passion for web design and development. Together, we also have extensive business expertise, allowing us to build not only technically strong websites, but also websites that truly contribute to the success of your business.",
+        "What started as a hobby during our studies has grown into a professional web design agency with a clear mission: to deliver affordable, high-quality websites to freelancers and small businesses.",
+        "We believe every entrepreneur deserves a professional online presence, without the high costs that large agencies often charge. Thanks to our efficient way of working and focus on what truly matters, we can deliver high-quality websites at affordable prices."
+      ],
+      visionTitle: "Our Vision & Approach",
+      visionHeadings: ["Our Vision", "Our Approach"],
+      visionParagraphs: [
+        "We envision a world where every entrepreneur, big or small, has access to professional web design services that help grow their business. No generic templates, but tailor-made websites that perfectly match the identity and goals of your business.",
+        "At TwinPixel, we believe in a personal approach. We take the time to understand your business, target audience, and objectives before getting started. This allows us to create a website that is not only beautiful but also effective in achieving your goals.",
+        "Our working method is transparent and direct. You always have direct contact with the designers and developers working on your project, without middlemen or account managers. This ensures faster communication, shorter lines, and ultimately a better result."
+      ],
+      featuresTitle: "Why Choose TwinPixel?",
+      featureTitles: [
+        "Fast delivery",
+        "100% custom",
+        "Competitive prices",
+        "Personal approach",
+        "Responsive design",
+        "SEO optimized"
+      ],
+      featureDescriptions: [
+        "No long waiting times. We deliver within agreed deadlines, so you can go online quickly.",
+        "No standard templates, but a unique design that perfectly fits your brand and goals.",
+        "Professional quality without the high costs of large agencies. Transparent pricing, no hidden costs.",
+        "Direct contact with the designers and developers working on your project. Short lines, fast communication.",
+        "All websites are fully responsive and work perfectly on all devices, from desktop to smartphone.",
+        "All websites are optimized for search engines, so you are better found by potential customers."
+      ],
+      teamTitle: "Our Team",
+      teamRoles: [
+        "Co-founder & Web Developer",
+        "Co-founder & UX/UI Designer"
+      ],
+      teamBios: [
+        "Twan is our technical expert. He ensures all websites are not only beautiful but also fast, secure, and technically flawless.",
+        "Emma specializes in user-friendly and visually appealing design. She ensures that every website is not only beautiful but also intuitive to use."
+      ]
+    }
+  };
+
+  const t = translations[lang];
+
+  // Paginaheader
+  const header = document.querySelector(".page-header h1");
+  if (header) header.textContent = t.header;
+
+  // Verhaal achter TwinPixel
+  const storyTitle = document.querySelector(".about-story-section .section-title");
+  if (storyTitle) storyTitle.textContent = t.storyTitle;
+
+  const storyParagraphs = document.querySelectorAll(".about-story-section .about-content p");
+  storyParagraphs.forEach((p, i) => {
+    if (t.storyParagraphs[i]) p.textContent = t.storyParagraphs[i];
+  });
+
+  // Visie & Aanpak
+  const visionTitle = document.querySelector(".about-vision-section .section-title");
+  if (visionTitle) visionTitle.textContent = t.visionTitle;
+
+  const visionHeadings = document.querySelectorAll(".about-vision-card h3");
+  visionHeadings.forEach((h3, i) => {
+    if (t.visionHeadings[i]) h3.textContent = t.visionHeadings[i];
+  });
+
+  const visionParagraphs = document.querySelectorAll(".about-vision-card p");
+  visionParagraphs.forEach((p, i) => {
+    if (t.visionParagraphs[i]) p.textContent = t.visionParagraphs[i];
+  });
+
+  // Waarom kiezen voor TwinPixel
+  const featuresTitle = document.querySelector(".about-features-section .section-title");
+  if (featuresTitle) featuresTitle.textContent = t.featuresTitle;
+
+  const featureCards = document.querySelectorAll(".feature-card-glass");
+  featureCards.forEach((card, i) => {
+    const h3 = card.querySelector("h3");
+    const p = card.querySelector("p");
+    if (h3) h3.textContent = t.featureTitles[i];
+    if (p) p.textContent = t.featureDescriptions[i];
+  });
+
+  // Team
+  const teamTitle = document.querySelector(".team-section .section-title");
+  if (teamTitle) teamTitle.textContent = t.teamTitle;
+
+  const roles = document.querySelectorAll(".team-role");
+  roles.forEach((role, i) => {
+    if (t.teamRoles[i]) role.textContent = t.teamRoles[i];
+  });
+
+  const bios = document.querySelectorAll(".team-bio");
+  bios.forEach((bio, i) => {
+    if (t.teamBios[i]) bio.textContent = t.teamBios[i];
+  });
+}
+
+
 
 // Function to update the home page content
 function updateHomePage(lang) {
@@ -2462,22 +2434,7 @@ function updateServicesPage(lang) {
           : "After an initial conversation, we prepare a detailed quote. After approval, we start with the design, followed by development, testing, and launch. Throughout the entire process, we keep you informed and regularly ask for feedback.";
     }
 
-    // FAQ 6
-    const faq6Question = faqItems[5].querySelector("h3");
-    if (faq6Question) {
-      faq6Question.textContent =
-        lang === "nl"
-          ? "Bieden jullie ondersteuning na de lancering?"
-          : "Do you offer support after the launch?";
-    }
-
-    const faq6Answer = faqItems[5].querySelector("p");
-    if (faq6Answer) {
-      faq6Answer.textContent =
-        lang === "nl"
-          ? "Ja, we bieden verschillende onderhouds- en ondersteuningspakketten aan om ervoor te zorgen dat je website up-to-date, veilig en optimaal presterend blijft. We zijn ook beschikbaar voor ad-hoc ondersteuning wanneer nodig."
-          : "Yes, we offer various maintenance and support packages to ensure your website stays up-to-date, secure, and performing optimally. We are also available for ad-hoc support when needed.";
-    }
+    
   }
 }
 
