@@ -278,7 +278,6 @@
               <a href="webdesign-wageningen.html">Lokale SEO in Wageningen</a>.
             </p>
           </div>
-
           <div class="service-card fade-in delay-3">
             <div class="service-icon">
               <i class="fas fa-paint-brush"></i>
@@ -291,7 +290,7 @@
         </div>
         <div class="button-container fade-in">
           <a href="services.html" class="btn neon-button">Bekijk al onze diensten</a>
-// js script beacause it would'nt work otherwise Im sorry
+
 <script>
   function vertaalKnop(href, tekstNl, tekstEn, lang) {
     const knop = document.querySelector(`a[href="${href}"].btn.neon-button`);
@@ -300,7 +299,6 @@
       knop.innerText = lang === "nl" ? tekstNl : tekstEn;
     }
   }
-
   document.addEventListener("DOMContentLoaded", () => {
     const lang = "en"; // of "nl"
     vertaalKnop("services.html", "Bekijk al onze diensten", "View all our services", lang);
