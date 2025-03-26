@@ -724,17 +724,6 @@
     background: transparent !important;
   }
 
-  /* Fix voor mobiel: forceer hoogte */
-  @media (max-width: 768px) {
-  df-messenger {
-    all: unset !important;
-    position: fixed !important;
-    bottom: 0 !important;
-    right: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    z-index: 9999 !important;
-  }
 
   df-messenger iframe {
     position: fixed !important;
@@ -744,9 +733,9 @@
     height: 100% !important;
     border: none !important;
     background: #000 !important; /* of transparent */
-    z-index: 9999 !important;
+    z-index: 999 !important;
   }
-}
+
 
 </style>
 
