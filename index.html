@@ -512,8 +512,6 @@
       </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script src="js/main.js"></script>
 
     <!-- Structured Data -->
     <!-- LocalBusiness Structured Data -->
@@ -715,7 +713,7 @@
     position: fixed !important;
     bottom: 24px;
     right: 24px;
-    z-index: 9999;
+    z-index: 1001;
 
     /* Maximale hoogte en breedte op mobiel */
     max-height: 80vh;
@@ -727,24 +725,19 @@
     background: transparent !important;
   }
 
-  /* Fix voor mobiel: forceer hoogte */
-  @media (max-width: 768px) {
-  df-messenger {
+
+  df-messenger iframe {
+    position: fixed !important;
     bottom: 0 !important;
     right: 0 !important;
     width: 100% !important;
-    max-width: 100% !important;
     height: 100% !important;
-    border-radius: 0 !important;
-    backdrop-filter: none !important; /* <-- hier moet 'ie! */
+    border: none !important;
+    background: #000 !important; /* of transparent */
+    z-index: 999 !important;
   }
 
-  df-messenger iframe {
-    width: 100% !important;
-    height: 100% !important;
-    background: transparent !important;
-  }
-  }
+
 </style>
 
 <df-messenger
@@ -755,6 +748,8 @@
   chat-icon="Images/pixie.png">
 </df-messenger>
 
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
   </body>
 </html>
 
