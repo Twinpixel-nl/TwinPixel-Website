@@ -114,17 +114,6 @@ df-messenger iframe {
     height: auto;
   }
 }
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-
-/* Voeg een bovenmarge toe aan de hoofdinhoud om overlapping te voorkomen */
-.main-content {
-  margin-top: 60px; /* Pas deze waarde aan op basis van de hoogte van je navigatiemenu */
-}
 
 
 /* Reset and Base Styles */
@@ -409,11 +398,9 @@ header.scrolled {
 }
 
 .navbar {
-  background-color: #333;
-  padding: 10px;
-  color: white;
-  width: 100%;
-  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
