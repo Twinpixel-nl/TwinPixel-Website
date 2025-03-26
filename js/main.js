@@ -1682,8 +1682,8 @@ function updateAboutPage(lang) {
   }
 
   // Update feature cards
-  const featureCards = document.querySelectorAll(".feature-card");
-  if (featureCards.length >= 6) {
+  const featureCards = document.querySelectorAll(".unique-cards-container");
+  if (featureCards.length >= 4) {
     // Fast delivery
     const fastDeliveryTitle = featureCards[0].querySelector("h4");
     if (fastDeliveryTitle) {
