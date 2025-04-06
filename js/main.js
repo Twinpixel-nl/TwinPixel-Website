@@ -703,14 +703,14 @@ function initTestimonialSlider() {
         slide.style.display = index === 0 ? "block" : "none"; // Show only first initially
         slide.setAttribute('aria-hidden', index === 0 ? 'false' : 'true'); // Accessibility
 
-        // Optional: Create dot indicators
-        const dot = document.createElement('button');
-        dot.className = 'testimonial-dot';
-        dot.setAttribute('aria-label', `Go to testimonial ${index + 1}`);
-        if (index === 0) dot.classList.add('active');
-        dot.addEventListener('click', () => showSlide(index));
-        controlsContainer.appendChild(dot);
-    });
+    //     // Optional: Create dot indicators
+    //     const dot = document.createElement('button');
+    //     dot.className = 'testimonial-dot';
+    //     dot.setAttribute('aria-label', `Go to testimonial ${index + 1}`);
+    //     if (index === 0) dot.classList.add('active');
+    //     dot.addEventListener('click', () => showSlide(index));
+    //     controlsContainer.appendChild(dot);
+     });
 
     // Optional: Append controls to the slider
     if (controlsContainer.hasChildNodes()) {
