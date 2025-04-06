@@ -3,19 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Meta Description (Needs key: wageningen.meta_description) -->
     <meta
       name="description"
       content="Professionele webdesign in Wageningen voor ZZP'ers en MKB. TwinPixel biedt op maat gemaakte websites met SEO-optimalisatie voor lokale vindbaarheid in Wageningen en omgeving."
+      data-i18n="wageningen.meta_description"
     />
     <meta
       name="keywords"
       content="webdesign Wageningen, website laten maken Wageningen, webdevelopment Wageningen, SEO-optimalisatie Wageningen, lokale vindbaarheid, ZZP website Wageningen, MKB website Wageningen"
     />
-    <title>
+    <!-- Title (Needs key: wageningen.title) -->
+    <title data-i18n="wageningen.title">
       Webdesign Wageningen | Lokale Websites voor ZZP & MKB | TwinPixel
     </title>
 
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph / Facebook (Static Recommended) -->
     <meta property="og:type" content="website" />
     <meta
       property="og:url"
@@ -34,7 +37,7 @@
       content="https://twinpixel.nl/Images/Logo%20donkere%20achtergrond.png"
     />
 
-    <!-- Twitter -->
+    <!-- Twitter (Static Recommended) -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta
       property="twitter:url"
@@ -96,24 +99,24 @@
       href="Icons/favicon-16x16.png"
     />
     <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-Y0TE68DKL1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-Y0TE68DKL1");
+    </script>
+
   </head>
 
-  <!-- Google tag (gtag.js) -->
-  <script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=G-Y0TE68DKL1"
-  ></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-
-    gtag("config", "G-Y0TE68DKL1");
-  </script>
-
-  <body>
+  <body class="webdesign-wageningen-page"> <!-- Added specific body class -->
     <!-- Mobile Menu Overlay -->
     <div class="mobile-menu-overlay"></div>
 
@@ -130,32 +133,23 @@
           </a>
 
           <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">Over ons</a></li>
-            <li><a href="services.html">Diensten</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="pricing.html">Prijzen</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html" data-i18n="common.nav_home">Home</a></li>
+            <li><a href="about.html" data-i18n="common.nav_about">Over ons</a></li>
+            <li><a href="services.html" data-i18n="common.nav_services">Diensten</a></li>
+            <li><a href="portfolio.html" data-i18n="common.nav_portfolio">Portfolio</a></li>
+            <li><a href="pricing.html" data-i18n="common.nav_pricing">Prijzen</a></li>
+            <li><a href="contact.html" data-i18n="common.nav_contact">Contact</a></li>
           </ul>
 
           <div class="language-switcher">
             <div class="language-buttons">
-              <a
-                href="#nl"
-                class="lang-btn active"
-                onclick="switchLanguage('nl'); return false;"
-                >NL</a
-              >
-              <a
-                href="#en"
-                class="lang-btn"
-                onclick="switchLanguage('en'); return false;"
-                >EN</a
-              >
+              <!-- Removed inline onclick -->
+              <a href="#nl" class="lang-btn active">NL</a>
+              <a href="#en" class="lang-btn">EN</a>
             </div>
           </div>
 
-          <button class="mobile-menu-btn">
+          <button class="mobile-menu-btn" aria-label="Toggle menu">
             <i class="fas fa-bars"></i>
           </button>
         </nav>
@@ -165,7 +159,7 @@
     <!-- Page Header -->
     <section class="page-header">
       <div class="container">
-        <h1 class="fade-in">Webdesign in Wageningen</h1>
+        <h1 class="fade-in" data-i18n="wageningen.header">Webdesign in Wageningen</h1>
       </div>
     </section>
 
@@ -173,14 +167,14 @@
     <section class="services-intro">
       <div class="container">
         <div class="intro-content fade-in">
-          <h2>Lokale webdesign diensten voor ondernemers in Wageningen</h2>
-          <p>
+          <h2 data-i18n="wageningen.intro_title">Lokale webdesign diensten voor ondernemers in Wageningen</h2>
+          <p data-i18n="wageningen.intro_p1">
             Ben je een ZZP'er of MKB-ondernemer in Wageningen of omgeving en
             zoek je een professionele website die jouw bedrijf echt op de kaart
             zet? TwinPixel is jouw lokale partner voor webdesign en online
             marketing in Wageningen.
           </p>
-          <p>
+          <p data-i18n="wageningen.intro_p2">
             Als lokaal webdesignbureau begrijpen we de Wageningse markt en
             kunnen we je helpen om online beter gevonden te worden door
             potentiële klanten in Wageningen en omgeving. Onze op maat gemaakte
@@ -192,54 +186,55 @@
     </section>
 
     <!-- Local Benefits Section -->
-    <section class="about-section">
+    <section class="about-section"> <!-- Consider a more specific class like 'local-benefits-section' -->
       <div class="container">
         <div class="section-title fade-in">
-          <h2>Waarom kiezen voor een lokaal webdesignbureau in Wageningen?</h2>
+          <h2 data-i18n="wageningen.benefits_title">Waarom kiezen voor een lokaal webdesignbureau in Wageningen?</h2>
         </div>
 
-        <div class="about-features">
+        <div class="about-features"> <!-- Consider renaming this class -->
           <div class="features-grid">
+            <!-- Benefit 1 -->
             <div class="feature-card fade-in delay-1">
               <div class="feature-icon">
                 <i class="fas fa-map-marker-alt"></i>
               </div>
-              <h3>Lokale kennis</h3>
-              <p>
+              <h3 data-i18n="wageningen.benefits.0.title">Lokale kennis</h3>
+              <p data-i18n="wageningen.benefits.0.desc">
                 We kennen de lokale markt in Wageningen en omgeving en begrijpen
                 wat werkt voor bedrijven in deze regio.
               </p>
             </div>
-
+            <!-- Benefit 2 -->
             <div class="feature-card fade-in delay-2">
               <div class="feature-icon">
                 <i class="fas fa-search-location"></i>
               </div>
-              <h3>Lokale SEO</h3>
-              <p>
+              <h3 data-i18n="wageningen.benefits.1.title">Lokale SEO</h3>
+              <p data-i18n="wageningen.benefits.1.desc">
                 We optimaliseren je website specifiek voor lokale
                 zoekopdrachten, zodat je beter gevonden wordt door potentiële
                 klanten in Wageningen.
               </p>
             </div>
-
+            <!-- Benefit 3 -->
             <div class="feature-card fade-in delay-3">
               <div class="feature-icon">
                 <i class="fas fa-handshake"></i>
               </div>
-              <h3>Persoonlijk contact</h3>
-              <p>
+              <h3 data-i18n="wageningen.benefits.2.title">Persoonlijk contact</h3>
+              <p data-i18n="wageningen.benefits.2.desc">
                 Als lokaal bedrijf zijn we altijd dichtbij voor een persoonlijk
                 gesprek of overleg over je website.
               </p>
             </div>
-
+            <!-- Benefit 4 -->
             <div class="feature-card fade-in delay-4">
               <div class="feature-icon">
                 <i class="fas fa-network-wired"></i>
               </div>
-              <h3>Lokaal netwerk</h3>
-              <p>
+              <h3 data-i18n="wageningen.benefits.3.title">Lokaal netwerk</h3>
+              <p data-i18n="wageningen.benefits.3.desc">
                 We hebben een sterk netwerk in Wageningen en kunnen je helpen
                 verbinden met andere lokale ondernemers.
               </p>
@@ -250,16 +245,16 @@
     </section>
 
     <!-- Local SEO Section -->
-    <section class="main-services">
+    <section class="main-services"> <!-- Consider a more specific class like 'local-seo-section' -->
       <div class="container">
-        <div class="service-item fade-in">
+        <div class="service-item fade-in"> <!-- Consider renaming 'service-item' for this context -->
           <div class="service-content">
             <div class="service-icon">
               <i class="fas fa-search"></i>
             </div>
             <div class="service-text">
-              <h2>Lokale SEO voor bedrijven in Wageningen</h2>
-              <p>
+              <h2 data-i18n="wageningen.local_seo_title">Lokale SEO voor bedrijven in Wageningen</h2>
+              <p data-i18n="wageningen.local_seo_desc">
                 Lokale SEO (Search Engine Optimization) is essentieel voor
                 bedrijven die klanten in Wageningen en omgeving willen
                 aantrekken. Wij zorgen ervoor dat je website geoptimaliseerd is
@@ -267,26 +262,26 @@
                 gemakkelijk kunnen vinden.
               </p>
 
-              <h3>Onze lokale SEO-diensten omvatten:</h3>
+              <h3 data-i18n="wageningen.local_seo_list_title">Onze lokale SEO-diensten omvatten:</h3>
               <ul>
-                <li>
+                <li data-i18n="wageningen.local_seo_list.0">
                   <i class="fas fa-check"></i> Optimalisatie voor lokale
                   zoekwoorden zoals "webdesign Wageningen" of "[jouw branche]
                   Wageningen"
                 </li>
-                <li>
+                <li data-i18n="wageningen.local_seo_list.1">
                   <i class="fas fa-check"></i> Google Mijn Bedrijf optimalisatie
                   voor betere zichtbaarheid in Google Maps
                 </li>
-                <li>
+                <li data-i18n="wageningen.local_seo_list.2">
                   <i class="fas fa-check"></i> Lokale backlink-strategie om je
                   autoriteit in de regio te vergroten
                 </li>
-                <li>
+                <li data-i18n="wageningen.local_seo_list.3">
                   <i class="fas fa-check"></i> Lokale content creatie die
                   relevant is voor je doelgroep in Wageningen
                 </li>
-                <li>
+                <li data-i18n="wageningen.local_seo_list.4">
                   <i class="fas fa-check"></i> Optimalisatie voor mobiele
                   apparaten, essentieel voor lokale zoekopdrachten
                 </li>
@@ -294,6 +289,7 @@
             </div>
           </div>
           <div class="service-image glow-effect fade-in delay-1">
+            <!-- Use a more relevant image if possible -->
             <img
               src="https://via.placeholder.com/800x500/121212/0066ff?text=Lokale+SEO+Wageningen"
               alt="Lokale SEO Wageningen"
@@ -304,14 +300,14 @@
     </section>
 
     <!-- Local Businesses Section -->
-    <section class="portfolio">
+    <section class="portfolio"> <!-- Consider a more specific class -->
       <div class="container">
         <div class="section-title fade-in">
-          <h2>Voor welke bedrijven in Wageningen maken wij websites?</h2>
+          <h2 data-i18n="wageningen.businesses_title">Voor welke bedrijven in Wageningen maken wij websites?</h2>
         </div>
 
-        <div class="portfolio-intro fade-in">
-          <p>
+        <div class="portfolio-intro fade-in"> <!-- Consider renaming class -->
+          <p data-i18n="wageningen.businesses_desc">
             Bij TwinPixel hebben we ervaring met het maken van websites voor
             diverse branches in Wageningen. Of je nu een winkel, horecazaak,
             adviesbureau of andere onderneming hebt, wij kunnen een website
@@ -319,46 +315,47 @@
           </p>
         </div>
 
-        <div class="services-grid">
+        <div class="services-grid"> <!-- Consider renaming class -->
+          <!-- Business Type 1 -->
           <div class="service-card fade-in delay-1">
             <div class="service-icon">
               <i class="fas fa-store"></i>
             </div>
-            <h3>Lokale winkels</h3>
-            <p>
+            <h3 data-i18n="wageningen.businesses.0.title">Lokale winkels</h3>
+            <p data-i18n="wageningen.businesses.0.desc">
               Aantrekkelijke websites voor winkels in Wageningen, met
               productoverzichten, openingstijden en contactinformatie.
             </p>
           </div>
-
+          <!-- Business Type 2 -->
           <div class="service-card fade-in delay-2">
             <div class="service-icon">
               <i class="fas fa-utensils"></i>
             </div>
-            <h3>Horeca</h3>
-            <p>
+            <h3 data-i18n="wageningen.businesses.1.title">Horeca</h3>
+            <p data-i18n="wageningen.businesses.1.desc">
               Sfeervolle websites voor restaurants, cafés en andere horecazaken
               in Wageningen, met menu's, reserveringsmogelijkheden en foto's.
             </p>
           </div>
-
+          <!-- Business Type 3 -->
           <div class="service-card fade-in delay-3">
             <div class="service-icon">
               <i class="fas fa-briefcase"></i>
             </div>
-            <h3>Zakelijke dienstverleners</h3>
-            <p>
+            <h3 data-i18n="wageningen.businesses.2.title">Zakelijke dienstverleners</h3>
+            <p data-i18n="wageningen.businesses.2.desc">
               Professionele websites voor advocaten, accountants, consultants en
               andere zakelijke dienstverleners in Wageningen.
             </p>
           </div>
-
+          <!-- Business Type 4 -->
           <div class="service-card fade-in delay-4">
             <div class="service-icon">
               <i class="fas fa-hammer"></i>
             </div>
-            <h3>Ambachtslieden</h3>
-            <p>
+            <h3 data-i18n="wageningen.businesses.3.title">Ambachtslieden</h3>
+            <p data-i18n="wageningen.businesses.3.desc">
               Praktische websites voor schilders, loodgieters, elektriciens en
               andere vakmensen in Wageningen, met portfolio en
               contactmogelijkheden.
@@ -372,95 +369,99 @@
     <section class="testimonials">
       <div class="container">
         <div class="section-title fade-in">
-          <h2>Wat klanten in Wageningen over ons zeggen</h2>
+          <h2 data-i18n="wageningen.testimonials_title">Wat klanten in Wageningen over ons zeggen</h2>
         </div>
 
         <div class="testimonial-slider fade-in">
+          <!-- Testimonial 1 -->
           <div class="testimonial-card">
-            <p class="testimonial-text">
+            <p class="testimonial-text" data-i18n="wageningen.testimonials.0.text">
               "TwinPixel heeft een prachtige website voor mijn winkel in
               Wageningen gemaakt. De lokale SEO-optimalisatie heeft echt
               geholpen om meer klanten uit de regio aan te trekken. Ik krijg
               regelmatig complimenten over mijn website!"
             </p>
-            <p class="testimonial-author">Lisa Jansen</p>
-            <p class="testimonial-company">Eigenaar, Bloemen & Zo Wageningen</p>
+            <p class="testimonial-author" data-i18n="wageningen.testimonials.0.author">Lisa Jansen</p>
+            <p class="testimonial-company" data-i18n="wageningen.testimonials.0.company">Eigenaar, Bloemen & Zo Wageningen</p>
           </div>
-
+          <!-- Testimonial 2 -->
           <div class="testimonial-card">
-            <p class="testimonial-text">
+            <p class="testimonial-text" data-i18n="wageningen.testimonials.1.text">
               "Als ZZP'er in Wageningen had ik een professionele website nodig
               die me zou helpen lokaal gevonden te worden. TwinPixel heeft
               precies geleverd wat ik nodig had, tegen een betaalbare prijs.
               Mijn klantenbestand is sindsdien flink gegroeid!"
             </p>
-            <p class="testimonial-author">Mark de Vries</p>
-            <p class="testimonial-company">Freelance Fotograaf, Wageningen</p>
+            <p class="testimonial-author" data-i18n="wageningen.testimonials.1.author">Mark de Vries</p>
+            <p class="testimonial-company" data-i18n="wageningen.testimonials.1.company">Freelance Fotograaf, Wageningen</p>
           </div>
+          <!-- Add more local testimonials if available -->
         </div>
       </div>
     </section>
 
     <!-- Local FAQ Section -->
-    <section class="faq-section">
+    <section class="faq-section"> <!-- Consider faq-local class if styling differs -->
       <div class="container">
-        <h2 class="section-title fade-in">
+        <h2 class="section-title fade-in" data-i18n="wageningen.faq_title">
           Veelgestelde vragen over webdesign in Wageningen
         </h2>
 
-        <div class="faq-grid">
+        <div class="faq-grid"> <!-- Consider if grid layout is still appropriate -->
+          <!-- FAQ 1 -->
           <div class="faq-item fade-in delay-1">
-            <h3>
+             <!-- Using div as requested for styling -->
+            <div class="faq-question" data-i18n="wageningen.faq.0.question">
               Waarom is een lokale website belangrijk voor mijn bedrijf in
               Wageningen?
-            </h3>
-            <p>
+            </div>
+            <div class="faq-answer" hidden data-i18n="wageningen.faq.0.answer">
               Een lokale website helpt je om beter gevonden te worden door
               potentiële klanten in Wageningen en omgeving. Met lokale
               SEO-optimalisatie verschijn je hoger in de zoekresultaten wanneer
               mensen zoeken naar producten of diensten in jouw branche in
               Wageningen.
-            </p>
+            </div>
           </div>
-
+          <!-- FAQ 2 -->
           <div class="faq-item fade-in delay-2">
-            <h3>
+            <div class="faq-question" data-i18n="wageningen.faq.1.question">
               Hoe lang duurt het om een website voor mijn bedrijf in Wageningen
               te maken?
-            </h3>
-            <p>
+            </div>
+            <div class="faq-answer" hidden data-i18n="wageningen.faq.1.answer">
               De doorlooptijd hangt af van de complexiteit van je website. Een
               eenvoudige website kan binnen 2-3 weken klaar zijn, terwijl
               complexere projecten 4-6 weken of langer kunnen duren. We stellen
               altijd een realistische tijdlijn op aan het begin van het project.
-            </p>
+            </div>
           </div>
-
+          <!-- FAQ 3 -->
           <div class="faq-item fade-in delay-3">
-            <h3>
+            <div class="faq-question" data-i18n="wageningen.faq.2.question">
               Kan TwinPixel ook helpen met het verbeteren van mijn bestaande
               website voor lokale vindbaarheid?
-            </h3>
-            <p>
+            </div>
+            <div class="faq-answer" hidden data-i18n="wageningen.faq.2.answer">
               Absoluut! We kunnen je bestaande website analyseren en
               optimaliseren voor lokale zoekopdrachten. Dit omvat technische
               SEO-verbeteringen, content optimalisatie en lokale
               backlink-strategieën om je vindbaarheid in Wageningen te
               verbeteren.
-            </p>
+            </div>
           </div>
-
+          <!-- FAQ 4 -->
           <div class="faq-item fade-in delay-4">
-            <h3>
+            <div class="faq-question" data-i18n="wageningen.faq.3.question">
               Wat kost een lokaal geoptimaliseerde website voor mijn bedrijf in
               Wageningen?
-            </h3>
-            <p>
+            </div>
+            <div class="faq-answer" hidden data-i18n="wageningen.faq.3.answer">
               De kosten hangen af van je specifieke wensen en behoeften. We
               bieden verschillende pakketten aan, beginnend bij €299 voor een
               eenvoudige website. Voor een persoonlijke offerte kun je contact
               met ons opnemen.
-            </p>
+            </div>
           </div>
         </div>
       </div>
@@ -469,15 +470,13 @@
     <!-- CTA Section -->
     <section class="cta-section fade-in">
       <div class="container">
-        <h2>Klaar om je online zichtbaarheid in Wageningen te verbeteren?</h2>
-        <p>
+        <h2 data-i18n="wageningen.cta_title">Klaar om je online zichtbaarheid in Wageningen te verbeteren?</h2>
+        <p data-i18n="wageningen.cta_subtitle">
           Neem contact met ons op voor een vrijblijvend gesprek over hoe wij je
           kunnen helpen met een professionele website die perfect aansluit bij
           jouw bedrijf in Wageningen.
         </p>
-        <a href="contact.html" class="btn btn-large glow-effect"
-          >Vraag een gratis consult aan</a
-        >
+        <a href="contact.html" class="btn btn-large glow-effect" data-i18n="wageningen.cta_button">Vraag een gratis consult aan</a>
       </div>
     </section>
 
@@ -486,33 +485,33 @@
       <div class="container">
         <img
           src="Images/Logo donkere achtergrond.png"
-          alt="TwinPixel Logo"
+          alt="TwinPixel Footer Logo"
           class="footer-logo"
         />
 
         <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">Over ons</a></li>
-          <li><a href="services.html">Diensten</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="pricing.html">Prijzen</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" data-i18n="common.nav_home">Home</a></li>
+          <li><a href="about.html" data-i18n="common.nav_about">Over ons</a></li>
+          <li><a href="services.html" data-i18n="common.nav_services">Diensten</a></li>
+          <li><a href="portfolio.html" data-i18n="common.nav_portfolio">Portfolio</a></li>
+          <li><a href="pricing.html" data-i18n="common.nav_pricing">Prijzen</a></li>
+          <li><a href="contact.html" data-i18n="common.nav_contact">Contact</a></li>
         </ul>
 
         <ul class="social-links">
           <li>
-            <a href="https://www.facebook.com/profile.php?id=61574036669497" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61574036669497" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
           </li>
           <li>
-            <a href="https://www.instagram.com/twinpixel.nl/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.instagram.com/twinpixel.nl/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
           </li>
           <li>
-            <a href="https://www.linkedin.com/company/twinpixel/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.linkedin.com/company/twinpixel/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
           </li>
         </ul>
 
-        <p class="copyright">
-          &copy; 2025 TwinPixel. Alle rechten voorbehouden.
+        <p class="copyright" data-i18n="common.copyright">
+          © 2025 TwinPixel. Alle rechten voorbehouden.
         </p>
       </div>
     </footer>
@@ -520,44 +519,25 @@
     <!-- JavaScript -->
     <script src="js/main.js"></script>
 
-    <!-- Structured Data -->
+    <!-- Structured Data (LD+JSON - Static Recommended) -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
+         "@id": "https://twinpixel.nl/webdesign-wageningen.html", // Added @id
         "name": "Webdesign Wageningen | Lokale Websites voor ZZP & MKB | TwinPixel",
         "description": "Professionele webdesign in Wageningen voor ZZP'ers en MKB. TwinPixel biedt op maat gemaakte websites met SEO-optimalisatie voor lokale vindbaarheid in Wageningen en omgeving.",
         "url": "https://twinpixel.nl/webdesign-wageningen.html",
-        "provider": {
-          "@type": "LocalBusiness",
-          "name": "TwinPixel",
-          "image": "https://twinpixel.nl/Images/Logo donkere achtergrond.png",
-          "url": "https://twinpixel.nl",
-          "telephone": "+31682579179",
-          "email": "info@twinpixel.nl",
-          "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Wageningen",
-            "addressRegion": "Gelderland",
-            "addressCountry": "NL"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 51.9691078,
-            "longitude": 5.6463139
-          },
-          "areaServed": {
-            "@type": "City",
-            "name": "Wageningen"
-          }
+         "isPartOf": { "@id": "https://twinpixel.nl/#website" }, // Linked to main website schema
+        "provider": { // Simplified provider reference
+          "@id": "https://twinpixel.nl/#business"
         },
-        "mainEntity": {
+        "mainEntity": { // Main service offered on this page
           "@type": "Service",
           "name": "Webdesign Wageningen",
           "description": "Professionele webdesign diensten voor bedrijven in Wageningen, inclusief op maat gemaakte websites en lokale SEO-optimalisatie.",
           "provider": {
-            "@type": "LocalBusiness",
-            "name": "TwinPixel"
+            "@id": "https://twinpixel.nl/#business" // Reference business schema
           },
           "areaServed": {
             "@type": "City",
@@ -566,7 +546,8 @@
           "audience": {
             "@type": "Audience",
             "audienceType": "ZZP'ers en MKB-bedrijven in Wageningen"
-          }
+          },
+           "serviceType": "Web Design" // More specific service type
         }
       }
     </script>

@@ -3,15 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Meta Description (Needs key: about.meta_description) -->
     <meta
       name="description"
       content="Leer meer over TwinPixel, een modern webdesignbureau opgericht door twee studenten met een passie voor webdesign en development."
+      data-i18n="about.meta_description"
     />
     <meta
       name="keywords"
       content="over ons, webdesign, website, webdevelopment, studenten, maatwerk, betaalbaar"
     />
-    <title>Over Ons | TwinPixel</title>
+    <!-- Title (Needs key: about.title) -->
+    <title data-i18n="about.title">Over Ons | TwinPixel</title>
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/style.css" />
@@ -51,23 +54,25 @@
     />
     <link rel="manifest" href="/" />
 
+    <!-- Canonical URL -->
     <link rel="canonical" href="https://twinpixel.nl/about.html">
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-Y0TE68DKL1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-Y0TE68DKL1");
+    </script>
+
   </head>
 
-  <!-- Google tag (gtag.js) -->
-  <script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=G-Y0TE68DKL1"
-  ></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-
-    gtag("config", "G-Y0TE68DKL1");
-  </script>
 
   <body>
     <!-- Mobile Menu Overlay -->
@@ -86,32 +91,23 @@
           </a>
 
           <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html" class="active">Over ons</a></li>
-            <li><a href="services.html">Diensten</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="pricing.html">Prijzen</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html" data-i18n="common.nav_home">Home</a></li>
+            <li><a href="about.html" class="active" data-i18n="common.nav_about">Over ons</a></li>
+            <li><a href="services.html" data-i18n="common.nav_services">Diensten</a></li>
+            <li><a href="portfolio.html" data-i18n="common.nav_portfolio">Portfolio</a></li>
+            <li><a href="pricing.html" data-i18n="common.nav_pricing">Prijzen</a></li>
+            <li><a href="contact.html" data-i18n="common.nav_contact">Contact</a></li>
           </ul>
 
           <div class="language-switcher">
             <div class="language-buttons">
-              <a
-                href="#nl"
-                class="lang-btn active"
-                onclick="switchLanguage('nl'); return false;"
-                >NL</a
-              >
-              <a
-                href="#en"
-                class="lang-btn"
-                onclick="switchLanguage('en'); return false;"
-                >EN</a
-              >
+              <!-- Removed inline onclick -->
+              <a href="#nl" class="lang-btn active">NL</a>
+              <a href="#en" class="lang-btn">EN</a>
             </div>
           </div>
 
-          <button class="mobile-menu-btn">
+          <button class="mobile-menu-btn" aria-label="Toggle menu">
             <i class="fas fa-bars"></i>
           </button>
         </nav>
@@ -121,7 +117,7 @@
     <!-- Page Header -->
     <section class="page-header">
       <div class="container">
-        <h1 class="fade-in">Over TwinPixel</h1>
+        <h1 class="fade-in" data-i18n="about.header">Over TwinPixel</h1>
       </div>
     </section>
 
@@ -131,10 +127,10 @@
         <!-- Story Section with Glassmorphism -->
         <div class="about-story-section fade-in">
           <div class="service-card-glass about-card">
-            <h2 class="section-title">Het verhaal achter TwinPixel</h2>
+            <h2 class="section-title" data-i18n="about.story_title">Het verhaal achter TwinPixel</h2>
             <div class="about-content-wrapper">
               <div class="about-content">
-                <p>
+                <p data-i18n="about.story_paragraphs.0">
                   TwinPixel is opgericht door Emma de Heer (UX designer) en Twan
                   Meurs (developer), twee studenten met een passie voor
                   webdesign en development. Samen hebben we ook uitgebreide
@@ -143,14 +139,14 @@
                   succes van jouw bedrijf.
                 </p>
 
-                <p>
+                <p data-i18n="about.story_paragraphs.1">
                   Wat begon als een hobby tijdens onze studie, is uitgegroeid
                   tot een professioneel webdesignbureau met een duidelijke
                   missie: betaalbare, hoogwaardige websites leveren aan ZZP'ers
                   en MKB'ers.
                 </p>
 
-                <p>
+                <p data-i18n="about.story_paragraphs.2">
                   Wij geloven dat elke ondernemer recht heeft op een
                   professionele online aanwezigheid, zonder de hoge kosten die
                   grote bureaus vaak rekenen. Door onze efficiënte werkwijze en
@@ -174,14 +170,15 @@
         <!-- Vision Section with Glassmorphism -->
         <div class="about-vision-section fade-in delay-1">
           <div class="service-card-glass about-card">
-            <h2 class="section-title">Onze visie & aanpak</h2>
+            <h2 class="section-title" data-i18n="about.vision_title">Onze visie & aanpak</h2>
             <div class="about-grid">
+              <!-- Vision Card 1 -->
               <div class="about-vision-card">
                 <div class="vision-icon">
                   <i class="fas fa-eye"></i>
                 </div>
-                <h3>Onze visie</h3>
-                <p>
+                <h3 data-i18n="about.vision_headings.0">Onze visie</h3>
+                <p data-i18n="about.vision_paragraphs.0">
                   Wij zien een wereld waarin elke ondernemer, groot of klein,
                   toegang heeft tot professionele webdesign diensten die hun
                   bedrijf helpen groeien. Geen generieke templates, maar op maat
@@ -189,20 +186,20 @@
                   doelstellingen van jouw bedrijf.
                 </p>
               </div>
-
+              <!-- Vision Card 2 -->
               <div class="about-vision-card">
                 <div class="vision-icon">
                   <i class="fas fa-handshake"></i>
                 </div>
-                <h3>Onze aanpak</h3>
-                <p>
+                <h3 data-i18n="about.vision_headings.1">Onze aanpak</h3>
+                <p data-i18n="about.vision_paragraphs.1">
                   Bij TwinPixel geloven we in een persoonlijke aanpak. We nemen
                   de tijd om jouw bedrijf, doelgroep en doelstellingen te
                   begrijpen voordat we aan de slag gaan. Dit stelt ons in staat
                   om een website te creëren die niet alleen mooi is, maar ook
                   effectief in het bereiken van jouw doelen.
                 </p>
-                <p>
+                <p data-i18n="about.vision_paragraphs.2">
                   Onze werkwijze is transparant en direct. Je hebt altijd
                   rechtstreeks contact met de designers en developers die aan
                   jouw project werken, zonder tussenlagen of account managers.
@@ -217,70 +214,71 @@
         <!-- Features Section with Glassmorphism -->
         <div class="about-features-section fade-in delay-2">
           <div class="service-card-glass about-card">
-            <h2 class="section-title">Waarom kiezen voor TwinPixel?</h2>
+            <h2 class="section-title" data-i18n="about.features_title">Waarom kiezen voor TwinPixel?</h2>
 
             <div class="features-grid">
+              <!-- Feature 1 -->
               <div class="feature-card-glass fade-in delay-1">
                 <div class="feature-icon">
                   <i class="fas fa-bolt"></i>
                 </div>
-                <h3>Snelle levering</h3>
-                <p>
+                <h3 data-i18n="about.feature_titles.0">Snelle levering</h3>
+                <p data-i18n="about.feature_descriptions.0">
                   Geen lange wachttijden. Wij leveren binnen afgesproken
                   deadlines, zodat jij snel online kunt gaan.
                 </p>
               </div>
-
+              <!-- Feature 2 -->
               <div class="feature-card-glass fade-in delay-2">
                 <div class="feature-icon">
                   <i class="fas fa-pencil-ruler"></i>
                 </div>
-                <h3>100% maatwerk</h3>
-                <p>
+                <h3 data-i18n="about.feature_titles.1">100% maatwerk</h3>
+                <p data-i18n="about.feature_descriptions.1">
                   Geen standaard templates, maar een uniek design dat perfect
                   past bij jouw merk en doelstellingen.
                 </p>
               </div>
-
+              <!-- Feature 3 -->
               <div class="feature-card-glass fade-in delay-3">
                 <div class="feature-icon">
                   <i class="fas fa-tags"></i>
                 </div>
-                <h3>Scherpe prijzen</h3>
-                <p>
+                <h3 data-i18n="about.feature_titles.2">Scherpe prijzen</h3>
+                <p data-i18n="about.feature_descriptions.2">
                   Professionele kwaliteit zonder de hoge kosten van grote
                   bureaus. Transparante prijzen, geen verborgen kosten.
                 </p>
               </div>
-
+              <!-- Feature 4 -->
               <div class="feature-card-glass fade-in delay-4">
                 <div class="feature-icon">
                   <i class="fas fa-comments"></i>
                 </div>
-                <h3>Persoonlijke aanpak</h3>
-                <p>
+                <h3 data-i18n="about.feature_titles.3">Persoonlijke aanpak</h3>
+                <p data-i18n="about.feature_descriptions.3">
                   Direct contact met de designers en developers die aan jouw
                   project werken. Korte lijnen, snelle communicatie.
                 </p>
               </div>
-
+              <!-- Feature 5 -->
               <div class="feature-card-glass fade-in delay-5">
                 <div class="feature-icon">
                   <i class="fas fa-mobile-alt"></i>
                 </div>
-                <h3>Responsive design</h3>
-                <p>
+                <h3 data-i18n="about.feature_titles.4">Responsive design</h3>
+                <p data-i18n="about.feature_descriptions.4">
                   Alle websites zijn volledig responsive en werken perfect op
                   alle apparaten, van desktop tot smartphone.
                 </p>
               </div>
-
+              <!-- Feature 6 -->
               <div class="feature-card-glass fade-in delay-6">
                 <div class="feature-icon">
                   <i class="fas fa-search"></i>
                 </div>
-                <h3>SEO-geoptimaliseerd</h3>
-                <p>
+                <h3 data-i18n="about.feature_titles.5">SEO-geoptimaliseerd</h3>
+                <p data-i18n="about.feature_descriptions.5">
                   Alle websites worden geoptimaliseerd voor zoekmachines, zodat
                   jij beter gevonden wordt door potentiële klanten.
                 </p>
@@ -292,9 +290,10 @@
         <!-- Team Section with Glassmorphism -->
         <div class="team-section fade-in delay-3">
           <div class="service-card-glass about-card">
-            <h2 class="section-title">Ons Team</h2>
+            <h2 class="section-title" data-i18n="about.team_title">Ons Team</h2>
 
             <div class="team-grid">
+              <!-- Team Member 1 -->
               <div class="team-member-card fade-in delay-1">
                 <div class="team-photo-container">
                   <div class="team-photo glow-effect">
@@ -302,9 +301,9 @@
                   </div>
                 </div>
                 <div class="team-info">
-                  <h3>Twan Meurs</h3>
-                  <p class="team-role">Mede-oprichter & Web Developer</p>
-                  <p class="team-bio">
+                  <h3>Twan Meurs</h3> <!-- Name likely static -->
+                  <p class="team-role" data-i18n="about.team_roles.0">Mede-oprichter & Web Developer</p>
+                  <p class="team-bio" data-i18n="about.team_bios.0">
                     Twan is onze technische expert. Hij zorgt ervoor dat alle
                     websites niet alleen mooi zijn, maar ook snel, veilig en
                     technisch perfect werken.
@@ -313,17 +312,19 @@
                     <a
                       href="https://www.linkedin.com/in/twan-meurs/"
                       class="social-icon"
+                      aria-label="Twan Meurs LinkedIn"
                       ><i class="fab fa-linkedin-in"></i
                     ></a>
                     <a
                       href="https://www.instagram.com/twanmeurs/"
                       class="social-icon"
+                      aria-label="Twan Meurs Instagram"
                       ><i class="fab fa-instagram"></i
                     ></a>
                   </div>
                 </div>
               </div>
-
+              <!-- Team Member 2 -->
               <div class="team-member-card fade-in delay-2">
                 <div class="team-photo-container">
                   <div class="team-photo glow-effect">
@@ -331,9 +332,9 @@
                   </div>
                 </div>
                 <div class="team-info">
-                  <h3>Emma de Heer</h3>
-                  <p class="team-role">Mede-oprichter & UX/UI Designer</p>
-                  <p class="team-bio">
+                  <h3>Emma de Heer</h3> <!-- Name likely static -->
+                  <p class="team-role" data-i18n="about.team_roles.1">Mede-oprichter & UX/UI Designer</p>
+                  <p class="team-bio" data-i18n="about.team_bios.1">
                     Emma is gespecialiseerd in gebruiksvriendelijk en visueel
                     aantrekkelijk design. Zij zorgt ervoor dat elke website niet
                     alleen mooi is, maar ook intuïtief in gebruik.
@@ -342,11 +343,13 @@
                     <a
                       href="https://www.linkedin.com/in/emma-de-heer-56826824b/"
                       class="social-icon"
+                      aria-label="Emma de Heer LinkedIn"
                       ><i class="fab fa-linkedin-in"></i
                     ></a>
                     <a
                       href="https://www.instagram.com/3mma_dh/"
                       class="social-icon"
+                      aria-label="Emma de Heer Instagram"
                       ><i class="fab fa-instagram"></i
                     ></a>
                   </div>
@@ -359,18 +362,17 @@
         <!-- CTA Section with Glassmorphism -->
         <div class="cta-section fade-in delay-4">
           <div class="service-card-glass cta-card">
-            <h2>Klaar om samen te werken?</h2>
-            <p>
+            <h2 data-i18n="common.cta_title">Klaar om samen te werken?</h2>
+            <p data-i18n="common.cta_subtitle">
               Laat ons je helpen om jouw online aanwezigheid naar een hoger
               niveau te tillen.
             </p>
              <div class="button-container">
-          <a href="contact.html" class="btn neon-button"
-            >Neem contact op</a
-          >
+               <a href="contact.html" class="btn neon-button" data-i18n="common.cta_button">Neem contact op</a>
+             </div>
           </div>
         </div>
-      </div>
+      </div> <!-- End .container for about-section -->
     </section>
 
     <!-- Footer -->
@@ -378,17 +380,17 @@
       <div class="container">
         <img
           src="Images/Logo donkere achtergrond.png"
-          alt="TwinPixel Logo"
+          alt="TwinPixel Footer Logo"
           class="footer-logo"
         />
 
         <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">Over ons</a></li>
-          <li><a href="services.html">Diensten</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="pricing.html">Prijzen</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" data-i18n="common.nav_home">Home</a></li>
+          <li><a href="about.html" data-i18n="common.nav_about">Over ons</a></li>
+          <li><a href="services.html" data-i18n="common.nav_services">Diensten</a></li>
+          <li><a href="portfolio.html" data-i18n="common.nav_portfolio">Portfolio</a></li>
+          <li><a href="pricing.html" data-i18n="common.nav_pricing">Prijzen</a></li>
+          <li><a href="contact.html" data-i18n="common.nav_contact">Contact</a></li>
         </ul>
 
         <ul class="social-links">
@@ -396,53 +398,55 @@
             <a
               href="https://www.facebook.com/profile.php?id=61574036669497"
               target="_blank"
+              aria-label="Facebook"
               ><i class="fab fa-facebook-f"></i
             ></a>
           </li>
           <li>
-            <a href="https://www.instagram.com/twinpixel.nl/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.instagram.com/twinpixel.nl/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
           </li>
           <li>
-            <a href="https://www.linkedin.com/company/twinpixel/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.linkedin.com/company/twinpixel/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
           </li>
         </ul>
 
-        <p class="copyright">
-          &copy; 2025 TwinPixel. Alle rechten voorbehouden.
+        <p class="copyright" data-i18n="common.copyright">
+          © 2025 TwinPixel. Alle rechten voorbehouden.
         </p>
       </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script src="js/main.js"></script>
 
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "@id": "https://twinpixel.nl/about.html",
-        "url": "https://twinpixel.nl/about.html",
-        "name": "Over Ons | TwinPixel",
-        "description": "Leer meer over TwinPixel, een modern webdesignbureau opgericht door twee studenten met een passie voor webdesign en development.",
-        "isPartOf": {
-          "@id": "https://twinpixel.nl/#website"
-        },
-        "about": {
-          "@id": "https://twinpixel.nl/#business"
-        },
-        "mainEntity": {
-          "@type": "AboutPage",
-          "name": "Over TwinPixel",
-          "description": "TwinPixel is opgericht door Emma de Heer (UX designer) en Twan Meurs (developer), twee studenten met een passie voor webdesign en development. Samen hebben we uitgebreide business expertise, waardoor we niet alleen technisch sterke websites bouwen, maar ook websites die echt bijdragen aan het succes van jouw bedrijf.",
-          "mainContentOfPage": {
-            "@type": "WebPageElement",
-            "about": {
-              "@id": "https://twinpixel.nl/#business"
+      <!-- JavaScript -->
+      <script src="js/main.js"></script>
+
+      <!-- Structured Data (LD+JSON - Static Recommended) -->
+      <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://twinpixel.nl/about.html",
+          "url": "https://twinpixel.nl/about.html",
+          "name": "Over Ons | TwinPixel",
+          "description": "Leer meer over TwinPixel, een modern webdesignbureau opgericht door twee studenten met een passie voor webdesign en development.",
+          "isPartOf": {
+            "@id": "https://twinpixel.nl/#website"
+          },
+          "about": {
+            "@id": "https://twinpixel.nl/#business"
+          },
+          "mainEntity": {
+            "@type": "AboutPage",
+            "name": "Over TwinPixel",
+            "description": "TwinPixel is opgericht door Emma de Heer (UX designer) en Twan Meurs (developer), twee studenten met een passie voor webdesign en development. Samen hebben we uitgebreide business expertise, waardoor we niet alleen technisch sterke websites bouwen, maar ook websites die echt bijdragen aan het succes van jouw bedrijf.",
+            "mainContentOfPage": {
+              "@type": "WebPageElement",
+              "about": {
+                "@id": "https://twinpixel.nl/#business"
+              }
             }
           }
         }
-      }
-    </script>
+      </script>
   </body>
 </html>

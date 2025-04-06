@@ -3,19 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Meta Description for SEO -->
     <meta
       name="description"
       content="TwinPixel - Modern webdesignbureau in Wageningen voor ZZP'ers en MKB. Professionele websites met SEO-optimalisatie, op maat gemaakt en betaalbaar."
+      data-i18n="common.meta_description"
     />
     <meta
       name="keywords"
       content="webdesign Wageningen, website laten maken, webdevelopment, SEO-optimalisatie, responsive website, maatwerk website, betaalbare website, ZZP website, MKB website"
     />
-    <title>
+    <title data-i18n="common.meta_title"> <!-- Assuming you add meta_title to JSON -->
       TwinPixel | Professionele Websites & SEO-optimalisatie in Wageningen
     </title>
 
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph / Facebook (Generally keep static or handle server-side for optimal sharing) -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://twinpixel.nl/" />
     <meta
@@ -31,7 +33,7 @@
       content="https://twinpixel.nl/Images/Logo%20donkere%20achtergrond.png"
     />
 
-    <!-- Twitter -->
+    <!-- Twitter (Generally keep static or handle server-side) -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://twinpixel.nl/" />
     <meta
@@ -88,28 +90,23 @@
     />
     <link rel="manifest" href="/site.webmanifest" />
 
-    <link rel="canonical" href="https://twinpixel.nl/">
-
-
-
      <!-- Google tag (gtag.js) -->
-  <script
-  async
-  src="https://www.googletagmanager.com/gtag/js?id=G-Y0TE68DKL1"
-></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag() {
-    dataLayer.push(arguments);
-  }
-  gtag("js", new Date());
-
-  gtag("config", "G-Y0TE68DKL1");
-</script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-Y0TE68DKL1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-Y0TE68DKL1");
+    </script>
 
   </head>
 
- 
+
   <body>
     <!-- Mobile Menu Overlay -->
     <div class="mobile-menu-overlay"></div>
@@ -127,22 +124,23 @@
           </a>
 
           <ul class="nav-links">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="about.html">Over ons</a></li>
-            <li><a href="services.html">Diensten</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="pricing.html">Prijzen</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html" class="active" data-i18n="common.nav_home">Home</a></li>
+            <li><a href="about.html" data-i18n="common.nav_about">Over ons</a></li>
+            <li><a href="services.html" data-i18n="common.nav_services">Diensten</a></li>
+            <li><a href="portfolio.html" data-i18n="common.nav_portfolio">Portfolio</a></li>
+            <li><a href="pricing.html" data-i18n="common.nav_pricing">Prijzen</a></li>
+            <li><a href="contact.html" data-i18n="common.nav_contact">Contact</a></li>
           </ul>
 
           <div class="language-switcher">
             <div class="language-buttons">
+              <!-- Text NL/EN is static, class change handles visual state -->
               <a href="#nl" class="lang-btn active">NL</a>
               <a href="#en" class="lang-btn">EN</a>
             </div>
           </div>
 
-          <button class="mobile-menu-btn">
+          <button class="mobile-menu-btn" aria-label="Toggle menu"> <!-- Added aria-label -->
             <i class="fas fa-bars"></i>
           </button>
         </nav>
@@ -153,16 +151,16 @@
     <section id="home" class="hero">
       <div class="container">
         <div class="hero-content fade-in">
-          <h1>
+          <h1 data-i18n="home.hero_title">
             Jouw <span>unieke</span> website.<br />Snel, op maat & betaalbaar.
           </h1>
-          <div class="p1">
+          <div class="p1" data-i18n="home.hero_subtitle">
             TwinPixel levert professionele websites die perfect aansluiten bij
             jouw bedrijf. Geen standaard templates, maar maatwerk met
             persoonlijke aandacht.
           </div>
           <a href="contact.html">
-            <button>Vraag een gratis consult aan</button>
+            <button data-i18n="home.hero_button">Vraag een gratis consult aan</button>
           </a>
         </div>
       </div>
@@ -172,76 +170,77 @@
     <section id="over-ons-preview" class="about">
       <div class="container">
         <div class="section-title">
-          <h2>Over TwinPixel</h2>
+          <h2 data-i18n="home.about_section_title">Over TwinPixel</h2>
         </div>
 
         <div class="about-content">
           <div class="about-text fade-in">
-            <h3>Het verhaal achter TwinPixel</h3>
-            <p>
+            <h3 data-i18n="home.about_story_title">Het verhaal achter TwinPixel</h3>
+            <p data-i18n="home.about_story_text">
               TwinPixel is opgericht door twee studenten met een passie voor
               webdesign en development. Wat begon als een hobby tijdens onze
               studie, is uitgegroeid tot een professioneel webdesignbureau met
               een duidelijke missie: betaalbare, hoogwaardige websites leveren
               aan ZZP'ers en MKB'ers.
             </p>
-            <h3 class="unique-title fade-in">Waarom wij uniek zijn</h3>
+            <h3 class="unique-title fade-in" data-i18n="home.about_unique_title">Waarom wij uniek zijn</h3>
             <div class="unique-cards-container">
+              <!-- Card 1 -->
               <div class="unique-card">
                 <div class="unique-card-inner">
                   <div class="feature-icon">
                     <i class="fas fa-rocket"></i>
                   </div>
-                  <h4>Snelle levering</h4>
-                  <p>
+                  <h4 data-i18n="home.unique_cards_titles.0">Snelle levering</h4>
+                  <p data-i18n="common.usp_fast_delivery">
                     Geen lange wachttijden, wij leveren binnen afgesproken
                     deadlines.
                   </p>
                 </div>
               </div>
-
+              <!-- Card 2 -->
               <div class="unique-card">
                 <div class="unique-card-inner">
                   <div class="feature-icon">
                     <i class="fas fa-paint-brush"></i>
                   </div>
-                  <h4>100% maatwerk</h4>
-                  <p>
+                  <h4 data-i18n="home.unique_cards_titles.1">100% maatwerk</h4>
+                  <p data-i18n="common.usp_custom_design">
                     Geen standaard templates, maar een uniek design dat past bij
                     jouw merk.
                   </p>
                 </div>
               </div>
-
+              <!-- Card 3 -->
               <div class="unique-card">
                 <div class="unique-card-inner">
                   <div class="feature-icon">
                     <i class="fas fa-euro-sign"></i>
                   </div>
-                  <h4>Scherpe prijzen</h4>
-                  <p>
+                  <h4 data-i18n="home.unique_cards_titles.2">Scherpe prijzen</h4>
+                  <p data-i18n="common.usp_competitive_prices">
                     Professionele kwaliteit zonder de hoge kosten van grote
                     bureaus.
                   </p>
                 </div>
               </div>
-
+              <!-- Card 4 -->
               <div class="unique-card">
                 <div class="unique-card-inner">
                   <div class="feature-icon">
                     <i class="fas fa-comments"></i>
                   </div>
-                  <h4>Persoonlijke aanpak</h4>
-                  <p>
+                  <h4 data-i18n="home.unique_cards_titles.3">Persoonlijke aanpak</h4>
+                  <p data-i18n="common.usp_direct_contact">
                     Direct contact met de designers en developers die aan jouw
                     project werken.
                   </p>
                 </div>
               </div>
             </div>
-                    <div class="button-container fade-in">
-          <a href="about.html"  class="btn neon-button">Lees meer over ons</a>
-          </div>
+            <div class="button-container fade-in">
+              <a href="about.html" class="btn neon-button" data-i18n="home.about_button">Lees meer over ons</a>
+            </div>
           </div>
         </div>
       </div>
@@ -251,60 +250,49 @@
     <section id="diensten-preview" class="services">
       <div class="container">
         <div class="section-title">
-          <h2>Onze Diensten</h2>
+          <h2 data-i18n="home.services_section_title">Onze Diensten</h2>
         </div>
 
         <div class="services-grid">
+          <!-- Service 1 -->
           <div class="service-card fade-in delay-1">
             <div class="service-icon">
               <i class="fas fa-laptop-code"></i>
             </div>
-            <h3>Webdesign</h3>
-            <p>
+            <h3 data-i18n="home.service_webdesign_title">Webdesign</h3>
+            <p data-i18n="home.service_webdesign_desc">
               Op maat gemaakte websites die perfect aansluiten bij jouw merk en
               doelstellingen. Modern, responsive en gebruiksvriendelijk.
             </p>
           </div>
-
+          <!-- Service 2 -->
           <div class="service-card fade-in delay-2">
             <div class="service-icon">
               <i class="fas fa-search"></i>
             </div>
-            <h3>SEO-optimalisatie</h3>
-            <p>
+            <h3 data-i18n="home.service_seo_title">SEO-optimalisatie</h3>
+            <p data-i18n="home.service_seo_desc"> <!-- JS will set textContent, overwriting the link inside -->
               Zorg dat je gevonden wordt door potentiële klanten. Wij
               optimaliseren je website voor zoekmachines met snelle laadtijden
               en mobile-first design.
-              <a href="webdesign-wageningen.html">Lokale SEO in Wageningen</a>.
+              <!-- This link will be overwritten by JS translation unless special handling is added -->
+              <!-- <a href="webdesign-wageningen.html">Lokale SEO in Wageningen</a>. -->
             </p>
           </div>
+          <!-- Service 3 -->
           <div class="service-card fade-in delay-3">
             <div class="service-icon">
               <i class="fas fa-paint-brush"></i>
             </div>
-            <h3>Logo & branding ontwerp</h3>
-            <p>
+            <h3 data-i18n="home.service_logo_title">Logo & branding ontwerp</h3>
+            <p data-i18n="home.service_logo_desc">
               Professioneel logo en branding ontwerp om je bedrijfsidentiteit te versterken.
             </p>
           </div>
         </div>
         <div class="button-container fade-in">
-          <a href="services.html" class="btn neon-button">Bekijk al onze diensten</a>
-
-<script>
-  function vertaalKnop(href, tekstNl, tekstEn, lang) {
-    const knop = document.querySelector(`a[href="${href}"].btn.neon-button`);
-    console.log("Gevonden knop:", knop);
-    if (knop) {
-      knop.innerText = lang === "nl" ? tekstNl : tekstEn;
-    }
-  }
-  document.addEventListener("DOMContentLoaded", () => {
-    const lang = "en"; // of "nl"
-    vertaalKnop("services.html", "Bekijk al onze diensten", "View all our services", lang);
-  });
-</script>
-
+          <a href="services.html" class="btn neon-button" data-i18n="common.cta_view_services">Bekijk al onze diensten</a>
+          <!-- Removed inline script block -->
         </div>
       </div>
     </section>
@@ -313,105 +301,110 @@
     <section id="testimonials" class="testimonials">
       <div class="container">
         <div class="section-title">
-          <h2>Wat Klanten Zeggen</h2>
+          <h2 data-i18n="home.testimonials_section_title">Wat Klanten Zeggen</h2>
         </div>
-        <!-- Deze dingen mogelijk nog verwerken in de translate in de javascript ander kaduk -->
         <div class="testimonial-slider fade-in">
+          <!-- Testimonial 1 -->
           <div class="testimonial-card">
-            <p class="testimonial-text">
+            <p class="testimonial-text" data-i18n="home.testimonials.0.text">
               "TwinPixel heeft mijn verwachtingen overtroffen. Ze hebben niet
               alleen een prachtige website opgeleverd, maar dit ook binnen een week gedaan!
               De website is snel, gebruiksvriendelijk en ziet er fantastisch uit!"
             </p>
-            <p class="testimonial-author">Harvey Meurs</p>
-            <p class="testimonial-company">Eigenaar, De wet van staal</p>
+            <p class="testimonial-author" data-i18n="home.testimonials.0.author">Harvey Meurs</p>
+            <p class="testimonial-company" data-i18n="home.testimonials.0.company">Eigenaar, De wet van staal</p>
           </div>
-
+          <!-- Testimonial 2 -->
           <div class="testimonial-card">
-            <p class="testimonial-text">
+            <p class="testimonial-text" data-i18n="home.testimonials.1.text">
               "Als ZZP'er had ik een professionele website nodig, maar ik had
               een beperkt budget. TwinPixel heeft me een website op maat gegeven
               die er professioneel uitziet zonder de hoge kosten. Ik krijg
               regelmatig complimenten over mijn site!"
             </p>
-            <p class="testimonial-author">Mark de Vries</p>
-            <p class="testimonial-company">Freelance Fotograaf</p>
+            <p class="testimonial-author" data-i18n="home.testimonials.1.author">Mark de Vries</p>
+            <p class="testimonial-company" data-i18n="home.testimonials.1.company">Freelance Fotograaf</p>
           </div>
-
+          <!-- Testimonial 3 -->
           <div class="testimonial-card">
-            <p class="testimonial-text">
-              "Twinpixel heeft mij geholpen met het bouwen van mijn eerste website. 
-              Door de professionele hulp van Twan en Emma hebben zij mijn perfecte website gecreëerd! 
-              Doordat zij goede feedback momenten inplannen is er ruimte om mijn feedback met hun te delen en andersom. 
-              Ook leggen zij goed uit waarom ze bepaalde elementen in de website hebben verwerkt, omdat dit beter oogt, sneller werkt of door andere redenen. 
+            <p class="testimonial-text" data-i18n="home.testimonials.2.text">
+              "Twinpixel heeft mij geholpen met het bouwen van mijn eerste website.
+              Door de professionele hulp van Twan en Emma hebben zij mijn perfecte website gecreëerd!
+              Doordat zij goede feedback momenten inplannen is er ruimte om mijn feedback met hun te delen en andersom.
+              Ook leggen zij goed uit waarom ze bepaalde elementen in de website hebben verwerkt, omdat dit beter oogt, sneller werkt of door andere redenen.
               Kan niets anders zeggen dat ik een fijne samenwerking heb gehad wat heeft geleid tot een mooi resultaat."
             </p>
-            <p class="testimonial-author">Britt Leander</p>
-            <p class="testimonial-company">Eigenaar, By Britt Nails</p>
+            <p class="testimonial-author" data-i18n="home.testimonials.2.author">Britt Leander</p>
+            <p class="testimonial-company" data-i18n="home.testimonials.2.company">Eigenaar, By Britt Nails</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Portfolio Intro -->
-    <section class="portfolio-intro">
+    <!-- Portfolio Intro & Grid Section -->
+    <section class="portfolio-intro"> <!-- Combined Intro and Grid for structure -->
       <div class="container">
         <div class="intro-content fade-in">
-          <h3>Ontdek onze projecten</h3>
-          <p>
+          <h3 data-i18n="portfolio.intro_title">Ontdek onze projecten</h3>
+          <p data-i18n="portfolio.intro_paragraphs.0">
             Bij TwinPixel zijn we trots op de websites die we hebben ontworpen
             en ontwikkeld voor onze klanten. Elk project is uniek en op maat
             gemaakt om aan de specifieke behoeften en doelstellingen van onze
             klanten te voldoen.
           </p>
-          <p>
+          <p data-i18n="portfolio.intro_paragraphs.1">
             Bekijk hieronder een selectie van onze recente projecten en laat je
             inspireren door wat wij voor jou kunnen betekenen.
           </p>
         </div>
-    
-    <!-- Portfolio Intro -->
-        <section class="portfolio">
-          <h2 class="portfolio-title">Ons Werk</h2>
+
+        <section class="portfolio"> <!-- Embedded portfolio grid -->
+          <h2 class="portfolio-title" data-i18n="portfolio.section_title">Ons Werk</h2>
           <div class="portfolio-grid">
+            <!-- Item 1 -->
             <div class="portfolio-item">
-              <img src="Images/Website-dewetvanstaal.png" class="portfolio-img" alt="https://dewetvanstaal.nl/">
+              <img src="Images/Website-dewetvanstaal.png" class="portfolio-img" alt="Website De Wet van Staal">
               <div class="portfolio-overlay">
-                <h3>De wet van staal</h3>
-                <p>Professioneel laswerk en technisch onderhoud.</p>
-                <a href="https://dewetvanstaal.nl/" class="portfolio-btn" target="_blank" rel="noopener noreferrer">Bekijk project</a>
+                <h3 data-i18n="portfolio.items.0.title">De wet van staal</h3>
+                <p data-i18n="portfolio.items.0.text">Professioneel laswerk en technisch onderhoud.</p>
+                <a href="https://dewetvanstaal.nl/" class="portfolio-btn" target="_blank" rel="noopener noreferrer" data-i18n="common.view_project">Bekijk project</a>
               </div>
             </div>
+            <!-- Item 2 -->
             <div class="portfolio-item">
-              <img src="Images/Website-svnull.png" class="portfolio-img" alt="Studievereniging NULL">
+              <img src="Images/Website-svnull.png" class="portfolio-img" alt="Website Studievereniging NULL">
               <div class="portfolio-overlay">
-                <h3>Studievereniging NULL</h3>
-                <p>De vereniging die ergens voor staat!</p>
-                <a href="https://svnull.nl/" class="portfolio-btn" target="_blank" rel="noopener noreferrer">Bekijk project</a>
+                <h3 data-i18n="portfolio.items.1.title">Studievereniging NULL</h3>
+                <p data-i18n="portfolio.items.1.text">De vereniging die ergens voor staat!</p>
+                <a href="https://svnull.nl/" class="portfolio-btn" target="_blank" rel="noopener noreferrer" data-i18n="common.view_project">Bekijk project</a>
               </div>
             </div>
+            <!-- Item 3 -->
             <div class="portfolio-item">
-              <img src="Images/Website-bybrittnails.png" class="portfolio-img" alt="By Britt Nails">
+              <img src="Images/Website-bybrittnails.png" class="portfolio-img" alt="Website By Britt Nails">
               <div class="portfolio-overlay">
-                <h3>By Britt Nails</h3>
-                <p>Een stijlvolle nagelstudio website.</p>
-                <a href="https://bybrittnails.nl/" class="portfolio-btn" target="_blank" rel="noopener noreferrer">Bekijk project</a>
+                <h3 data-i18n="portfolio.items.2.title">By Britt Nails</h3>
+                <p data-i18n="portfolio.items.2.text">Een stijlvolle nagelstudio website.</p>
+                <a href="https://bybrittnails.nl/" class="portfolio-btn" target="_blank" rel="noopener noreferrer" data-i18n="common.view_project">Bekijk project</a>
               </div>
             </div>
           </div>
+           <div class="button-container fade-in"> <!-- Added button container -->
+             <a href="portfolio.html" class="btn neon-button" data-i18n="common.cta_view_portfolio">Bekijk ons volledige portfolio</a>
+           </div>
         </section>
       </div>
-    </section>    
+    </section>
 
     <!-- Prijzen Section (Preview) -->
     <section id="prijzen-preview" class="pricing">
       <div class="container">
         <div class="section-title">
-          <h2>Onze Prijzen</h2>
+          <h2 data-i18n="home.pricing_section_title">Onze Prijzen</h2>
         </div>
 
         <div class="pricing-intro fade-in">
-          <p>
+          <p data-i18n="home.pricing_intro">
             Bij TwinPixel werken we met een hybride prijsmodel: een eenmalig
             bedrag voor het maken van je website, en daarna een maandelijks
             bedrag voor hosting en kleine updates. Zo weet je precies waar je
@@ -420,56 +413,58 @@
         </div>
 
         <div class="pricing-grid">
+          <!-- Card 1: Starter -->
           <div class="pricing-card fade-in">
-            <h3 class="pricing-title">Starter</h3>
-            <div class="pricing-price">€299 <span>eenmalig</span></div>
-            <div style="margin-top: 5px; font-size: 0.9em">
+            <h3 class="pricing-title" data-i18n="home.pricing_cards.0.title">Starter</h3>
+            <div class="pricing-price">€299 <span data-i18n="common.one_time_fee">eenmalig</span></div>
+            <div style="margin-top: 5px; font-size: 0.9em" data-i18n="home.pricing_hosting_info.0">
               + €5/maand voor hosting
             </div>
             <ul class="pricing-features">
-              <li>One-page website</li>
-              <li>Responsive design</li>
-              <li>Basis-SEO</li>
-              <li>Contactformulier</li>
+              <li data-i18n="home.pricing_cards.0.features.0">One-page website</li>
+              <li data-i18n="home.pricing_cards.0.features.1">Responsive design</li>
+              <li data-i18n="home.pricing_cards.0.features.2">Basis-SEO</li>
+              <li data-i18n="home.pricing_cards.0.features.3">Contactformulier</li>
             </ul>
-            <a href="pricing.html" class="btn">Meer informatie</a>
+            <a href="pricing.html" class="btn" data-i18n="common.button_learn_more">Meer informatie</a>
           </div>
 
+          <!-- Card 2: Standaard -->
           <div class="pricing-card fade-in delay-1">
-            <div class="popular-choice">Populaire keuze</div>
-
-            <h3 class="pricing-title">Standaard</h3>
-            <div class="pricing-price">€499 <span>eenmalig</span></div>
-            <div style="margin-top: 5px; font-size: 0.9em">
+            <div class="popular-choice" data-i18n="common.popular_choice">Populaire keuze</div>
+            <h3 class="pricing-title" data-i18n="home.pricing_cards.1.title">Standaard</h3>
+            <div class="pricing-price">€499 <span data-i18n="common.one_time_fee">eenmalig</span></div>
+            <div style="margin-top: 5px; font-size: 0.9em" data-i18n="home.pricing_hosting_info.1">
               + €10/maand voor hosting & updates
             </div>
             <ul class="pricing-features">
-              <li>Meerdere pagina's</li>
-              <li>Responsive design</li>
-              <li>SEO-optimalisatie</li>
-              <li>Contactformulier</li>
+              <li data-i18n="home.pricing_cards.1.features.0">Meerdere pagina's</li>
+              <li data-i18n="home.pricing_cards.1.features.1">Responsive design</li>
+              <li data-i18n="home.pricing_cards.1.features.2">SEO-optimalisatie</li>
+              <li data-i18n="home.pricing_cards.1.features.3">Contactformulier</li>
             </ul>
-            <a href="pricing.html" class="btn">Meer informatie</a>
+            <a href="pricing.html" class="btn" data-i18n="common.button_learn_more">Meer informatie</a>
           </div>
 
+          <!-- Card 3: Premium -->
           <div class="pricing-card fade-in delay-2">
-            <h3 class="pricing-title">Premium</h3>
-            <div class="pricing-price">€749 <span>eenmalig</span></div>
-            <div style="margin-top: 5px; font-size: 0.9em">
+            <h3 class="pricing-title" data-i18n="home.pricing_cards.2.title">Premium</h3>
+            <div class="pricing-price">€749 <span data-i18n="common.one_time_fee">eenmalig</span></div>
+            <div style="margin-top: 5px; font-size: 0.9em" data-i18n="home.pricing_hosting_info.2">
               + €20/maand voor hosting & updates
             </div>
             <ul class="pricing-features">
-              <li>Maatwerk design</li>
-              <li>Basis support</li>
-              <li>Geavanceerde SEO</li>
-              <li>Content management systeem</li>
+              <li data-i18n="home.pricing_cards.2.features.0">Maatwerk design</li>
+              <li data-i18n="home.pricing_cards.2.features.1">Basis support</li>
+              <li data-i18n="home.pricing_cards.2.features.2">Geavanceerde SEO</li>
+              <li data-i18n="home.pricing_cards.2.features.3">Content management systeem</li>
             </ul>
-            <a href="pricing.html" class="btn">Meer informatie</a>
+            <a href="pricing.html" class="btn" data-i18n="common.button_learn_more">Meer informatie</a>
           </div>
         </div>
 
         <div class="button-container fade-in">
-          <a href="pricing.html"  class="btn neon-button"
+          <a href="pricing.html" class="btn neon-button" data-i18n="home.pricing_button"
             >Bekijk alle prijzen en pakketten</a
           >
         </div>
@@ -477,19 +472,20 @@
     </section>
 
     <!-- Contact CTA Section -->
-    <section class="about-section">
+    <section class="about-section"> <!-- Consider renaming this section class if it's just a CTA -->
       <div class="container">
-      <div class="cta-section fade-in delay-4">
-        <div class="service-card-glass cta-card">
-          <h2>Klaar om samen te werken?</h2>
-          <p>
-            Laat ons je helpen om jouw online aanwezigheid naar een hoger niveau
-            te tillen.
-          </p>
-          <div class="button-container">
-          <a href="contact.html" class="btn neon-button"
-            >Neem contact op</a
-          >
+        <div class="cta-section fade-in delay-4">
+          <div class="service-card-glass cta-card">
+            <h2 data-i18n="common.cta_title">Klaar om samen te werken?</h2>
+            <p data-i18n="common.cta_subtitle">
+              Laat ons je helpen om jouw online aanwezigheid naar een hoger niveau
+              te tillen.
+            </p>
+            <div class="button-container">
+              <a href="contact.html" class="btn neon-button" data-i18n="common.cta_button"
+                >Neem contact op</a
+              >
+            </div>
           </div>
         </div>
       </div>
@@ -500,27 +496,27 @@
       <div class="container">
         <img
           src="Images/Logo donkere achtergrond.png"
-          alt="TwinPixel Logo"
+          alt="TwinPixel Footer Logo"
           class="footer-logo"
         />
 
         <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">Over ons</a></li>
-          <li><a href="services.html">Diensten</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="pricing.html">Prijzen</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" data-i18n="common.nav_home">Home</a></li>
+          <li><a href="about.html" data-i18n="common.nav_about">Over ons</a></li>
+          <li><a href="services.html" data-i18n="common.nav_services">Diensten</a></li>
+          <li><a href="portfolio.html" data-i18n="common.nav_portfolio">Portfolio</a></li>
+          <li><a href="pricing.html" data-i18n="common.nav_pricing">Prijzen</a></li>
+          <li><a href="contact.html" data-i18n="common.nav_contact">Contact</a></li>
         </ul>
 
         <ul class="social-links">
-                <li><a href="https://www.facebook.com/profile.php?id=61574036669497" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="https://www.instagram.com/twinpixel.nl/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="https://www.linkedin.com/company/twinpixel/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=61574036669497" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://www.instagram.com/twinpixel.nl/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://www.linkedin.com/company/twinpixel/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
             </ul>
 
-        <p class="copyright">
-          &copy; 2025 TwinPixel. Alle rechten voorbehouden.
+        <p class="copyright" data-i18n="common.copyright">
+          © 2025 TwinPixel. Alle rechten voorbehouden.
         </p>
       </div>
     </footer>

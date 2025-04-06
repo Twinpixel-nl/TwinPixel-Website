@@ -3,17 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Meta Description (Needs key: services.meta_description) -->
     <meta
       name="description"
       content="Ontdek de webdesign en development diensten van TwinPixel in Wageningen: op maat gemaakte websites, SEO-optimalisatie en UX/UI-design voor ZZP'ers en MKB in de regio."
+      data-i18n="services.meta_description"
     />
     <meta
       name="keywords"
       content="webdesign Wageningen, website laten maken, webdevelopment, SEO-optimalisatie Wageningen, responsive website, maatwerk website, betaalbare website, ZZP website, MKB website"
     />
-    <title>Webdesign & SEO Diensten | TwinPixel Wageningen</title>
+    <!-- Title (Needs key: services.title) -->
+    <title data-i18n="services.title">Webdesign & SEO Diensten | TwinPixel Wageningen</title>
 
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph / Facebook (Static Recommended) -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://twinpixel.nl/services.html" />
     <meta
@@ -29,7 +32,7 @@
       content="https://twinpixel.nl/Images/Logo%20donkere%20achtergrond.png"
     />
 
-    <!-- Twitter -->
+    <!-- Twitter (Static Recommended) -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://twinpixel.nl/services.html" />
     <meta
@@ -87,24 +90,21 @@
     />
     <link rel="manifest" href="/site.webmanifest" />
 
-    <link rel="canonical" href="https://twinpixel.nl/services.html">
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-Y0TE68DKL1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-Y0TE68DKL1");
+    </script>
 
   </head>
-
-  <!-- Google tag (gtag.js) -->
-  <script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=G-Y0TE68DKL1"
-  ></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-
-    gtag("config", "G-Y0TE68DKL1");
-  </script>
 
   <body>
     <!-- Mobile Menu Overlay -->
@@ -123,32 +123,23 @@
           </a>
 
           <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">Over ons</a></li>
-            <li><a href="services.html" class="active">Diensten</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="pricing.html">Prijzen</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html" data-i18n="common.nav_home">Home</a></li>
+            <li><a href="about.html" data-i18n="common.nav_about">Over ons</a></li>
+            <li><a href="services.html" class="active" data-i18n="common.nav_services">Diensten</a></li>
+            <li><a href="portfolio.html" data-i18n="common.nav_portfolio">Portfolio</a></li>
+            <li><a href="pricing.html" data-i18n="common.nav_pricing">Prijzen</a></li>
+            <li><a href="contact.html" data-i18n="common.nav_contact">Contact</a></li>
           </ul>
 
           <div class="language-switcher">
             <div class="language-buttons">
-              <a
-                href="#nl"
-                class="lang-btn active"
-                onclick="switchLanguage('nl'); return false;"
-                >NL</a
-              >
-              <a
-                href="#en"
-                class="lang-btn"
-                onclick="switchLanguage('en'); return false;"
-                >EN</a
-              >
+              <!-- Removed inline onclick -->
+              <a href="#nl" class="lang-btn active">NL</a>
+              <a href="#en" class="lang-btn">EN</a>
             </div>
           </div>
 
-          <button class="mobile-menu-btn">
+          <button class="mobile-menu-btn" aria-label="Toggle menu">
             <i class="fas fa-bars"></i>
           </button>
         </nav>
@@ -158,7 +149,7 @@
     <!-- Page Header -->
     <section class="page-header">
       <div class="container">
-        <h1 class="fade-in">Onze Diensten</h1>
+        <h1 class="fade-in" data-i18n="services.page_title">Onze Diensten</h1>
       </div>
     </section>
 
@@ -166,14 +157,14 @@
     <section class="services-intro">
       <div class="container">
         <div class="intro-content fade-in">
-          <h3>Wat kunnen we voor je betekenen?</h3>
-          <p>
+          <h3 data-i18n="services.intro_heading">Wat kunnen we voor je betekenen?</h3>
+          <p data-i18n="services.intro_text.0">
             Bij TwinPixel bieden we een breed scala aan webdesign en development
             diensten aan. Of je nu een volledig nieuwe website nodig hebt, je
             bestaande site wilt verbeteren of je online zichtbaarheid wilt
             vergroten, wij hebben de expertise om je te helpen.
           </p>
-          <p>
+          <p data-i18n="services.intro_text.1">
             Al onze diensten worden op maat gemaakt om aan jouw specifieke
             behoeften en doelstellingen te voldoen. We werken nauw met je samen
             om ervoor te zorgen dat het eindresultaat niet alleen aan je
@@ -184,228 +175,230 @@
     </section>
 
     <!-- Services Grid Section -->
-<section class="services-grid-section">
-  <div class="container">
-    <h2 class="section-title fade-in">Onze Diensten</h2>
+    <section class="services-grid-section">
+      <div class="container">
+        <!-- Title for this section (if needed, can reuse services.page_title or add a new key) -->
+        <h2 class="section-title fade-in" data-i18n="services.grid_section_title">Onze Kerndiensten</h2> <!-- Example Key -->
 
-    <div class="services-grid-container">
-      <!-- Service 1: Webdesign -->
-      <div class="service-grid-item fade-in">
-        <div class="service-card-glass">
-          <div class="service-icon">
-            <i class="fas fa-laptop-code"></i>
+        <div class="services-grid-container">
+          <!-- Service 1: Webdesign -->
+          <div class="service-grid-item fade-in">
+            <div class="service-card-glass">
+              <div class="service-icon">
+                <i class="fas fa-laptop-code"></i>
+              </div>
+              <h3 data-i18n="services.grid_items.0.title">Webdesign</h3>
+              <p data-i18n="services.grid_items.0.desc">
+                Professionele, responsive websites die perfect aansluiten bij
+                jouw merk en doelstellingen.
+              </p>
+              <ul class="service-features">
+                <li data-i18n="services.grid_items.0.features.0"><i class="fas fa-check"></i> Responsive design</li>
+                <li data-i18n="services.grid_items.0.features.1"><i class="fas fa-check"></i> Unieke designs</li>
+                <li data-i18n="services.grid_items.0.features.2"><i class="fas fa-check"></i> Gebruiksvriendelijke navigatie</li>
+                <li data-i18n="services.grid_items.0.features.3"><i class="fas fa-check"></i> Snelle laadtijden</li>
+              </ul>
+              <div class="service-price">
+                <span class="price-amount" data-i18n="services.grid_items.0.price_amount">vanaf €299</span>
+                <span class="price-period" data-i18n="common.one_time_fee">eenmalig</span>
+              </div>
+              <a href="pricing.html" class="service-cta btn glow-effect" data-i18n="common.button_learn_more">Meer informatie</a>
+            </div>
           </div>
-          <h3>Webdesign</h3>
-          <p>
-            Professionele, responsive websites die perfect aansluiten bij
-            jouw merk en doelstellingen.
-          </p>
-          <ul class="service-features">
-            <li><i class="fas fa-check"></i> Responsive design</li>
-            <li><i class="fas fa-check"></i> Unieke designs</li>
-            <li><i class="fas fa-check"></i> Gebruiksvriendelijke navigatie</li>
-            <li><i class="fas fa-check"></i> Snelle laadtijden</li>
-          </ul>
-          <div class="service-price">
-            <span class="price-amount">vanaf €299</span>
-            <span class="price-period">eenmalig</span>
+
+          <!-- Service 2: SEO-optimalisatie -->
+          <div class="service-grid-item fade-in delay-1">
+            <div class="service-card-glass">
+              <div class="service-icon">
+                <i class="fas fa-search"></i>
+              </div>
+              <h3 data-i18n="services.grid_items.1.title">SEO-optimalisatie</h3>
+              <p data-i18n="services.grid_items.1.desc">
+                Verbeter je vindbaarheid in zoekmachines en trek meer relevante
+                bezoekers aan.
+              </p>
+              <ul class="service-features">
+                <li data-i18n="services.grid_items.1.features.0"><i class="fas fa-check"></i> Keyword research</li>
+                <li data-i18n="services.grid_items.1.features.1"><i class="fas fa-check"></i> On-page optimalisatie</li>
+                <li data-i18n="services.grid_items.1.features.2"><i class="fas fa-check"></i> Technische SEO</li>
+                <li data-i18n="services.grid_items.1.features.3"><i class="fas fa-check"></i> Lokale SEO</li>
+              </ul>
+              <div class="service-price">
+                <span class="price-amount" data-i18n="services.grid_items.1.price_amount">€99</span>
+                <span class="price-period" data-i18n="common.one_time_fee">eenmalig</span>
+              </div>
+              <a href="contact.html" class="service-cta btn glow-effect" data-i18n="common.button_learn_more">Meer informatie</a>
+            </div>
           </div>
-          <a href="pricing.html" class="service-cta btn glow-effect">Meer informatie</a>
+
+          <!-- Service 3: E-commerce -->
+          <div class="service-grid-item fade-in delay-3">
+            <div class="service-card-glass">
+              <div class="service-icon">
+                <i class="fas fa-shopping-cart"></i>
+              </div>
+              <h3 data-i18n="services.grid_items.2.title">E-commerce</h3>
+              <p data-i18n="services.grid_items.2.desc">
+                Gebruiksvriendelijke webshops met veilige betalingsintegraties
+                en intuïtief beheer.
+              </p>
+              <ul class="service-features">
+                <li data-i18n="services.grid_items.2.features.0"><i class="fas fa-check"></i> Productcatalogus</li>
+                <li data-i18n="services.grid_items.2.features.1"><i class="fas fa-check"></i> Betalingsintegratie</li>
+                <li data-i18n="services.grid_items.2.features.2"><i class="fas fa-check"></i> Voorraadbeheer</li>
+                <li data-i18n="services.grid_items.2.features.3"><i class="fas fa-check"></i> Mobiel-vriendelijk</li>
+              </ul>
+              <div class="service-price">
+                <span class="price-amount" data-i18n="services.grid_items.2.price_amount">vanaf €799</span>
+                <span class="price-period" data-i18n="common.one_time_fee">eenmalig</span>
+              </div>
+              <a href="contact.html" class="service-cta btn glow-effect" data-i18n="common.button_learn_more">Meer informatie</a>
+            </div>
+          </div>
+
+          <!-- Service 4: Webhosting & Onderhoud -->
+          <div class="service-grid-item fade-in delay-4">
+            <div class="service-card-glass">
+              <div class="service-icon">
+                <i class="fas fa-server"></i>
+              </div>
+              <h3 data-i18n="services.grid_items.3.title">Webhosting & Onderhoud</h3>
+              <p data-i18n="services.grid_items.3.desc">
+                Betrouwbare hosting en regelmatig onderhoud voor een snelle,
+                veilige website.
+              </p>
+              <ul class="service-features">
+                <li data-i18n="services.grid_items.3.features.0"><i class="fas fa-check"></i> Snelle servers</li>
+                <li data-i18n="services.grid_items.3.features.1"><i class="fas fa-check"></i> SSL-certificaat</li>
+                <li data-i18n="services.grid_items.3.features.2"><i class="fas fa-check"></i> Regelmatige updates</li>
+                <li data-i18n="services.grid_items.3.features.3"><i class="fas fa-check"></i> Dagelijkse backups</li>
+              </ul>
+              <div class="service-price">
+                <span class="price-amount" data-i18n="services.grid_items.3.price_amount">€10</span>
+                <span class="price-period" data-i18n="services.grid_items.3.price_period">per maand</span> <!-- Specific key needed -->
+              </div>
+              <a href="contact.html" class="service-cta btn glow-effect" data-i18n="common.button_learn_more">Meer informatie</a>
+            </div>
+          </div>
+
+          <!-- Service 5: Logo & Branding -->
+          <div class="service-grid-item fade-in delay-5">
+            <div class="service-card-glass">
+              <div class="service-icon">
+                <i class="fas fa-paint-brush"></i>
+              </div>
+              <h3 data-i18n="services.grid_items.4.title">Logo & Branding</h3>
+              <p data-i18n="services.grid_items.4.desc">
+                Professioneel logo en branding ontwerp om je bedrijfsidentiteit te versterken.
+              </p>
+              <ul class="service-features">
+                <li data-i18n="services.grid_items.4.features.0"><i class="fas fa-check"></i> Logo</li>
+                <li data-i18n="services.grid_items.4.features.1"><i class="fas fa-check"></i> Kleurenpalet</li>
+                <li data-i18n="services.grid_items.4.features.2"><i class="fas fa-check"></i> Typografie</li>
+                <li data-i18n="services.grid_items.4.features.3"><i class="fas fa-check"></i> Branding gids</li>
+              </ul>
+              <div class="service-price">
+                <span class="price-amount" data-i18n="services.grid_items.4.price_amount">€199</span>
+                <span class="price-period" data-i18n="common.one_time_fee">eenmalig</span>
+              </div>
+              <a href="contact.html" class="service-cta btn glow-effect" data-i18n="common.button_learn_more">Meer informatie</a>
+            </div>
+          </div>
+
+          <!-- Service 6: Chatbots op maat -->
+          <div class="service-grid-item fade-in delay-6">
+            <div class="service-card-glass">
+              <div class="service-icon">
+                <i class="fas fa-robot"></i>
+              </div>
+              <h3 data-i18n="services.grid_items.5.title">Chatbots op maat</h3>
+              <p data-i18n="services.grid_items.5.desc">
+                Automatiseer je communicatie met slimme, toegankelijke en persoonlijke chatbots.
+              </p>
+              <ul class="service-features">
+                <li data-i18n="services.grid_items.5.features.0"><i class="fas fa-check"></i> Op maat ontworpen voor jouw bedrijf</li>
+                <li data-i18n="services.grid_items.5.features.1"><i class="fas fa-check"></i> Gebouwd in Dialogflow of andere platforms</li>
+                <li data-i18n="services.grid_items.5.features.2"><i class="fas fa-check"></i> Integratie op je website of app</li>
+                <li data-i18n="services.grid_items.5.features.3"><i class="fas fa-check"></i> Uit te breiden met AI of CRM-koppeling</li>
+              </ul>
+              <div class="service-price">
+                <span class="price-amount" data-i18n="services.grid_items.5.price_amount">vanaf €350</span>
+                <span class="price-period" data-i18n="common.one_time_fee">eenmalig</span>
+              </div>
+              <a href="contact.html" class="service-cta btn glow-effect" data-i18n="common.button_learn_more">Meer informatie</a>
+            </div>
+          </div>
         </div>
       </div>
-
-      <!-- Service 2: SEO-optimalisatie -->
-      <div class="service-grid-item fade-in delay-1">
-        <div class="service-card-glass">
-          <div class="service-icon">
-            <i class="fas fa-search"></i>
-          </div>
-          <h3>SEO-optimalisatie</h3>
-          <p>
-            Verbeter je vindbaarheid in zoekmachines en trek meer relevante
-            bezoekers aan.
-          </p>
-          <ul class="service-features">
-            <li><i class="fas fa-check"></i> Keyword research</li>
-            <li><i class="fas fa-check"></i> On-page optimalisatie</li>
-            <li><i class="fas fa-check"></i> Technische SEO</li>
-            <li><i class="fas fa-check"></i> Lokale SEO</li>
-          </ul>
-          <div class="service-price">
-            <span class="price-amount">€99</span>
-            <span class="price-period">eenmalig</span>
-          </div>
-          <a href="contact.html" class="service-cta btn glow-effect">Meer informatie</a>
-        </div>
-      </div>
-
-      <!-- Service 3: E-commerce -->
-      <div class="service-grid-item fade-in delay-3">
-        <div class="service-card-glass">
-          <div class="service-icon">
-            <i class="fas fa-shopping-cart"></i>
-          </div>
-          <h3>E-commerce</h3>
-          <p>
-            Gebruiksvriendelijke webshops met veilige betalingsintegraties
-            en intuïtief beheer.
-          </p>
-          <ul class="service-features">
-            <li><i class="fas fa-check"></i> Productcatalogus</li>
-            <li><i class="fas fa-check"></i> Betalingsintegratie</li>
-            <li><i class="fas fa-check"></i> Voorraadbeheer</li>
-            <li><i class="fas fa-check"></i> Mobiel-vriendelijk</li>
-          </ul>
-          <div class="service-price">
-            <span class="price-amount">vanaf €799</span>
-            <span class="price-period">eenmalig</span>
-          </div>
-          <a href="contact.html" class="service-cta btn glow-effect">Meer informatie</a>
-        </div>
-      </div>
-
-      <!-- Service 4: Webhosting & Onderhoud -->
-      <div class="service-grid-item fade-in delay-4">
-        <div class="service-card-glass">
-          <div class="service-icon">
-            <i class="fas fa-server"></i>
-          </div>
-          <h3>Webhosting & Onderhoud</h3>
-          <p>
-            Betrouwbare hosting en regelmatig onderhoud voor een snelle,
-            veilige website.
-          </p>
-          <ul class="service-features">
-            <li><i class="fas fa-check"></i> Snelle servers</li>
-            <li><i class="fas fa-check"></i> SSL-certificaat</li>
-            <li><i class="fas fa-check"></i> Regelmatige updates</li>
-            <li><i class="fas fa-check"></i> Dagelijkse backups</li>
-          </ul>
-          <div class="service-price">
-            <span class="price-amount">€10</span>
-            <span class="price-period">per maand</span>
-          </div>
-          <a href="contact.html" class="service-cta btn glow-effect">Meer informatie</a>
-        </div>
-      </div>
-
-      <!-- Service 5: Content Marketing -->
-      <div class="service-grid-item fade-in delay-5">
-        <div class="service-card-glass">
-          <div class="service-icon">
-            <i class="fas fa-paint-brush"></i>
-          </div>
-          <h3>Logo & Branding</h3>
-          <p>
-            Professioneel logo en branding ontwerp om je bedrijfsidentiteit te versterken.
-          </p>
-          <ul class="service-features">
-            <li><i class="fas fa-check"></i> Logo</li>
-            <li><i class="fas fa-check"></i> Kleurenpalet</li>
-            <li><i class="fas fa-check"></i> Typografie</li>
-            <li><i class="fas fa-check"></i> Branding gids</li>
-          </ul>
-          <div class="service-price">
-            <span class="price-amount">€199</span>
-            <span class="price-period">eenmalig</span>
-          </div>
-          <a href="contact.html" class="service-cta btn glow-effect">Meer informatie</a>
-        </div>
-      </div>
-
-      <!-- Service 6: Chatbots op maat -->
-      <div class="service-grid-item fade-in delay-6">
-        <div class="service-card-glass">
-          <div class="service-icon">
-            <i class="fas fa-robot"></i>
-          </div>
-          <h3>Chatbots op maat</h3>
-          <p>
-            Automatiseer je communicatie met slimme, toegankelijke en persoonlijke chatbots.
-          </p>
-          <ul class="service-features">
-            <li><i class="fas fa-check"></i> Op maat ontworpen voor jouw bedrijf</li>
-            <li><i class="fas fa-check"></i> Gebouwd in Dialogflow of andere platforms</li>
-            <li><i class="fas fa-check"></i> Integratie op je website of app</li>
-            <li><i class="fas fa-check"></i> Uit te breiden met AI of CRM-koppeling</li>
-          </ul>
-          <div class="service-price">
-            <span class="price-amount">vanaf €350</span>
-            <span class="price-period">eenmalig</span>
-          </div>
-          <a href="contact.html" class="service-cta btn glow-effect">Meer informatie</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
     <!-- Detailed Services Section -->
     <section class="detailed-services">
       <div class="container">
-        <h2 class="section-title fade-in">Uitgelichte Diensten</h2>
+        <h2 class="section-title fade-in" data-i18n="services.detailed_section_title">Uitgelichte Diensten</h2> <!-- Example key -->
 
+        <!-- Webdesign Detail -->
         <div id="webdesign" class="detailed-service-item fade-in">
           <div class="service-content">
             <div class="service-icon">
               <i class="fas fa-laptop-code"></i>
             </div>
             <div class="service-text">
-              <h2>Webdesign</h2>
-              <p>
+              <h2 data-i18n="services.services_items.0.title">Webdesign</h2>
+              <p data-i18n="services.services_items.0.desc">
                 Onze op maat gemaakte websites zijn niet alleen visueel
                 aantrekkelijk, maar ook functioneel en gebruiksvriendelijk. We
                 ontwerpen websites die perfect aansluiten bij jouw merk en
                 doelstellingen.
               </p>
 
-              <h3>Wat we bieden:</h3>
+              <h3 data-i18n="services.services_items.0.offer_title">Wat we bieden:</h3>
               <ul>
-                <li>
+                <li data-i18n="services.services_items.0.offer_items.0">
                   <i class="fas fa-check"></i> Volledig responsive websites die
                   er geweldig uitzien op alle apparaten
                 </li>
-                <li>
+                <li data-i18n="services.services_items.0.offer_items.1">
                   <i class="fas fa-check"></i> Unieke designs die passen bij
                   jouw merk en doelgroep
                 </li>
-                <li>
+                <li data-i18n="services.services_items.0.offer_items.2">
                   <i class="fas fa-check"></i> Gebruiksvriendelijke navigatie en
                   intuïtieve interfaces
                 </li>
-                <li>
+                <li data-i18n="services.services_items.0.offer_items.3">
                   <i class="fas fa-check"></i> Snelle laadtijden voor een
                   optimale gebruikerservaring
                 </li>
-                <li>
+                <li data-i18n="services.services_items.0.offer_items.4">
                   <i class="fas fa-check"></i> Content management systemen voor
                   eenvoudige updates
                 </li>
               </ul>
 
-              <h3>Ons ontwerpproces:</h3>
+              <h3 data-i18n="services.services_items.0.process_title">Ons ontwerpproces:</h3>
               <ol>
-                <li>
+                <li data-i18n="services.services_items.0.process_items.0">
                   <strong>Onderzoek & Analyse</strong> - We beginnen met het
                   begrijpen van jouw bedrijf, doelgroep en concurrenten.
                 </li>
-                <li>
+                <li data-i18n="services.services_items.0.process_items.1">
                   <strong>Wireframing & Prototyping</strong> - We creëren een
                   basisstructuur en navigatie voor je website.
                 </li>
-                <li>
+                <li data-i18n="services.services_items.0.process_items.2">
                   <strong>Visueel Design</strong> - We ontwikkelen een uniek
                   design dat past bij jouw merk.
                 </li>
-                <li>
+                <li data-i18n="services.services_items.0.process_items.3">
                   <strong>Development</strong> - We bouwen je website met
                   schone, efficiënte code.
                 </li>
-                <li>
+                <li data-i18n="services.services_items.0.process_items.4">
                   <strong>Testen & Optimaliseren</strong> - We testen je website
                   op verschillende apparaten en browsers.
                 </li>
-                <li>
+                <li data-i18n="services.services_items.0.process_items.5">
                   <strong>Lancering</strong> - We lanceren je website en zorgen
                   ervoor dat alles soepel verloopt.
                 </li>
@@ -417,79 +410,80 @@
           </div>
         </div>
 
+        <!-- SEO Detail -->
         <div id="seo" class="detailed-service-item reverse fade-in">
           <div class="service-content">
             <div class="service-icon">
               <i class="fas fa-search"></i>
             </div>
             <div class="service-text">
-              <h2>SEO-optimalisatie</h2>
-              <p>
+              <h2 data-i18n="services.services_items.1.title">SEO-optimalisatie</h2>
+              <p data-i18n="services.services_items.1.desc">
                 Een prachtige website heeft weinig waarde als niemand hem kan
                 vinden. Onze SEO-diensten zorgen ervoor dat je website goed
                 scoort in zoekmachines, zodat potentiële klanten je gemakkelijk
                 kunnen vinden.
               </p>
 
-              <h3>Wat we bieden:</h3>
+              <h3 data-i18n="services.services_items.1.offer_title">Wat we bieden:</h3>
               <ul>
-                <li>
+                <li data-i18n="services.services_items.1.offer_items.0">
                   <i class="fas fa-check"></i> Technische SEO-optimalisatie voor
                   betere zoekresultaten
                 </li>
-                <li>
+                <li data-i18n="services.services_items.1.offer_items.1">
                   <i class="fas fa-check"></i> Keyword research en implementatie
                 </li>
-                <li>
+                <li data-i18n="services.services_items.1.offer_items.2">
                   <i class="fas fa-check"></i> Optimalisatie van meta-tags,
                   headers en content
                 </li>
-                <li>
+                <li data-i18n="services.services_items.1.offer_items.3">
                   <i class="fas fa-check"></i> Verbetering van laadtijden en
                   mobiele prestaties
                 </li>
-                <li>
+                <li data-i18n="services.services_items.1.offer_items.4">
                   <i class="fas fa-check"></i> Lokale SEO voor bedrijven met een
                   fysieke locatie
                 </li>
-                <li>
+                <li data-i18n="services.services_items.1.offer_items.5">
                   <i class="fas fa-check"></i> Regelmatige rapportages en
                   analyses
                 </li>
               </ul>
 
-              <h3>Onze SEO-aanpak:</h3>
+              <h3 data-i18n="services.services_items.1.process_title">Onze SEO-aanpak:</h3>
               <ol>
-                <li>
+                <li data-i18n="services.services_items.1.process_items.0">
                   <strong>Audit & Analyse</strong> - We analyseren je huidige
                   website en identificeren verbeterpunten.
                 </li>
-                <li>
+                <li data-i18n="services.services_items.1.process_items.1">
                   <strong>Keyword Research</strong> - We onderzoeken welke
                   zoekwoorden relevant zijn voor jouw bedrijf.
                 </li>
-                <li>
+                <li data-i18n="services.services_items.1.process_items.2">
                   <strong>On-page Optimalisatie</strong> - We optimaliseren je
                   website-inhoud en structuur.
                 </li>
-                <li>
+                <li data-i18n="services.services_items.1.process_items.3">
                   <strong>Technische Optimalisatie</strong> - We verbeteren de
                   technische aspecten van je website.
                 </li>
-                <li>
+                <li data-i18n="services.services_items.1.process_items.4">
                   <strong>Content Strategie</strong> - We ontwikkelen een
                   strategie voor relevante en waardevolle content.
                 </li>
-                <li>
+                <li data-i18n="services.services_items.1.process_items.5">
                   <strong>Monitoring & Rapportage</strong> - We houden je
                   resultaten bij en passen onze strategie indien nodig aan.
                 </li>
               </ol>
-
-              <p>
+                <!-- Special link handling needed here if paragraph is translated -->
+              <p data-i18n="services.local_seo_link_paragraph">
                 <strong>Lokale ondernemers:</strong> Bekijk onze speciale pagina
                 over
-                <a href="webdesign-wageningen.html"
+                <a href="webdesign-wageningen.html" data-no-translate="true"
                   >lokale SEO voor bedrijven in Wageningen</a
                 >
                 om te zien hoe we je kunnen helpen beter gevonden te worden in
@@ -501,121 +495,129 @@
             <img src="Images/Diensten1.png" alt="SEO Service" />
           </div>
         </div>
+         <!-- Add more detailed service items here if needed, following the pattern -->
+      </div> <!-- End container for detailed-services -->
+    </section>
 
-<!-- Werkproces Section -->
-<section class="werkproces-section">
-  <div class="container">
-    <h2 class="section-title fade-in">Ons Werkproces</h2>
-    <p class="section-subtitle fade-in delay-1">Onze gestructureerde aanpak zorgt voor een soepel proces en een eindresultaat dat aan al je verwachtingen voldoet.</p>
-    
-    <div class="process-path">
-      <div class="process-steps">
-        <!-- Step 1 -->
-        <div class="process-step">
-          <div class="step-marker">1</div>
-          <div class="step-content">
-            <h3>Kennismaking & Analyse</h3>
-            <p>We beginnen met een uitgebreid gesprek om je bedrijf, doelstellingen en verwachtingen te begrijpen. We analyseren je huidige online aanwezigheid, je doelgroep en je concurrenten om een solide basis te leggen voor je project.</p>
-          </div>
-        </div>
-        
-        <!-- Step 2 -->
-        <div class="process-step">
-          <div class="step-marker">2</div>
-          <div class="step-content">
-            <h3>Strategie & Planning</h3>
-            <p>Op basis van onze analyse ontwikkelen we een strategie en planning die perfect aansluit bij jouw doelen. We bepalen de beste aanpak, technologieën en tijdlijn om je project succesvol te maken.</p>
-          </div>
-        </div>
-        
-        <!-- Step 3 -->
-        <div class="process-step">
-          <div class="step-marker">3</div>
-          <div class="step-content">
-            <h3>Design & Development</h3>
-            <p>We ontwerpen en ontwikkelen je website of digitale product met aandacht voor detail. Ons team zorgt voor een aantrekkelijk design, gebruiksvriendelijke interface en schone, efficiënte code die perfect werkt op alle apparaten.</p>
-          </div>
-        </div>
-        
-        <!-- Step 4 -->
-        <div class="process-step">
-          <div class="step-marker">4</div>
-          <div class="step-content">
-            <h3>Testen & Optimaliseren</h3>
-            <p>We testen je website grondig op verschillende apparaten en browsers om ervoor te zorgen dat alles perfect werkt. We optimaliseren de prestaties, laadtijden en gebruikerservaring om het beste resultaat te garanderen.</p>
-          </div>
-        </div>
-        
-        <!-- Step 5 -->
-        <div class="process-step">
-          <div class="step-marker">5</div>
-          <div class="step-content">
-            <h3>Lancering & Ondersteuning</h3>
-            <p>We lanceren je website en zorgen ervoor dat alles soepel verloopt. Na de lancering blijven we beschikbaar voor ondersteuning, updates en verdere optimalisaties om ervoor te zorgen dat je digitale aanwezigheid blijft groeien.</p>
+
+    <!-- Werkproces Section -->
+    <section class="werkproces-section">
+      <div class="container">
+        <h2 class="section-title fade-in" data-i18n="services.process_section_title">Ons Werkproces</h2>
+        <p class="section-subtitle fade-in delay-1" data-i18n="services.process_section_subtitle">Onze gestructureerde aanpak zorgt voor een soepel proces en een eindresultaat dat aan al je verwachtingen voldoet.</p> <!-- Added key -->
+
+        <div class="process-path">
+          <div class="process-steps">
+            <!-- Step 1 -->
+            <div class="process-step">
+              <div class="step-marker">1</div>
+              <div class="step-content">
+                <h3 data-i18n="services.process_steps.0.title">Kennismaking & Analyse</h3>
+                <p data-i18n="services.process_steps.0.desc">We beginnen met een uitgebreid gesprek om je bedrijf, doelstellingen en verwachtingen te begrijpen. We analyseren je huidige online aanwezigheid, je doelgroep en je concurrenten om een solide basis te leggen voor je project.</p>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="process-step">
+              <div class="step-marker">2</div>
+              <div class="step-content">
+                <h3 data-i18n="services.process_steps.1.title">Strategie & Planning</h3>
+                <p data-i18n="services.process_steps.1.desc">Op basis van onze analyse ontwikkelen we een strategie en planning die perfect aansluit bij jouw doelen. We bepalen de beste aanpak, technologieën en tijdlijn om je project succesvol te maken.</p>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="process-step">
+              <div class="step-marker">3</div>
+              <div class="step-content">
+                <h3 data-i18n="services.process_steps.2.title">Design & Development</h3>
+                <p data-i18n="services.process_steps.2.desc">We ontwerpen en ontwikkelen je website of digitale product met aandacht voor detail. Ons team zorgt voor een aantrekkelijk design, gebruiksvriendelijke interface en schone, efficiënte code die perfect werkt op alle apparaten.</p>
+              </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="process-step">
+              <div class="step-marker">4</div>
+              <div class="step-content">
+                <h3 data-i18n="services.process_steps.3.title">Testen & Optimaliseren</h3>
+                <p data-i18n="services.process_steps.3.desc">We testen je website grondig op verschillende apparaten en browsers om ervoor te zorgen dat alles perfect werkt. We optimaliseren de prestaties, laadtijden en gebruikerservaring om het beste resultaat te garanderen.</p>
+              </div>
+            </div>
+
+            <!-- Step 5 -->
+            <div class="process-step">
+              <div class="step-marker">5</div>
+              <div class="step-content">
+                <h3 data-i18n="services.process_steps.4.title">Lancering & Ondersteuning</h3>
+                <p data-i18n="services.process_steps.4.desc">We lanceren je website en zorgen ervoor dat alles soepel verloopt. Na de lancering blijven we beschikbaar voor ondersteuning, updates en verdere optimalisaties om ervoor te zorgen dat je digitale aanwezigheid blijft groeien.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
 
     <!-- FAQ Section -->
     <section class="faq-section">
       <div class="container">
-             <h2>Veelgestelde Vragen</h2>
+             <h2 data-i18n="services.faq_title">Veelgestelde Vragen</h2>
+             <!-- FAQ Item 1 -->
              <div class="faq-item">
-                 <div class="faq-question">Zijn er verborgen kosten?</div>
-                 <div class="faq-answer">Nee, bij TwinPixel geloven we in volledige transparantie. De prijs die we opgeven is de prijs die je betaalt. Er zijn geen verborgen kosten of verrassingen achteraf.</div>
+                 <div class="faq-question" data-i18n="services.faq.0.question">Zijn er verborgen kosten?</div>
+                 <div class="faq-answer" hidden data-i18n="services.faq.0.answer">Nee, bij TwinPixel geloven we in volledige transparantie. De prijs die we opgeven is de prijs die je betaalt. Er zijn geen verborgen kosten of verrassingen achteraf.</div>
              </div>
+             <!-- FAQ Item 2 -->
              <div class="faq-item">
-                 <div class="faq-question">Wat als ik specifieke wensen heb die niet in een pakket passen?</div>
-                 <div class="faq-answer">Geen probleem! We bieden ook op maat gemaakte oplossingen aan en aanvullende diensten die je altijd met pakketten kan combineren. Neem contact met ons op om je specifieke wensen te bespreken en we stellen een offerte op maat voor je op.</div>
+                 <div class="faq-question" data-i18n="services.faq.1.question">Wat als ik specifieke wensen heb die niet in een pakket passen?</div>
+                 <div class="faq-answer" hidden data-i18n="services.faq.1.answer">Geen probleem! We bieden ook op maat gemaakte oplossingen aan en aanvullende diensten die je altijd met pakketten kan combineren. Neem contact met ons op om je specifieke wensen te bespreken en we stellen een offerte op maat voor je op.</div>
              </div>
+             <!-- FAQ Item 3 -->
                 <div class="faq-item">
-                 <div class="faq-question">Hoe zit het met hosting en domeinregistratie?</div>
-                 <div class="faq-answer">Hosting is inbegrepen in het maandelijkse bedrag van ons hybride prijsmodel. Domeinregistratie wordt apart gefactureerd tegen kostprijs. We kunnen je domein registreren of helpen bij het overzetten van een bestaand domein.</div>
+                 <div class="faq-question" data-i18n="services.faq.2.question">Hoe zit het met hosting en domeinregistratie?</div>
+                 <div class="faq-answer" hidden data-i18n="services.faq.2.answer">Hosting is inbegrepen in het maandelijkse bedrag van ons hybride prijsmodel. Domeinregistratie wordt apart gefactureerd tegen kostprijs. We kunnen je domein registreren of helpen bij het overzetten van een bestaand domein.</div>
              </div>
+             <!-- FAQ Item 4 -->
              <div class="faq-item">
-                 <div class="faq-question">Kan ik later upgraden naar een ander pakket?</div>
-                 <div class="faq-answer">Ja, je kunt altijd upgraden naar een uitgebreider pakket. We berekenen dan alleen het verschil tussen je huidige pakket en het nieuwe pakket, plus eventuele extra werkzaamheden die nodig zijn.</div>
+                 <div class="faq-question" data-i18n="services.faq.3.question">Kan ik later upgraden naar een ander pakket?</div>
+                 <div class="faq-answer" hidden data-i18n="services.faq.3.answer">Ja, je kunt altijd upgraden naar een uitgebreider pakket. We berekenen dan alleen het verschil tussen je huidige pakket en het nieuwe pakket, plus eventuele extra werkzaamheden die nodig zijn.</div>
              </div>
+             <!-- FAQ Item 5 -->
              <div class="faq-item">
-                 <div class="faq-question">Hoe lang duurt het voordat mijn website klaar is?</div>
-                 <div class="faq-answer">De doorlooptijd hangt af van het gekozen pakket en de complexiteit van je website. Een Starter website kan binnen 2-3 weken klaar zijn, terwijl een Enterprise website 4-6 weken kan duren. We stellen altijd een realistische tijdlijn op aan het begin van het project. Daarnaast kan je voor 99 euro extra snel de website opgeleverd krijgen.</div>
+                 <div class="faq-question" data-i18n="services.faq.4.question">Hoe lang duurt het voordat mijn website klaar is?</div>
+                 <div class="faq-answer" hidden data-i18n="services.faq.4.answer">De doorlooptijd hangt af van het gekozen pakket en de complexiteit van je website. Een Starter website kan binnen 2-3 weken klaar zijn, terwijl een Enterprise website 4-6 weken kan duren. We stellen altijd een realistische tijdlijn op aan het begin van het project. Daarnaast kan je voor 99 euro extra snel de website opgeleverd krijgen.</div>
              </div>
+             <!-- FAQ Item 6 -->
              <div class="faq-item">
-                 <div class="faq-question">Wat houdt het hybride prijsmodel precies in?</div>
-                 <div class="faq-answer">Ons hybride prijsmodel bestaat uit twee delen: een eenmalig bedrag voor het ontwerpen en bouwen van je website, en een maandelijks bedrag voor hosting en kleine updates. Dit zorgt ervoor dat je website niet alleen professioneel wordt opgezet, maar ook goed blijft draaien en up-to-date blijft zonder onverwachte kosten.</div>
+                 <div class="faq-question" data-i18n="services.faq.5.question">Wat houdt het hybride prijsmodel precies in?</div>
+                 <div class="faq-answer" hidden data-i18n="services.faq.5.answer">Ons hybride prijsmodel bestaat uit twee delen: een eenmalig bedrag voor het ontwerpen en bouwen van je website, en een maandelijks bedrag voor hosting en kleine updates. Dit zorgt ervoor dat je website niet alleen professioneel wordt opgezet, maar ook goed blijft draaien en up-to-date blijft zonder onverwachte kosten.</div>
              </div>
+             <!-- FAQ Item 7 -->
              <div class="faq-item">
-                 <div class="faq-question">Wat als ik nog geen logo of huisstijl heb?</div>
-                 <div class="faq-answer">Geen zorgen! We bieden ook logo- en huisstijlontwerp aan als aparte dienst. We kunnen je helpen met het ontwerpen van een professioneel logo en bijpassende huisstijl die perfect aansluiten bij je merk en doelgroep.</div>
+                 <div class="faq-question" data-i18n="services.faq.6.question">Wat als ik nog geen logo of huisstijl heb?</div>
+                 <div class="faq-answer" hidden data-i18n="services.faq.6.answer">Geen zorgen! We bieden ook logo- en huisstijlontwerp aan als aparte dienst. We kunnen je helpen met het ontwerpen van een professioneel logo en bijpassende huisstijl die perfect aansluiten bij je merk en doelgroep.</div>
              </div>
+             <!-- FAQ Item 8 -->
              <div class="faq-item">
-                 <div class="faq-question">Wat als ik zelf teksten, afbeeldingen of updates wil toevoegen?</div>
-                 <div class="faq-answer">We bieden pakketten aan met een Content Management Systeem (CMS), zodat je zelf eenvoudig teksten, afbeeldingen en updates kan toevoegen. We geven je een korte training zodat je zelf aan de slag kan met je website.</div>
+                 <div class="faq-question" data-i18n="services.faq.7.question">Wat als ik zelf teksten, afbeeldingen of updates wil toevoegen?</div>
+                 <div class="faq-answer" hidden data-i18n="services.faq.7.answer">We bieden pakketten aan met een Content Management Systeem (CMS), zodat je zelf eenvoudig teksten, afbeeldingen en updates kan toevoegen. We geven je een korte training zodat je zelf aan de slag kan met je website.</div>
             </div>
          </div>
-        </div>
-      </div>
      </section>
 
-
     <!-- CTA Section -->
-    <section class="about-section">
+    <section class="about-section"> <!-- Consider renaming class -->
       <div class="container">
         <div class="cta-section fade-in delay-4">
           <div class="service-card-glass cta-card">
-            <h2>Klaar om samen te werken?</h2>
-            <p>
+            <h2 data-i18n="common.cta_title">Klaar om samen te werken?</h2>
+            <p data-i18n="common.cta_subtitle">
               Laat ons je helpen om jouw online aanwezigheid naar een hoger
               niveau te tillen.
             </p>
              <div class="button-container">
-          <a href="contact.html" class="btn neon-button"
-            >Neem contact op</a
-          >
+               <a href="contact.html" class="btn neon-button" data-i18n="common.cta_button">Neem contact op</a>
+             </div>
           </div>
         </div>
       </div>
@@ -626,17 +628,17 @@
       <div class="container">
         <img
           src="Images/Logo donkere achtergrond.png"
-          alt="TwinPixel Logo"
+          alt="TwinPixel Footer Logo"
           class="footer-logo"
         />
 
         <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">Over ons</a></li>
-          <li><a href="services.html">Diensten</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="pricing.html">Prijzen</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" data-i18n="common.nav_home">Home</a></li>
+          <li><a href="about.html" data-i18n="common.nav_about">Over ons</a></li>
+          <li><a href="services.html" data-i18n="common.nav_services">Diensten</a></li>
+          <li><a href="portfolio.html" data-i18n="common.nav_portfolio">Portfolio</a></li>
+          <li><a href="pricing.html" data-i18n="common.nav_pricing">Prijzen</a></li>
+          <li><a href="contact.html" data-i18n="common.nav_contact">Contact</a></li>
         </ul>
 
         <ul class="social-links">
@@ -644,19 +646,20 @@
             <a
               href="https://www.facebook.com/profile.php?id=61574036669497"
               target="_blank"
+              aria-label="Facebook"
               ><i class="fab fa-facebook-f"></i
             ></a>
           </li>
           <li>
-            <a href="https://www.instagram.com/twinpixel.nl/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.instagram.com/twinpixel.nl/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
           </li>
           <li>
-            <a href="https://www.linkedin.com/company/twinpixel/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.linkedin.com/company/twinpixel/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
           </li>
         </ul>
 
-        <p class="copyright">
-          &copy; 2025 TwinPixel. Alle rechten voorbehouden.
+        <p class="copyright" data-i18n="common.copyright">
+          © 2025 TwinPixel. Alle rechten voorbehouden.
         </p>
       </div>
     </footer>
@@ -688,10 +691,10 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "ItemList",
+        "@type": "ItemList", // Representing the list of services offered
         "@id": "https://twinpixel.nl/services.html#services",
         "name": "TwinPixel Diensten",
-        "description": "Webdesign, SEO-optimalisatie en UX/UI-design diensten van TwinPixel in Wageningen",
+        "description": "Webdesign, SEO-optimalisatie, E-commerce, Hosting, Branding, en Chatbot diensten van TwinPixel in Wageningen",
         "itemListElement": [
           {
             "@type": "ListItem",
@@ -700,30 +703,9 @@
               "@type": "Service",
               "name": "Webdesign",
               "url": "https://twinpixel.nl/services.html#webdesign",
-              "provider": {
-                "@id": "https://twinpixel.nl/#business"
-              },
-              "description": "Op maat gemaakte websites die perfect aansluiten bij jouw merk en doelstellingen. Modern, responsive en gebruiksvriendelijk.",
-              "areaServed": {
-                "@type": "GeoCircle",
-                "geoMidpoint": {
-                  "@type": "GeoCoordinates",
-                  "latitude": 51.9691078,
-                  "longitude": 5.6463139
-                },
-                "geoRadius": 50000
-              },
-              "audience": {
-                "@type": "Audience",
-                "audienceType": "ZZP'ers en MKB-bedrijven"
-              },
-              "offers": {
-                "@type": "Offer",
-                "price": "449",
-                "priceCurrency": "EUR",
-                "description": "Professionele website op maat, inclusief responsive design en SEO-optimalisatie",
-                "url": "https://twinpixel.nl/pricing.html"
-              }
+              "provider": { "@id": "https://twinpixel.nl/#business" },
+              "description": "Professionele, responsive websites die perfect aansluiten bij jouw merk en doelstellingen.",
+              "offers": { "@type": "Offer", "price": "299", "priceCurrency": "EUR" /* Starting price */ }
             }
           },
           {
@@ -733,85 +715,92 @@
               "@type": "Service",
               "name": "SEO-optimalisatie",
               "url": "https://twinpixel.nl/services.html#seo",
-              "provider": {
-                "@id": "https://twinpixel.nl/#business"
-              },
-              "description": "Zorg dat je gevonden wordt door potentiële klanten. Wij optimaliseren je website voor zoekmachines met snelle laadtijden en mobile-first design.",
-              "areaServed": {
-                "@type": "GeoCircle",
-                "geoMidpoint": {
-                  "@type": "GeoCoordinates",
-                  "latitude": 51.9691078,
-                  "longitude": 5.6463139
-                },
-                "geoRadius": 50000
-              },
-              "audience": {
-                "@type": "Audience",
-                "audienceType": "ZZP'ers en MKB-bedrijven"
-              },
-              "offers": {
-                "@type": "Offer",
-                "price": "99",
-                "priceCurrency": "EUR",
-                "description": "SEO-optimalisatie voor betere vindbaarheid in zoekmachines",
-                "url": "https://twinpixel.nl/pricing.html"
-              }
+              "provider": { "@id": "https://twinpixel.nl/#business" },
+              "description": "Verbeter je vindbaarheid in zoekmachines en trek meer relevante bezoekers aan.",
+               "offers": { "@type": "Offer", "price": "99", "priceCurrency": "EUR" }
             }
           },
-          {
+           {
             "@type": "ListItem",
             "position": 3,
             "item": {
               "@type": "Service",
-              "name": "UX/UI-Design",
-              "url": "https://twinpixel.nl/services.html#uxui",
-              "provider": {
-                "@id": "https://twinpixel.nl/#business"
-              },
-              "description": "Gebruiksvriendelijke en visueel aantrekkelijke interfaces die bezoekers omzetten in klanten. Intuïtief, toegankelijk en conversiegericht.",
-              "areaServed": {
-                "@type": "GeoCircle",
-                "geoMidpoint": {
-                  "@type": "GeoCoordinates",
-                  "latitude": 51.9691078,
-                  "longitude": 5.6463139
-                },
-                "geoRadius": 50000
-              },
-              "audience": {
-                "@type": "Audience",
-                "audienceType": "ZZP'ers en MKB-bedrijven"
-              },
-              "offers": {
-                "@type": "Offer",
-                "price": "149",
-                "priceCurrency": "EUR",
-                "description": "Professioneel UX/UI-design voor een optimale gebruikerservaring",
-                "url": "https://twinpixel.nl/pricing.html"
-              }
+              "name": "E-commerce",
+              "url": "https://twinpixel.nl/services.html#ecommerce", // Assuming you add an ID
+              "provider": { "@id": "https://twinpixel.nl/#business" },
+              "description": "Gebruiksvriendelijke webshops met veilige betalingsintegraties en intuïtief beheer.",
+               "offers": { "@type": "Offer", "price": "799", "priceCurrency": "EUR" /* Starting price */ }
             }
-          }
-        ]
-      }
-    </script>
-    <script>
-      // Animate timeline when it's in view
-      document.addEventListener("DOMContentLoaded", () => {
-        const timeline = document.querySelector(".timeline");
-    
-        const observer = new IntersectionObserver(
-          ([entry]) => {
-            if (entry.isIntersecting) {
-              timeline.classList.add("scrolled");
+          },
+           {
+            "@type": "ListItem",
+            "position": 4,
+            "item": {
+              "@type": "Service",
+              "name": "Webhosting & Onderhoud",
+               "url": "https://twinpixel.nl/services.html#hosting", // Assuming you add an ID
+              "provider": { "@id": "https://twinpixel.nl/#business" },
+              "description": "Betrouwbare hosting en regelmatig onderhoud voor een snelle, veilige website.",
+               "offers": { "@type": "Offer", "price": "10", "priceCurrency": "EUR" /* Per month starting */ }
+            }
+          },
+           {
+            "@type": "ListItem",
+            "position": 5,
+            "item": {
+              "@type": "Service",
+              "name": "Logo & Branding",
+               "url": "https://twinpixel.nl/services.html#branding", // Assuming you add an ID
+              "provider": { "@id": "https://twinpixel.nl/#business" },
+              "description": "Professioneel logo en branding ontwerp om je bedrijfsidentiteit te versterken.",
+              "offers": { "@type": "Offer", "price": "199", "priceCurrency": "EUR" }
             }
           },
           {
-            threshold: 0.3,
+            "@type": "ListItem",
+            "position": 6,
+            "item": {
+              "@type": "Service",
+              "name": "Chatbots op maat",
+               "url": "https://twinpixel.nl/services.html#chatbots", // Assuming you add an ID
+              "provider": { "@id": "https://twinpixel.nl/#business" },
+              "description": "Automatiseer je communicatie met slimme, toegankelijke en persoonlijke chatbots.",
+               "offers": { "@type": "Offer", "price": "350", "priceCurrency": "EUR" /* Starting price */ }
+            }
           }
-        );
-    
-        if (timeline) observer.observe(timeline);
+          // Add other detailed services if applicable
+        ]
+      }
+    </script>
+
+      // Animate timeline when it's in view
+      <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const processSteps = document.querySelectorAll(".process-step");
+        if (!processSteps.length) return; // Exit if no steps found
+
+        const observerOptions = {
+            root: null, // relative to document viewport
+            rootMargin: '0px',
+            threshold: 0.4 // Trigger when 40% of the element is visible
+        };
+
+        const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                    // Optional: unobserve after animation if it only runs once
+                    // obs.unobserve(entry.target);
+                } else {
+                    // Optional: remove class if you want animation to repeat on scroll out/in
+                    // entry.target.classList.remove('in-view');
+                }
+            });
+        }, observerOptions);
+
+        processSteps.forEach(step => {
+            observer.observe(step);
+        });
       });
     </script>
     

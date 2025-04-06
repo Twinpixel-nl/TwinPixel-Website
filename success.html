@@ -3,13 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Meta Description (Needs key: success.meta_description) -->
     <meta
       name="description"
       content="Bedankt voor uw bericht. TwinPixel in Wageningen neemt binnen 24 uur contact met u op."
+      data-i18n="success.meta_description"
     />
-    <title>Bericht Verzonden | TwinPixel Webdesign Wageningen</title>
+    <!-- Title (Needs key: success.title) -->
+    <title data-i18n="success.title">Bericht Verzonden | TwinPixel Webdesign Wageningen</title>
 
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph / Facebook (Static Recommended) -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://twinpixel.nl/success.html" />
     <meta
@@ -25,7 +28,7 @@
       content="https://twinpixel.nl/Images/Logo%20donkere%20achtergrond.png"
     />
 
-    <!-- Twitter -->
+    <!-- Twitter (Static Recommended) -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://twinpixel.nl/success.html" />
     <meta
@@ -47,7 +50,7 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/language-switcher.css" />
-    <link rel="stylesheet" href="css/success.css" />
+    <link rel="stylesheet" href="css/success.css" /> <!-- Assuming success.css exists -->
 
     <!-- Font Awesome for icons -->
     <link
@@ -82,22 +85,22 @@
       href="Icons/favicon-16x16.png"
     />
     <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-Y0TE68DKL1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-Y0TE68DKL1");
+    </script>
+
   </head>
-
-  <!-- Google tag (gtag.js) -->
-  <script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=G-Y0TE68DKL1"
-  ></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-
-    gtag("config", "G-Y0TE68DKL1");
-  </script>
 
   <body>
     <!-- Mobile Menu Overlay -->
@@ -116,32 +119,23 @@
           </a>
 
           <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">Over ons</a></li>
-            <li><a href="services.html">Diensten</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="pricing.html">Prijzen</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html" data-i18n="common.nav_home">Home</a></li>
+            <li><a href="about.html" data-i18n="common.nav_about">Over ons</a></li>
+            <li><a href="services.html" data-i18n="common.nav_services">Diensten</a></li>
+            <li><a href="portfolio.html" data-i18n="common.nav_portfolio">Portfolio</a></li>
+            <li><a href="pricing.html" data-i18n="common.nav_pricing">Prijzen</a></li>
+            <li><a href="contact.html" data-i18n="common.nav_contact">Contact</a></li>
           </ul>
 
           <div class="language-switcher">
             <div class="language-buttons">
-              <a
-                href="#nl"
-                class="lang-btn active"
-                onclick="switchLanguage('nl'); return false;"
-                >NL</a
-              >
-              <a
-                href="#en"
-                class="lang-btn"
-                onclick="switchLanguage('en'); return false;"
-                >EN</a
-              >
+              <!-- Removed inline onclick -->
+              <a href="#nl" class="lang-btn active">NL</a>
+              <a href="#en" class="lang-btn">EN</a>
             </div>
           </div>
 
-          <button class="mobile-menu-btn">
+          <button class="mobile-menu-btn" aria-label="Toggle menu">
             <i class="fas fa-bars"></i>
           </button>
         </nav>
@@ -151,7 +145,7 @@
     <!-- Page Header -->
     <section class="page-header">
       <div class="container">
-        <h1 class="fade-in">Bericht Verzonden</h1>
+        <h1 class="fade-in" data-i18n="success.header">Bericht Verzonden</h1>
       </div>
     </section>
 
@@ -160,18 +154,17 @@
       <div class="container">
         <div class="success-content fade-in">
           <div class="success-icon">
-            <i class="fas fa-check-circle"></i>
+            <i class="fas fa-check-circle"></i> <!-- Icon is visual, no translation needed -->
           </div>
-          <h2>Bedankt voor uw bericht!</h2>
-          <p>
+          <h2 data-i18n="success.message_title">Bedankt voor uw bericht!</h2>
+          <p data-i18n="success.message_body">
             We hebben uw bericht ontvangen en zullen binnen 24 uur contact met u
             opnemen. Controleer uw e-mail voor een bevestiging van uw bericht.
           </p>
           <div class="success-actions">
-            <a href="index.html" class="btn">Terug naar home</a>
-            <a href="portfolio.html" class="btn btn-outline"
-              >Bekijk ons portfolio</a
-            >
+            <!-- Reusing common keys for buttons -->
+            <a href="index.html" class="btn" data-i18n="common.nav_home">Terug naar home</a>
+            <a href="portfolio.html" class="btn btn-outline" data-i18n="common.nav_portfolio">Bekijk ons portfolio</a>
           </div>
         </div>
       </div>
@@ -182,33 +175,33 @@
       <div class="container">
         <img
           src="Images/Logo donkere achtergrond.png"
-          alt="TwinPixel Logo"
+          alt="TwinPixel Footer Logo"
           class="footer-logo"
         />
 
         <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">Over ons</a></li>
-          <li><a href="services.html">Diensten</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="pricing.html">Prijzen</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" data-i18n="common.nav_home">Home</a></li>
+          <li><a href="about.html" data-i18n="common.nav_about">Over ons</a></li>
+          <li><a href="services.html" data-i18n="common.nav_services">Diensten</a></li>
+          <li><a href="portfolio.html" data-i18n="common.nav_portfolio">Portfolio</a></li>
+          <li><a href="pricing.html" data-i18n="common.nav_pricing">Prijzen</a></li>
+          <li><a href="contact.html" data-i18n="common.nav_contact">Contact</a></li>
         </ul>
 
         <ul class="social-links">
           <li>
-            <a href="https://www.facebook.com/profile.php?id=61574036669497" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61574036669497" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
           </li>
           <li>
-            <a href="https://www.instagram.com/twinpixel.nl/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.instagram.com/twinpixel.nl/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
           </li>
           <li>
-            <a href="https://www.linkedin.com/company/twinpixel/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.linkedin.com/company/twinpixel/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
           </li>
         </ul>
 
-        <p class="copyright">
-          &copy; 2025 TwinPixel. Alle rechten voorbehouden.
+        <p class="copyright" data-i18n="common.copyright">
+          © 2025 TwinPixel. Alle rechten voorbehouden.
         </p>
       </div>
     </footer>

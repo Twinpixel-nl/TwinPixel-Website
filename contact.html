@@ -3,17 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Meta Description for SEO (Needs key: contact.meta_description) -->
     <meta
       name="description"
       content="Neem contact op met TwinPixel in Wageningen voor een gratis consult of offerte. Wij helpen ZZP'ers en MKB'ers met professionele websites en SEO-optimalisatie."
+      data-i18n="contact.meta_description"
     />
     <meta
       name="keywords"
       content="contact TwinPixel, webdesign Wageningen, offerte aanvragen website, gratis consult website, website laten maken Wageningen, SEO-optimalisatie Wageningen"
     />
-    <title>Contact | TwinPixel Webdesign Wageningen</title>
+    <!-- Title (Needs key: contact.title) -->
+    <title data-i18n="contact.title">Contact | TwinPixel Webdesign Wageningen</title>
 
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph / Facebook (Static Recommended) -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://twinpixel.nl/contact.html" />
     <meta
@@ -29,7 +32,7 @@
       content="https://twinpixel.nl/Images/Logo%20donkere%20achtergrond.png"
     />
 
-    <!-- Twitter -->
+    <!-- Twitter (Static Recommended) -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://twinpixel.nl/contact.html" />
     <meta
@@ -86,25 +89,21 @@
     />
     <link rel="manifest" href="/site.webmanifest" />
 
-    
-    <link rel="canonical" href="https://twinpixel.nl/contact.html">
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-Y0TE68DKL1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-Y0TE68DKL1");
+    </script>
 
   </head>
-
-  <!-- Google tag (gtag.js) -->
-  <script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=G-Y0TE68DKL1"
-  ></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-
-    gtag("config", "G-Y0TE68DKL1");
-  </script>
 
   <body>
     <!-- Mobile Menu Overlay -->
@@ -123,32 +122,23 @@
           </a>
 
           <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">Over ons</a></li>
-            <li><a href="services.html">Diensten</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="pricing.html">Prijzen</a></li>
-            <li><a href="contact.html" class="active">Contact</a></li>
+            <li><a href="index.html" data-i18n="common.nav_home">Home</a></li>
+            <li><a href="about.html" data-i18n="common.nav_about">Over ons</a></li>
+            <li><a href="services.html" data-i18n="common.nav_services">Diensten</a></li>
+            <li><a href="portfolio.html" data-i18n="common.nav_portfolio">Portfolio</a></li>
+            <li><a href="pricing.html" data-i18n="common.nav_pricing">Prijzen</a></li>
+            <li><a href="contact.html" class="active" data-i18n="common.nav_contact">Contact</a></li>
           </ul>
 
           <div class="language-switcher">
             <div class="language-buttons">
-              <a
-                href="#nl"
-                class="lang-btn active"
-                onclick="switchLanguage('nl'); return false;"
-                >NL</a
-              >
-              <a
-                href="#en"
-                class="lang-btn"
-                onclick="switchLanguage('en'); return false;"
-                >EN</a
-              >
+              <!-- Removed inline onclick -->
+              <a href="#nl" class="lang-btn active">NL</a>
+              <a href="#en" class="lang-btn">EN</a>
             </div>
           </div>
 
-          <button class="mobile-menu-btn">
+          <button class="mobile-menu-btn" aria-label="Toggle menu">
             <i class="fas fa-bars"></i>
           </button>
         </nav>
@@ -158,7 +148,7 @@
     <!-- Page Header -->
     <section class="page-header">
       <div class="container">
-        <h1 class="fade-in">Neem Contact Op</h1>
+        <h1 class="fade-in" data-i18n="contact.header">Neem Contact Op</h1>
       </div>
     </section>
 
@@ -166,8 +156,8 @@
     <section class="contact-section">
       <div class="container">
         <div class="contact-intro fade-in">
-          <h2>Laten we samenwerken</h2>
-          <p>
+          <h2 data-i18n="contact.intro_title">Laten we samenwerken</h2>
+          <p data-i18n="contact.intro_text">
             Heb je vragen over onze diensten of wil je een offerte aanvragen?
             Vul het formulier in of neem direct contact met ons op. We reageren
             binnen 24 uur op je bericht.
@@ -176,64 +166,56 @@
 
         <div class="contact-grid">
           <div class="contact-info fade-in">
+            <!-- Email Card -->
             <a href="mailto:info@twinpixel.nl">
-            <div class="info-card">
-              <div class="info-icon">
-                <i class="fas fa-envelope"></i>
+              <div class="info-card">
+                <div class="info-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div class="info-content">
+                  <h3 data-i18n="contact.info_email_title">E-mail</h3>
+                  <p>info@twinpixel.nl</p> <!-- Email address is static -->
+                </div>
               </div>
-              <div class="info-content">
-                <h3>E-mail</h3>
-                <p>info@twinpixel.nl</p>
+            </a>
+            <!-- Phone Card -->
+            <a href="tel:+31682579179">
+              <div class="info-card">
+                <div class="info-icon">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <div class="info-content">
+                  <h3 data-i18n="contact.info_phone_title">Telefoon</h3>
+                  <p>+31 6 82579179</p> <!-- Phone number is static -->
+                </div>
               </div>
-            </div>
-          </a>
-          <a href="tel:+31682579179">
-            <div class="info-card">
-              <div class="info-icon">
-                <i class="fas fa-phone"></i>
-              </div>
-              <div class="info-content">
-                <h3>Telefoon</h3>
-                <p>+31 6 82579179</p>
-              </div>
-            </div>
-          </a>
-
+            </a>
+            <!-- Location Card -->
             <div class="info-card">
               <div class="info-icon">
                 <i class="fas fa-map-marker-alt"></i>
               </div>
               <div class="info-content">
-                <h3>Locatie</h3>
-                <p>Oude Diedenweg 16, Wageningen</p>
+                <h3 data-i18n="contact.info_location_title">Locatie</h3>
+                <p data-i18n="contact.info_location_text">Oude Diedenweg 16, Wageningen</p>
               </div>
             </div>
-
+            <!-- Hours Card -->
             <div class="info-card">
               <div class="info-icon">
                 <i class="fas fa-clock"></i>
               </div>
               <div class="info-content">
-                <h3>Openingstijden</h3>
-                <p>Maandag - Vrijdag: 9:00 - 17:00</p>
+                <h3 data-i18n="contact.info_hours_title">Openingstijden</h3>
+                <p data-i18n="contact.info_hours_text">Maandag - Vrijdag: 9:00 - 17:00</p>
               </div>
             </div>
-
-            <!-- <div class="social-links-container">
-                        <h3>Volg ons</h3>
-                        <div class="social-links">
-                            <a href="#" target="_blank" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
-                            <a href="#" target="_blank" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" target="_blank" class="social-link"><i class="fab fa-twitter"></i></a>
-                        </div>
-                    </div> -->
           </div>
 
           <div class="contact-form-container fade-in delay-1">
             <div class="form-header">
-              <h3>Stuur ons een bericht</h3>
-              <p>
+              <h3 data-i18n="contact.form_title">Stuur ons een bericht</h3>
+              <p data-i18n="contact.form_text">
                 Vul het formulier in en we nemen zo snel mogelijk contact met je
                 op.
               </p>
@@ -250,209 +232,226 @@
             >
               <input type="hidden" name="form-name" value="contact" />
               <div class="form-group">
-                <label for="name">Naam *</label>
+                <label for="name" data-i18n="contact.form_label_name">Naam *</label>
                 <input
                   type="text"
                   id="name"
                   name="name"
                   placeholder="Jouw naam"
                   required
+                  data-i18n="contact.form_placeholder_name" 
                 />
               </div>
 
               <div class="form-group">
-                <label for="email">E-mail *</label>
+                <label for="email" data-i18n="contact.form_label_email">E-mail *</label>
                 <input
                   type="email"
                   id="email"
                   name="email"
                   placeholder="Jouw e-mailadres"
                   required
+                  data-i18n="contact.form_placeholder_email" 
                 />
               </div>
 
               <div class="form-group">
-                <label for="phone">Telefoonnummer</label>
+                <label for="phone" data-i18n="contact.form_label_phone">Telefoonnummer</label>
                 <input
                   type="tel"
                   id="phone"
                   name="phone"
                   placeholder="Jouw telefoonnummer"
+                  data-i18n="contact.form_placeholder_phone"
                 />
               </div>
 
               <div class="form-group">
-                <label for="subject">Onderwerp *</label>
+                <label for="subject" data-i18n="contact.form_label_subject">Onderwerp *</label>
                 <input
                   type="text"
                   id="subject"
                   name="subject"
                   placeholder="Onderwerp van je bericht"
                   required
+                  data-i18n="contact.form_placeholder_subject" 
                 />
               </div>
 
               <div class="form-group">
-                <label for="message">Bericht *</label>
+                <label for="message" data-i18n="contact.form_label_message">Bericht *</label>
                 <textarea
                   id="message"
                   name="message"
                   placeholder="Jouw bericht"
                   required
+                  data-i18n="contact.form_placeholder_message"
                 ></textarea>
               </div>
 
               <div class="form-group">
-                <a type="submit" class="form-submit-btn glow-effect">Verstuur bericht</a>
+                <!-- Button text handled by JS -->
+                <button type="submit" class="form-submit-btn glow-effect" data-i18n="contact.form_button">Verstuur bericht</button>
               </div>
             </form>
           </div>
         </div>
       </div>
     </section>
-<!--consultation-->
+
+    <!-- Consultation Section -->
     <section class="consultation-section">
       <div class="container">
         <div class="consultation-content fade-in">
-          <h2 class="section-title">Vraag een gratis consult aan</h2>
-          <p class="section-subtitle">
+          <h2 class="section-title" data-i18n="contact.consult_title">Vraag een gratis consult aan</h2>
+          <p class="section-subtitle" data-i18n="contact.consult_text">
             Wil je weten wat wij voor jou kunnen betekenen? Plan een gratis
             consult in en we bespreken je wensen en mogelijkheden.
           </p>
-    
+
           <div class="consultation-steps-wrapper">
+            <!-- Step 1 -->
             <div class="consultation-step fade-in delay-1">
               <div class="consultation-icon-circle">1</div>
               <div class="consultation-step-content">
-                <h3>Plan een afspraak</h3>
-                <p>
+                <h3 data-i18n="contact.consult_steps.0.title">Plan een afspraak</h3>
+                <p data-i18n="contact.consult_steps.0.desc">
                   Kies een datum en tijd die jou uitkomt voor een videogesprek of telefoongesprek. We zijn flexibel en kunnen ook buiten kantooruren afspreken als dat beter voor je werkt. Het gesprek duurt ongeveer 30 minuten en is volledig vrijblijvend.
                 </p>
               </div>
             </div>
-    
+            <!-- Step 2 -->
             <div class="consultation-step fade-in delay-2">
               <div class="consultation-icon-circle">2</div>
               <div class="consultation-step-content">
-                <h3>Deel je wensen</h3>
-                <p>
+                <h3 data-i18n="contact.consult_steps.1.title">Deel je wensen</h3>
+                <p data-i18n="contact.consult_steps.1.desc">
                   Vertel ons over je bedrijf, doelstellingen en wensen voor je website. We luisteren naar je ideeën, beantwoorden je vragen en denken met je mee. Heb je al voorbeelden van websites die je aanspreken? Deel ze gerust met ons tijdens het gesprek.
                 </p>
               </div>
             </div>
-    
+            <!-- Step 3 -->
             <div class="consultation-step fade-in delay-3">
               <div class="consultation-icon-circle">3</div>
               <div class="consultation-step-content">
-                <h3>Ontvang advies</h3>
-                <p>
+                <h3 data-i18n="contact.consult_steps.2.title">Ontvang advies</h3>
+                <p data-i18n="contact.consult_steps.2.desc">
                   Wij geven je vrijblijvend advies over de beste aanpak voor jouw project. We bespreken mogelijke oplossingen, technische mogelijkheden en een globale prijsindicatie. Na het gesprek sturen we een samenvatting van het besproken advies per e-mail, zodat je alles nog eens rustig kunt nalezen.
                 </p>
               </div>
             </div>
           </div>
-    
+
           <div class="cta-button-container">
-            <a href="#" class="btn btn-large glow-effect">Plan een gratis consult</a>
+            <!-- Assuming this links to the contact form or a calendar -->
+            <a href="#" class="btn btn-large glow-effect" data-i18n="contact.consult_button">Plan een gratis consult</a>
           </div>
         </div>
       </div>
     </section>
 
-  <!-- FAQ Section -->
-  <section class="faq-section">
-    <div class="container">
-           <h2>Veelgestelde Vragen</h2>
-           <div class="faq-item">
-               <div class="faq-question">Zijn er verborgen kosten?</div>
-               <div class="faq-answer">Nee, bij TwinPixel geloven we in volledige transparantie. De prijs die we opgeven is de prijs die je betaalt. Er zijn geen verborgen kosten of verrassingen achteraf.</div>
-           </div>
-           <div class="faq-item">
-               <div class="faq-question">Wat als ik specifieke wensen heb die niet in een pakket passen?</div>
-               <div class="faq-answer">Geen probleem! We bieden ook op maat gemaakte oplossingen aan en aanvullende diensten die je altijd met pakketten kan combineren. Neem contact met ons op om je specifieke wensen te bespreken en we stellen een offerte op maat voor je op.</div>
-           </div>
-              <div class="faq-item">
-               <div class="faq-question">Hoe zit het met hosting en domeinregistratie?</div>
-               <div class="faq-answer">Hosting is inbegrepen in het maandelijkse bedrag van ons hybride prijsmodel. Domeinregistratie wordt apart gefactureerd tegen kostprijs. We kunnen je domein registreren of helpen bij het overzetten van een bestaand domein.</div>
-           </div>
-           <div class="faq-item">
-               <div class="faq-question">Kan ik later upgraden naar een ander pakket?</div>
-               <div class="faq-answer">Ja, je kunt altijd upgraden naar een uitgebreider pakket. We berekenen dan alleen het verschil tussen je huidige pakket en het nieuwe pakket, plus eventuele extra werkzaamheden die nodig zijn.</div>
-           </div>
-           <div class="faq-item">
-               <div class="faq-question">Hoe lang duurt het voordat mijn website klaar is?</div>
-               <div class="faq-answer">De doorlooptijd hangt af van het gekozen pakket en de complexiteit van je website. Een Starter website kan binnen 2-3 weken klaar zijn, terwijl een Enterprise website 4-6 weken kan duren. We stellen altijd een realistische tijdlijn op aan het begin van het project. Daarnaast kan je voor 99 euro extra snel de website opgeleverd krijgen.</div>
-           </div>
-           <div class="faq-item">
-               <div class="faq-question">Wat houdt het hybride prijsmodel precies in?</div>
-               <div class="faq-answer">Ons hybride prijsmodel bestaat uit twee delen: een eenmalig bedrag voor het ontwerpen en bouwen van je website, en een maandelijks bedrag voor hosting en kleine updates. Dit zorgt ervoor dat je website niet alleen professioneel wordt opgezet, maar ook goed blijft draaien en up-to-date blijft zonder onverwachte kosten.</div>
-           </div>
-           <div class="faq-item">
-               <div class="faq-question">Wat als ik nog geen logo of huisstijl heb?</div>
-               <div class="faq-answer">Geen zorgen! We bieden ook logo- en huisstijlontwerp aan als aparte dienst. We kunnen je helpen met het ontwerpen van een professioneel logo en bijpassende huisstijl die perfect aansluiten bij je merk en doelgroep.</div>
-           </div>
-           <div class="faq-item">
-               <div class="faq-question">Wat als ik zelf teksten, afbeeldingen of updates wil toevoegen?</div>
-               <div class="faq-answer">We bieden pakketten aan met een Content Management Systeem (CMS), zodat je zelf eenvoudig teksten, afbeeldingen en updates kan toevoegen. We geven je een korte training zodat je zelf aan de slag kan met je website.</div>
-          </div>
-       </div>
-      </div>
-    </div>
-   </section>
- 
-<!-- Map + Weer Container -->
-<section class="map-weather-wrapper fade-in">
-  <!-- Map Section -->
-  <div class="map-container">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2456.5887685021!2d5.6603978!3d51.9747693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c7a43c5c5e2d8f%3A0x9d5c9d83f0ac497a!2sOude%20Diedenweg%2016%2C%206704%20AD%20Wageningen!5e0!3m2!1snl!2snl!4v1645542345678!5m2!1snl!2snl"
-      width="100%"
-      height="450"
-      style="border: 0"
-      allowfullscreen=""
-      loading="lazy"
-    ></iframe>
-  </div>
+    <!-- FAQ Section -->
+        <!-- FAQ Section -->
+        <section class="faq-section">
+          <div class="container">
+            <h2 data-i18n="contact.faq_title">Veelgestelde Vragen</h2>
+            <!-- FAQ Item 1 -->
+            <div class="faq-item">
+              <div class="faq-question" data-i18n="contact.faq.0.question">Zijn er verborgen kosten?</div>
+              <div class="faq-answer" hidden data-i18n="contact.faq.0.answer">Nee, bij TwinPixel geloven we in volledige transparantie. De prijs die we opgeven is de prijs die je betaalt. Er zijn geen verborgen kosten of verrassingen achteraf.</div>
+            </div>
+            <!-- FAQ Item 2 -->
+            <div class="faq-item">
+              <div class="faq-question" data-i18n="contact.faq.1.question">Wat als ik specifieke wensen heb die niet in een pakket passen?</div>
+              <div class="faq-answer" hidden data-i18n="contact.faq.1.answer">Geen probleem! We bieden ook op maat gemaakte oplossingen aan en aanvullende diensten die je altijd met pakketten kan combineren. Neem contact met ons op om je specifieke wensen te bespreken en we stellen een offerte op maat voor je op.</div>
+            </div>
+            <!-- FAQ Item 3 -->
+            <div class="faq-item">
+              <div class="faq-question" data-i18n="contact.faq.2.question">Hoe zit het met hosting en domeinregistratie?</div>
+              <div class="faq-answer" hidden data-i18n="contact.faq.2.answer">Hosting is inbegrepen in het maandelijkse bedrag van ons hybride prijsmodel. Domeinregistratie wordt apart gefactureerd tegen kostprijs. We kunnen je domein registreren of helpen bij het overzetten van een bestaand domein.</div>
+            </div>
+            <!-- FAQ Item 4 -->
+            <div class="faq-item">
+              <div class="faq-question" data-i18n="contact.faq.3.question">Kan ik later upgraden naar een ander pakket?</div>
+              <div class="faq-answer" hidden data-i18n="contact.faq.3.answer">Ja, je kunt altijd upgraden naar een uitgebreider pakket. We berekenen dan alleen het verschil tussen je huidige pakket en het nieuwe pakket, plus eventuele extra werkzaamheden die nodig zijn.</div>
+            </div>
+            <!-- FAQ Item 5 -->
+            <div class="faq-item">
+              <div class="faq-question" data-i18n="contact.faq.4.question">Hoe lang duurt het voordat mijn website klaar is?</div>
+              <div class="faq-answer" hidden data-i18n="contact.faq.4.answer">De doorlooptijd hangt af van het gekozen pakket en de complexiteit van je website. Een Starter website kan binnen 2-3 weken klaar zijn, terwijl een Enterprise website 4-6 weken kan duren. We stellen altijd een realistische tijdlijn op aan het begin van het project. Daarnaast kan je voor 99 euro extra snel de website opgeleverd krijgen.</div>
+            </div>
+            <!-- FAQ Item 6 -->
+            <div class="faq-item">
+              <div class="faq-question" data-i18n="contact.faq.5.question">Wat houdt het hybride prijsmodel precies in?</div>
+              <div class="faq-answer" hidden data-i18n="contact.faq.5.answer">Ons hybride prijsmodel bestaat uit twee delen: een eenmalig bedrag voor het ontwerpen en bouwen van je website, en een maandelijks bedrag voor hosting en kleine updates. Dit zorgt ervoor dat je website niet alleen professioneel wordt opgezet, maar ook goed blijft draaien en up-to-date blijft zonder onverwachte kosten.</div>
+            </div>
+            <!-- FAQ Item 7 -->
+            <div class="faq-item">
+              <div class="faq-question" data-i18n="contact.faq.6.question">Wat als ik nog geen logo of huisstijl heb?</div>
+              <div class="faq-answer" hidden data-i18n="contact.faq.6.answer">Geen zorgen! We bieden ook logo- en huisstijlontwerp aan als aparte dienst. We kunnen je helpen met het ontwerpen van een professioneel logo en bijpassende huisstijl die perfect aansluiten bij je merk en doelgroep.</div>
+            </div>
+            <!-- FAQ Item 8 -->
+            <div class="faq-item">
+              <div class="faq-question" data-i18n="contact.faq.7.question">Wat als ik zelf teksten, afbeeldingen of updates wil toevoegen?</div>
+              <div class="faq-answer" hidden data-i18n="contact.faq.7.answer">We bieden pakketten aan met een Content Management Systeem (CMS), zodat je zelf eenvoudig teksten, afbeeldingen en updates kan toevoegen. We geven je een korte training zodat je zelf aan de slag kan met je website.</div>
+            </div>
+          </div> <!-- End .container -->
+        </section>
 
-  <!-- Weerblok -->
-  <div id="weerblok" class="weer">
-    <h2>🌦 Huidig weer in Wageningen</h2>
-    <div id="weerdata">Laden...</div>
-  </div>
-</section>
+    <!-- Map + Weer Container -->
+    <section class="map-weather-wrapper fade-in">
+      <!-- Map Section -->
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2456.5887685021!2d5.6603978!3d51.9747693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c7a43c5c5e2d8f%3A0x9d5c9d83f0ac497a!2sOude%20Diedenweg%2016%2C%206704%20AD%20Wageningen!5e0!3m2!1snl!2snl!4v1645542345678!5m2!1snl!2snl"
+          width="100%"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          title="Locatie van TwinPixel op Google Maps" 
+        ></iframe>
+      </div>
+
+      <!-- Weerblok -->
+      <div id="weerblok" class="weer">
+        <h2 data-i18n="contact.weather_title">🌦 Huidig weer in Wageningen</h2> <!-- Optional translation -->
+        <div id="weerdata" data-i18n="common.term_loading">Laden...</div>
+      </div>
+    </section>
 
     <!-- Footer -->
     <footer>
       <div class="container">
         <img
           src="Images/Logo donkere achtergrond.png"
-          alt="TwinPixel Logo"
+          alt="TwinPixel Footer Logo"
           class="footer-logo"
         />
 
         <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">Over ons</a></li>
-          <li><a href="services.html">Diensten</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="pricing.html">Prijzen</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" data-i18n="common.nav_home">Home</a></li>
+          <li><a href="about.html" data-i18n="common.nav_about">Over ons</a></li>
+          <li><a href="services.html" data-i18n="common.nav_services">Diensten</a></li>
+          <li><a href="portfolio.html" data-i18n="common.nav_portfolio">Portfolio</a></li>
+          <li><a href="pricing.html" data-i18n="common.nav_pricing">Prijzen</a></li>
+          <li><a href="contact.html" data-i18n="common.nav_contact">Contact</a></li>
         </ul>
 
         <ul class="social-links">
           <li>
-            <a href="https://www.facebook.com/profile.php?id=61574036669497" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61574036669497" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
           </li>
           <li>
-            <a href="https://www.instagram.com/twinpixel.nl/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.instagram.com/twinpixel.nl/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
           </li>
           <li>
-            <a href="https://www.linkedin.com/company/twinpixel/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.linkedin.com/company/twinpixel/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
           </li>
         </ul>
 
-        <p class="copyright">
-          &copy; 2025 TwinPixel. Alle rechten voorbehouden.
+        <p class="copyright" data-i18n="common.copyright">
+          © 2025 TwinPixel. Alle rechten voorbehouden.
         </p>
       </div>
     </footer>
@@ -462,7 +461,7 @@
     <script src="js/consultation-animations.js"></script>
 
     <!-- Structured Data -->
-    <!-- WebPage Structured Data -->
+    <!-- Structured Data (LD+JSON - Static Recommended) -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -516,40 +515,49 @@
     </script>
 
 
+    <!-- Weather Script -->
     <script>
-      const API_KEY = 'df9943d235db91f43563747e06a57e99';
+      const API_KEY = 'df9943d235db91f43563747e06a57e99'; // Consider hiding this key
       const STAD = 'Wageningen';
-  
+
       async function laadWeer() {
-          const url = `https://api.openweathermap.org/data/2.5/weather?q=${STAD}&units=metric&appid=${API_KEY}&lang=nl`;
-  
+          const weerDataElement = document.getElementById('weerdata');
+          if (!weerDataElement) return; // Exit if element not found
+
+          // Determine language for weather API (nl or en)
+          const lang = document.documentElement.lang || 'nl';
+          const url = `https://api.openweathermap.org/data/2.5/weather?q=${STAD}&units=metric&appid=${API_KEY}&lang=${lang}`;
+
           try {
               const response = await fetch(url);
               const data = await response.json();
-              console.log("Weerdata:", data);
-  
-              // ❗ Check of er echt data is
-              if (!data || data.cod !== 200) {
-                  throw new Error(data.message || "Onbekende fout");
+              console.log("Weather data:", data);
+
+              if (!response.ok || data.cod !== 200) {
+                  throw new Error(data.message || "Unknown weather API error");
               }
-  
+
               const temp = data.main.temp;
               const beschrijving = data.weather[0].description;
               const icoon = data.weather[0].icon;
               const icoonUrl = `https://openweathermap.org/img/wn/${icoon}@2x.png`;
-  
-              document.getElementById('weerdata').innerHTML = `
-                  <img src="${icoonUrl}" alt="Weer icoon" class="mx-auto">
-                  <p class="font-bold text-xl">${temp}°C</p>
-                  <p class="capitalize">${beschrijving}</p>
+
+              weerDataElement.innerHTML = `
+                  <img src="${icoonUrl}" alt="Weather icon" class="mx-auto" style="display:inline-block; vertical-align: middle; width: 50px; height: 50px;"> <!-- Basic styling -->
+                  <p class="font-bold text-xl" style="display:inline-block; vertical-align: middle; margin-left: 10px;">${Math.round(temp)}°C</p> <!-- Rounded temp -->
+                  <p class="capitalize" style="clear: both; margin-top: 5px;">${beschrijving}</p>
               `;
           } catch (err) {
-              console.error("Weer laden mislukt:", err);
-              document.getElementById('weerdata').textContent = "⚠️ Weerdata kon niet geladen worden.";
+              console.error("Failed to load weather:", err);
+              weerDataElement.textContent = "⚠️ Weather data unavailable.";
+
           }
       }
-  
-      laadWeer();
-  </script>
+
+      // Load weather after initial language is likely set
+      document.addEventListener('DOMContentLoaded', laadWeer);
+      // Optionally reload weather on language switch if desired (might need event listener)
+
+    </script>
   </body>
 </html>

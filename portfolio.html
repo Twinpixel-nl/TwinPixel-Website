@@ -3,15 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Meta Description (Needs key: portfolio.meta_description) -->
     <meta
       name="description"
       content="Bekijk het portfolio van TwinPixel: moderne, op maat gemaakte websites voor diverse branches. Ontdek onze projecten en laat je inspireren."
+      data-i18n="portfolio.meta_description"
     />
     <meta
       name="keywords"
       content="portfolio, webdesign, website voorbeelden, projecten, webdevelopment, responsive design"
     />
-    <title>Portfolio | TwinPixel</title>
+    <!-- Title (Needs key: portfolio.title) -->
+    <title data-i18n="portfolio.title">Portfolio | TwinPixel</title>
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/style.css" />
@@ -51,24 +54,24 @@
     />
     <link rel="manifest" href="/" />
 
+    <!-- Canonical URL -->
     <link rel="canonical" href="https://twinpixel.nl/portfolio.html">
 
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-Y0TE68DKL1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-Y0TE68DKL1");
+    </script>
+
   </head>
-
-  <!-- Google tag (gtag.js) -->
-  <script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=G-Y0TE68DKL1"
-  ></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-
-    gtag("config", "G-Y0TE68DKL1");
-  </script>
 
   <body>
     <!-- Mobile Menu Overlay -->
@@ -87,32 +90,23 @@
           </a>
 
           <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">Over ons</a></li>
-            <li><a href="services.html">Diensten</a></li>
-            <li><a href="portfolio.html" class="active">Portfolio</a></li>
-            <li><a href="pricing.html">Prijzen</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html" data-i18n="common.nav_home">Home</a></li>
+            <li><a href="about.html" data-i18n="common.nav_about">Over ons</a></li>
+            <li><a href="services.html" data-i18n="common.nav_services">Diensten</a></li>
+            <li><a href="portfolio.html" class="active" data-i18n="common.nav_portfolio">Portfolio</a></li>
+            <li><a href="pricing.html" data-i18n="common.nav_pricing">Prijzen</a></li>
+            <li><a href="contact.html" data-i18n="common.nav_contact">Contact</a></li>
           </ul>
 
           <div class="language-switcher">
             <div class="language-buttons">
-              <a
-                href="#nl"
-                class="lang-btn active"
-                onclick="switchLanguage('nl'); return false;"
-                >NL</a
-              >
-              <a
-                href="#en"
-                class="lang-btn"
-                onclick="switchLanguage('en'); return false;"
-                >EN</a
-              >
+              <!-- Removed inline onclick -->
+              <a href="#nl" class="lang-btn active">NL</a>
+              <a href="#en" class="lang-btn">EN</a>
             </div>
           </div>
 
-          <button class="mobile-menu-btn">
+          <button class="mobile-menu-btn" aria-label="Toggle menu">
             <i class="fas fa-bars"></i>
           </button>
         </nav>
@@ -122,200 +116,148 @@
     <!-- Page Header -->
     <section class="page-header">
       <div class="container">
-        <h1 class="fade-in">Ons Portfolio</h1>
+        <h1 class="fade-in" data-i18n="portfolio.header">Ons Portfolio</h1>
       </div>
     </section>
 
     <!-- Portfolio Intro -->
-<section class="portfolio-intro">
-  <div class="container">
-    <div class="intro-content fade-in">
-      <h3>Ontdek onze projecten</h3>
-      <p>
-        Bij TwinPixel zijn we trots op de websites die we hebben ontworpen
-        en ontwikkeld voor onze klanten. Elk project is uniek en op maat
-        gemaakt om aan de specifieke behoeften en doelstellingen van onze
-        klanten te voldoen.
-      </p>
-      <p>
-        Bekijk hieronder een selectie van onze recente projecten en laat je
-        inspireren door wat wij voor jou kunnen betekenen.
-      </p>
-    </div>
+    <section class="portfolio-intro">
+      <div class="container">
+        <div class="intro-content fade-in">
+          <h3 data-i18n="portfolio.intro_title">Ontdek onze projecten</h3>
+          <p data-i18n="portfolio.intro_paragraphs.0">
+            Bij TwinPixel zijn we trots op de websites die we hebben ontworpen
+            en ontwikkeld voor onze klanten. Elk project is uniek en op maat
+            gemaakt om aan de specifieke behoeften en doelstellingen van onze
+            klanten te voldoen.
+          </p>
+          <p data-i18n="portfolio.intro_paragraphs.1">
+            Bekijk hieronder een selectie van onze recente projecten en laat je
+            inspireren door wat wij voor jou kunnen betekenen.
+          </p>
+        </div>
 
-    <section class="portfolio">
-      <h2 class="portfolio-title">Ons Werk</h2>
-      <div class="portfolio-grid">
-        <div class="portfolio-item">
-          <img src="Images/Website-dewetvanstaal.png" class="portfolio-img" alt="https://dewetvanstaal.nl/">
-          <div class="portfolio-overlay">
-            <h3>De wet van staal</h3>
-            <p>Professioneel laswerk en technisch onderhoud.</p>
-            <a href="https://dewetvanstaal.nl/" class="portfolio-btn" target="_blank" rel="noopener noreferrer">Bekijk project</a>
-          </div>
+        <!-- Portfolio Filters (Optional, uncomment and add data-i18n if used) -->
+        <!--
+        <div class="portfolio-filters fade-in">
+            <button class="filter-btn active" data-filter="all" data-i18n="portfolio.filters.0">Alle projecten</button>
+            <button class="filter-btn" data-filter="webshop" data-i18n="portfolio.filters.1">Webshops</button>
+            <button class="filter-btn" data-filter="business" data-i18n="portfolio.filters.2">Zakelijke websites</button>
+            <button class="filter-btn" data-filter="portfolio" data-i18n="portfolio.filters.3">Portfolio websites</button>
+            <button class="filter-btn" data-filter="blog" data-i18n="portfolio.filters.4">Blogs</button>
         </div>
-        <div class="portfolio-item">
-          <img src="Images/Website-svnull.png" class="portfolio-img" alt="Studievereniging NULL">
-          <div class="portfolio-overlay">
-            <h3>Studievereniging NULL</h3>
-            <p>De vereniging die ergens voor staat!</p>
-            <a href="https://svnull.nl/" class="portfolio-btn" target="_blank" rel="noopener noreferrer">Bekijk project</a>
+        -->
+
+        <section class="portfolio">
+          <h2 class="portfolio-title" data-i18n="portfolio.section_title">Ons Werk</h2>
+          <div class="portfolio-grid">
+            <!-- Item 1 -->
+            <div class="portfolio-item" data-category="business"> <!-- Added example data-category -->
+              <img src="Images/Website-dewetvanstaal.png" class="portfolio-img" alt="Website De Wet van Staal">
+              <div class="portfolio-overlay">
+                <h3 data-i18n="portfolio.items.0.title">De wet van staal</h3>
+                <p data-i18n="portfolio.items.0.text">Professioneel laswerk en technisch onderhoud.</p>
+                <a href="https://dewetvanstaal.nl/" class="portfolio-btn" target="_blank" rel="noopener noreferrer" data-i18n="common.view_project">Bekijk project</a>
+              </div>
+            </div>
+            <!-- Item 2 -->
+            <div class="portfolio-item" data-category="association"> <!-- Added example data-category -->
+              <img src="Images/Website-svnull.png" class="portfolio-img" alt="Website Studievereniging NULL">
+              <div class="portfolio-overlay">
+                <h3 data-i18n="portfolio.items.1.title">Studievereniging NULL</h3>
+                <p data-i18n="portfolio.items.1.text">De vereniging die ergens voor staat!</p>
+                <a href="https://svnull.nl/" class="portfolio-btn" target="_blank" rel="noopener noreferrer" data-i18n="common.view_project">Bekijk project</a>
+              </div>
+            </div>
+            <!-- Item 3 -->
+            <div class="portfolio-item" data-category="service"> <!-- Added example data-category -->
+              <img src="Images/Website-bybrittnails.png" class="portfolio-img" alt="Website By Britt Nails">
+              <div class="portfolio-overlay">
+                <h3 data-i18n="portfolio.items.2.title">By Britt Nails</h3>
+                <p data-i18n="portfolio.items.2.text">Een stijlvolle nagelstudio website.</p>
+                <a href="https://bybrittnails.nl/" class="portfolio-btn" target="_blank" rel="noopener noreferrer" data-i18n="common.view_project">Bekijk project</a>
+              </div>
+            </div>
+            <!-- Add more portfolio items here with appropriate data-category -->
           </div>
-        </div>
-        <div class="portfolio-item">
-          <img src="Images/Website-bybrittnails.png" class="portfolio-img" alt="By Britt Nails">
-          <div class="portfolio-overlay">
-            <h3>By Britt Nails</h3>
-            <p>Een stijlvolle nagelstudio website.</p>
-            <a href="https://bybrittnails.nl/" class="portfolio-btn" target="_blank" rel="noopener noreferrer">Bekijk project</a>
-          </div>
-        </div>
+        </section>
       </div>
     </section>
-  </div>
-</section>
 
-
-    <!-- Project Details Modals -->
-    <!-- Project 1 Modal -->
-    <!-- <div id="project1" class="project-modal">
+    <!-- Project Details Modals (Commented Out - Add data-i18n if you implement these) -->
+    <!--
+    <div id="project1" class="project-modal">
         <div class="modal-content">
-            <span class="close-modal">&times;</span>
+            <span class="close-modal" aria-label="Close modal">×</span>
             <div class="project-details">
-                <div class="project-images">
-                    <img src="https://via.placeholder.com/1200x800/121212/0066ff?text=EcoStyle+Webshop+Screenshot+1" alt="EcoStyle Webshop Screenshot 1">
-                    <img src="https://via.placeholder.com/1200x800/121212/0066ff?text=EcoStyle+Webshop+Screenshot+2" alt="EcoStyle Webshop Screenshot 2">
-                    <img src="https://via.placeholder.com/1200x800/121212/0066ff?text=EcoStyle+Webshop+Screenshot+3" alt="EcoStyle Webshop Screenshot 3">
-                </div>
+                <div class="project-images"> ... </div>
                 <div class="project-info">
-                    <h2>EcoStyle Webshop</h2>
-                    <p class="project-category">E-commerce</p>
+                    <h2 data-i18n="portfolio.modals.project1.title">EcoStyle Webshop</h2>
+                    <p class="project-category" data-i18n="portfolio.modals.project1.category">E-commerce</p>
                     <div class="project-description">
-                        <p>EcoStyle is een webshop gespecialiseerd in duurzame mode en accessoires. De eigenaar wilde een moderne, gebruiksvriendelijke webshop die de duurzame waarden van het merk weerspiegelt.</p>
-                        <p>We hebben een volledig responsive webshop ontwikkeld met een intuïtief bestelproces, veilige betalingsintegratie en een gebruiksvriendelijk beheerssysteem. Het design is minimalistisch en clean, met subtiele animaties en een focus op de producten.</p>
+                        <p data-i18n="portfolio.modals.project1.description.0">...</p>
+                        <p data-i18n="portfolio.modals.project1.description.1">...</p>
                     </div>
-                    <div class="project-details-list">
-                        <div class="detail-item">
-                            <h3>Klant</h3>
-                            <p>EcoStyle</p>
-                        </div>
-                        <div class="detail-item">
-                            <h3>Datum</h3>
-                            <p>Maart 2024</p>
-                        </div>
-                        <div class="detail-item">
-                            <h3>Diensten</h3>
-                            <p>Webdesign, E-commerce Development, SEO</p>
-                        </div>
-                    </div>
-                    <div class="project-testimonial">
-                        <p>"TwinPixel heeft onze verwachtingen overtroffen. Ze hebben niet alleen een prachtige webshop opgeleverd, maar ook meegedacht over onze online strategie. De webshop is snel, gebruiksvriendelijk en ziet er fantastisch uit!"</p>
-                        <p class="testimonial-author">- Sandra Bakker, Oprichter EcoStyle</p>
-                    </div>
+                    ... etc ...
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
+    -->
 
-    <!-- Additional Project Modals would be added here in the same format -->
-
-    <!-- Case Studies Section -->
-    <!-- <section class="case-studies">
+    <!-- Case Studies Section (Commented Out - Add data-i18n if you implement these) -->
+    <!--
+    <section class="case-studies">
         <div class="container">
-            <h2 class="section-title fade-in">Uitgelichte Case Studies</h2>
-            
+            <h2 class="section-title fade-in" data-i18n="portfolio.case_studies_title">Uitgelichte Case Studies</h2>
             <div class="case-study fade-in">
                 <div class="case-study-content">
-                    <h3>Van idee naar succesvolle webshop: EcoStyle</h3>
-                    <p>Ontdek hoe we EcoStyle hebben geholpen om hun online verkoop met 150% te verhogen door een gebruiksvriendelijke webshop te ontwikkelen die perfect aansluit bij hun doelgroep.</p>
-                    <a href="#project1" class="btn btn-outline">Lees de case study</a>
+                    <h3 data-i18n="portfolio.case_studies.0.title">...</h3>
+                    <p data-i18n="portfolio.case_studies.0.description">...</p>
+                    <a href="#project1" class="btn btn-outline" data-i18n="portfolio.case_studies.0.button">Lees de case study</a>
                 </div>
-                <div class="case-study-image glow-effect">
-                    <img src="https://via.placeholder.com/800x500/121212/0066ff?text=EcoStyle+Case+Study" alt="EcoStyle Case Study">
-                </div>
+                ...
             </div>
-            
-            <div class="case-study reverse fade-in">
-                <div class="case-study-content">
-                    <h3>Een nieuwe online identiteit voor Advocatenkantoor Recht</h3>
-                    <p>Lees hoe we Advocatenkantoor Recht hebben geholpen om hun professionele uitstraling te versterken met een moderne website die vertrouwen uitstraalt en nieuwe klanten aantrekt.</p>
-                    <a href="#project4" class="btn btn-outline">Lees de case study</a>
-                </div>
-                <div class="case-study-image glow-effect">
-                    <img src="https://via.placeholder.com/800x500/121212/0066ff?text=Advocatenkantoor+Case+Study" alt="Advocatenkantoor Case Study">
-                </div>
-            </div>
+            ...
         </div>
     </section>
-     -->
-    <!-- Testimonials Section -->
-    <!-- <section class="portfolio-testimonials">
+    -->
+
+    <!-- Testimonials Section (Commented Out - Add data-i18n if you implement these) -->
+    <!--
+    <section class="portfolio-testimonials">
         <div class="container">
-            <h2 class="section-title fade-in">Wat onze klanten zeggen</h2>
-            
+            <h2 class="section-title fade-in" data-i18n="common.section_testimonials">Wat onze klanten zeggen</h2>
             <div class="testimonial-grid">
                 <div class="testimonial-card fade-in delay-1">
                     <div class="testimonial-content">
-                        <p class="testimonial-text">"TwinPixel heeft onze verwachtingen overtroffen. Ze hebben niet alleen een prachtige website opgeleverd, maar ook meegedacht over onze online strategie. De website is snel, gebruiksvriendelijk en ziet er fantastisch uit!"</p>
+                        <p class="testimonial-text" data-i18n="portfolio.testimonials.0.text">...</p>
                         <div class="testimonial-author-info">
-                            <div class="testimonial-author-image">
-                                <img src="https://via.placeholder.com/100x100/121212/0066ff?text=SB" alt="Sandra Bakker">
-                            </div>
-                            <div class="testimonial-author-details">
-                                <p class="testimonial-author">Sandra Bakker</p>
-                                <p class="testimonial-company">Oprichter, EcoStyle</p>
-                            </div>
+                            ...
+                            <p class="testimonial-author" data-i18n="portfolio.testimonials.0.author">...</p>
+                            <p class="testimonial-company" data-i18n="portfolio.testimonials.0.company">...</p>
                         </div>
                     </div>
                 </div>
-                
-                <div class="testimonial-card fade-in delay-2">
-                    <div class="testimonial-content">
-                        <p class="testimonial-text">"Als ZZP'er had ik een professionele website nodig, maar ik had een beperkt budget. TwinPixel heeft me een website op maat gegeven die er professioneel uitziet zonder de hoge kosten. Ik krijg regelmatig complimenten over mijn site!"</p>
-                        <div class="testimonial-author-info">
-                            <div class="testimonial-author-image">
-                                <img src="https://via.placeholder.com/100x100/121212/0066ff?text=MV" alt="Mark de Vries">
-                            </div>
-                            <div class="testimonial-author-details">
-                                <p class="testimonial-author">Mark de Vries</p>
-                                <p class="testimonial-company">Freelance Fotograaf</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card fade-in delay-3">
-                    <div class="testimonial-content">
-                        <p class="testimonial-text">"De snelheid waarmee TwinPixel werkt is indrukwekkend. Binnen twee weken hadden we een volledig functionerende website die er geweldig uitziet. De communicatie was uitstekend en ze waren altijd bereid om aanpassingen te maken."</p>
-                        <div class="testimonial-author-info">
-                            <div class="testimonial-author-image">
-                                <img src="https://via.placeholder.com/100x100/121212/0066ff?text=JR" alt="Jan Ruiter">
-                            </div>
-                            <div class="testimonial-author-details">
-                                <p class="testimonial-author">Jan Ruiter</p>
-                                <p class="testimonial-company">Eigenaar, Restaurant De Smaak</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                ...
             </div>
         </div>
     </section>
-     -->
+    -->
+
     <!-- CTA Section -->
-    <section class="about-section">
+    <section class="about-section"> <!-- Consider a more generic class like 'cta-section-wrapper' -->
       <div class="container">
         <div class="cta-section fade-in delay-4">
           <div class="service-card-glass cta-card">
-            <h2>Klaar om samen te werken?</h2>
-            <p>
+            <h2 data-i18n="common.cta_title">Klaar om samen te werken?</h2>
+            <p data-i18n="common.cta_subtitle">
               Laat ons je helpen om jouw online aanwezigheid naar een hoger
               niveau te tillen.
             </p>
              <div class="button-container">
-          <a href="contact.html" class="btn neon-button"
-            >Neem contact op</a
-          >
+               <a href="contact.html" class="btn neon-button" data-i18n="common.cta_button">Neem contact op</a>
+             </div>
           </div>
         </div>
       </div>
@@ -326,17 +268,17 @@
       <div class="container">
         <img
           src="Images/Logo donkere achtergrond.png"
-          alt="TwinPixel Logo"
+          alt="TwinPixel Footer Logo"
           class="footer-logo"
         />
 
         <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">Over ons</a></li>
-          <li><a href="services.html">Diensten</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="pricing.html">Prijzen</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" data-i18n="common.nav_home">Home</a></li>
+          <li><a href="about.html" data-i18n="common.nav_about">Over ons</a></li>
+          <li><a href="services.html" data-i18n="common.nav_services">Diensten</a></li>
+          <li><a href="portfolio.html" data-i18n="common.nav_portfolio">Portfolio</a></li>
+          <li><a href="pricing.html" data-i18n="common.nav_pricing">Prijzen</a></li>
+          <li><a href="contact.html" data-i18n="common.nav_contact">Contact</a></li>
         </ul>
 
         <ul class="social-links">
@@ -344,19 +286,20 @@
             <a
               href="https://www.facebook.com/profile.php?id=61574036669497"
               target="_blank"
+              aria-label="Facebook"
               ><i class="fab fa-facebook-f"></i
             ></a>
           </li>
           <li>
-            <a href="https://www.instagram.com/twinpixel.nl/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.instagram.com/twinpixel.nl/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
           </li>
           <li>
-            <a href="https://www.linkedin.com/company/twinpixel/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.linkedin.com/company/twinpixel/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
           </li>
         </ul>
 
-        <p class="copyright">
-          &copy; 2025 TwinPixel. Alle rechten voorbehouden.
+        <p class="copyright" data-i18n="common.copyright">
+          © 2025 TwinPixel. Alle rechten voorbehouden.
         </p>
       </div>
     </footer>

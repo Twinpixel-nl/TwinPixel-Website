@@ -1,0 +1,506 @@
+{
+  "common": {
+    "nav_home": "Home",
+    "nav_about": "About us",
+    "nav_services": "Services",
+    "nav_portfolio": "Portfolio",
+    "nav_pricing": "Pricing",
+    "nav_contact": "Contact",
+    "cta_title": "Ready to take your online presence to the next level?",
+    "cta_subtitle": "Contact us for a free consultation about how we can help you.",
+    "cta_button": "Contact us",
+    "copyright": "© 2025 TwinPixel. All rights reserved.",
+    "form_name_required": "Please enter your name.",
+    "form_email_required": "Please enter your email address.",
+    "form_email_invalid": "Please enter a valid email address.",
+    "form_subject_required": "Please enter a subject.",
+    "form_message_required": "Please enter a message.",
+    "button_send": "Send",
+    "button_submit": "Submit",
+    "button_read_more": "Read more",
+    "button_view_more": "View more",
+    "button_learn_more": "Learn more",
+    "button_contact": "Contact us",
+    "button_schedule": "Schedule appointment",
+    "section_services": "Services",
+    "section_portfolio": "Portfolio",
+    "section_about": "About us",
+    "section_team": "Our team",
+    "section_testimonials": "What clients say",
+    "section_faq": "Frequently asked questions",
+    "section_contact": "Contact",
+    "section_pricing": "Pricing",
+    "alert_success": "Success! Your message has been sent.",
+    "alert_error": "An error occurred. Please try again.",
+    "time_days": "days",
+    "time_hours": "hours",
+    "time_minutes": "minutes",
+    "time_seconds": "seconds",
+    "term_loading": "Loading...",
+    "term_search": "Search",
+    "term_filter": "Filter",
+    "term_sort": "Sort",
+    "term_share": "Share",
+    "term_follow": "Follow",
+    "term_like": "Like",
+    "term_comment": "Comment",
+    "meta_description": "TwinPixel delivers professional websites that perfectly match your business. No standard templates, but custom work with personal attention.",
+    "meta_title": "TwinPixel | Professional Websites & SEO Optimization in Wageningen",
+    "error_404_title": "Page not found",
+    "error_404_message": "The page you are looking for does not exist or has been moved. Use the navigation above or the links below to continue.",
+    "error_404_button": "Back to home",
+    "usp_fast_delivery": "No long waiting times, we deliver within agreed deadlines.",
+    "usp_custom_design": "No standard templates, but a unique design that matches your brand.",
+    "usp_competitive_prices": "Professional quality without the high costs of large agencies.",
+    "usp_personal_approach": "Personal approach",
+    "usp_direct_contact": "Direct contact with the designers and developers working on your project.",
+    "cta_read_more_about": "READ MORE ABOUT US",
+    "cta_view_services": "VIEW ALL OUR SERVICES",
+    "cta_view_portfolio": "VIEW OUR FULL PORTFOLIO",
+    "cta_view_pricing": "VIEW ALL PRICES AND PACKAGES",
+    "popular_choice": "Popular choice",
+    "view_project": "View project",
+    "one_time_fee": "one-time",
+    "from_prefix": "from",
+    "monthly_hosting_suffix_short": "/month for hosting & updates",
+    "weather_error": "⚠️ Weather data unavailable."
+  },
+  "home": {
+    "hero_title": "Your <span>unique</span> website.<br>Fast, custom & affordable.",
+    "hero_subtitle": "TwinPixel delivers professional websites that perfectly match your business. No standard templates, but custom work with personal attention.",
+    "hero_button": "Request a free consultation",
+    "unique_cards_titles": ["Fast delivery", "100% custom", "Competitive prices", "Personal approach"],
+    "about_section_title": "About TwinPixel",
+    "about_story_title": "The story behind TwinPixel",
+    "about_story_text": "TwinPixel was founded by two students with a passion for web design and development. What started as a hobby during our studies has grown into a professional web design agency with a clear mission: to deliver affordable, high-quality websites to freelancers and small businesses.",
+    "about_unique_title": "Why we are unique",
+    "about_unique_items": [
+      "<strong>Fast delivery</strong> - No long waiting times, we deliver within agreed deadlines.",
+      "<strong>100% custom</strong> - No standard templates, but a unique design that matches your brand.",
+      "<strong>Competitive prices</strong> - Professional quality without the high costs of large agencies.",
+      "<strong>Personal approach</strong> - Direct contact with the designers and developers working on your project."
+    ],
+    "about_button": "Read more about us",
+    "services_section_title": "Our Services",
+    "service_webdesign_title": "Web Design",
+    "service_webdesign_desc": "Custom-made websites that perfectly match your brand and objectives. Modern, responsive, and user-friendly.",
+    "service_seo_title": "SEO Optimization",
+    "service_seo_desc": "Make sure you are found by potential customers. We optimize your website for search engines with fast loading times and mobile-first design.",
+    "service_logo_title": "Logo & Branding",
+    "service_logo_desc": "Professional logo and branding design to strengthen your corporate identity.",
+    "services_button": "View all our services",
+    "portfolio_section_title": "Our Portfolio",
+    "portfolio_intro": "At TwinPixel, we are proud of the websites we have designed and developed for our clients. Each project is unique and tailored to meet the specific needs and objectives of our clients.",
+    "portfolio_items": [
+      { "title": "De wet van staal", "category": "Informative website with contact page" },
+      { "title": "Student Association NULL", "category": "Website with database and CMS system" },
+      { "title": "By Britt Nails", "category": "Nail Stylist Website" }
+    ],
+    "portfolio_button": "View our full portfolio",
+    "pricing_section_title": "Our Pricing",
+    "pricing_intro": "At TwinPixel, we work with a hybrid pricing model: a one-time fee for creating your website, and then a monthly fee for hosting and small updates. This way, you know exactly what to expect, without surprises afterward.",
+    "pricing_cards": [
+      { "title": "Starter", "price": "€299", "features": ["One-page website", "Responsive design", "Basic SEO", "Contact form"] },
+      { "title": "Standard", "price": "€499", "features": ["Multiple pages", "Responsive design", "SEO optimization", "Contact form"] },
+      { "title": "Premium", "price": "€749", "features": ["Custom design", "Basic support", "Advanced SEO", "Content management system"] }
+    ],
+    "pricing_hosting_info": [
+       "+ €5/month for hosting",
+       "+ €10/month for hosting & updates",
+       "+ €20/month for hosting & updates"
+      ],
+    "pricing_button": "View all prices and packages",
+    "testimonials_section_title": "What Clients Say",
+    "testimonials": [
+      { "text": "\"TwinPixel exceeded my expectations. They not only delivered a beautiful website, but did so within a week! The website is fast, user-friendly, and looks fantastic!\"", "author": "Harvey Meurs", "company": "Owner, De wet van staal" },
+      { "text": "\"As a freelancer, I needed a professional website, but I had a limited budget. TwinPixel gave me a custom website that looks professional without the high costs. I regularly receive compliments about my site!\"", "author": "Mark de Vries", "company": "Freelance Photographer" },
+      { "text": "\"Twinpixel helped me build my first website. Thanks to the professional help of Twan and Emma, they created my perfect website! Because they schedule good feedback moments, there is room to share my feedback with them and vice versa. They also explain well why they have incorporated certain elements into the website, because it looks better, works faster, or for other reasons. I can only say that I have had a good collaboration that has resulted in a beautiful result.\"", "author": "Britt Leander", "company": "Owner, By Britt Nails" }
+    ]
+  },
+  "about": {
+    "meta_description": "Learn more about TwinPixel, a modern web design agency founded by two students with a passion for web design and development.",
+    "title": "About Us | TwinPixel",
+    "header": "About TwinPixel",
+    "story_title": "The Story Behind TwinPixel",
+    "story_paragraphs": [
+      "TwinPixel was founded by Emma de Heer (UX designer) and Twan Meurs (developer), two students with a passion for web design and development. Together, we also have extensive business expertise, allowing us to build not only technically strong websites, but also websites that truly contribute to the success of your business.",
+      "What started as a hobby during our studies has grown into a professional web design agency with a clear mission: to deliver affordable, high-quality websites to freelancers and small businesses.",
+      "We believe every entrepreneur deserves a professional online presence, without the high costs that large agencies often charge. Thanks to our efficient way of working and focus on what truly matters, we can deliver high-quality websites at affordable prices."
+    ],
+    "vision_title": "Our Vision & Approach",
+    "vision_headings": ["Our Vision", "Our Approach"],
+    "vision_paragraphs": [
+      "We envision a world where every entrepreneur, big or small, has access to professional web design services that help grow their business. No generic templates, but tailor-made websites that perfectly match the identity and goals of your business.",
+      "At TwinPixel, we believe in a personal approach. We take the time to understand your business, target audience, and objectives before getting started. This allows us to create a website that is not only beautiful but also effective in achieving your goals.",
+      "Our working method is transparent and direct. You always have direct contact with the designers and developers working on your project, without middlemen or account managers. This ensures faster communication, shorter lines, and ultimately a better result."
+    ],
+    "features_title": "Why Choose TwinPixel?",
+    "feature_titles": [
+      "Fast delivery",
+      "100% custom",
+      "Competitive prices",
+      "Personal approach",
+      "Responsive design",
+      "SEO optimized"
+    ],
+    "feature_descriptions": [
+      "No long waiting times. We deliver within agreed deadlines, so you can go online quickly.",
+      "No standard templates, but a unique design that perfectly fits your brand and goals.",
+      "Professional quality without the high costs of large agencies. Transparent pricing, no hidden costs.",
+      "Direct contact with the designers and developers working on your project. Short lines, fast communication.",
+      "All websites are fully responsive and work perfectly on all devices, from desktop to smartphone.",
+      "All websites are optimized for search engines, so you are better found by potential customers."
+    ],
+    "team_title": "Our Team",
+    "team_roles": [
+      "Co-founder & Web Developer",
+      "Co-founder & UX/UI Designer"
+    ],
+    "team_bios": [
+      "Twan is our technical expert. He ensures all websites are not only beautiful but also fast, secure, and technically flawless.",
+      "Emma specializes in user-friendly and visually appealing design. She ensures that every website is not only beautiful but also intuitive to use."
+    ]
+  },
+  "services": {
+    "meta_description": "Discover TwinPixel's web design and development services in Wageningen: custom websites, SEO optimization, and UX/UI design for freelancers and SMEs in the region.",
+    "title": "Web Design & SEO Services | TwinPixel Wageningen",
+    "page_title": "Our Services",
+    "intro_heading": "How can we help you?",
+    "intro_text": [
+      "At TwinPixel, we offer a wide range of web design and development services. Whether you need a brand new website, want to improve your existing one, or increase your online visibility, we have the expertise to help.",
+      "All our services are tailored to your specific needs and goals. We work closely with you to ensure that the end result not only meets but exceeds your expectations."
+    ],
+    "grid_section_title": "Our Core Services",
+    "grid_items": [
+       {
+        "title": "Web Design",
+        "desc": "Professional, responsive websites perfectly tailored to your brand and objectives.",
+        "features": [ "Responsive design", "Unique designs", "User-friendly navigation", "Fast loading times" ],
+        "price_amount": "from €299"
+      },
+      {
+        "title": "SEO Optimization",
+        "desc": "Improve your search engine visibility and attract more relevant visitors.",
+        "features": [ "Keyword research", "On-page optimization", "Technical SEO", "Local SEO" ],
+        "price_amount": "€99"
+      },
+      {
+        "title": "E-commerce",
+        "desc": "User-friendly online stores with secure payment integrations and intuitive management.",
+        "features": [ "Product catalog", "Payment integration", "Inventory management", "Mobile-friendly" ],
+        "price_amount": "from €799"
+      },
+      {
+        "title": "Web Hosting & Maintenance",
+        "desc": "Reliable hosting and regular maintenance for a fast, secure website.",
+        "features": [ "Fast servers", "SSL certificate", "Regular updates", "Daily backups" ],
+        "price_amount": "€10",
+        "price_period": "per month"
+      },
+      {
+        "title": "Logo & Branding",
+        "desc": "Professional logo and branding design to strengthen your corporate identity.",
+        "features": [ "Logo", "Color palette", "Typography", "Branding guide" ],
+        "price_amount": "€199"
+      },
+      {
+        "title": "Custom Chatbots",
+        "desc": "Automate your communication with smart, accessible, and personalized chatbots.",
+        "features": [ "Custom designed for your business", "Built in Dialogflow or other platforms", "Integration on your website or app", "Expandable with AI or CRM connection" ],
+        "price_amount": "from €350"
+      }
+    ],
+    "detailed_section_title": "Featured Services",
+    "services_items": [
+          {
+            "title": "Web Design",
+            "desc": "Our custom-made websites are not only visually appealing, but also functional and user-friendly. We design websites that perfectly match your brand and objectives.",
+            "offer_title": "What we offer:",
+            "offer_items": [
+              "Fully responsive websites that look great on all devices",
+              "Unique designs that match your brand and target audience",
+              "User-friendly navigation and intuitive interfaces",
+              "Fast loading times for an optimal user experience",
+              "Content management systems for easy updates"
+            ],
+            "process_title": "Our design process:",
+            "process_items": [
+              "Research & Analysis - We start by understanding your business, target audience, and competitors.",
+              "Wireframing & Prototyping - We create a basic structure and navigation for your website.",
+              "Visual Design - We develop a unique design that matches your brand.",
+              "Development - We build your website with clean, efficient code.",
+              "Testing & Optimization - We test your website on different devices and browsers.",
+              "Launch - We launch your website and ensure everything runs smoothly."
+            ]
+        },
+        {
+            "title": "SEO Optimization",
+            "desc": "A beautiful website has little value if no one can find it. Our SEO services ensure your website ranks well in search engines, making it easy for potential customers to find you.",
+            "offer_title": "What we offer:",
+            "offer_items": [
+              "Technical SEO optimization for better search results",
+              "Keyword research and implementation",
+              "Optimization of meta tags, headers, and content",
+              "Improvement of loading times and mobile performance",
+              "Local SEO for businesses with a physical location",
+              "Regular reports and analyses"
+            ],
+            "process_title": "Our SEO approach:",
+            "process_items": [
+              "Audit & Analysis - We analyze your current website and identify areas for improvement.",
+              "Keyword Research - We research keywords relevant to your business.",
+              "On-page Optimization - We optimize your website content and structure.",
+              "Technical Optimization - We improve the technical aspects of your website.",
+              "Content Strategy - We develop a strategy for relevant and valuable content.",
+              "Monitoring & Reporting - We track your results and adjust our strategy as needed."
+            ]
+        }
+    ],
+     "local_seo_link_paragraph": "<strong>Local entrepreneurs:</strong> Check out our dedicated page on <a href=\"webdesign-wageningen.html\" data-no-translate=\"true\">local SEO for businesses in Wageningen</a> to see how we can help you get found better in your region.",
+    "process_section_title": "Our Work Process",
+    "process_section_subtitle": "Our structured approach ensures a smooth process and an end result that meets all your expectations.",
+    "process_steps": [
+        { "title": "Introduction & Analysis", "desc": "We start with a comprehensive discussion to understand your business, goals, and expectations. We analyze your current online presence, target audience, and competitors to build a solid foundation for your project." },
+        { "title": "Strategy & Planning", "desc": "Based on our analysis, we develop a strategy and plan perfectly tailored to your goals. We determine the best approach, technologies, and timeline to make your project successful." },
+        { "title": "Design & Development", "desc": "We design and develop your website or digital product with attention to detail. Our team ensures an attractive design, user-friendly interface, and clean, efficient code that works perfectly on all devices." },
+        { "title": "Testing & Optimization", "desc": "We thoroughly test your website on different devices and browsers to ensure everything works perfectly. We optimize performance, loading times, and user experience to guarantee the best result." },
+        { "title": "Launch & Support", "desc": "We launch your website and ensure everything runs smoothly. After launch, we remain available for support, updates, and further optimizations to ensure your digital presence continues to grow." }
+      ],
+    "faq_title": "Frequently Asked Questions",
+    "faq": [
+        { "question": "Are there hidden costs?", "answer": "No, at TwinPixel we believe in full transparency. The price we quote is the price you pay. There are no hidden costs or surprises." },
+        { "question": "What if I have specific needs that don’t fit a package?", "answer": "No problem! We also offer custom solutions and additional services that can always be combined with packages. Contact us to discuss your specific wishes and we'll create a tailored offer." },
+        { "question": "What about hosting and domain registration?", "answer": "Hosting is included in the monthly amount of our hybrid pricing model. Domain registration is invoiced separately at cost. We can register your domain or help you transfer an existing one." },
+        { "question": "Can I upgrade to another package later?", "answer": "Yes, you can always upgrade to a more extensive package. We only charge the difference between your current and new package, plus any additional work required." },
+        { "question": "How long does it take to complete my website?", "answer": "The timeline depends on the chosen package and the complexity of your website. A Starter site can be ready within 2-3 weeks, while an Enterprise site may take 4-6 weeks. We always provide a realistic timeline at the start of the project. For an extra €99, you can request express delivery." },
+        { "question": "What exactly is the hybrid pricing model?", "answer": "Our hybrid pricing model consists of two parts: a one-time fee for designing and building your website, and a monthly fee for hosting and small updates. This ensures your website is not only professionally set up but also runs smoothly and stays up-to-date without unexpected costs." },
+        { "question": "What if I don’t have a logo or brand identity yet?", "answer": "No worries! We also offer logo and branding design as a separate service. We can help you design a professional logo and matching identity that perfectly aligns with your brand and target audience." },
+        { "question": "What if I want to add content or updates myself?", "answer": "We offer packages with a Content Management System (CMS), so you can easily add text, images, and updates yourself. We’ll provide a short training so you can manage your website independently." }
+      ]
+  },
+  "portfolio": {
+    "meta_description": "View TwinPixel's portfolio: modern, custom-made websites for various industries. Discover our projects and get inspired.",
+    "title": "Portfolio | TwinPixel",
+    "header": "Our Portfolio",
+    "intro_title": "Discover our projects",
+    "intro_paragraphs": [
+      "At TwinPixel, we take pride in the websites we have designed and developed for our clients. Each project is unique and tailor-made to meet the specific needs and goals of our clients.",
+      "Below you’ll find a selection of our recent projects — let yourself be inspired by what we can do for you."
+    ],
+     "filters": [
+        "All projects",
+        "Webshops",
+        "Business websites",
+        "Portfolio websites",
+        "Blogs"
+      ],
+    "section_title": "Our Work",
+    "items": [
+      { "title": "De wet van staal", "text": "Professional welding and technical maintenance.", "button": "View project" },
+      { "title": "Student Association NULL", "text": "The association that stands for something!", "button": "View project" },
+      { "title": "By Britt Nails", "text": "A stylish nail studio website.", "button": "View project" }
+    ]
+  },
+  "pricing": {
+    "meta_description": "View TwinPixel's transparent pricing for web design and development. Affordable packages for freelancers and SMEs, with no hidden costs.",
+    "title": "Pricing | TwinPixel",
+    "header": "Our Pricing",
+    "intro_title": "Transparent pricing, no hidden costs",
+    "intro_paragraphs": [
+      "At TwinPixel, we use a hybrid pricing model: a one-time fee for building your website, followed by a monthly fee for hosting and minor updates. This way, you know exactly what to expect, without surprises afterward.",
+      "We offer various packages that cater to different needs and budgets. Do you have specific wishes or does none of our packages meet your needs? Then choose our custom package or contact us for a personal quote."
+    ],
+    "model_title": "Our Hybrid Pricing Model",
+    "model_onetime_title": "One-time fee",
+    "model_onetime_desc": "For designing and building your website",
+    "model_monthly_title": "Monthly fee",
+    "model_monthly_desc": "For hosting and small updates",
+    "cards": [
+      {
+        "title": "Starter",
+        "price": "€299",
+        "hosting_info": "+ €5/month for hosting",
+        "features": [
+          "One-page website",
+          "Basic SEO",
+          "Contact form",
+          "Social media links",
+          "1 revision round"
+        ],
+        "button": "More information"
+      },
+      {
+        "title": "Standard",
+        "price": "€499",
+        "hosting_info": "+ €10/month for hosting & updates",
+        "features": [
+          "Multiple pages",
+          "Portfolio or blog option",
+          "SEO optimization",
+          "Contact form",
+          "Google Analytics integration",
+          "Social media integration",
+          "2 revision rounds"
+        ],
+        "button": "More information"
+      },
+      {
+        "title": "Premium",
+        "price": "€749",
+        "hosting_info": "+ €20/month for hosting & updates",
+        "features": [
+          "Custom design",
+          "Basic support",
+          "Advanced SEO",
+          "Content management system",
+          "Advanced contact form",
+          "Google Analytics integration",
+          "Social media integration",
+          "3 revision rounds"
+        ],
+        "button": "More information"
+      },
+      {
+        "title": "Custom",
+        "price": "€999",
+        "hosting_info": "+ from €30/month for hosting & updates",
+        "features": [
+          "Unique design & identity",
+          "Advanced functionalities",
+          "E-commerce integration",
+          "Extensive SEO optimization",
+          "Payment system integration",
+          "Newsletter and email integration",
+          "Priority support",
+          "Unlimited revision rounds"
+        ],
+        "button": "More information"
+      }
+    ],
+    "disclaimer": "All prices are excluding VAT. Our hybrid pricing model consists of a one-time fee for the design and development of your website, plus a monthly fee for hosting and small updates. This way, you have no unexpected costs and your website always stays up-to-date.",
+    "additional_title": "Additional Services",
+    "additional_services": [
+      { "title": "Basic Hosting", "desc": "Reliable hosting with SSL certificate to keep your website fast and secure online.", "price": "€5 per month" },
+      { "title": "Standard Maintenance", "desc": "Hosting, updates, and small changes (1x per month) to keep your website up-to-date.", "price": "€10 per month" },
+      { "title": "Premium Maintenance", "desc": "Everything from Standard + SEO optimization + monthly change of your choice.", "price": "€20 per month" },
+      { "title": "SEO Optimization", "desc": "Improve the findability of your website in search engines with our SEO optimization.", "price": "€99 one-time" },
+      { "title": "Logo & Branding Design", "desc": "Professional logo and branding design to strengthen your company identity.", "price": "€199 one-time" },
+      { "title": "Fast Delivery", "desc": "In a hurry? We can deliver your website within 5 days.", "price": "€99 one-time" }
+    ],
+    "faq_title": "Frequently Asked Questions",
+     "faq": [
+        { "question": "Are there hidden costs?", "answer": "No, at TwinPixel we believe in full transparency. The price we quote is the price you pay. There are no hidden costs or surprises." },
+        { "question": "What if I have specific needs that don’t fit a package?", "answer": "No problem! We also offer custom solutions. Contact us to discuss your specific wishes and we'll create a tailored offer." },
+        { "question": "What about hosting and domain registration?", "answer": "Hosting is included in the monthly amount of our hybrid pricing model. Domain registration is invoiced separately at cost. We can register your domain or help you transfer an existing one." },
+        { "question": "Can I upgrade to another package later?", "answer": "Yes, you can always upgrade to a more extensive package. We only charge the difference between your current and new package, plus any additional work required." },
+        { "question": "How long does it take for my website to be ready?", "answer": "The turnaround time depends on the chosen package and the complexity of your website. A Starter website can be ready within 2-3 weeks, while an Enterprise website can take 4-6 weeks. We always establish a realistic timeline at the beginning of the project." },
+         { "question": "What are the payment terms?", "answer": "We ask for a 50% down payment at the start of the project. The remaining 50% is invoiced upon delivery of the website. The monthly fee for hosting and updates is invoiced monthly, starting from the launch of your website." },
+        { "question": "What exactly is the hybrid pricing model?", "answer": "Our hybrid pricing model consists of two parts: a one-time fee for designing and building your website, and a monthly fee for hosting and small updates. This ensures your website is not only professionally set up, but also continues to run well and stays up-to-date without unexpected costs." }
+    ]
+  },
+  "contact": {
+    "meta_description": "Contact TwinPixel in Wageningen for a free consultation or quote. We help freelancers and SMEs with professional websites and SEO optimization.",
+    "title": "Contact | TwinPixel Web Design Wageningen",
+    "header": "Contact Us",
+    "intro_title": "Let's work together",
+    "intro_text": "Do you have questions about our services or would you like to request a quote? Fill out the form or contact us directly. We will respond to your message within 24 hours.",
+    "info_email_title": "Email",
+    "info_phone_title": "Phone",
+    "info_location_title": "Location",
+    "info_location_text": "Oude Diedenweg 16, Wageningen",
+    "info_hours_title": "Opening Hours",
+    "info_hours_text": "Monday - Friday: 9:00 - 17:00",
+    "form_title": "Send us a message",
+    "form_text": "Fill out the form and we will contact you as soon as possible.",
+    "form_label_name": "Name *",
+    "form_label_email": "Email *",
+    "form_label_phone": "Phone number",
+    "form_label_subject": "Subject *",
+    "form_label_message": "Message *",
+    "form_placeholder_name": "Your name",
+    "form_placeholder_email": "Your email address",
+    "form_placeholder_phone": "Your phone number",
+    "form_placeholder_subject": "Subject of your message",
+    "form_placeholder_message": "Your message",
+    "form_button": "Send message",
+    "consult_title": "Request a free consultation",
+    "consult_text": "Want to know what we can do for you? Schedule a free consultation and we will discuss your needs and possibilities.",
+    "consult_steps": [
+      { "title": "Schedule an appointment", "desc": "Choose a date and time that suits you for a video call or phone call. We are flexible and can also schedule outside office hours if it works better for you. The call takes about 30 minutes and is completely non-binding." },
+      { "title": "Share your wishes", "desc": "Tell us about your business, goals, and wishes for your website. We listen to your ideas, answer your questions, and think along with you. Feel free to share examples of websites you like during the conversation." },
+      { "title": "Receive advice", "desc": "We provide you with non-binding advice on the best approach for your project. We discuss possible solutions, technical possibilities, and a general price indication. After the call, we'll send a summary of the advice discussed via email, so you can review everything at your leisure." }
+    ],
+    "consult_button": "Schedule a free consultation",
+    "faq_title": "Frequently Asked Questions",
+     "faq": [
+        { "question": "Are there hidden costs?", "answer": "No, at TwinPixel we believe in full transparency. The price we quote is the price you pay. There are no hidden costs or surprises." },
+        { "question": "What if I have specific needs that don’t fit a package?", "answer": "No problem! We also offer custom solutions and additional services that can always be combined with packages. Contact us to discuss your specific wishes and we'll create a tailored offer." },
+        { "question": "What about hosting and domain registration?", "answer": "Hosting is included in the monthly amount of our hybrid pricing model. Domain registration is invoiced separately at cost. We can register your domain or help you transfer an existing one." },
+        { "question": "Can I upgrade to another package later?", "answer": "Yes, you can always upgrade to a more extensive package. We only charge the difference between your current and new package, plus any additional work required." },
+        { "question": "How long does it take for my website to be ready?", "answer": "The turnaround time depends on the chosen package and the complexity of your website. A Starter website can be ready within 2-3 weeks, while an Enterprise website can take 4-6 weeks. We always establish a realistic timeline at the beginning of the project." },
+        { "question": "What exactly is the hybrid pricing model?", "answer": "Our hybrid pricing model consists of two parts: a one-time fee for designing and building your website, and a monthly fee for hosting and small updates. This ensures your website is not only professionally set up, but also continues to run well and stays up-to-date without unexpected costs." },
+        { "question": "What if I don’t have a logo or brand identity yet?", "answer": "No worries! We also offer logo and branding design as a separate service. We can help you design a professional logo and matching identity that perfectly aligns with your brand and target audience." },
+        { "question": "What if I want to add content or updates myself?", "answer": "We offer packages with a Content Management System (CMS), so you can easily add text, images, and updates yourself. We’ll provide a short training so you can manage your website independently." }
+      ],
+    "weather_title": "🌦 Current weather in Wageningen"
+  },
+  "success": {
+      "meta_description": "Thank you for your message. TwinPixel in Wageningen will contact you within 24 hours.",
+      "title": "Message Sent | TwinPixel Web Design Wageningen",
+      "header": "Message Sent",
+      "message_title": "Thank you for your message!",
+      "message_body": "We have received your message and will contact you within 24 hours. Please check your email for a confirmation of your message."
+  },
+  "error404": {
+      "meta_description": "Page not found - TwinPixel web design agency in Wageningen",
+      "title": "Page Not Found | TwinPixel"
+  },
+  "wageningen": {
+      "meta_description": "Professional web design in Wageningen for freelancers and SMEs. TwinPixel offers custom websites with SEO optimization for local visibility in Wageningen and surroundings.",
+      "title": "Web Design Wageningen | Local Websites for Freelancers & SMEs | TwinPixel",
+      "header": "Web Design in Wageningen",
+      "intro_title": "Local web design services for entrepreneurs in Wageningen",
+      "intro_p1": "Are you a freelancer or SME entrepreneur in Wageningen or the surrounding area looking for a professional website that truly puts your business on the map? TwinPixel is your local partner for web design and online marketing in Wageningen.",
+      "intro_p2": "As a local web design agency, we understand the Wageningen market and can help you get found better online by potential customers in Wageningen and the surrounding area. Our custom-made websites are not only visually appealing but also optimized for local searches.",
+      "benefits_title": "Why choose a local web design agency in Wageningen?",
+      "benefits": [
+          { "title": "Local knowledge", "desc": "We know the local market in Wageningen and the surrounding area and understand what works for businesses in this region." },
+          { "title": "Local SEO", "desc": "We optimize your website specifically for local searches, so you get found better by potential customers in Wageningen." },
+          { "title": "Personal contact", "desc": "As a local company, we are always nearby for a personal meeting or consultation about your website." },
+          { "title": "Local network", "desc": "We have a strong network in Wageningen and can help connect you with other local entrepreneurs." }
+      ],
+      "local_seo_title": "Local SEO for businesses in Wageningen",
+      "local_seo_desc": "Local SEO (Search Engine Optimization) is essential for businesses wanting to attract customers in Wageningen and the surrounding area. We ensure your website is optimized for local searches, so potential customers can easily find you.",
+      "local_seo_list_title": "Our local SEO services include:",
+      "local_seo_list": [
+          "Optimization for local keywords like \"web design Wageningen\" or \"[your industry] Wageningen\"",
+          "Google Business Profile optimization for better visibility in Google Maps",
+          "Local backlink strategy to increase your authority in the region",
+          "Local content creation relevant to your target audience in Wageningen",
+          "Mobile device optimization, essential for local searches"
+      ],
+      "businesses_title": "For which businesses in Wageningen do we build websites?",
+      "businesses_desc": "At TwinPixel, we have experience building websites for various industries in Wageningen. Whether you have a shop, restaurant, consulting firm, or other business, we can create a website that perfectly fits your company and target audience.",
+      "businesses": [
+          { "title": "Local shops", "desc": "Attractive websites for shops in Wageningen, with product overviews, opening hours, and contact information." },
+          { "title": "Hospitality", "desc": "Atmospheric websites for restaurants, cafes, and other hospitality businesses in Wageningen, with menus, reservation options, and photos." },
+          { "title": "Business services", "desc": "Professional websites for lawyers, accountants, consultants, and other business service providers in Wageningen." },
+          { "title": "Craftsmen", "desc": "Practical websites for painters, plumbers, electricians, and other tradespeople in Wageningen, with portfolio and contact options." }
+      ],
+      "testimonials_title": "What clients in Wageningen say about us",
+      "testimonials": [
+          { "text": "\"TwinPixel created a beautiful website for my shop in Wageningen. The local SEO optimization really helped attract more customers from the region. I regularly receive compliments on my website!\"", "author": "Lisa Jansen", "company": "Owner, Bloemen & Zo Wageningen" },
+          { "text": "\"As a freelancer in Wageningen, I needed a professional website that would help me get found locally. TwinPixel delivered exactly what I needed at an affordable price. My client base has grown significantly since then!\"", "author": "Mark de Vries", "company": "Freelance Photographer, Wageningen" }
+      ],
+      "faq_title": "Frequently asked questions about web design in Wageningen",
+      "faq": [
+          { "question": "Why is a local website important for my business in Wageningen?", "answer": "A local website helps you get found better by potential customers in Wageningen and the surrounding area. With local SEO optimization, you appear higher in search results when people search for products or services in your industry in Wageningen." },
+          { "question": "How long does it take to create a website for my business in Wageningen?", "answer": "The turnaround time depends on the complexity of your website. A simple website can be ready within 2-3 weeks, while more complex projects may take 4-6 weeks or longer. We always provide a realistic timeline at the start of the project." },
+          { "question": "Can TwinPixel also help improve my existing website for local visibility?", "answer": "Absolutely! We can analyze your existing website and optimize it for local searches. This includes technical SEO improvements, content optimization, and local backlink strategies to improve your visibility in Wageningen." },
+          { "question": "What does a locally optimized website cost for my business in Wageningen?", "answer": "The cost depends on your specific wishes and needs. We offer various packages, starting at €299 for a simple website. Contact us for a personalized quote." }
+      ],
+      "cta_title": "Ready to improve your online visibility in Wageningen?",
+      "cta_subtitle": "Contact us for a no-obligation discussion about how we can help you with a professional website that perfectly suits your business in Wageningen.",
+      "cta_button": "Request a free consultation"
+  }
+}

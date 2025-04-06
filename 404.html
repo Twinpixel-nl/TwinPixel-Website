@@ -3,11 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Meta Description (Needs key: error404.meta_description) -->
     <meta
       name="description"
       content="Pagina niet gevonden - TwinPixel webdesign bureau in Wageningen"
+      data-i18n="error404.meta_description"
     />
-    <title>Pagina Niet Gevonden | TwinPixel</title>
+    <!-- Title (Needs key: error404.title) -->
+    <title data-i18n="error404.title">Pagina Niet Gevonden | TwinPixel</title>
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/style.css" />
@@ -48,34 +51,41 @@
     <link rel="manifest" href="/site.webmanifest" />
 
     <style>
+      /* Keep existing styles */
       .error-container {
         text-align: center;
         padding: 100px 20px;
         max-width: 800px;
         margin: 0 auto;
+        min-height: calc(100vh - 200px); /* Ensure it takes up space */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
       }
-      
+
       .error-code {
-        font-size: 120px;
-        font-weight: 700;
-        margin: 0;
-        background: linear-gradient(45deg, #0066ff, #00ccff);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        line-height: 1;
-      }
-      
+  font-size: 120px;
+  font-weight: 700;
+  margin: 0;
+  background: linear-gradient(45deg, #0066ff, #00ccff);
+  background-clip: text;              /* <-- standaard versie */
+  -webkit-background-clip: text;      /* <-- voor Safari en Chrome */
+  -webkit-text-fill-color: transparent;
+  line-height: 1;
+}
+
+
       .error-message {
         font-size: 32px;
         margin: 20px 0;
       }
-      
+
       .error-description {
         font-size: 18px;
         margin-bottom: 40px;
         color: #777;
       }
-      
+
       .error-links {
         display: flex;
         justify-content: center;
@@ -83,14 +93,23 @@
         gap: 20px;
         margin-top: 40px;
       }
-      
+
       .error-links a {
         margin: 0 10px;
+        color: var(--primary-color); /* Use theme color */
+        text-decoration: none;
+        font-weight: 500;
+      }
+      .error-links a:hover {
+        text-decoration: underline;
       }
     </style>
   </head>
 
   <body>
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay"></div>
+
     <!-- Header -->
     <header>
       <div class="container">
@@ -104,22 +123,23 @@
           </a>
 
           <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">Over ons</a></li>
-            <li><a href="services.html">Diensten</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="pricing.html">Prijzen</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html" data-i18n="common.nav_home">Home</a></li>
+            <li><a href="about.html" data-i18n="common.nav_about">Over ons</a></li>
+            <li><a href="services.html" data-i18n="common.nav_services">Diensten</a></li>
+            <li><a href="portfolio.html" data-i18n="common.nav_portfolio">Portfolio</a></li>
+            <li><a href="pricing.html" data-i18n="common.nav_pricing">Prijzen</a></li>
+            <li><a href="contact.html" data-i18n="common.nav_contact">Contact</a></li>
           </ul>
 
           <div class="language-switcher">
             <div class="language-buttons">
+              <!-- Removed inline onclick -->
               <a href="#nl" class="lang-btn active">NL</a>
               <a href="#en" class="lang-btn">EN</a>
             </div>
           </div>
 
-          <button class="mobile-menu-btn">
+          <button class="mobile-menu-btn" aria-label="Toggle menu">
             <i class="fas fa-bars"></i>
           </button>
         </nav>
@@ -127,48 +147,49 @@
     </header>
 
     <!-- 404 Error Section -->
-    <section class="error-container">
-      <h1 class="error-code">404</h1>
-      <h2 class="error-message">Pagina niet gevonden</h2>
-      <p class="error-description">
+    <main class="error-container"> <!-- Use main for semantics -->
+      <h1 class="error-code">404</h1> <!-- This is usually static -->
+      <h2 class="error-message" data-i18n="common.error_404_title">Pagina niet gevonden</h2>
+      <p class="error-description" data-i18n="common.error_404_message">
         De pagina die je zoekt bestaat niet of is verplaatst. Gebruik de navigatie hierboven of een van de onderstaande links om verder te gaan.
       </p>
       <div class="button-container">
-        <a href="index.html" class="btn neon-button">Terug naar Home</a>
+        <a href="index.html" class="btn neon-button" data-i18n="common.error_404_button">Terug naar Home</a>
       </div>
       <div class="error-links">
-        <a href="services.html">Onze Diensten</a>
-        <a href="contact.html">Neem Contact Op</a>
-        <a href="portfolio.html">Bekijk Ons Portfolio</a>
+        <!-- Reusing common keys for consistency -->
+        <a href="services.html" data-i18n="common.section_services">Onze Diensten</a>
+        <a href="contact.html" data-i18n="common.nav_contact">Neem Contact Op</a>
+        <a href="portfolio.html" data-i18n="common.section_portfolio">Bekijk Ons Portfolio</a>
       </div>
-    </section>
+    </main>
 
     <!-- Footer -->
     <footer>
       <div class="container">
         <img
           src="Images/Logo donkere achtergrond.png"
-          alt="TwinPixel Logo"
+          alt="TwinPixel Footer Logo"
           class="footer-logo"
         />
 
         <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">Over ons</a></li>
-          <li><a href="services.html">Diensten</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="pricing.html">Prijzen</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" data-i18n="common.nav_home">Home</a></li>
+          <li><a href="about.html" data-i18n="common.nav_about">Over ons</a></li>
+          <li><a href="services.html" data-i18n="common.nav_services">Diensten</a></li>
+          <li><a href="portfolio.html" data-i18n="common.nav_portfolio">Portfolio</a></li>
+          <li><a href="pricing.html" data-i18n="common.nav_pricing">Prijzen</a></li>
+          <li><a href="contact.html" data-i18n="common.nav_contact">Contact</a></li>
         </ul>
 
         <ul class="social-links">
-          <li><a href="https://www.facebook.com/profile.php?id=61574036669497" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-          <li><a href="https://www.instagram.com/twinpixel.nl/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-          <li><a href="https://www.linkedin.com/company/twinpixel/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=61574036669497" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="https://www.instagram.com/twinpixel.nl/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+          <li><a href="https://www.linkedin.com/company/twinpixel/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
         </ul>
 
-        <p class="copyright">
-          &copy; 2025 TwinPixel. Alle rechten voorbehouden.
+        <p class="copyright" data-i18n="common.copyright">
+          © 2025 TwinPixel. Alle rechten voorbehouden.
         </p>
       </div>
     </footer>
