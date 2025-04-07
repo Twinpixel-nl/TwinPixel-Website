@@ -373,7 +373,9 @@
           "Betalingssysteem integratie",
           "Nieuwsbrief en e-mailintegratie",
           "Prioriteitssupport",
-          "Onbeperkte revisierondes"
+          "Onbeperkte revisierondes",
+          "API-koppelingen met externe systemen",
+          "Automatische gegevensverwerking (formulieren, API’s, CRM-koppeling)"
         ],
         "button": "Meer informatie"
       }

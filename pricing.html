@@ -233,47 +233,48 @@
             <a href="contact.html" class="btn" data-i18n="pricing.cards.2.button">Meer informatie</a>
           </div>
 
-          <!-- Maatwerk Package (Attempting Original Structure + i18n) -->
-          <div class="pricing-card maatwerk fade-in delay-3">
-            <h3 class="pricing-title" data-i18n="pricing.cards.3.title">Maatwerk</h3>
-            <div class="pricing-price">
-              <span
-                style="font-size: 0.6em; color: #b0b0b0; font-weight: normal"
-                data-i18n="common.from_prefix"
-                >vanaf</span
-              >
-              €999 <span></span> <!-- KEPT EMPTY SPAN from original working version -->
-            </div>
-             <p class="pricing-subtext" data-i18n="pricing.cards.3.hosting_info">+ vanaf €30/maand voor hosting & updates</p>
+<!-- Werkende HTML: Spant de volledige grid-breedte (equivalent aan 3+ kaarten) -->
+<!-- De 'maatwerk' class zorgt voor de interne 2-koloms feature lijst -->
 
-            <ul class="pricing-features">
-              <li data-i18n="pricing.cards.3.features.0">Uniek design & identiteit</li>
-              <li data-i18n="pricing.cards.3.features.1">Geavanceerde functionaliteiten</li>
-              <li data-i18n="pricing.cards.3.features.2">E-commerce integratie</li>
-              <li data-i18n="pricing.cards.3.features.3">Uitgebreide SEO-optimalisatie</li>
-              <li data-i18n="pricing.cards.3.features.4">Betalingssysteem integratie</li>
-              <li data-i18n="pricing.cards.3.features.5">Nieuwsbrief en e-mailintegratie</li>
-              <li data-i18n="pricing.cards.3.features.6">Prioriteitssupport</li>
-              <li data-i18n="pricing.cards.3.features.7">Onbeperkte revisierondes</li>
-            </ul>
-            <a href="contact.html" class="btn" data-i18n="pricing.cards.3.button">Meer informatie</a>
-          </div>
+<div class="pricing-card maatwerk fade-in delay-3" style="grid-column: 1 / -1; max-width: none; margin: 2rem 0;">
 
-        </div> <!-- This closes the parent .pricing-grid -->
+  <h3 class="pricing-title" data-i18n="pricing.cards.3.title">Maatwerk</h3>
+  <div class="pricing-price">
+      <span
+          style="font-size: 0.6em; color: #b0b0b0; font-weight: normal"
+          data-i18n="common.from_prefix"
+          >vanaf</span>
+      €999 <span></span>
+  </div>
+  <p class="pricing-subtext" data-i18n="pricing.cards.3.hosting_info">+ vanaf €30/maand voor hosting & updates</p>
 
-        <!-- Disclaimer remains outside the grid -->
-        <div class="pricing-disclaimer fade-in">
-          <p data-i18n="pricing.disclaimer">
-            Alle prijzen zijn exclusief BTW. Ons hybride prijsmodel bestaat uit
-            een eenmalig bedrag voor het ontwerp en de ontwikkeling van je
-            website, plus een maandelijks bedrag voor hosting en kleine updates.
-            Zo heb je geen onverwachte kosten en blijft je website altijd
-            up-to-date.
-          </p>
-        </div>
+  <ul class="pricing-features">
+      <!-- Features worden nu correct in 2 kolommen gezet door de externe CSS -->
+      <li data-i18n="pricing.cards.3.features.0">Uniek design & identiteit</li>
+      <li data-i18n="pricing.cards.3.features.1">Geavanceerde functionaliteiten</li>
+      <li data-i18n="pricing.cards.3.features.2">E-commerce integratie</li>
+      <li data-i18n="pricing.cards.3.features.3">Uitgebreide SEO-optimalisatie</li>
+      <li data-i18n="pricing.cards.3.features.4">Betalingssysteem integratie</li>
+      <li data-i18n="pricing.cards.3.features.5">Nieuwsbrief en e-mailintegratie</li>
+      <li data-i18n="pricing.cards.3.features.6">Prioriteitssupport</li>
+      <li data-i18n="pricing.cards.3.features.7">Onbeperkte revisierondes</li>
+      <li data-i18n="pricing.cards.3.features.8">API-koppelingen met externe systemen</li>
+      <li data-i18n="pricing.cards.3.features.9">Automatische gegevensverwerking (formulieren, API’s, CRM-koppeling)</li>
+  </ul>
+  <a href="contact.html" class="btn" data-i18n="pricing.cards.3.button">Meer informatie</a>
+</div>
+</div>
+
+<div class="pricing-disclaimer fade-in">
+<p data-i18n="pricing.disclaimer">
+  Alle prijzen zijn exclusief BTW. Ons hybride prijsmodel bestaat uit
+  een eenmalig bedrag voor het ontwerp en de ontwikkeling van je
+  website, plus een maandelijks bedrag voor hosting en kleine updates.
 
       </div> <!-- This closes the parent .container for pricing-main -->
     </section> <!-- This closes the parent .pricing-main section -->
+
+
 
     <!-- Additional Services Section -->
     <section class="additional-pricing">

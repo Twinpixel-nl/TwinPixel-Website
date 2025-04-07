@@ -1107,10 +1107,15 @@ header.scrolled {
   margin: 3rem;
 }
 
-pricing-card.maatwerk {
-  grid-column: span 2; /* Laat de kaart over twee kolommen spreiden */
-  max-width: 900px; /* Voorkomt dat hij te breed wordt op grote schermen */
-  margin: 0 auto; /* Centreert de kaart */
+/* Aanpassing in je CSS-bestand */
+.pricing-card.maatwerk {
+  /* Verander 'span 2' naar '1 / -1' om ALLE kolommen te overspannen */
+  grid-column: 1 / -1;
+  /* Of gebruik 'span 3' als je zeker weet dat het altijd 3 kolommen zijn */
+  /* grid-column: span 3; */
+
+  max-width: 100%; /* Verwijder of pas max-width aan indien nodig */
+  margin: 2rem auto; /* Pas eventueel marge aan */
 }
 
 /* Maak de features-lijst tweekoloms op grote schermen */
