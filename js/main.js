@@ -784,18 +784,18 @@ function getCookie(name) {
 }
 
 function updateChatbotLanguage(lang) {
-    const dfMessenger = document.querySelector('df-messenger');
-    if (dfMessenger) {
-        dfMessenger.setAttribute('language-code', lang);
-
-        // Forceer iframe reload om de taal direct toe te passen
-        const iframe = dfMessenger.shadowRoot?.querySelector("iframe");
-        if (iframe) {
-            const originalSrc = iframe.src;
-            iframe.src = "";
-            setTimeout(() => {
-                iframe.src = originalSrc;
-            }, 100); // delay voor herladen
-        }
+    const oldBot = document.querySelector("df-messenger");
+    if (oldBot) {
+        oldBot.remove();
     }
+
+    const newBot = document.createElement("df-messenger");
+    newBot.setAttribute("chat-title", "Pixie");
+    newBot.setAttribute("intent", "WELCOME");
+    newBot.setAttribute("agent-id", "dce6508a-1cc9-40cf-933d-a75707da044d");
+    newBot.setAttribute("language-code", lang);
+    newBot.setAttribute("chat-icon", "Images/pixie.png");
+
+    document.body.appendChild(newBot);
 }
+
