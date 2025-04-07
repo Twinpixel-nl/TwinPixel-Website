@@ -165,15 +165,24 @@ function validateContactForm(form) {
 document.addEventListener("DOMContentLoaded", async () => { // Make async to wait for initial load
     // Determine initial language
     let initialLang = 'nl'; // Default
+
     if (window.location.hash) {
         const hash = window.location.hash.substring(1);
         if (hash === "en" || hash === "nl") {
             initialLang = hash;
         }
-    } else {
+    } else if (getCookie("preferredLanguage")) {
         const cookieLang = getCookie("preferredLanguage");
         if (cookieLang === "en" || cookieLang === "nl") {
             initialLang = cookieLang;
+        }
+    } else {
+        // 👇 Nieuw: detecteer browsertaal
+        const browserLang = navigator.language || navigator.userLanguage;
+        if (browserLang.toLowerCase().startsWith("en")) {
+            initialLang = "en";
+        } else {
+            initialLang = "nl"; // alles anders valt terug op Nederlands
         }
     }
     currentLang = initialLang; // Set global currentLang
