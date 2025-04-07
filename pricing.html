@@ -233,7 +233,7 @@
             <a href="contact.html" class="btn" data-i18n="pricing.cards.2.button">Meer informatie</a>
           </div>
 
-          <!-- Maatwerk Package -->
+          <!-- Maatwerk Package (Attempting Original Structure + i18n) -->
           <div class="pricing-card maatwerk fade-in delay-3">
             <h3 class="pricing-title" data-i18n="pricing.cards.3.title">Maatwerk</h3>
             <div class="pricing-price">
@@ -242,7 +242,7 @@
                 data-i18n="common.from_prefix"
                 >vanaf</span
               >
-              €999 <span></span> <!-- Empty span restored -->
+              €999 <span></span> <!-- KEPT EMPTY SPAN from original working version -->
             </div>
              <p class="pricing-subtext" data-i18n="pricing.cards.3.hosting_info">+ vanaf €30/maand voor hosting & updates</p>
 
@@ -259,8 +259,9 @@
             <a href="contact.html" class="btn" data-i18n="pricing.cards.3.button">Meer informatie</a>
           </div>
 
-        </div> <!-- Closing pricing-grid -->
+        </div> <!-- This closes the parent .pricing-grid -->
 
+        <!-- Disclaimer remains outside the grid -->
         <div class="pricing-disclaimer fade-in">
           <p data-i18n="pricing.disclaimer">
             Alle prijzen zijn exclusief BTW. Ons hybride prijsmodel bestaat uit
@@ -270,8 +271,9 @@
             up-to-date.
           </p>
         </div>
-      </div> <!-- Closing container -->
-    </section> <!-- Closing pricing-main -->
+
+      </div> <!-- This closes the parent .container for pricing-main -->
+    </section> <!-- This closes the parent .pricing-main section -->
 
     <!-- Additional Services Section -->
     <section class="additional-pricing">
