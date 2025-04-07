@@ -281,6 +281,7 @@ function switchLanguage(lang, updateHash = true) {
             body.style.opacity = "1";
             body.style.transition = "opacity 0.3s ease-in";
         }, 50); // Adjust delay if needed
+        updateChatbotLanguage(lang); 
     }).catch(error => {
         // Handle potential error during the switch (e.g., network issue)
         console.error(`Failed to switch language to ${lang}:`, error);
@@ -780,4 +781,21 @@ function getCookie(name) {
         if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
     }
     return null;
+}
+
+function updateChatbotLanguage(lang) {
+    const dfMessenger = document.querySelector('df-messenger');
+    if (dfMessenger) {
+        dfMessenger.setAttribute('language-code', lang);
+
+        // Forceer iframe reload om de taal direct toe te passen
+        const iframe = dfMessenger.shadowRoot?.querySelector("iframe");
+        if (iframe) {
+            const originalSrc = iframe.src;
+            iframe.src = "";
+            setTimeout(() => {
+                iframe.src = originalSrc;
+            }, 100); // delay voor herladen
+        }
+    }
 }
