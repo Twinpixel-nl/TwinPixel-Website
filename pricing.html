@@ -6,12 +6,13 @@
     <meta
       name="description"
       content="Bekijk de transparante prijzen van TwinPixel voor webdesign en development. Betaalbare pakketten voor ZZP'ers en MKB, zonder verborgen kosten."
+      data-i18n="pricing.meta_description"
     />
     <meta
       name="keywords"
       content="prijzen, webdesign kosten, website prijzen, betaalbare websites, webdevelopment tarieven"
     />
-    <title>Prijzen | TwinPixel</title>
+    <title data-i18n="pricing.title">Prijzen | TwinPixel</title>
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/style.css" />
@@ -50,22 +51,25 @@
       href="Icons/favicon-16x16.png"
     />
     <link rel="manifest" href="/" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://twinpixel.nl/pricing.html">
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-Y0TE68DKL1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-Y0TE68DKL1");
+    </script>
+
   </head>
-
-  <!-- Google tag (gtag.js) -->
-  <script
-    async
-    src="https://www.googletagmanager.com/gtag/js?id=G-Y0TE68DKL1"
-  ></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag("js", new Date());
-
-    gtag("config", "G-Y0TE68DKL1");
-  </script>
 
   <body>
     <!-- Mobile Menu Overlay -->
@@ -84,45 +88,33 @@
           </a>
 
           <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">Over ons</a></li>
-            <li><a href="services.html">Diensten</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="pricing.html" class="active">Prijzen</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html" data-i18n="common.nav_home">Home</a></li>
+            <li><a href="about.html" data-i18n="common.nav_about">Over ons</a></li>
+            <li><a href="services.html" data-i18n="common.nav_services">Diensten</a></li>
+            <li><a href="portfolio.html" data-i18n="common.nav_portfolio">Portfolio</a></li>
+            <li><a href="pricing.html" class="active" data-i18n="common.nav_pricing">Prijzen</a></li>
+            <li><a href="contact.html" data-i18n="common.nav_contact">Contact</a></li>
           </ul>
 
           <div class="language-switcher">
             <div class="language-buttons">
-              <a
-                href="#nl"
-                class="lang-btn active"
-                onclick="switchLanguage('nl'); return false;"
-                >NL</a
-              >
-              <a
-                href="#en"
-                class="lang-btn"
-                onclick="switchLanguage('en'); return false;"
-                >EN</a
-              >
+              <!-- Removed inline onclick -->
+              <a href="#nl" class="lang-btn active">NL</a>
+              <a href="#en" class="lang-btn">EN</a>
             </div>
           </div>
 
-          <button class="mobile-menu-btn">
+          <button class="mobile-menu-btn" aria-label="Toggle menu">
             <i class="fas fa-bars"></i>
           </button>
         </nav>
       </div>
-
-      <link rel="canonical" href="https://twinpixel.nl/pricing.html">
-
     </header>
 
     <!-- Page Header -->
     <section class="page-header">
       <div class="container">
-        <h1 class="fade-in">Onze Prijzen</h1>
+        <h1 class="fade-in" data-i18n="pricing.header">Onze Prijzen</h1>
       </div>
     </section>
 
@@ -130,14 +122,14 @@
     <section class="pricing-intro">
       <div class="container">
         <div class="intro-content fade-in">
-          <h3>Transparante prijzen, geen verborgen kosten</h3>
-          <p>
+          <h3 data-i18n="pricing.intro_title">Transparante prijzen, geen verborgen kosten</h3>
+          <p data-i18n="pricing.intro_paragraphs.0">
             Bij TwinPixel werken we met een hybride prijsmodel: een eenmalig
             bedrag voor het maken van je website, en daarna een maandelijks
             bedrag voor hosting en kleine updates. Zo weet je precies waar je
             aan toe bent, zonder verrassingen achteraf.
           </p>
-          <p>
+          <p data-i18n="pricing.intro_paragraphs.1">
             We bieden verschillende pakketten aan die aansluiten bij
             verschillende behoeften en budgetten. Heb je specifieke wensen of
             past geen van onze pakketten bij jouw behoeften? Kies dan voor ons
@@ -152,12 +144,14 @@
     <section class="pricing-main">
       <div class="container">
         <div class="pricing-info fade-in">
-          <h3 class="text-center">Ons hybride prijsmodel</h3>
+          <h3 class="text-center" data-i18n="pricing.model_title">Ons hybride prijsmodel</h3>
           <div
             style="
               display: flex;
               justify-content: center;
-              gap: 40px;
+              align-items: center;
+              flex-wrap: wrap;
+              gap: 20px 40px;
               margin: 20px 0;
             "
           >
@@ -165,20 +159,18 @@
               <div style="font-size: 24px; margin-bottom: 10px">
                 <i class="fas fa-hammer"></i>
               </div>
-              <h4>Eenmalig bedrag</h4>
-              <p>Voor het ontwerpen en bouwen van je website</p>
+              <h4 data-i18n="pricing.model_onetime_title">Eenmalig bedrag</h4>
+              <p data-i18n="pricing.model_onetime_desc">Voor het ontwerpen en bouwen van je website</p>
             </div>
-            <div style="text-align: center">
-              <div style="font-size: 24px; margin-bottom: 10px">
-                <i class="fas fa-plus"></i>
-              </div>
+            <div style="text-align: center; font-size: 24px; margin: 0 10px;">
+              <i class="fas fa-plus"></i>
             </div>
             <div style="text-align: center">
               <div style="font-size: 24px; margin-bottom: 10px">
                 <i class="fas fa-server"></i>
               </div>
-              <h4>Maandelijks bedrag</h4>
-              <p>Voor hosting en kleine updates</p>
+              <h4 data-i18n="pricing.model_monthly_title">Maandelijks bedrag</h4>
+              <p data-i18n="pricing.model_monthly_desc">Voor hosting en kleine updates</p>
             </div>
           </div>
         </div>
@@ -186,343 +178,257 @@
         <div class="pricing-grid">
           <!-- Starter Package -->
           <div class="pricing-card fade-in">
-            <h3 class="pricing-title">Starter</h3>
-            <div class="pricing-price">€299 <span>eenmalig</span></div>
-            <div style="margin-top: 5px; font-size: 0.9em">
+            <h3 class="pricing-title" data-i18n="pricing.cards.0.title">Starter</h3>
+            <div class="pricing-price">€299 <span data-i18n="common.one_time_fee">eenmalig</span></div>
+            <div style="margin-top: 5px; font-size: 0.9em" data-i18n="pricing.cards.0.hosting_info">
               + €5/maand voor hosting
             </div>
             <ul class="pricing-features">
-              <li>One-page website</li>
-              <li>Basis-SEO</li>
-              <li>Contactformulier</li>
-              <li>Social media links</li>
-              <li>1 revisieronde</li>
+              <li data-i18n="pricing.cards.0.features.0">One-page website</li>
+              <li data-i18n="pricing.cards.0.features.1">Basis-SEO</li>
+              <li data-i18n="pricing.cards.0.features.2">Contactformulier</li>
+              <li data-i18n="pricing.cards.0.features.3">Social media links</li>
+              <li data-i18n="pricing.cards.0.features.4">1 revisieronde</li>
             </ul>
-            <a href="contact.html" class="btn">Meer informatie</a>
+            <a href="contact.html" class="btn" data-i18n="pricing.cards.0.button">Meer informatie</a>
           </div>
 
           <!-- Standaard Package -->
           <div class="pricing-card fade-in delay-1">
-            <div class="popular-choice">Populaire keuze</div>
-            <h3 class="pricing-title">Standaard</h3>
-            <div class="pricing-price">€499 <span>eenmalig</span></div>
-            <div style="margin-top: 5px; font-size: 0.9em">
+            <div class="popular-choice" data-i18n="common.popular_choice">Populaire keuze</div>
+            <h3 class="pricing-title" data-i18n="pricing.cards.1.title">Standaard</h3>
+            <div class="pricing-price">€499 <span data-i18n="common.one_time_fee">eenmalig</span></div>
+            <div style="margin-top: 5px; font-size: 0.9em" data-i18n="pricing.cards.1.hosting_info">
               + €10/maand voor hosting & updates
             </div>
             <ul class="pricing-features">
-              <li>Meerdere pagina's</li>
-              <li>Portfolio of blog-optie</li>
-              <li>SEO-optimalisatie</li>
-              <li>Contactformulier</li>
-              <li>Google Analytics integratie</li>
-              <li>Social media integratie</li>
-              <li>2 revisierondes</li>
+              <li data-i18n="pricing.cards.1.features.0">Meerdere pagina's</li>
+              <li data-i18n="pricing.cards.1.features.1">Portfolio of blog-optie</li>
+              <li data-i18n="pricing.cards.1.features.2">SEO-optimalisatie</li>
+              <li data-i18n="pricing.cards.1.features.3">Contactformulier</li>
+              <li data-i18n="pricing.cards.1.features.4">Google Analytics integratie</li>
+              <li data-i18n="pricing.cards.1.features.5">Social media integratie</li>
+              <li data-i18n="pricing.cards.1.features.6">2 revisierondes</li>
             </ul>
-            <a href="contact.html" class="btn">Meer informatie</a>
+            <a href="contact.html" class="btn" data-i18n="pricing.cards.1.button">Meer informatie</a>
           </div>
 
           <!-- Premium Package -->
           <div class="pricing-card fade-in delay-2">
-            <h3 class="pricing-title">Premium</h3>
-            <div class="pricing-price">€749 <span>eenmalig</span></div>
-            <div style="margin-top: 5px; font-size: 0.9em">
+            <h3 class="pricing-title" data-i18n="pricing.cards.2.title">Premium</h3>
+            <div class="pricing-price">€749 <span data-i18n="common.one_time_fee">eenmalig</span></div>
+            <div style="margin-top: 5px; font-size: 0.9em" data-i18n="pricing.cards.2.hosting_info">
               + €20/maand voor hosting & updates
             </div>
             <ul class="pricing-features">
-              <li>Maatwerk design</li>
-              <li>Basis support</li>
-              <li>Geavanceerde SEO</li>
-              <li>Content management systeem</li>
-              <li>Geavanceerd contactformulier</li>
-              <li>Google Analytics integratie</li>
-              <li>Social media integratie</li>
-              <li>3 revisierondes</li>
+              <li data-i18n="pricing.cards.2.features.0">Maatwerk design</li>
+              <li data-i18n="pricing.cards.2.features.1">Basis support</li>
+              <li data-i18n="pricing.cards.2.features.2">Geavanceerde SEO</li>
+              <li data-i18n="pricing.cards.2.features.3">Content management systeem</li>
+              <li data-i18n="pricing.cards.2.features.4">Geavanceerd contactformulier</li>
+              <li data-i18n="pricing.cards.2.features.5">Google Analytics integratie</li>
+              <li data-i18n="pricing.cards.2.features.6">Social media integratie</li>
+              <li data-i18n="pricing.cards.2.features.7">3 revisierondes</li>
             </ul>
-            <a href="contact.html" class="btn">Meer informatie</a>
+            <a href="contact.html" class="btn" data-i18n="pricing.cards.2.button">Meer informatie</a>
           </div>
+
+          <!-- Maatwerk Package -->
+          <div class="pricing-card maatwerk fade-in delay-3">
+            <h3 class="pricing-title" data-i18n="pricing.cards.3.title">Maatwerk</h3>
+            <div class="pricing-price">
+              <span
+                style="font-size: 0.6em; color: #b0b0b0; font-weight: normal"
+                data-i18n="common.from_prefix"
+                >vanaf</span
+              >
+              €999 <span></span> <!-- Empty span restored -->
+            </div>
+             <p class="pricing-subtext" data-i18n="pricing.cards.3.hosting_info">+ vanaf €30/maand voor hosting & updates</p>
+
+            <ul class="pricing-features">
+              <li data-i18n="pricing.cards.3.features.0">Uniek design & identiteit</li>
+              <li data-i18n="pricing.cards.3.features.1">Geavanceerde functionaliteiten</li>
+              <li data-i18n="pricing.cards.3.features.2">E-commerce integratie</li>
+              <li data-i18n="pricing.cards.3.features.3">Uitgebreide SEO-optimalisatie</li>
+              <li data-i18n="pricing.cards.3.features.4">Betalingssysteem integratie</li>
+              <li data-i18n="pricing.cards.3.features.5">Nieuwsbrief en e-mailintegratie</li>
+              <li data-i18n="pricing.cards.3.features.6">Prioriteitssupport</li>
+              <li data-i18n="pricing.cards.3.features.7">Onbeperkte revisierondes</li>
+            </ul>
+            <a href="contact.html" class="btn" data-i18n="pricing.cards.3.button">Meer informatie</a>
           </div>
 
-<!-- Maatwerk Package (Revised Structure) -->
-<div class="pricing-card maatwerk fade-in delay-3">
-  <h3 class="pricing-title" data-i18n="pricing.cards.3.title">Maatwerk</h3>
-  <div class="pricing-price">
-    <span
-      style="font-size: 0.6em; color: #b0b0b0; font-weight: normal"
-      data-i18n="common.from_prefix"
-      >vanaf</span
-    >
-    €999 <span></span> <!-- Reverted to empty span like the original -->
-  </div>
-   <p class="pricing-subtext" data-i18n="pricing.cards.3.hosting_info">+ vanaf €30/maand voor hosting & updates</p>
+        </div> <!-- Closing pricing-grid -->
 
-  <ul class="pricing-features">
-    <li data-i18n="pricing.cards.3.features.0">Uniek design & identiteit</li>
-    <li data-i18n="pricing.cards.3.features.1">Geavanceerde functionaliteiten</li>
-    <li data-i18n="pricing.cards.3.features.2">E-commerce integratie</li>
-    <li data-i18n="pricing.cards.3.features.3">Uitgebreide SEO-optimalisatie</li>
-    <li data-i18n="pricing.cards.3.features.4">Betalingssysteem integratie</li>
-    <li data-i18n="pricing.cards.3.features.5">Nieuwsbrief en e-mailintegratie</li>
-    <li data-i18n="pricing.cards.3.features.6">Prioriteitssupport</li>
-    <li data-i18n="pricing.cards.3.features.7">Onbeperkte revisierondes</li>
-  </ul>
-  <a href="contact.html" class="btn" data-i18n="pricing.cards.3.button">Meer informatie</a>
-</div>
+        <div class="pricing-disclaimer fade-in">
+          <p data-i18n="pricing.disclaimer">
+            Alle prijzen zijn exclusief BTW. Ons hybride prijsmodel bestaat uit
+            een eenmalig bedrag voor het ontwerp en de ontwikkeling van je
+            website, plus een maandelijks bedrag voor hosting en kleine updates.
+            Zo heb je geen onverwachte kosten en blijft je website altijd
+            up-to-date.
+          </p>
+        </div>
+      </div> <!-- Closing container -->
+    </section> <!-- Closing pricing-main -->
 
-</div> <!-- This should close the parent .pricing-grid -->
-
-<!-- Disclaimer remains outside the grid -->
-<div class="pricing-disclaimer fade-in">
-<p data-i18n="pricing.disclaimer">
-  Alle prijzen zijn exclusief BTW. Ons hybride prijsmodel bestaat uit
-  een eenmalig bedrag voor het ontwerp en de ontwikkeling van je
-  website, plus een maandelijks bedrag voor hosting en kleine updates.
-  Zo heb je geen onverwachte kosten en blijft je website altijd
-  up-to-date.
-</p>
-</div>
-
-</div> <!-- This closes the parent .container for pricing-main -->
-</section> <!-- This closes the parent .pricing-main section -->
     <!-- Additional Services Section -->
     <section class="additional-pricing">
       <div class="container">
-        <h2 class="section-title fade-in">Aanvullende Diensten</h2>
+        <h2 class="section-title fade-in" data-i18n="pricing.additional_title">Aanvullende Diensten</h2>
 
         <div class="additional-services-grid">
+          <!-- Service 1 -->
           <div class="additional-service fade-in delay-1">
             <div class="service-icon">
               <i class="fas fa-server"></i>
             </div>
             <div class="service-details">
-              <h3>Basis Hosting</h3>
-              <p>
+              <h3 data-i18n="pricing.additional_services.0.title">Basis Hosting</h3>
+              <p data-i18n="pricing.additional_services.0.desc">
                 Betrouwbare hosting met SSL-certificaat om je website snel en
                 veilig online te houden.
               </p>
-              <div class="service-price">€5 per maand</div>
+              <div class="service-price" data-i18n="pricing.additional_services.0.price">€5 per maand</div>
             </div>
           </div>
-
+          <!-- Service 2 -->
           <div class="additional-service fade-in delay-2">
             <div class="service-icon">
               <i class="fas fa-wrench"></i>
             </div>
             <div class="service-details">
-              <h3>Standaard Onderhoud</h3>
-              <p>
+              <h3 data-i18n="pricing.additional_services.1.title">Standaard Onderhoud</h3>
+              <p data-i18n="pricing.additional_services.1.desc">
                 Hosting, updates en kleine wijzigingen (1x per maand) om je
                 website up-to-date te houden.
               </p>
-              <div class="service-price">€10 per maand</div>
+              <div class="service-price" data-i18n="pricing.additional_services.1.price">€10 per maand</div>
             </div>
           </div>
-
+          <!-- Service 3 -->
           <div class="additional-service fade-in delay-3">
             <div class="service-icon">
               <i class="fas fa-chart-line"></i>
             </div>
             <div class="service-details">
-              <h3>Premium Onderhoud</h3>
-              <p>
+              <h3 data-i18n="pricing.additional_services.2.title">Premium Onderhoud</h3>
+              <p data-i18n="pricing.additional_services.2.desc">
                 Alles uit Standaard + SEO-optimalisatie + maandelijks een
                 wijziging naar keuze.
               </p>
-              <div class="service-price">€20 per maand</div>
+              <div class="service-price" data-i18n="pricing.additional_services.2.price">€20 per maand</div>
             </div>
           </div>
-
+          <!-- Service 4 -->
           <div class="additional-service fade-in delay-4">
             <div class="service-icon">
               <i class="fas fa-search"></i>
             </div>
             <div class="service-details">
-              <h3>SEO-optimalisatie</h3>
-              <p>
+              <h3 data-i18n="pricing.additional_services.3.title">SEO-optimalisatie</h3>
+              <p data-i18n="pricing.additional_services.3.desc">
                 Verbeter de vindbaarheid van je website in zoekmachines met onze
                 SEO-optimalisatie.
               </p>
-              <div class="service-price">€99 eenmalig</div>
+              <div class="service-price" data-i18n="pricing.additional_services.3.price">€99 eenmalig</div>
             </div>
           </div>
-
+          <!-- Service 5 -->
           <div class="additional-service fade-in delay-5">
             <div class="service-icon">
               <i class="fas fa-paint-brush"></i>
             </div>
             <div class="service-details">
-              <h3>Logo & Branding Ontwerp</h3>
-              <p>
+              <h3 data-i18n="pricing.additional_services.4.title">Logo & Branding Ontwerp</h3>
+              <p data-i18n="pricing.additional_services.4.desc">
                 Professioneel logo en branding ontwerp om je bedrijfsidentiteit
                 te versterken.
               </p>
-              <div class="service-price">€199 eenmalig</div>
+              <div class="service-price" data-i18n="pricing.additional_services.4.price">€199 eenmalig</div>
             </div>
           </div>
-
+          <!-- Service 6 -->
           <div class="additional-service fade-in delay-6">
             <div class="service-icon">
               <i class="fas fa-bolt"></i>
             </div>
             <div class="service-details">
-              <h3>Snelle Oplevering</h3>
-              <p>
+              <h3 data-i18n="pricing.additional_services.5.title">Snelle Oplevering</h3>
+              <p data-i18n="pricing.additional_services.5.desc">
                 Heb je haast? Wij kunnen je website binnen 5 dagen opleveren.
               </p>
-              <div class="service-price">€99 eenmalig</div>
+              <div class="service-price" data-i18n="pricing.additional_services.5.price">€99 eenmalig</div>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Comparison Table Section -->
-    <!-- <section class="comparison-section">
-        <div class="container">
-            <h2 class="section-title fade-in">Pakketvergelijking</h2>
-            
-            <div class="table-container fade-in">
-                <table class="comparison-table">
-                    <thead>
-                        <tr>
-                            <th>Feature</th>
-                            <th>Starter</th>
-                            <th>Standaard</th>
-                            <th>Premium</th>
-                            <th>Maatwerk</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Aantal pagina's</td>
-                            <td>1</td>
-                            <td>Meerdere</td>
-                            <td>Meerdere</td>
-                            <td>Onbeperkt</td>
-                        </tr>
-                        <tr>
-                            <td>Responsive design</td>
-                            <td><i class="fas fa-check"></i></td>
-                            <td><i class="fas fa-check"></i></td>
-                            <td><i class="fas fa-check"></i></td>
-                            <td><i class="fas fa-check"></i></td>
-                        </tr>
-                        <tr>
-                            <td>SEO-optimalisatie</td>
-                            <td>Basis</td>
-                            <td>Standaard</td>
-                            <td>Geavanceerd</td>
-                            <td>Uitgebreid</td>
-                        </tr>
-                        <tr>
-                            <td>Contactformulier</td>
-                            <td>Standaard</td>
-                            <td>Standaard</td>
-                            <td>Geavanceerd</td>
-                            <td>Op maat</td>
-                        </tr>
-                        <tr>
-                            <td>Portfolio/Blog</td>
-                            <td><i class="fas fa-times"></i></td>
-                            <td><i class="fas fa-check"></i></td>
-                            <td><i class="fas fa-check"></i></td>
-                            <td><i class="fas fa-check"></i></td>
-                        </tr>
-                        <tr>
-                            <td>Content management</td>
-                            <td><i class="fas fa-times"></i></td>
-                            <td><i class="fas fa-times"></i></td>
-                            <td><i class="fas fa-check"></i></td>
-                            <td><i class="fas fa-check"></i></td>
-                        </tr>
-                        <tr>
-                            <td>E-commerce</td>
-                            <td><i class="fas fa-times"></i></td>
-                            <td><i class="fas fa-times"></i></td>
-                            <td><i class="fas fa-times"></i></td>
-                            <td><i class="fas fa-check"></i></td>
-                        </tr>
-                        <tr>
-                            <td>Revisierondes</td>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>Onbeperkt</td>
-                        </tr>
-                        <tr>
-                            <td>Gratis ondersteuning</td>
-                            <td>Geen</td>
-                            <td>1 maand</td>
-                            <td>3 maanden</td>
-                            <td>6 maanden</td>
-                        </tr>
-                        <tr>
-                            <td>Levertijd</td>
-                            <td>1-2 weken</td>
-                            <td>2-3 weken</td>
-                            <td>3-4 weken</td>
-                            <td>In overleg</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </section> -->
+    <!-- Comparison Table Section (Commented out) -->
+    <!-- <section class="comparison-section"> ... </section> -->
 
      <!-- FAQ Section -->
-  <section class="faq-section">
-    <div class="container">
-           <h2>Veelgestelde Vragen</h2>
-           <div class="faq-item">
-               <div class="faq-question">Zijn er verborgen kosten?</div>
-               <div class="faq-answer">Nee, bij TwinPixel geloven we in volledige transparantie. De prijs die we opgeven is de prijs die je betaalt. Er zijn geen verborgen kosten of verrassingen achteraf.</div>
-           </div>
-           <div class="faq-item">
-               <div class="faq-question">Wat als ik specifieke wensen heb die niet in een pakket passen?</div>
-               <div class="faq-answer">Geen probleem! We bieden ook op maat gemaakte oplossingen aan en aanvullende diensten die je altijd met pakketten kan combineren. Neem contact met ons op om je specifieke wensen te bespreken en we stellen een offerte op maat voor je op.</div>
-           </div>
-              <div class="faq-item">
-               <div class="faq-question">Hoe zit het met hosting en domeinregistratie?</div>
-               <div class="faq-answer">Hosting is inbegrepen in het maandelijkse bedrag van ons hybride prijsmodel. Domeinregistratie wordt apart gefactureerd tegen kostprijs. We kunnen je domein registreren of helpen bij het overzetten van een bestaand domein.</div>
-           </div>
-           <div class="faq-item">
-               <div class="faq-question">Kan ik later upgraden naar een ander pakket?</div>
-               <div class="faq-answer">Ja, je kunt altijd upgraden naar een uitgebreider pakket. We berekenen dan alleen het verschil tussen je huidige pakket en het nieuwe pakket, plus eventuele extra werkzaamheden die nodig zijn.</div>
-           </div>
-           <div class="faq-item">
-               <div class="faq-question">Hoe lang duurt het voordat mijn website klaar is?</div>
-               <div class="faq-answer">De doorlooptijd hangt af van het gekozen pakket en de complexiteit van je website. Een Starter website kan binnen 2-3 weken klaar zijn, terwijl een Enterprise website 4-6 weken kan duren. We stellen altijd een realistische tijdlijn op aan het begin van het project. Daarnaast kan je voor 99 euro extra snel de website opgeleverd krijgen.</div>
-           </div>
-           <div class="faq-item">
-               <div class="faq-question">Wat houdt het hybride prijsmodel precies in?</div>
-               <div class="faq-answer">Ons hybride prijsmodel bestaat uit twee delen: een eenmalig bedrag voor het ontwerpen en bouwen van je website, en een maandelijks bedrag voor hosting en kleine updates. Dit zorgt ervoor dat je website niet alleen professioneel wordt opgezet, maar ook goed blijft draaien en up-to-date blijft zonder onverwachte kosten.</div>
-           </div>
-           <div class="faq-item">
-               <div class="faq-question">Wat als ik nog geen logo of huisstijl heb?</div>
-               <div class="faq-answer">Geen zorgen! We bieden ook logo- en huisstijlontwerp aan als aparte dienst. We kunnen je helpen met het ontwerpen van een professioneel logo en bijpassende huisstijl die perfect aansluiten bij je merk en doelgroep.</div>
-           </div>
-           <div class="faq-item">
-               <div class="faq-question">Wat als ik zelf teksten, afbeeldingen of updates wil toevoegen?</div>
-               <div class="faq-answer">We bieden pakketten aan met een Content Management Systeem (CMS), zodat je zelf eenvoudig teksten, afbeeldingen en updates kan toevoegen. We geven je een korte training zodat je zelf aan de slag kan met je website.</div>
-          </div>
-       </div>
-      </div>
-    </div>
-   </section>
+    <section class="faq-section">
+      <div class="container">
+             <h2 data-i18n="pricing.faq_title">Veelgestelde Vragen</h2>
+             <!-- FAQ Item 1 -->
+             <div class="faq-item">
+                 <div class="faq-question" data-i18n="pricing.faq.0.question">Zijn er verborgen kosten?</div>
+                 <div class="faq-answer" hidden data-i18n="pricing.faq.0.answer">Nee, bij TwinPixel geloven we in volledige transparantie. De prijs die we opgeven is de prijs die je betaalt. Er zijn geen verborgen kosten of verrassingen achteraf.</div>
+             </div>
+             <!-- FAQ Item 2 -->
+             <div class="faq-item">
+                 <div class="faq-question" data-i18n="pricing.faq.1.question">Wat als ik specifieke wensen heb die niet in een pakket passen?</div>
+                 <div class="faq-answer" hidden data-i18n="pricing.faq.1.answer">Geen probleem! We bieden ook op maat gemaakte oplossingen aan en aanvullende diensten die je altijd met pakketten kan combineren. Neem contact met ons op om je specifieke wensen te bespreken en we stellen een offerte op maat voor je op.</div>
+             </div>
+             <!-- FAQ Item 3 -->
+                <div class="faq-item">
+                 <div class="faq-question" data-i18n="pricing.faq.2.question">Hoe zit het met hosting en domeinregistratie?</div>
+                 <div class="faq-answer" hidden data-i18n="pricing.faq.2.answer">Hosting is inbegrepen in het maandelijkse bedrag van ons hybride prijsmodel. Domeinregistratie wordt apart gefactureerd tegen kostprijs. We kunnen je domein registreren of helpen bij het overzetten van een bestaand domein.</div>
+             </div>
+             <!-- FAQ Item 4 -->
+             <div class="faq-item">
+                 <div class="faq-question" data-i18n="pricing.faq.3.question">Kan ik later upgraden naar een ander pakket?</div>
+                 <div class="faq-answer" hidden data-i18n="pricing.faq.3.answer">Ja, je kunt altijd upgraden naar een uitgebreider pakket. We berekenen dan alleen het verschil tussen je huidige pakket en het nieuwe pakket, plus eventuele extra werkzaamheden die nodig zijn.</div>
+             </div>
+             <!-- FAQ Item 5 -->
+             <div class="faq-item">
+                 <div class="faq-question" data-i18n="pricing.faq.4.question">Hoe lang duurt het voordat mijn website klaar is?</div>
+                 <div class="faq-answer" hidden data-i18n="pricing.faq.4.answer">De doorlooptijd hangt af van het gekozen pakket en de complexiteit van je website. Een Starter website kan binnen 2-3 weken klaar zijn, terwijl een Enterprise website 4-6 weken kan duren. We stellen altijd een realistische tijdlijn op aan het begin van het project. Daarnaast kan je voor 99 euro extra snel de website opgeleverd krijgen.</div>
+             </div>
+             <!-- FAQ Item 6 -->
+             <div class="faq-item">
+                 <div class="faq-question" data-i18n="pricing.faq.5.question">Wat houdt het hybride prijsmodel precies in?</div>
+                 <div class="faq-answer" hidden data-i18n="pricing.faq.5.answer">Ons hybride prijsmodel bestaat uit twee delen: een eenmalig bedrag voor het ontwerpen en bouwen van je website, en een maandelijks bedrag voor hosting en kleine updates. Dit zorgt ervoor dat je website niet alleen professioneel wordt opgezet, maar ook goed blijft draaien en up-to-date blijft zonder onverwachte kosten.</div>
+             </div>
+             <!-- FAQ Item 7 -->
+             <div class="faq-item">
+                 <div class="faq-question" data-i18n="pricing.faq.6.question">Wat als ik nog geen logo of huisstijl heb?</div>
+                 <div class="faq-answer" hidden data-i18n="pricing.faq.6.answer">Geen zorgen! We bieden ook logo- en huisstijlontwerp aan als aparte dienst. We kunnen je helpen met het ontwerpen van een professioneel logo en bijpassende huisstijl die perfect aansluiten bij je merk en doelgroep.</div>
+             </div>
+             <!-- FAQ Item 8 -->
+             <div class="faq-item">
+                 <div class="faq-question" data-i18n="pricing.faq.7.question">Wat als ik zelf teksten, afbeeldingen of updates wil toevoegen?</div>
+                 <div class="faq-answer" hidden data-i18n="pricing.faq.7.answer">We bieden pakketten aan met een Content Management Systeem (CMS), zodat je zelf eenvoudig teksten, afbeeldingen en updates kan toevoegen. We geven je een korte training zodat je zelf aan de slag kan met je website.</div>
+            </div>
+         </div> <!-- end container -->
+     </section>
 
     <!-- CTA Section -->
-    <section class="about-section">
+    <section class="about-section"> <!-- Consider renaming class -->
       <div class="container">
         <div class="cta-section fade-in delay-4">
           <div class="service-card-glass cta-card">
-            <h2>Klaar om samen te werken?</h2>
-            <p>
+            <h2 data-i18n="common.cta_title">Klaar om samen te werken?</h2>
+            <p data-i18n="common.cta_subtitle">
               Laat ons je helpen om jouw online aanwezigheid naar een hoger
               niveau te tillen.
             </p>
              <div class="button-container">
-          <a href="contact.html" class="btn neon-button"
-            >Neem contact op</a
-          >
+               <a href="contact.html" class="btn neon-button" data-i18n="common.cta_button">Neem contact op</a>
+             </div>
           </div>
         </div>
       </div>
@@ -533,17 +439,17 @@
       <div class="container">
         <img
           src="Images/Logo donkere achtergrond.png"
-          alt="TwinPixel Logo"
+          alt="TwinPixel Footer Logo"
           class="footer-logo"
         />
 
         <ul class="footer-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">Over ons</a></li>
-          <li><a href="services.html">Diensten</a></li>
-          <li><a href="portfolio.html">Portfolio</a></li>
-          <li><a href="pricing.html">Prijzen</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" data-i18n="common.nav_home">Home</a></li>
+          <li><a href="about.html" data-i18n="common.nav_about">Over ons</a></li>
+          <li><a href="services.html" data-i18n="common.nav_services">Diensten</a></li>
+          <li><a href="portfolio.html" data-i18n="common.nav_portfolio">Portfolio</a></li>
+          <li><a href="pricing.html" data-i18n="common.nav_pricing">Prijzen</a></li>
+          <li><a href="contact.html" data-i18n="common.nav_contact">Contact</a></li>
         </ul>
 
         <ul class="social-links">
@@ -551,19 +457,20 @@
             <a
               href="https://www.facebook.com/profile.php?id=61574036669497"
               target="_blank"
+              aria-label="Facebook"
               ><i class="fab fa-facebook-f"></i
             ></a>
           </li>
           <li>
-            <a href="https://www.instagram.com/twinpixel.nl/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.instagram.com/twinpixel.nl/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
           </li>
           <li>
-            <a href="https://www.linkedin.com/company/twinpixel/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.linkedin.com/company/twinpixel/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
           </li>
         </ul>
 
-        <p class="copyright">
-          &copy; 2025 TwinPixel. Alle rechten voorbehouden.
+        <p class="copyright" data-i18n="common.copyright">
+          © 2025 TwinPixel. Alle rechten voorbehouden.
         </p>
       </div>
     </footer>
@@ -571,7 +478,7 @@
     <!-- JavaScript -->
     <script src="js/main.js"></script>
 
-    <!-- Structured Data -->
+    <!-- Structured Data (LD+JSON - Static Recommended) -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -588,88 +495,89 @@
         }
       }
     </script>
-
-    <!-- Pricing Structured Data -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "PriceSpecification",
-        "@id": "https://twinpixel.nl/pricing.html#pricing",
-        "name": "TwinPixel Prijzen",
-        "description": "Transparante prijzen voor webdesign en development diensten van TwinPixel",
-        "isPartOf": {
-          "@id": "https://twinpixel.nl/#website"
+        "@type": "Product",
+        "name": "TwinPixel Webdesign Pakketten",
+        "description": "Webdesign en development pakketten van TwinPixel.",
+        "brand": {
+            "@type": "Brand",
+            "name": "TwinPixel"
         },
-        "offers": [
-          {
-            "@type": "Offer",
-            "name": "Starter Pakket",
-            "description": "One-page website met responsive design, basis-SEO en contactformulier",
-            "price": "299",
+        "offers": {
+            "@type": "AggregateOffer",
+            "lowPrice": "299",
+            "highPrice": "999", // Starting price for custom
             "priceCurrency": "EUR",
-            "priceSpecification": {
-              "@type": "UnitPriceSpecification",
-              "price": "5",
-              "priceCurrency": "EUR",
-              "unitText": "maand",
-              "description": "Maandelijkse kosten voor hosting en updates"
-            },
-            "offeredBy": {
-              "@id": "https://twinpixel.nl/#business"
-            }
-          },
-          {
-            "@type": "Offer",
-            "name": "Standaard Pakket",
-            "description": "Meerdere pagina's met responsive design, SEO-optimalisatie, contactformulier en meer",
-            "price": "449",
-            "priceCurrency": "EUR",
-            "priceSpecification": {
-              "@type": "UnitPriceSpecification",
-              "price": "10",
-              "priceCurrency": "EUR",
-              "unitText": "maand",
-              "description": "Maandelijkse kosten voor hosting en updates"
-            },
-            "offeredBy": {
-              "@id": "https://twinpixel.nl/#business"
-            }
-          },
-          {
-            "@type": "Offer",
-            "name": "Premium Pakket",
-            "description": "High-end design, responsive website, geavanceerde SEO, maatwerk functionaliteiten en meer",
-            "price": "599",
-            "priceCurrency": "EUR",
-            "priceSpecification": {
-              "@type": "UnitPriceSpecification",
-              "price": "20",
-              "priceCurrency": "EUR",
-              "unitText": "maand",
-              "description": "Maandelijkse kosten voor hosting en updates"
-            },
-            "offeredBy": {
-              "@id": "https://twinpixel.nl/#business"
-            }
-          },
-          {
-            "@type": "Offer",
-            "name": "Maatwerk Pakket",
-            "description": "Volledig op maat gemaakte website met uniek design, geavanceerde functionaliteiten en meer",
-            "price": "799",
-            "priceCurrency": "EUR",
-            "priceSpecification": {
-              "@type": "UnitPriceSpecification",
-              "price": "30",
-              "priceCurrency": "EUR",
-              "unitText": "maand",
-              "description": "Maandelijkse kosten voor hosting en updates"
-            },
-            "offeredBy": {
-              "@id": "https://twinpixel.nl/#business"
-            }
+            "offerCount": 4,
+            "offers": [
+              {
+                "@type": "Offer",
+                "name": "Starter Pakket",
+                "url": "https://twinpixel.nl/pricing.html#starter",
+                "price": "299",
+                "priceCurrency": "EUR",
+                "priceSpecification": {
+                  "@type": "PriceSpecification",
+                  "price": "5",
+                  "priceCurrency": "EUR",
+                  "valueAddedTaxIncluded": "false",
+                  "priceType": "Subscription",
+                  "billingDuration": "P1M"
+                },
+                "itemOffered": { "@type": "Service", "name": "Starter Webdesign Pakket" }
+              },
+              {
+                "@type": "Offer",
+                "name": "Standaard Pakket",
+                "url": "https://twinpixel.nl/pricing.html#standaard",
+                "price": "499",
+                "priceCurrency": "EUR",
+                "priceSpecification": {
+                  "@type": "PriceSpecification",
+                  "price": "10",
+                  "priceCurrency": "EUR",
+                  "valueAddedTaxIncluded": "false",
+                  "priceType": "Subscription",
+                  "billingDuration": "P1M"
+                },
+                 "itemOffered": { "@type": "Service", "name": "Standaard Webdesign Pakket" }
+              },
+              {
+                "@type": "Offer",
+                "name": "Premium Pakket",
+                "url": "https://twinpixel.nl/pricing.html#premium",
+                "price": "749",
+                "priceCurrency": "EUR",
+                "priceSpecification": {
+                  "@type": "PriceSpecification",
+                  "price": "20",
+                  "priceCurrency": "EUR",
+                  "valueAddedTaxIncluded": "false",
+                  "priceType": "Subscription",
+                  "billingDuration": "P1M"
+                },
+                 "itemOffered": { "@type": "Service", "name": "Premium Webdesign Pakket" }
+              },
+              {
+                "@type": "Offer",
+                "name": "Maatwerk Pakket",
+                "url": "https://twinpixel.nl/pricing.html#maatwerk",
+                "price": "999",
+                "priceCurrency": "EUR",
+                 "priceSpecification": {
+                  "@type": "PriceSpecification",
+                  "price": "30",
+                  "priceCurrency": "EUR",
+                  "valueAddedTaxIncluded": "false",
+                  "priceType": "Subscription",
+                  "billingDuration": "P1M"
+                },
+                 "itemOffered": { "@type": "Service", "name": "Maatwerk Webdesign Pakket" }
+              }
+            ]
           }
-        ]
       }
     </script>
   </body>
