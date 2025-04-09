@@ -165,15 +165,24 @@ function validateContactForm(form) {
 document.addEventListener("DOMContentLoaded", async () => { // Make async to wait for initial load
     // Determine initial language
     let initialLang = 'nl'; // Default
+
     if (window.location.hash) {
         const hash = window.location.hash.substring(1);
         if (hash === "en" || hash === "nl") {
             initialLang = hash;
         }
-    } else {
+    } else if (getCookie("preferredLanguage")) {
         const cookieLang = getCookie("preferredLanguage");
         if (cookieLang === "en" || cookieLang === "nl") {
             initialLang = cookieLang;
+        }
+    } else {
+        // 👇 Nieuw: detecteer browsertaal
+        const browserLang = navigator.language || navigator.userLanguage;
+        if (browserLang.toLowerCase().startsWith("en")) {
+            initialLang = "en";
+        } else {
+            initialLang = "nl"; // alles anders valt terug op Nederlands
         }
     }
     currentLang = initialLang; // Set global currentLang
@@ -281,6 +290,7 @@ function switchLanguage(lang, updateHash = true) {
             body.style.opacity = "1";
             body.style.transition = "opacity 0.3s ease-in";
         }, 50); // Adjust delay if needed
+        updateChatbotLanguage(lang); 
     }).catch(error => {
         // Handle potential error during the switch (e.g., network issue)
         console.error(`Failed to switch language to ${lang}:`, error);
@@ -781,3 +791,20 @@ function getCookie(name) {
     }
     return null;
 }
+
+function updateChatbotLanguage(lang) {
+    const oldBot = document.querySelector("df-messenger");
+    if (oldBot) {
+        oldBot.remove();
+    }
+
+    const newBot = document.createElement("df-messenger");
+    newBot.setAttribute("chat-title", "Pixie");
+    newBot.setAttribute("intent", "WELCOME");
+    newBot.setAttribute("agent-id", "dce6508a-1cc9-40cf-933d-a75707da044d");
+    newBot.setAttribute("language-code", lang);
+    newBot.setAttribute("chat-icon", "Images/pixie.png");
+
+    document.body.appendChild(newBot);
+}
+

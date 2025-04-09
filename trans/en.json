@@ -372,7 +372,9 @@
           "Payment system integration",
           "Newsletter and email integration",
           "Priority support",
-          "Unlimited revision rounds"
+          "Unlimited revision rounds",
+          "API integrations with external systems",
+          "Automated data processing (forms, APIs, CRM integration)"
         ],
         "button": "More information"
       }

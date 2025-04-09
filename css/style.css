@@ -1107,10 +1107,15 @@ header.scrolled {
   margin: 3rem;
 }
 
-pricing-card.maatwerk {
-  grid-column: span 2; /* Laat de kaart over twee kolommen spreiden */
-  max-width: 900px; /* Voorkomt dat hij te breed wordt op grote schermen */
-  margin: 0 auto; /* Centreert de kaart */
+/* Aanpassing in je CSS-bestand */
+.pricing-card.maatwerk {
+  /* Verander 'span 2' naar '1 / -1' om ALLE kolommen te overspannen */
+  grid-column: 1 / -1;
+  /* Of gebruik 'span 3' als je zeker weet dat het altijd 3 kolommen zijn */
+  /* grid-column: span 3; */
+
+  max-width: 100%; /* Verwijder of pas max-width aan indien nodig */
+  margin: 2rem auto; /* Pas eventueel marge aan */
 }
 
 /* Maak de features-lijst tweekoloms op grote schermen */
@@ -3274,4 +3279,27 @@ body.inner-page .page-header .container {
     width: 120px;
     height: 120px;
   }
+}
+
+.whatsapp-bubble {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(145deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  box-shadow: var(--primary-glow);
+  z-index: 1000;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-bubble:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px var(--primary-color);
 }
