@@ -91,9 +91,10 @@
     "portfolio_section_title": "Ons Portfolio",
     "portfolio_intro": "Bij TwinPixel zijn we trots op de websites die we hebben ontworpen en ontwikkeld voor onze klanten. Elk project is uniek en op maat gemaakt om aan de specifieke behoeften en doelstellingen van onze klanten te voldoen.",
     "portfolio_items": [
-      { "title": "De wet van staal", "category": "Informatieve website met contact pagina" },
-      { "title": "studievereniging NULL", "category": "Website met database en CMS systeem" },
-      { "title": "By Britt Nails", "category": "Nagelstyliste Website" }
+      { "title": "De wet van staal", "text": "Professioneel laswerk en technisch onderhoud.", "button": "Bekijk project" },
+      { "title": "De Socialmedia manager", "category": "Een high-end website & branding voor socialmediamanager.", "button": "Bekijk project" },
+      { "title": "By Britt Nails", "text": "Een stijlvolle nagelstudio website.", "button": "Bekijk project" },
+      { "title": "studievereniging NULL", "category": "Website met database en CMS systeem","button": "Bekijk project"  }
     ],
     "portfolio_button": "Bekijk ons volledige portfolio",
     "pricing_section_title": "Onze Prijzen",
@@ -296,9 +297,9 @@
       ],
     "section_title": "Ons Werk",
     "items": [
-      { "title": "De wet van staal", "text": "Professioneel laswerk en technisch onderhoud.", "button": "Bekijk project" },
-      { "title": "Studievereniging NULL", "text": "De vereniging die ergens voor staat!", "button": "Bekijk project" },
-      { "title": "By Britt Nails", "text": "Een stijlvolle nagelstudio website.", "button": "Bekijk project" }
+      { "title": "De wet van staal", "category": "Informatieve website met contact pagina" },
+      { "title": "De Socialmedia manager", "category": "Een high-end website & branding voor socialmediamanager." },
+      { "title": "By Britt Nails", "category": "Nagelstyliste Website" }
     ]
   
   },

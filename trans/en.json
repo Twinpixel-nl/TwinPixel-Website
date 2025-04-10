@@ -93,8 +93,9 @@
     "portfolio_intro": "At TwinPixel, we are proud of the websites we have designed and developed for our clients. Each project is unique and tailored to meet the specific needs and objectives of our clients.",
     "portfolio_items": [
       { "title": "De wet van staal", "category": "Informative website with contact page" },
-      { "title": "Student Association NULL", "category": "Website with database and CMS system" },
-      { "title": "By Britt Nails", "category": "Nail Stylist Website" }
+      { "title": "De Socialmeda manager", "category": "A high-end website & branding with a blog for Socialmedia Manager." },
+      { "title": "By Britt Nails", "category": "Nail Stylist Website" },
+      { "title": "Study Associations NULL", "category": "The associaton that stands for something"}
     ],
     "portfolio_button": "View our full portfolio",
     "pricing_section_title": "Our Pricing",
@@ -297,7 +298,7 @@
     "section_title": "Our Work",
     "items": [
       { "title": "De wet van staal", "text": "Professional welding and technical maintenance.", "button": "View project" },
-      { "title": "Student Association NULL", "text": "The association that stands for something!", "button": "View project" },
+      { "title": "De Socialmeda manager", "category": "A high-end website & branding with a blog for Socialmedia Manager.", "button": "View project" },
       { "title": "By Britt Nails", "text": "A stylish nail studio website.", "button": "View project" }
     ]
   },
