@@ -288,7 +288,7 @@
       "At TwinPixel, we take pride in the websites we have designed and developed for our clients. Each project is unique and tailor-made to meet the specific needs and goals of our clients.",
       "Below you’ll find a selection of our recent projects — let yourself be inspired by what we can do for you."
     ],
-     "filters": [
+     "filters": [ 
         "All projects",
         "Webshops",
         "Business websites",
@@ -297,11 +297,25 @@
       ],
     "section_title": "Our Work",
     "items": [
-      { "title": "De wet van staal", "text": "Professional welding and technical maintenance.", "button": "View project" },
-      { "title": "De Socialmeda manager", "category": "A high-end website & branding with a blog for Socialmedia Manager.", "button": "View project" },
-      { "title": "By Britt Nails", "text": "A stylish nail studio website.", "button": "View project" }
+      { 
+        "title": "De wet van staal", 
+        "text": "Professional welding and technical maintenance."
+      },
+      { 
+        "title": "The Social Media Manager", 
+        "text": "A high-end website & branding with a blog for the social media manager." 
+      },
+      { 
+        "title": "By Britt Nails",
+        "text": "A stylish nail studio website."
+      },
+      { 
+        "title": "Study Association NULL", 
+        "text": "The association that stands for something!" 
+      }
     ]
-  },
+
+  }, 
   "pricing": {
     "meta_description": "View TwinPixel's transparent pricing for web design and development. Affordable packages for freelancers and SMEs, with no hidden costs.",
     "title": "Pricing | TwinPixel",

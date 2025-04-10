@@ -297,12 +297,26 @@
       ],
     "section_title": "Ons Werk",
     "items": [
-      { "title": "De wet van staal", "category": "Informatieve website met contact pagina" },
-      { "title": "De Socialmedia manager", "category": "Een high-end website & branding voor socialmediamanager." },
-      { "title": "By Britt Nails", "category": "Nagelstyliste Website" }
+      { 
+        "title": "De wet van staal",
+        "text": "Professioneel laswerk en technisch onderhoud."
+     
+      },
+      { 
+        "title": "De Socialmedia manager",
+        "text": "Een high-end website & branding met blog voor socialmediamanager."
+      },
+      {
+        "title": "By Britt Nails",
+        "text": "Een stijlvolle nagelstudio website."
+      },
+      { 
+        "title": "Studievereniging NULL",
+        "text": "De vereniging die ergens voor staat!"
+      }
     ]
-  
   },
+  
   "pricing": {
     "meta_description": "Bekijk de transparante prijzen van TwinPixel voor webdesign en development. Betaalbare pakketten voor ZZP'ers en MKB, zonder verborgen kosten.",
     "title": "Prijzen | TwinPixel",
