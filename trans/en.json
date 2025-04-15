@@ -114,7 +114,7 @@
     "testimonials_section_title": "What Clients Say",
     "testimonials": [
       { "text": "\"TwinPixel exceeded my expectations. They not only delivered a beautiful website, but did so within a week! The website is fast, user-friendly, and looks fantastic!\"", "author": "Harvey Meurs", "company": "Owner, De wet van staal" },
-      { "text": "\"As a freelancer, I needed a professional website, but I had a limited budget. TwinPixel gave me a custom website that looks professional without the high costs. I regularly receive compliments about my site!\"", "author": "Mark de Vries", "company": "Freelance Photographer" },
+      { "text": "\"We had a great collaboration with Twinpixel. Fast delivery, good service, high quality, and above all, a personal approach. For custom work, this is the place to be. Highly recommended!\"", "author": "Julian van Beek", "company": "Owner, Rocket Agency" },
       { "text": "\"Twinpixel helped me build my first website. Thanks to the professional help of Twan and Emma, they created my perfect website! Because they schedule good feedback moments, there is room to share my feedback with them and vice versa. They also explain well why they have incorporated certain elements into the website, because it looks better, works faster, or for other reasons. I can only say that I have had a good collaboration that has resulted in a beautiful result.\"", "author": "Britt Leander", "company": "Owner, By Britt Nails" }
     ]
   },
@@ -506,8 +506,8 @@
       ],
       "testimonials_title": "What clients in Wageningen say about us",
       "testimonials": [
-          { "text": "\"TwinPixel created a beautiful website for my shop in Wageningen. The local SEO optimization really helped attract more customers from the region. I regularly receive compliments on my website!\"", "author": "Lisa Jansen", "company": "Owner, Bloemen & Zo Wageningen" },
-          { "text": "\"As a freelancer in Wageningen, I needed a professional website that would help me get found locally. TwinPixel delivered exactly what I needed at an affordable price. My client base has grown significantly since then!\"", "author": "Mark de Vries", "company": "Freelance Photographer, Wageningen" }
+          { "text": "\"TwinPixel created a beautiful website for my shop in Wageningen. The local SEO optimization really helped attract more customers from the region. I regularly receive compliments on my website!\"", "author": "Harvey Meurs", "company": "Owner, De wet van staal Wageningen" },
+          { "text": "\"Twinpixel helped me build my first website. Thanks to the professional help of Twan and Emma, they created my perfect website! Because they schedule good feedback moments, there is room to share my feedback with them and vice versa. They also explain well why they have incorporated certain elements into the website, because it looks better, works faster, or for other reasons. I can only say that I have had a good collaboration that has resulted in a beautiful result.\"", "author": "Britt Leander", "company": "Owner, By Britt Nails Wageningen" }
       ],
       "faq_title": "Frequently asked questions about web design in Wageningen",
       "faq": [
