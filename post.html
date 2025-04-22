@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>%%TITLE%% | TwinPixel Blog</title>
+  <meta name="description" content="%%DESCRIPTION%%" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "%%TITLE%%",
+    "datePublished": "%%DATE%%",
+    "author": {
+      "@type": "Person",
+      "name": "TwinPixel"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TwinPixel",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "/images/logo.png"
+      }
+    },
+    "description": "%%DESCRIPTION%%"
+  }
+  </script>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>%%TITLE%%</h1>
+    <p class="text-sm text-gray-500">Geplaatst op: %%DATE%%</p>
+  </header>
+  <main class="p-4">
+    %%CONTENT%%
+  </main>
+  <footer>
+    <!-- Je bestaande footer komt hier -->
+  </footer>
+</body>
+</html>
