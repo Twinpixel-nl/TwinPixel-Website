@@ -1,9 +1,12 @@
 backend:
   name: git-gateway
+  repo: Twinpixel-nl/Twinpixel-Website
   branch: main
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
+
+site_url: https://twinpixel.nl
 
 collections:
   - name: "blog"
