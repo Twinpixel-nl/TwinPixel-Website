@@ -6,14 +6,17 @@
     <meta name="robots" content="noindex" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Netlify Identity Widget -->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <!-- CMS styles en scripts -->
+
+    <!-- Netlify CMS -->
     <script src="https://unpkg.com/netlify-cms@^2.10.0/dist/netlify-cms.js"></script>
   </head>
   <body>
-    <!-- Netlify CMS mount point -->
+    <!-- 🔥 DIT IS ESSENTIEEL! -->
+    <div id="nc-root"></div>
+
     <script>
-      // Redirect to homepage after successful login
       if (window.netlifyIdentity) {
         window.netlifyIdentity.on("init", user => {
           if (!user) {
@@ -22,7 +25,7 @@
             });
           }
         });
-      }
-    </script>
+      }
+    </script>
   </body>
 </html>
