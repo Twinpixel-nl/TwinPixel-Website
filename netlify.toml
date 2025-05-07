@@ -1,4 +1,4 @@
 [[redirects]]
   from = "/admin"
-  to = "/admin.html"
+  to = "/admin/index.html"
   status = 200
