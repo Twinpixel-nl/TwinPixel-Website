@@ -4,7 +4,7 @@ const matter = require("gray-matter");
 const { marked } = require("marked");
 
 const BLOG_SRC = path.join(__dirname, "../blog");
-const TEMPLATE = path.join(__dirname, "../templates/post.html");
+const TEMPLATE = path.join(__dirname, "../post.html"); // Correct path to root post.html
 // const OUT_DIR = path.join(__dirname, "../dist/blog"); // Change this
 // const INDEX_FILE = path.join(__dirname, "../dist/blog-index.json"); // Change this
 const OUT_DIR = path.join(__dirname, "../blog"); // Output HTMLs directly into the root blog folder
