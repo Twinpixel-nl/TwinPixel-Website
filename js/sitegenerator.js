@@ -5,8 +5,10 @@ const { marked } = require("marked");
 
 const BLOG_SRC = path.join(__dirname, "../blog");
 const TEMPLATE = path.join(__dirname, "../templates/post.html");
-const OUT_DIR = path.join(__dirname, "../dist/blog");
-const INDEX_FILE = path.join(__dirname, "../dist/blog-index.json");
+// const OUT_DIR = path.join(__dirname, "../dist/blog"); // Change this
+// const INDEX_FILE = path.join(__dirname, "../dist/blog-index.json"); // Change this
+const OUT_DIR = path.join(__dirname, "../blog"); // Output HTMLs directly into the root blog folder
+const INDEX_FILE = path.join(__dirname, "../blog/blog-index.json"); // Output index inside the root blog folder
 
 // Zorg dat output folder bestaat
 fs.ensureDirSync(OUT_DIR);
