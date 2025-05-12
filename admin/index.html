@@ -9,11 +9,11 @@
     <!-- Netlify Identity Widget -->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
-    <!-- Netlify CMS -->
-    <script src="https://unpkg.com/netlify-cms@^2.10.0/dist/netlify-cms.js"></script>
+    <!-- Leave this out of the head -->
+    <!-- <script src="https://unpkg.com/netlify-cms@^2.10.0/dist/netlify-cms.js"></script> -->
   </head>
   <body>
-    <!-- ✅ Zonder dit blijft je scherm wit -->
+    <!-- ✅ The target element -->
     <div id="nc-root"></div>
 
     <script>
@@ -27,5 +27,8 @@
         });
       }
     </script>
+
+    <!-- Netlify CMS - Load it HERE, at the end of the body -->
+    <script src="https://unpkg.com/netlify-cms@^2.10.0/dist/netlify-cms.js"></script>
   </body>
 </html>
