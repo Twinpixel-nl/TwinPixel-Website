@@ -3,44 +3,40 @@ const path = require("path");
 const matter = require("gray-matter");
 const { marked } = require("marked");
 
-const BLOG_SRC = path.join(__dirname, "../blog");
-const TEMPLATE = path.join(__dirname, "../post.html"); // Correct path to root post.html
-// const OUT_DIR = path.join(__dirname, "../dist/blog"); // Change this
-// const INDEX_FILE = path.join(__dirname, "../dist/blog-index.json"); // Change this
-const OUT_DIR = path.join(__dirname, "../blog"); // Output HTMLs directly into the root blog folder
-const INDEX_FILE = path.join(__dirname, "../blog/blog-index.json"); // Output index inside the root blog folder
+const BLOG_DIR = path.join(__dirname, "../blog");
+const TEMPLATE_FILE = path.join(__dirname, "../templates/post.html");
+const INDEX_FILE = path.join(BLOG_DIR, "blog-index.json");
 
-// Zorg dat output folder bestaat
-fs.ensureDirSync(OUT_DIR);
+// HTML-template ophalen
+const template = fs.readFileSync(TEMPLATE_FILE, "utf8");
 
-// Laad template
-const template = fs.readFileSync(TEMPLATE, "utf8");
-
-// Maak blog-index array
+// Index array voor JSON
 const index = [];
 
-const files = fs.readdirSync(BLOG_SRC).filter(f => f.endsWith(".md"));
+// Loop door alle .md bestanden
+fs.readdirSync(BLOG_DIR).forEach(file => {
+  if (!file.endsWith(".md")) return;
 
-files.forEach(file => {
   const slug = file.replace(".md", "");
-  const content = fs.readFileSync(path.join(BLOG_SRC, file), "utf8");
-  const { data, content: body } = matter(content);
+  const raw = fs.readFileSync(path.join(BLOG_DIR, file), "utf8");
+  const { data, content } = matter(raw);
+  const html = marked(content);
 
-  const htmlContent = marked(body);
+  // Vul de template
   const page = template
     .replace(/%%TITLE%%/g, data.title)
     .replace(/%%DESCRIPTION%%/g, data.description)
     .replace(/%%DATE%%/g, data.date)
-    .replace(/%%CONTENT%%/g, htmlContent);
+    .replace(/%%CONTENT%%/g, html);
 
-  // Schrijf individuele HTML-bestand
-  fs.writeFileSync(path.join(OUT_DIR, `${slug}.html`), page);
+  // Schrijf HTML-bestand naast de .md
+  fs.writeFileSync(path.join(BLOG_DIR, `${slug}.html`), page);
 
   // Voeg toe aan index
   index.push({
     title: data.title,
     description: data.description,
-    image: data.image,
+    image: data.image || "",
     date: data.date,
     slug: slug
   });
@@ -48,4 +44,4 @@ files.forEach(file => {
 
 // Schrijf blog-index.json
 fs.writeFileSync(INDEX_FILE, JSON.stringify(index, null, 2));
-console.log("✅ Blogpagina's en index gegenereerd!");
+console.log("✅ Blogposts en index succesvol gegenereerd in blog/");
