@@ -43,7 +43,8 @@ fs.readdirSync(BLOG_DIR).forEach(file => {
     description: data.description,
     image: data.image || "",
     date: data.date,
-    slug: slug
+    slug: slug,
+    tags: data.tags || []
   });
 });
 
