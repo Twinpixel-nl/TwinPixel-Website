@@ -1,3 +1,7 @@
+[build]
+  command = "node scripts/site-generator.js"
+  publish = "."
+
 [[redirects]]
   from = "/admin"
   to = "/admin/index.html"
