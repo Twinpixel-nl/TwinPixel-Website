@@ -3,8 +3,10 @@ const path = require("path");
 const matter = require("gray-matter");
 const { marked } = require("marked");
 
-const BLOG_DIR = path.join(__dirname, "../blog");
-const TEMPLATE_FILE = path.join(__dirname, "../templates/post.html");
+// Voor toegang tot /blog vanuit /js/
+const BLOG_DIR = path.resolve(__dirname, "../blog");
+const TEMPLATE_FILE = path.resolve(__dirname, "../templates/post.html");
+
 const INDEX_FILE = path.join(BLOG_DIR, "blog-index.json");
 
 // HTML-template ophalen
