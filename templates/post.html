@@ -1,26 +1,113 @@
 <!DOCTYPE html>
 <html lang="nl">
-  <head>
-    <meta charset="UTF-8" />
-    <title>%%TITLE%% | TwinPixel Blog</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="%%DESCRIPTION%%" />
-    <link rel="stylesheet" href="/css/style.css" />
-  </head>
-  <body>
-    <header>
-      <div class="container">
-        <h1>%%TITLE%%</h1>
-        <p class="text-gray-400 mb-6">Gepubliceerd op: %%DATE%%</p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>%%TITLE%% | TwinPixel Blog</title>
+  <meta name="description" content="%%DESCRIPTION%%" />
+
+  <!-- Stijlen -->
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/language-switcher.css" />
+  <link rel="stylesheet" href="../css/blog.css" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "%%TITLE%%",
+    "datePublished": "%%DATE%%",
+    "author": {
+      "@type": "Person",
+      "name": "TwinPixel"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TwinPixel",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "/Images/Logo%20donkere%20achtergrond.png"
+      }
+    },
+    "description": "%%DESCRIPTION%%"
+  }
+  </script>
+</head>
+<body>
+  <!-- Mobile menu overlay (voor je script) -->
+  <div class="mobile-menu-overlay"></div>
+
+  <!-- Header met je bestaande navigatie -->
+  <header>
+    <div class="container">
+      <nav class="navbar">
+        <a href="../index.html" class="logo-container">
+          <img src="../Images/Logo donkere achtergrond.png" alt="TwinPixel Logo" class="logo" />
+        </a>
+        <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">Over ons</a></li>
+          <li><a href="../services.html">Diensten</a></li>
+          <li><a href="../portfolio.html">Portfolio</a></li>
+          <li><a href="../pricing.html">Prijzen</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+        <div class="language-switcher">
+          <div class="language-buttons">
+            <a href="#nl" class="lang-btn active">NL</a>
+            <a href="#en" class="lang-btn">EN</a>
+          </div>
+        </div>
+        <button class="mobile-menu-btn" aria-label="Toggle menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Blogkaart -->
+  <main class="container py-12">
+    <article class="blog-post-card">
+      <h1 class="blog-post-title">%%TITLE%%</h1>
+      <p class="blog-post-date">
+        Gepubliceerd op: 
+        <script>
+          document.write(new Date("%%DATE%%").toLocaleDateString("nl-NL", {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+          }));
+        </script>
+      </p>
+      <div class="blog-post-content">
+        %%CONTENT%%
       </div>
-    </header>
-    <main class="container">
-      %%CONTENT%%
-    </main>
-    <footer>
-      <div class="container">
-        <p>© 2025 TwinPixel. Alle rechten voorbehouden.</p>
-      </div>
-    </footer>
-  </body>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <img src="../Images/Logo donkere achtergrond.png" alt="TwinPixel Footer Logo" class="footer-logo" />
+      <ul class="footer-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">Over ons</a></li>
+        <li><a href="../services.html">Diensten</a></li>
+        <li><a href="../portfolio.html">Portfolio</a></li>
+        <li><a href="../pricing.html">Prijzen</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+      <ul class="social-links">
+        <li><a href="https://www.facebook.com/profile.php?id=61574036669497" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a href="https://www.instagram.com/twinpixel.nl/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="https://www.linkedin.com/company/twinpixel/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+      </ul>
+      <p class="copyright">© 2025 TwinPixel. Alle rechten voorbehouden.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
 </html>
