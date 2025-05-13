@@ -7,6 +7,9 @@ media_folder: "Images/uploads"
 public_folder: "/Images/uploads"
 
 site_url: https://twinpixel.nl
+display_url: https://twinpixel.nl
+
+publish_mode: editorial_workflow
 
 collections:
   - name: "blog"
@@ -19,3 +22,12 @@ collections:
       - { label: "Publicatiedatum", name: "date", widget: "datetime" }
       - { label: "Omschrijving", name: "description", widget: "string" }
       - { label: "Inhoud", name: "body", widget: "markdown" }
+
+# 🔥 webhook toevoegen
+build:
+  publish: .
+  functions: functions
+  command: node js/sitegenerator.js
+
+hooks:
+  deploy: "https://api.netlify.com/build_hooks/abcdef12345678"
