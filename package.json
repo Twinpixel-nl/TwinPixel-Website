@@ -2,9 +2,12 @@
     "name": "twinpixel-website", 
     "version": "1.0.0",
   
+    
     "scripts": {
-      "build": "npm install && node js/sitegenerator.js"
+      "build": "npm install && node js/sitegenerator.js",
+      "generate": "node js/sitegenerator.js"
     },
+    
   
     "dependencies": {
 
