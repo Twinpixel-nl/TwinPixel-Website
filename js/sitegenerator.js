@@ -30,11 +30,20 @@ fs.readdirSync(BLOG_DIR).forEach(file => {
 
   const html = marked(content);
 
+  // Eerste afbeelding eruit halen
+  const firstImageMatch = html.match(/<img[^>]+src="([^">]+)"/);
+  const firstImageHTML = firstImageMatch ? `<img src="${firstImageMatch[1]}" alt="Featured Image" class="w-full rounded-xl mb-6" />` : "";
+  
+  // Content met afbeelding erboven
+  const fullHtml = `${firstImageHTML}${html}`;
+  
+
   const page = template
     .replace(/%%TITLE%%/g, data.title)
     .replace(/%%DESCRIPTION%%/g, data.description)
     .replace(/%%DATE%%/g, data.date)
-    .replace(/%%CONTENT%%/g, html);
+    .replace(/%%CONTENT%%/g, fullHtml);
+
 
   fs.writeFileSync(path.join(BLOG_DIR, `${slug}.html`), page);
 
