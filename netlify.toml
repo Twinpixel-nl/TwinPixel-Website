@@ -1,5 +1,5 @@
 [build]
-  command = "node scripts/site-generator.js"
+  command = "node js/site-generator.js"
   publish = "."
 
 [[redirects]]
