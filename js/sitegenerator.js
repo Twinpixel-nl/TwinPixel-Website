@@ -13,26 +13,29 @@ const template = fs.readFileSync(TEMPLATE_FILE, "utf8");
 // Index array voor JSON
 const index = [];
 
-// Loop door alle .md bestanden
 fs.readdirSync(BLOG_DIR).forEach(file => {
   if (!file.endsWith(".md")) return;
 
   const slug = file.replace(".md", "");
   const raw = fs.readFileSync(path.join(BLOG_DIR, file), "utf8");
   const { data, content } = matter(raw);
+
+  // Validatie: sla over als essentiële data ontbreekt
+  if (!data.title || !data.description || !data.date) {
+    console.warn(`⚠️  Bestand '${file}' mist verplichte velden en wordt overgeslagen.`);
+    return;
+  }
+
   const html = marked(content);
 
-  // Vul de template
   const page = template
     .replace(/%%TITLE%%/g, data.title)
     .replace(/%%DESCRIPTION%%/g, data.description)
     .replace(/%%DATE%%/g, data.date)
     .replace(/%%CONTENT%%/g, html);
 
-  // Schrijf HTML-bestand naast de .md
   fs.writeFileSync(path.join(BLOG_DIR, `${slug}.html`), page);
 
-  // Voeg toe aan index
   index.push({
     title: data.title,
     description: data.description,
@@ -41,6 +44,7 @@ fs.readdirSync(BLOG_DIR).forEach(file => {
     slug: slug
   });
 });
+
 
 // Schrijf blog-index.json
 fs.writeFileSync(INDEX_FILE, JSON.stringify(index, null, 2));
