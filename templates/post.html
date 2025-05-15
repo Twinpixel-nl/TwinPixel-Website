@@ -3,20 +3,45 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>%%TITLE%% | TwinPixel Blog</title>
   <meta name="description" content="%%DESCRIPTION%%" />
+  <meta name="keywords" content="webdesign blog, SEO tips, TwinPixel, webdevelopment, ondernemers tips, online zichtbaarheid" />
+  <link rel="canonical" href="https://twinpixel.nl/blog/%%SLUG%%.html" />
 
-  <!-- Stijlen -->
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="%%TITLE%%" />
+  <meta property="og:description" content="%%DESCRIPTION%%" />
+  <meta property="og:image" content="https://twinpixel.nl/Images/Logo%20donkere%20achtergrond.png" />
+  <meta property="og:url" content="https://twinpixel.nl/blog/%%SLUG%%.html" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="%%TITLE%%" />
+  <meta name="twitter:description" content="%%DESCRIPTION%%" />
+  <meta name="twitter:image" content="https://twinpixel.nl/Images/Logo%20donkere%20achtergrond.png" />
+
+  <!-- Stylesheets -->
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="../css/language-switcher.css" />
   <link rel="stylesheet" href="../css/blog.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
-  <!-- Structured Data -->
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="../Icons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="../Icons/favicon-16x16.png" />
+
+  <!-- Structured Data: BlogPosting -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "headline": "%%TITLE%%",
+    "description": "%%DESCRIPTION%%",
     "datePublished": "%%DATE%%",
     "author": {
       "@type": "Person",
@@ -27,18 +52,16 @@
       "name": "TwinPixel",
       "logo": {
         "@type": "ImageObject",
-        "url": "/Images/Logo%20donkere%20achtergrond.png"
+        "url": "https://twinpixel.nl/Images/Logo%20donkere%20achtergrond.png"
       }
-    },
-    "description": "%%DESCRIPTION%%"
+    }
   }
   </script>
 </head>
-<body>
-  <!-- Mobile menu overlay (voor je script) -->
-  <div class="mobile-menu-overlay"></div>
 
-  <!-- Header met je bestaande navigatie -->
+<body>
+  <!-- Header -->
+  <div class="mobile-menu-overlay"></div>
   <header>
     <div class="container">
       <nav class="navbar">
@@ -59,31 +82,26 @@
             <a href="#en" class="lang-btn">EN</a>
           </div>
         </div>
-        <button class="mobile-menu-btn" aria-label="Toggle menu">
+        <button class="mobile-menu-btn" aria-label="Menu openen">
           <i class="fas fa-bars"></i>
         </button>
       </nav>
     </div>
   </header>
 
-  <!-- Blogkaart -->
+  <!-- Blog Artikel -->
   <main class="container py-12">
-    <article class="blog-post-card">
-      <h1 class="blog-post-title">%%TITLE%%</h1>
-      <p class="blog-post-date">
-        Gepubliceerd op: 
-        <script>
-          document.write(new Date("%%DATE%%").toLocaleDateString("nl-NL", {
-            weekday: 'long',
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
-          }));
-        </script>
-      </p>
-      <div class="blog-post-content">
+    <article class="blog-post">
+      <header class="blog-header">
+        <h1 class="blog-post-title">%%TITLE%%</h1>
+        <p class="blog-post-date">
+          Gepubliceerd op: <span id="publish-date"></span>
+        </p>
+      </header>
+
+      <section class="blog-post-content">
         %%CONTENT%%
-      </div>
+      </section>
     </article>
   </main>
 
@@ -100,14 +118,25 @@
         <li><a href="../contact.html">Contact</a></li>
       </ul>
       <ul class="social-links">
-        <li><a href="https://www.facebook.com/profile.php?id=61574036669497" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-        <li><a href="https://www.instagram.com/twinpixel.nl/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-        <li><a href="https://www.linkedin.com/company/twinpixel/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=61574036669497" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a href="https://www.instagram.com/twinpixel.nl/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="https://www.linkedin.com/company/twinpixel/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
       </ul>
       <p class="copyright">© 2025 TwinPixel. Alle rechten voorbehouden.</p>
     </div>
   </footer>
 
+  <!-- Scripts -->
   <script src="../js/main.js"></script>
+  <script>
+    // Dynamische publicatiedatum
+    const rawDate = "%%DATE%%";
+    document.getElementById("publish-date").textContent = new Date(rawDate).toLocaleDateString("nl-NL", {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+  </script>
 </body>
 </html>
