@@ -227,5 +227,32 @@
           }
         }
       </script>
+      <script>
+        // Example JavaScript (place in your main.js or a script tag at the end of <body>)
+// This is a generic example; you might need to adapt selectors if you have many such dates.
+document.addEventListener('DOMContentLoaded', function() {
+  const dateElements = document.querySelectorAll('time[id^="unique-post-date-"]'); // Selects all time elements whose ID starts with "unique-post-date-"
+  dateElements.forEach(dateElement => {
+    const isoDate = dateElement.getAttribute('datetime');
+    if (isoDate) {
+      try {
+        const date = new Date(isoDate);
+        if (!isNaN(date.getTime())) {
+          dateElement.textContent = date.toLocaleDateString("nl-NL", {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+          });
+        } else {
+           console.warn("Invalid date string for formatting:", isoDate, "for element:", dateElement);
+        }
+      } catch (e) {
+        console.error("Error formatting date:", e, "for element:", dateElement);
+      }
+    }
+  });
+});
+      </script>
   </body>
 </html>
