@@ -128,7 +128,7 @@
                 <article>
             <h2 class="section-title">%%TITLE%%</h2>
                        <p class="blog-post-meta">
-    Gepubliceerd op: <span class="publish-date">{{ page.date | date: "%Y-%m-%dT%H:%M:%SZ" }}</span>
+    Gepubliceerd op: <span class="publish-date">%%DATE%%</span>
 </p>
                     <section class="blog-post-content">
                         %%CONTENT%%
@@ -188,7 +188,7 @@
     "@type": "BlogPosting",
     "headline": "%%TITLE%%",
     "description": "%%DESCRIPTION%%",
-     "datePublished": "{{ page.date | date: '%Y-%m-%dT%H:%M:%SZ' }}",
+     "datePublished": "%%DATE%%" | "date: '%Y-%m-%dT%H:%M:%SZ'",
     "author": {
       "@type": "Person",
       "name": "TwinPixel"
