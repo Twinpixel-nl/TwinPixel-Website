@@ -1,6 +1,6 @@
 [build]
-  command = "npm install && npm run generate"
-  publish = "."
+  publish = "." # Publish de hele root omdat /blog daarin staat
+  command = "npm run build" 
 
 [[redirects]]
   from = "/admin"
