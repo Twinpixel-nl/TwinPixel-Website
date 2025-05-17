@@ -123,32 +123,25 @@
     <div class="service-card-glass about-card">
       <div class="about-grid">
         <article>
-          <h1>[BLOG_POST_TITLE]</h1>
-          <p class="post-meta">
-            Gepubliceerd op:
-            <time datetime="[BLOG_POST_DATE_ISO]" id="unique-post-date-[UNIQUE_POST_ID]">
-              <!-- This date will be formatted by JavaScript. Fallback can be the ISO date or a pre-formatted string. -->
-              [BLOG_POST_DATE_ISO]
-            </time>
-          </p>
-          <!-- This placeholder is for a short summary or excerpt of the blog post -->
-          <p>[BLOG_POST_SUMMARY]</p>
+            <h1>{{ page.title }}</h1>
+            <p class="post-meta">
+                Gepubliceerd op: <time datetime="{{ page.date | date_to_iso_string }}">{{ page.date | date: "%d-%m-%Y" }}</time>
+                <!-- Your JS date formatter would then pick up the datetime attribute -->
+            </p>
+            {% if page.description %} <!-- Or a separate 'summary' field -->
+                <p>{{ page.description }}</p>
+            {% endif %}
 
-          <!--
-            IMAGE HANDLING:
-            If this blog post has a featured image, include the <figure> block below
-            and replace the placeholders.
-            If there is NO image, you should REMOVE or COMMENT OUT the entire <figure> block.
-          -->
-          <figure class="blog-post-featured-image"> <!-- Added class for potential styling -->
-            <img src="[BLOG_POST_IMAGE_URL]" alt="[BLOG_POST_IMAGE_ALT_TEXT]">
-            <!-- Optional: You could add a <figcaption>[BLOG_POST_IMAGE_CAPTION]</figcaption> here -->
-          </figure>
+            {% if page.image %}
+            <figure class="blog-post-featured-image">
+                <img src="{{ site.baseurl }}{{ page.image }}" alt="Afbeelding voor {{ page.title }}">
+            </figure>
+            {% endif %}
 
-          <div class="post-body">
-            [BLOG_POST_CONTENT_HTML]
-          </div>
-        </article>
+            <div class="post-body">
+                {{ content }} <!-- 'content' is usually where the Markdown body is injected -->
+            </div>
+            </article>
       </div>
     </div>
   </div>
