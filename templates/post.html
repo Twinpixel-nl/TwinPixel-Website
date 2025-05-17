@@ -118,20 +118,41 @@
         <h1 class="fade-in" data-i18n="about.header">Post</h1>
       </div>
     </section>
-<main class="container">
-    <article>
-      <h1>{{ title }}</h1>
-      <p class="post-meta">Gepubliceerd op {{ date }}</p>
-      {% if image %}
-        <figure>
-          <img src="{{ image }}" alt="Afbeelding bij blogpost">
-        </figure>
-      {% endif %}
-      <div class="post-body">
-        {{ content }}
+<div class="container">
+  <div class="about-vision-section fade-in delay-1">
+    <div class="service-card-glass about-card">
+      <div class="about-grid">
+        <article>
+          <h1>[BLOG_POST_TITLE]</h1>
+          <p class="post-meta">
+            Gepubliceerd op:
+            <time datetime="[BLOG_POST_DATE_ISO]" id="unique-post-date-[UNIQUE_POST_ID]">
+              <!-- This date will be formatted by JavaScript. Fallback can be the ISO date or a pre-formatted string. -->
+              [BLOG_POST_DATE_ISO]
+            </time>
+          </p>
+          <!-- This placeholder is for a short summary or excerpt of the blog post -->
+          <p>[BLOG_POST_SUMMARY]</p>
+
+          <!--
+            IMAGE HANDLING:
+            If this blog post has a featured image, include the <figure> block below
+            and replace the placeholders.
+            If there is NO image, you should REMOVE or COMMENT OUT the entire <figure> block.
+          -->
+          <figure class="blog-post-featured-image"> <!-- Added class for potential styling -->
+            <img src="[BLOG_POST_IMAGE_URL]" alt="[BLOG_POST_IMAGE_ALT_TEXT]">
+            <!-- Optional: You could add a <figcaption>[BLOG_POST_IMAGE_CAPTION]</figcaption> here -->
+          </figure>
+
+          <div class="post-body">
+            [BLOG_POST_CONTENT_HTML]
+          </div>
+        </article>
       </div>
-    </article>
-  </main>
+    </div>
+  </div>
+</div>
 
     <!-- Footer -->
     <footer>
