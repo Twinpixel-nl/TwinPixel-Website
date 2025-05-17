@@ -12,7 +12,41 @@
   --transition-speed: 0.3s;
   --border-radius: 8px;
 }
+/* Stijl voor de afbeelding die rechts moet floaten */
+.blog-post-image-right {
+  float: right; /* Laat de afbeelding naar rechts verplaatsen */
+  margin-left: 25px; /* Ruimte tussen de afbeelding en de tekst links ervan */
+  margin-bottom: 15px; /* Ruimte onder de afbeelding voordat tekst eronder doorloopt */
+  max-width: 45%;    /* Maximale breedte van de afbeelding (pas aan naar wens, bijv. 40% of 50%) */
+                      /* Dit voorkomt dat de afbeelding te dominant wordt op bredere schermen */
+  height: auto;       /* Behoud de aspect ratio van de afbeelding */
+  border-radius: 8px; /* Optioneel: voor wat afgeronde hoeken */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optioneel: een subtiele schaduw */
+}
 
+/* Optionele clearfix voor de container van de blog content.
+   Dit helpt als .blog-post-content zelf een achtergrond of border heeft
+   en de gefloate afbeelding correct moet omsluiten.
+   Voor de tekstflow eronder is het niet altijd strikt nodig. */
+.blog-post-content::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* --- Responsiviteit --- */
+/* Op kleinere schermen (bijv. mobiel) wil je misschien dat de afbeelding niet float,
+   maar boven de tekst staat over de volledige breedte. */
+@media (max-width: 768px) { /* Pas dit breekpunt (768px) aan naar wens */
+  .blog-post-image-right {
+    float: none; /* Verwijder de float */
+    display: block; /* Maak het een block-element zodat het de volledige breedte kan innemen */
+    max-width: 100%; /* Laat de afbeelding de volledige beschikbare breedte innemen */
+    margin-left: auto; /* Centreer de afbeelding (werkt met display: block en margin-right: auto) */
+    margin-right: auto;
+    margin-bottom: 20px; /* Zorg voor voldoende ruimte onder de afbeelding */
+  }
+}
 /* weather stuff */
 .map-weather-wrapper {
   display: flex;
