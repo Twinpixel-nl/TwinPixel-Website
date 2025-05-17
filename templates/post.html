@@ -204,15 +204,24 @@
     }
   }
   </script>
-      <script>
-    // Dynamische publicatiedatum
-    const rawDate = "%%DATE%%";
-    document.getElementById("publish-date").textContent = new Date(rawDate).toLocaleDateString("nl-NL", {
-      weekday: 'long',
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    });
-  </script>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const dateEl = document.getElementById("publish-date");
+    if (dateEl) {
+      const rawDate = dateEl.textContent;
+      const parsed = new Date(rawDate);
+      if (!isNaN(parsed)) {
+        dateEl.textContent = parsed.toLocaleDateString("nl-NL", {
+          weekday: 'long',
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        });
+      } else {
+        dateEl.textContent = "Datum onbekend";
+      }
+    }
+  });
+</script>
   </body>
 </html>
