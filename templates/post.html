@@ -1,142 +1,218 @@
 <!DOCTYPE html>
 <html lang="nl">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Meta Description (Needs key: about.meta_description) -->
+    <meta
+      name="description"
+      content="Leer meer over TwinPixel, een modern webdesignbureau opgericht door twee studenten met een passie voor webdesign en development."
+      data-i18n="about.meta_description"
+    />
+    <meta
+      name="keywords"
+      content="over ons, webdesign, website, webdevelopment, studenten, maatwerk, betaalbaar"
+    />
+    <!-- Title (Needs key: about.title) -->
+    <title data-i18n="about.title">Over Ons | TwinPixel</title>
 
-  <title>%%TITLE%% | TwinPixel Blog</title>
-  <meta name="description" content="%%DESCRIPTION%%" />
-  <meta name="keywords" content="webdesign blog, SEO tips, TwinPixel, webdevelopment, ondernemers tips, online zichtbaarheid" />
-  <link rel="canonical" href="https://twinpixel.nl/blog/%%SLUG%%.html" />
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/language-switcher.css" />
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="%%TITLE%%" />
-  <meta property="og:description" content="%%DESCRIPTION%%" />
-  <meta property="og:image" content="https://twinpixel.nl/Images/Logo%20donkere%20achtergrond.png" />
-  <meta property="og:url" content="https://twinpixel.nl/blog/%%SLUG%%.html" />
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="%%TITLE%%" />
-  <meta name="twitter:description" content="%%DESCRIPTION%%" />
-  <meta name="twitter:image" content="https://twinpixel.nl/Images/Logo%20donkere%20achtergrond.png" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="../css/style.css" />
-  <link rel="stylesheet" href="../css/language-switcher.css" />
-  <link rel="stylesheet" href="../css/blog.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <!-- Fav icons -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../Icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../Icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../Icons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/" />
 
-  <!-- Favicons -->
-  <link rel="icon" type="image/png" sizes="32x32" href="../Icons/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="../Icons/favicon-16x16.png" />
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://twinpixel.nl/about.html">
 
-  <!-- Structured Data: BlogPosting -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "%%TITLE%%",
-    "description": "%%DESCRIPTION%%",
-    "datePublished": "%%DATE%%",
-    "author": {
-      "@type": "Person",
-      "name": "TwinPixel"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "TwinPixel",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://twinpixel.nl/Images/Logo%20donkere%20achtergrond.png"
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-Y0TE68DKL1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
       }
-    }
-  }
-  </script>
-</head>
+      gtag("js", new Date());
+      gtag("config", "G-Y0TE68DKL1");
+    </script>
 
-<body>
-  <!-- Header -->
-  <div class="mobile-menu-overlay"></div>
-  <header>
-    <div class="container">
-      <nav class="navbar">
-        <a href="../index.html" class="logo-container">
-          <img src="../Images/Logo donkere achtergrond.png" alt="TwinPixel Logo" class="logo" />
-        </a>
-        <ul class="nav-links">
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../about.html">Over ons</a></li>
-          <li><a href="../services.html">Diensten</a></li>
-          <li><a href="../portfolio.html">Portfolio</a></li>
-          <li><a href="../pricing.html">Prijzen</a></li>
-          <li><a href="../contact.html">Contact</a></li>
-        </ul>
-        <div class="language-switcher">
-          <div class="language-buttons">
-            <a href="#nl" class="lang-btn active">NL</a>
-            <a href="#en" class="lang-btn">EN</a>
+  </head>
+
+
+  <body>
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay"></div>
+
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <nav class="navbar">
+          <a href="index.html" class="logo-container">
+            <img
+              src="../Images/Logo donkere achtergrond.png"
+              alt="TwinPixel Logo"
+              class="logo"
+            />
+          </a>
+
+          <ul class="nav-links">
+            <li><a href="../index.html" data-i18n="common.nav_home">Home</a></li>
+            <li><a href="../about.html" class="active" data-i18n="common.nav_about">Over ons</a></li>
+            <li><a href="../services.html" data-i18n="common.nav_services">Diensten</a></li>
+            <li><a href="../portfolio.html" data-i18n="common.nav_portfolio">Portfolio</a></li>
+            <li><a href="../pricing.html" data-i18n="common.nav_pricing">Prijzen</a></li>
+            <li><a href="../contact.html" data-i18n="common.nav_contact">Contact</a></li>
+          </ul>
+
+          <div class="language-switcher">
+            <div class="language-buttons">
+              <!-- Removed inline onclick -->
+              <a href="#nl" class="lang-btn active">NL</a>
+              <a href="#en" class="lang-btn">EN</a>
+            </div>
+          </div>
+
+          <button class="mobile-menu-btn" aria-label="Toggle menu">
+            <i class="fas fa-bars"></i>
+          </button>
+        </nav>
+      </div>
+    </header>
+     <section class="page-header">
+      <div class="container">
+        <h1 class="fade-in" data-i18n="about.header">Post</h1>
+      </div>
+    </section>
+<div class="container">
+<div class="about-vision-section fade-in delay-1">
+          <div class="service-card-glass about-card">
+             <article>
+            <h2 class="section-title" data-i18n="about.vision_title">{{ title }}</h2>
+            <div class="about-grid">
+            <h2 class="section-title" data-i18n="about.story_title">Gepubliceerd op {{ date | date: "%d-%m-%Y %H:%M" }}</h2>
+<p data-i18n="about.story_paragraphs.0">{{ description }}</p>
+      {% if image %}
+        <figure>
+          <img src="{{ image }}" alt="Afbeelding bij blogpost">
+        </figure>
+      {% endif %}
+
+      <div class="post-body">
+        {{ content }}
+      </div>
+    </article>
+            </div>
           </div>
         </div>
-        <button class="mobile-menu-btn" aria-label="Menu openen">
-          <i class="fas fa-bars"></i>
-        </button>
-      </nav>
-    </div>
-  </header>
+        </div>
 
-  <!-- Blog Artikel -->
-  <main class="container py-12">
-    <article class="blog-post">
-      <header class="blog-header">
-        <h1 class="blog-post-title">%%TITLE%%</h1>
-        <p class="blog-post-date">
-          Gepubliceerd op: <span id="publish-date"></span>
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <img
+          src="../Images/Logo donkere achtergrond.png"
+          alt="TwinPixel Footer Logo"
+          class="footer-logo"
+        />
+
+        <ul class="footer-links">
+          <li><a href="index.html" data-i18n="common.nav_home">Home</a></li>
+          <li><a href="about.html" data-i18n="common.nav_about">Over ons</a></li>
+          <li><a href="services.html" data-i18n="common.nav_services">Diensten</a></li>
+          <li><a href="portfolio.html" data-i18n="common.nav_portfolio">Portfolio</a></li>
+          <li><a href="pricing.html" data-i18n="common.nav_pricing">Prijzen</a></li>
+          <li><a href="contact.html" data-i18n="common.nav_contact">Contact</a></li>
+        </ul>
+
+        <ul class="social-links">
+          <li>
+            <a
+              href="https://www.facebook.com/profile.php?id=61574036669497"
+              target="_blank"
+              aria-label="Facebook"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/twinpixel.nl/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/twinpixel/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          </li>
+        </ul>
+
+        <p class="copyright" data-i18n="common.copyright">
+          © 2025 TwinPixel. Alle rechten voorbehouden.
         </p>
-      </header>
+      </div>
+    </footer>
 
-      <section class="blog-post-content">
-        %%CONTENT%%
-      </section>
-    </article>
-  </main>
 
-  <!-- Footer -->
-  <footer>
-    <div class="container">
-      <img src="../Images/Logo donkere achtergrond.png" alt="TwinPixel Footer Logo" class="footer-logo" />
-      <ul class="footer-links">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../about.html">Over ons</a></li>
-        <li><a href="../services.html">Diensten</a></li>
-        <li><a href="../portfolio.html">Portfolio</a></li>
-        <li><a href="../pricing.html">Prijzen</a></li>
-        <li><a href="../contact.html">Contact</a></li>
-      </ul>
-      <ul class="social-links">
-        <li><a href="https://www.facebook.com/profile.php?id=61574036669497" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-        <li><a href="https://www.instagram.com/twinpixel.nl/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
-        <li><a href="https://www.linkedin.com/company/twinpixel/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
-      </ul>
-      <p class="copyright">© 2025 TwinPixel. Alle rechten voorbehouden.</p>
-    </div>
-  </footer>
+      <!-- JavaScript -->
+      <script src="js/main.js"></script>
 
-  <!-- Scripts -->
-  <script src="../js/main.js"></script>
-  <script>
-    // Dynamische publicatiedatum
-    const rawDate = "%%DATE%%";
-    document.getElementById("publish-date").textContent = new Date(rawDate).toLocaleDateString("nl-NL", {
-      weekday: 'long',
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    });
-  </script>
-</body>
+      <!-- Structured Data (LD+JSON - Static Recommended) -->
+      <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "@id": "https://twinpixel.nl/about.html",
+          "url": "https://twinpixel.nl/about.html",
+          "name": "Over Ons | TwinPixel",
+          "description": "Leer meer over TwinPixel, een modern webdesignbureau opgericht door twee studenten met een passie voor webdesign en development.",
+          "isPartOf": {
+            "@id": "https://twinpixel.nl/#website"
+          },
+          "about": {
+            "@id": "https://twinpixel.nl/#business"
+          },
+          "mainEntity": {
+            "@type": "AboutPage",
+            "name": "Over TwinPixel",
+            "description": "TwinPixel is opgericht door Emma de Heer (UX designer) en Twan Meurs (developer), twee studenten met een passie voor webdesign en development. Samen hebben we uitgebreide business expertise, waardoor we niet alleen technisch sterke websites bouwen, maar ook websites die echt bijdragen aan het succes van jouw bedrijf.",
+            "mainContentOfPage": {
+              "@type": "WebPageElement",
+              "about": {
+                "@id": "https://twinpixel.nl/#business"
+              }
+            }
+          }
+        }
+      </script>
+  </body>
 </html>
