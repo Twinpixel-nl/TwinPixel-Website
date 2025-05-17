@@ -118,35 +118,25 @@
         <h1 class="fade-in" data-i18n="about.header">Post</h1>
       </div>
     </section>
-<div class="container">
-  <div class="about-vision-section fade-in delay-1">
-    <div class="service-card-glass about-card">
-      <div class="about-grid">
-        <article>
-            <h1>{{ page.title }}</h1>
-            <p class="post-meta">
-                Gepubliceerd op: <time datetime="{{ page.date | date_to_iso_string }}">{{ page.date | date: "%d-%m-%Y" }}</time>
-                <!-- Your JS date formatter would then pick up the datetime attribute -->
-            </p>
-            {% if page.description %} <!-- Or a separate 'summary' field -->
-                <p>{{ page.description }}</p>
-            {% endif %}
-
-            {% if page.image %}
-            <figure class="blog-post-featured-image">
-                <img src="{{ site.baseurl }}{{ page.image }}" alt="Afbeelding voor {{ page.title }}">
-            </figure>
-            {% endif %}
-
-            <div class="post-body">
-                {{ content }} <!-- 'content' is usually where the Markdown body is injected -->
-            </div>
-            </article>
-      </div>
     </div>
   </div>
 </div>
 
+<!-- Blog Artikel -->
+  <main class="container py-12">
+    <article class="blog-post">
+      <header class="blog-header">
+        <h1 class="blog-post-title">%%TITLE%%</h1>
+        <p class="blog-post-date">
+          Gepubliceerd op: <span id="publish-date"></span>
+        </p>
+      </header>
+
+      <section class="blog-post-content">
+        %%CONTENT%%
+      </section>
+    </article>
+  </main>
     <!-- Footer -->
     <footer>
       <div class="container">
@@ -191,33 +181,36 @@
 
       <!-- JavaScript -->
       <script src="../js/main.js"></script>
-      <script src="../js/blog.js"></script>
-      <script>
-        // Example JavaScript (place in your main.js or a script tag at the end of <body>)
-// This is a generic example; you might need to adapt selectors if you have many such dates.
-document.addEventListener('DOMContentLoaded', function() {
-  const dateElements = document.querySelectorAll('time[id^="unique-post-date-"]'); // Selects all time elements whose ID starts with "unique-post-date-"
-  dateElements.forEach(dateElement => {
-    const isoDate = dateElement.getAttribute('datetime');
-    if (isoDate) {
-      try {
-        const date = new Date(isoDate);
-        if (!isNaN(date.getTime())) {
-          dateElement.textContent = date.toLocaleDateString("nl-NL", {
-            weekday: 'long',
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
-          });
-        } else {
-           console.warn("Invalid date string for formatting:", isoDate, "for element:", dateElement);
-        }
-      } catch (e) {
-        console.error("Error formatting date:", e, "for element:", dateElement);
+      <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "%%TITLE%%",
+    "description": "%%DESCRIPTION%%",
+    "datePublished": "%%DATE%%",
+    "author": {
+      "@type": "Person",
+      "name": "TwinPixel"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TwinPixel",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://twinpixel.nl/Images/Logo%20donkere%20achtergrond.png"
       }
     }
-  });
-});
-      </script>
+  }
+  </script>
+      <script>
+    // Dynamische publicatiedatum
+    const rawDate = "%%DATE%%";
+    document.getElementById("publish-date").textContent = new Date(rawDate).toLocaleDateString("nl-NL", {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    });
+  </script>
   </body>
 </html>
