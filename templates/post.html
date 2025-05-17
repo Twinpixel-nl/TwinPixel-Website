@@ -118,30 +118,20 @@
         <h1 class="fade-in" data-i18n="about.header">Post</h1>
       </div>
     </section>
-<div class="container">
-<div class="about-vision-section fade-in delay-1">
-          <div class="service-card-glass about-card">
-            <h2 class="section-title" data-i18n="about.vision_title">{{ title }}</h2>
-            <div class="about-grid">
+<main class="container">
     <article>
       <h1>{{ title }}</h1>
-      <p class="post-meta">Gepubliceerd op {{ date | date: "%d-%m-%Y %H:%M" }}</p>
-      <p>{{ description }}</p>
-
+      <p class="post-meta">Gepubliceerd op {{ date }}</p>
       {% if image %}
         <figure>
           <img src="{{ image }}" alt="Afbeelding bij blogpost">
         </figure>
       {% endif %}
-
       <div class="post-body">
         {{ content }}
       </div>
     </article>
-            </div>
-          </div>
-        </div>
-        </div>
+  </main>
 
     <!-- Footer -->
     <footer>
