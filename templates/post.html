@@ -127,9 +127,8 @@
           <div class="service-card-glass about-card">
                 <article>
             <h2 class="section-title">%%TITLE%%</h2>
-                        <p class="blog-post-meta">
-    Gepubliceerd op: <span class="publish-date"><div>{.post.date}></div></span> <!-- VOORBEELD! -->
-    <!-- You could add author, categories here too -->
+                       <p class="blog-post-meta">
+    Gepubliceerd op: <span class="publish-date">{{ page.date | date: "%Y-%m-%dT%H:%M:%SZ" }}</span>
 </p>
                     <section class="blog-post-content">
                         %%CONTENT%%
@@ -189,7 +188,7 @@
     "@type": "BlogPosting",
     "headline": "%%TITLE%%",
     "description": "%%DESCRIPTION%%",
-    "datePublished": "%%DATE%%",
+     "datePublished": "{{ page.date | date: '%Y-%m-%dT%H:%M:%SZ' }}",
     "author": {
       "@type": "Person",
       "name": "TwinPixel"
