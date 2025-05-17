@@ -128,9 +128,9 @@
                 <article>
             <h2 class="section-title">%%TITLE%%</h2>
                         <p class="blog-post-meta">
-                            Gepubliceerd op: <span class="publish-date">%%DATE%%</span>
-                            <!-- You could add author, categories here too -->
-                        </p>
+    Gepubliceerd op: <span class="publish-date">%%DATE%%</span> <!-- VOORBEELD! -->
+    <!-- You could add author, categories here too -->
+</p>
                     <section class="blog-post-content">
                         %%CONTENT%%
                     </section>
@@ -204,33 +204,40 @@
     }
   }
   </script>
-  <script>
+    <script>
   document.addEventListener("DOMContentLoaded", () => {
-    const dateEl = document.querySelector(".publish-date"); // Selecteert op class
-    if (dateEl) {
-      const rawDateString = dateEl.textContent.trim(); // Haal de huidige tekstinhoud op (zou de datum moeten zijn)
+    const dateEl = document.querySelector(".publish-date"); // Zorg dat je HTML een element met class="publish-date" heeft
 
-      // Controleer of de inhoud niet leeg is en niet de placeholder zelf is
+    if (dateEl) {
+      const rawDateString = dateEl.textContent.trim();
+
+      // BELANGRIJK:
+      // De 'rawDateString' moet hier een geldige datumstring zijn,
+      // bij voorkeur in YYYY-MM-DD formaat (bijv. "2025-05-06").
+      // De placeholder "%%DATE%%" moet al vervangen zijn door een ECHTE datum
+      // voordat dit script draait.
+
       if (rawDateString && rawDateString !== "%%DATE%%") {
         const parsedDate = new Date(rawDateString);
 
         if (!isNaN(parsedDate)) { // Controleer of het parsen van de datum gelukt is
+          // Formatteer naar DD-MM-YYYY
           const day = String(parsedDate.getDate()).padStart(2, '0');
-          const month = String(parsedDate.getMonth() + 1).padStart(2, '0'); // Maanden zijn 0-based
+          const month = String(parsedDate.getMonth() + 1).padStart(2, '0'); // Maanden zijn 0-based, dus +1
           const year = parsedDate.getFullYear();
           dateEl.textContent = `${day}-${month}-${year}`;
         } else {
-          // Als het parsen mislukt, maar het is niet de placeholder,
+          // Als het parsen mislukt, maar het was niet de placeholder,
           // laat dan de originele tekst staan of toon een foutmelding.
-          // Voor nu laten we de originele tekst staan als het geen placeholder was.
-          // dateEl.textContent = "Ongeldige datum";
           console.warn("Ongeldige datumstring aangetroffen in .publish-date:", rawDateString);
+          // Optioneel: dateEl.textContent = "Ongeldige datum";
         }
       } else if (rawDateString === "%%DATE%%") {
-        // Als het nog steeds de placeholder is, toon "Datum onbekend"
+        // Als het nog steeds de placeholder "%%DATE%%" is,
+        // betekent dit dat de placeholder niet is vervangen door een echte datum.
         dateEl.textContent = "Datum onbekend";
       }
-      // Als rawDateString leeg is, gebeurt er niets, wat prima is.
+      // Als rawDateString leeg is, gebeurt er niets.
     }
   });
   </script>
