@@ -8,7 +8,7 @@ let currentLang = 'nl'; // Default language
 async function loadTranslations(lang) {
     try {
         // Fetch the JSON file from the 'trans' directory
-        const response = await fetch(`trans/${lang}.json`);
+        const response = await fetch(`/trans/${lang}.json`);
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}, lang: ${lang}`);
         }
