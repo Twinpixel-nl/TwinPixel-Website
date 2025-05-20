@@ -3486,27 +3486,27 @@ body.dark-bg {
   background-color: #0b1120;
   color: #e5e7eb; /* Standaard tekstkleur voor de pagina */
 }
-
-/* ============================================= */
-/*         Individuele Blog Post Styling         */
-/* ============================================= */
-
-/* Header specifiek voor blog post pagina (optioneel, als je variaties wilt) */
+/* Header specifiek voor blog post pagina */
 .blog-post-header {
-  text-align: center; /* Centreer titel en datum */
-  padding-top: 3rem;
+  text-align: center;
+  /* VERHOOGD: Zorgt voor voldoende ruimte onder de navigatiebalk.
+     Pas deze waarde (7rem) eventueel aan op basis van de daadwerkelijke hoogte van je header.
+     Als je header bijvoorbeeld 80px hoog is, wil je misschien padding-top: calc(80px + 2rem); */
+  padding-top: 7rem; /* Was 3rem */
   padding-bottom: 2rem;
-  border-bottom: 1px solid #374151; /* Subtiele scheidingslijn */
+  border-bottom: 1px solid #374151;
   margin-bottom: 2.5rem;
 }
 
 .blog-post-header h1 {
-  font-size: 2.5rem; /* Grotere titel voor de post */
+  font-size: 2.5rem;
   color: #f3f4f6;
-  margin-bottom: 0.75rem;
+  /* VERHOOGD: Meer ruimte tussen de titel en de datum eronder. */
+  margin-bottom: 1.5rem; /* Was 0.75rem */
   line-height: 1.2;
 }
 
+/* De rest van je .blog-post-header .publish-date, .author-name, etc. blijft hetzelfde */
 .blog-post-header .publish-date,
 .blog-post-header .author-name {
   font-size: 0.9rem;
@@ -3515,8 +3515,10 @@ body.dark-bg {
 }
 
 .blog-post-header .author-name {
-  margin-bottom: 0; /* Geen extra marge als het de laatste is */
+  margin-bottom: 0;
 }
+
+/* ... (de rest van je blog post styling) ... */
 
 /* Container voor de blog post pagina content */
 .blog-post-page-container {
