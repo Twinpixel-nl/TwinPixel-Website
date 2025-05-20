@@ -133,7 +133,7 @@ files.forEach(file => {
     })(window,document,'script','dataLayer','GTM-WGPWS2SM');</script>
   <!-- End Google Tag Manager -->
 </head>
-<body class="dark-bg blog-post-detail-page"> <!-- Voeg dark-bg toe als je dat standaard wilt -->
+<body class="dark-bg"> <!-- Voeg dark-bg toe als je dat standaard wilt -->
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WGPWS2SM"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
