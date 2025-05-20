@@ -3663,3 +3663,32 @@ body.dark-bg {
   border-top: 1px solid #4b5563;
   margin: 2.5em 0;
 }
+@keyframes subtleGradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body.blog-post-detail-page {
+  /* Kies hier je gradient kleuren. Dit zijn voorbeelden van donkere, niet te felle tinten.
+     Je kunt de originele #0b1120 hier ook in verwerken als je wilt. */
+  background: linear-gradient(
+    270deg, /* Richting van de gradient */
+    #1f2937, /* Donkergrijs/blauw (Tailwind slate-800) */
+    #111827, /* Donkergrijs/blauw (Tailwind gray-900) */
+    #1f2937, /* Herhaal voor soepele overgang */
+    #262f40, /* Een iets andere donkerblauwe tint */
+    #111827  /* Terug naar gray-900 */
+  );
+  background-size: 500% 500%; /* Maak de gradient veel groter dan de viewport voor soepele beweging */
+  animation: subtleGradientAnimation 45s ease infinite; /* Pas duur (45s) aan voor snelheid */
+  
+  /* Behoud je standaard tekstkleur als die goed is, anders hier instellen */
+  color: #e5e7eb; /* Bijvoorbeeld lichtgrijs voor tekst */
+}
