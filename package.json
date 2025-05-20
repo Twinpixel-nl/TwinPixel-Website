@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "build": "npm run generate && npm run sitemap",
-    "generate": "node js/sitegenerator.js",
-    "sitemap": "node js/sitemap-generator.js"
+    "generate": "node js/generate-blog.js",
+    "sitemap": "node js/sitemapgenerator.js"
   },
   "dependencies": {
     "fs-extra": "^11.2.0",

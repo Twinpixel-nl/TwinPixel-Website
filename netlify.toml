@@ -1,8 +1,13 @@
 [build]
-  publish = "." # Publish de hele root omdat /blog daarin staat
-  command = "npm run build" 
+  publish = "." 
+  command = "npm run build"
 
 [[redirects]]
   from = "/admin"
   to = "/admin/index.html"
   status = 200
+
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Content-Type = "application/xml"
