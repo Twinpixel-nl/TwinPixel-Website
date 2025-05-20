@@ -1,20 +1,11 @@
 User-agent: *
 Allow: /
 
-# Sitemap location
 Sitemap: https://twinpixel.nl/sitemap.xml
 
-# Allow all bots to access all content
-Disallow:
-
-# Specify crawl delay for all bots
-Crawl-delay: 10
-
-# Specific instructions for Google
+# Crawl-delay instructies (optioneel, alleen als je server onder druk staat)
 User-agent: Googlebot
 Crawl-delay: 5
 
-# Specific instructions for Bing
 User-agent: Bingbot
 Crawl-delay: 5
-Sitemap: https://twinpixel.nl/sitemap.xml
