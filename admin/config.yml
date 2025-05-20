@@ -11,28 +11,36 @@ display_url: https://twinpixel.nl
 
 publish_mode: editorial_workflow
 
-backend:
-  name: git-gateway
-  repo: Twinpixel-nl/TwinPixel-Website # Jouw repo
-  branch: main
-
-media_folder: "Images/uploads"
-public_folder: "/Images/uploads"
-
 collections:
   - name: "blog"
     label: "Blog Posts"
-    folder: "content/blog" # Hier slaat CMS de .md bestanden op
+    folder: "content/blog"
     create: true
-    slug: "{{slug}}" # Genereert bestandsnaam.md
+    slug: "{{slug}}"
     fields:
       - { label: "Titel", name: "title", widget: "string" }
-      - { label: "Publicatiedatum", name: "date", widget: "datetime", format: "YYYY-MM-DDTHH:mm:ss.SSSZ", date_format: "YYYY-MM-DD", time_format: "HH:mm" } # Belangrijk voor ISO
-      - { label: "Korte Omschrijving (SEO)", name: "description", widget: "string" }
-      - { label: "Uitgelichte Afbeelding (pad vanaf root, bv /Images/uploads/img.jpg)", name: "image", widget: "image", required: false }
+      - {
+          label: "Publicatiedatum",
+          name: "date",
+          widget: "datetime",
+          format: "YYYY-MM-DDTHH:mm:ss.SSSZ",
+          date_format: "YYYY-MM-DD",
+          time_format: "HH:mm",
+        }
+      - {
+          label: "Korte Omschrijving (SEO)",
+          name: "description",
+          widget: "string",
+        }
+      - {
+          label: "Uitgelichte Afbeelding",
+          name: "image",
+          widget: "image",
+          required: false,
+        }
       - { label: "Inhoud", name: "body", widget: "markdown" }
-      # Voeg optionele velden toe als 'excerpt', 'author', 'lastmod' als je die gebruikt
-# 🔥 webhook toevoegen
+
+# Netlify build hook (optioneel, hoort normaal in netlify.toml)
 build:
   publish: .
   functions: functions
