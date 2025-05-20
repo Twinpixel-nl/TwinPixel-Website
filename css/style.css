@@ -3483,7 +3483,7 @@ body.inner-page .page-header .container {
 
 /* Zorg dat de body achtergrond donker is (deze class was al aanwezig) */
 body.dark-bg {
-  background-color: #1f2937 !important;
+  background-color: var(--dark-surface);
   color: #e5e7eb; /* Standaard tekstkleur voor de pagina */
 }
 /* Header specifiek voor blog post pagina */
