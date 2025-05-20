@@ -3424,10 +3424,15 @@ body.inner-page .page-header .container {
 
 /* Styling voor de afbeelding */
 .blog-grid article .blog-post-image {
-  width: 100%;
-  height: 200px;            /* Vaste hoogte voor alle afbeeldingen */
-  object-fit: cover;        /* Afbeelding schalen en bijsnijden om te passen, zonder vervorming */
-  display: block;           /* Voorkomt extra ruimte onder de afbeelding */
+  width: 100%;              /* Behoud dit: afbeelding neemt de volledige breedte van de kaart */
+  /* height: 200px; VERWIJDER of commentarieer deze regel */
+  aspect-ratio: 16 / 9;     /* NIEUW: Stelt een vaste verhouding in (breedte / hoogte).
+                               Pas 16 / 9 aan naar bijv. 4 / 3 of 3 / 2 als je een andere verhouding wilt. */
+  object-fit: cover;        /* Behoud dit: Zorgt dat de afbeelding de ruimte vult zonder vervorming,
+                               delen die buiten de aspect ratio vallen worden afgesneden. */
+  display: block;           /* Behoud dit: Voorkomt extra ruimte onder de afbeelding */
+  background-color: #374151; /* Optioneel: een achtergrondkleur voor als afbeeldingen langzaam laden
+                                 of als er een probleem is met de afbeeldingsbron. */
 }
 
 /* Wrapper voor de tekstuele content onder de afbeelding */
