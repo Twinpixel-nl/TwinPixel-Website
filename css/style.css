@@ -3536,13 +3536,13 @@ body.dark-bg {
 /* Uitgelichte afbeelding van het blogbericht */
 .blog-post-full-image {
   width: 100%;
-  aspect-ratio: 16 / 9;     /* Behoud de gewenste verhouding */
-  max-height: 450px;        /* NIEUW: Stel hier de maximale hoogte in die je wilt (bijv. 400px, 450px, 500px) */
-  object-fit: cover;
+  aspect-ratio: 16 / 9;     /* Of een andere ratio naar wens */
+  max-height: 450px;        /* Pas deze waarde aan! Bijv. 300px, 400px */
+  object-fit: cover;        /* Belangrijk i.c.m. aspect-ratio en max-height */
   border-radius: 0.75rem;
   margin-bottom: 2.5rem;
-  display: block;
-  background-color: #374151;
+  display: block;           /* Voorkomt extra ruimte eronder */
+  background-color: #374151; /* Placeholder */
 }
 
 /* De div die de daadwerkelijke markdown content bevat */
