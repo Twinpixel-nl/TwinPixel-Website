@@ -972,6 +972,220 @@ header.scrolled {
   }
 }
 
+/* Fast Delivery Section */
+.fast-delivery-section {
+  padding: 4rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.fast-delivery-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 102, 255, 0.1),
+    transparent 70%
+  );
+  z-index: -1;
+}
+
+.fast-delivery-card {
+  max-width: 600px;
+  margin: 0 auto;
+  background: rgba(18, 18, 18, 0.8);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: var(--border-radius);
+  border: 1px solid rgba(0, 102, 255, 0.3);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 102, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.fast-delivery-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  z-index: 1;
+}
+
+.fast-delivery-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4), 0 0 30px rgba(0, 102, 255, 0.4);
+  border-color: rgba(0, 102, 255, 0.5);
+}
+
+.fast-delivery-content {
+  padding: 3rem 2.5rem;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.fast-delivery-icon {
+  font-size: 4rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  transition: all 0.4s ease;
+  text-shadow: 0 0 20px rgba(0, 102, 255, 0.5);
+}
+
+.fast-delivery-card:hover .fast-delivery-icon {
+  transform: scale(1.1) translateY(-5px);
+  color: var(--secondary-color);
+  text-shadow: 0 0 30px rgba(0, 204, 255, 0.8);
+  animation: pulse-glow 2s infinite alternate;
+}
+
+.fast-delivery-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(
+    45deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: all 0.3s ease;
+}
+
+.fast-delivery-content p {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.fast-delivery-price {
+  margin: 2rem 0;
+  padding: 1.5rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.fast-delivery-price .price-amount {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  display: block;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 15px rgba(0, 102, 255, 0.5);
+}
+
+.fast-delivery-price .price-period {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.fast-delivery-btn {
+  background: linear-gradient(
+    45deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: white;
+  padding: 1rem 2.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 50px;
+  box-shadow: 0 10px 25px rgba(0, 102, 255, 0.4);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.fast-delivery-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.7s ease;
+}
+
+.fast-delivery-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(0, 102, 255, 0.6);
+}
+
+.fast-delivery-btn:hover::before {
+  left: 100%;
+}
+
+/* Responsive adjustments for Fast Delivery */
+@media (max-width: 768px) {
+  .fast-delivery-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .fast-delivery-icon {
+    font-size: 3rem;
+  }
+
+  .fast-delivery-content h2 {
+    font-size: 2rem;
+  }
+
+  .fast-delivery-content p {
+    font-size: 1.1rem;
+  }
+
+  .fast-delivery-price .price-amount {
+    font-size: 2.5rem;
+  }
+
+  .fast-delivery-btn {
+    padding: 0.8rem 2rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .fast-delivery-content {
+    padding: 1.5rem 1rem;
+  }
+
+  .fast-delivery-icon {
+    font-size: 2.5rem;
+  }
+
+  .fast-delivery-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .fast-delivery-price .price-amount {
+    font-size: 2.2rem;
+  }
+}
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .services-grid-container {
