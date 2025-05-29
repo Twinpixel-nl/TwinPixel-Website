@@ -158,7 +158,7 @@ files.forEach(file => {
           <li><a href="../about.html" data-i18n="common.nav_about">Over ons</a></li>
           <li><a href="../services.html" data-i18n="common.nav_services">Diensten</a></li>
           <li><a href="../portfolio.html" data-i18n="common.nav_portfolio">Portfolio</a></li>
-          <li><a href="../pricing.html" data-i18n="common.nav_pricing">Prijzen</a></li>
+          <li><a href="../blog.html" class="active" data-i18n="common.nav_blog">Blog</a></li>
           <li><a href="../contact.html" data-i18n="common.nav_contact">Contact</a></li>
           <!-- Overweeg een 'Blog' link hier, die naar ../blog.html wijst en 'active' is -->
         </ul>
@@ -202,7 +202,7 @@ files.forEach(file => {
         <li><a href="../about.html">Over ons</a></li>
         <li><a href="../services.html">Diensten</a></li>
         <li><a href="../portfolio.html">Portfolio</a></li>
-        <li><a href="../pricing.html">Prijzen</a></li>
+        <li><a href="../blog.html">Blog</a></li>
         <li><a href="../contact.html">Contact</a></li>
       </ul>
       <ul class="social-links">
