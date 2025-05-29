@@ -622,6 +622,13 @@ header.scrolled {
   gap: 2rem;
 }
 
+/* Services Grid with Delivery Layout */
+.services-grid-with-delivery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
 .service-card {
   background-color: rgba(18, 18, 18, 0.5);
   border-radius: var(--border-radius);
