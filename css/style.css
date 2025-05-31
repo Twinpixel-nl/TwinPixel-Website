@@ -772,7 +772,7 @@ header.scrolled {
 }
 
 .service-card-glass:hover .service-icon {
-  transform: scale(1.1) translateY(-5px);
+  transform: scale(1.1); /* REMOVED translateY(-5px) */
   color: var(--secondary-color);
   text-shadow: 0 0 15px rgba(0, 204, 255, 0.7);
 }
@@ -3480,6 +3480,10 @@ footer {
   }
 }
 
+.service-grid-item-full-width {
+  grid-column: 1 / -1;
+  max-width: none;
+}
 /* Page Header Section */
 .page-header {
   padding: 8rem 0 4rem;
