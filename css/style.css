@@ -764,17 +764,64 @@ header.scrolled {
   transform: scaleX(1);
 }
 
+/* Base style for the outer .service-icon div */
 .service-card-glass .service-icon {
-  font-size: 3rem;
-  color: var(--primary-color);
+  font-size: 3rem; /* This will now effectively control the space for the wrapper */
+  /* color: var(--primary-color); <<< Deze kan hier weg als het op de <i> tag staat */
   margin-bottom: 1.5rem;
-  transition: all 0.4s ease;
+  /* transition: all 0.4s ease; <<< Deze 'all' transition is prima, maar specifieker kan ook */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.service-card-glass:hover .service-icon {
-  transform: scale(1.1); /* REMOVED translateY(-5px) */
-  color: var(--secondary-color);
-  text-shadow: 0 0 15px rgba(0, 204, 255, 0.7);
+/* Style for the icon-wrapper */
+.service-card-glass .service-icon .icon-wrapper {
+  display: inline-block;
+  transition: transform 0.4s ease;
+  transform-origin: center center;
+}
+
+/* Style for the <i> tag itself (the icon glyph) */
+.service-card-glass .service-icon .icon-wrapper i {
+   font-size: 3rem;
+   line-height: 1;
+   display: block;
+   color: var(--primary-color); /* Basiskleur voor het icoon */
+   transition: color 0.4s ease, text-shadow 0.4s ease; /* Transitie voor oplichten */
+}
+
+
+/* Hover effect on the card, targeting the .icon-wrapper for transformation */
+.service-card-glass:hover .service-icon .icon-wrapper {
+  transform: scale(1.1);
+}
+
+/* Style for the <i> tag itself (the icon glyph) - BASIS */
+.service-card-glass .service-icon .icon-wrapper i {
+   font-size: 3rem;
+   line-height: 1;
+   display: block;
+   color: var(--primary-color); /* Basiskleur voor het icoon */
+   transition: color 0.4s ease, text-shadow 0.4s ease; /* Transitie voor oplichten */
+   /* Voorbereiding voor gradient: */
+   -webkit-background-clip: text; /* Voor Webkit browsers */
+   background-clip: text;         /* Standaard */
+}
+
+
+/* Hover effect on the card, targeting the .icon-wrapper for transformation */
+.service-card-glass:hover .service-icon .icon-wrapper {
+  transform: scale(1.1);
+}
+
+/* Apply GRADIENT color and shadow to the <i> tag on hover */
+.service-card-glass:hover .service-icon .icon-wrapper  {
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); /* Jouw gradient */
+  color: transparent; /* Maak de tekst (icoon) transparant */
+  -webkit-background-clip: text; /* Zorgt dat de achtergrond alleen zichtbaar is waar tekst is */
+  background-clip: text;         /* Standaard equivalent */
+  text-shadow: 0 0 15px rgba(0, 204, 255, 0.7); /* Gloed kan blijven of aangepast worden */
 }
 
 .service-card-glass h3 {
