@@ -316,9 +316,16 @@
       { 
         "title": "VVD Wageningen", 
         "text": "A local political party website." 
-      }
+      },
+          {
+      "title": "Twan Meurs",
+      "text": "A personal website about IT, leadership, and ambition."
+    },
+    {
+      "title": "Emma de Heer",
+      "text": "UX portfolio and vision of Emma."
+    }
     ]
-
   }, 
   "pricing": {
     "meta_description": "View TwinPixel's transparent pricing for web design and development. Affordable packages for freelancers and SMEs, with no hidden costs.",
