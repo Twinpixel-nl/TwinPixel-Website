@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Pad naar de bron-JSON en het doel-XML-bestand
-const blogIndex_PATH = path.join(__dirname, '..', 'blog-index.json');
+const blogIndex_PATH = path.join(__dirname, '..', 'content', 'blog', 'blog-index.json');
 const RSS_FILE_PATH = path.join(__dirname, '..', 'rss.xml');
 const SITE_URL = 'https://twinpixel.nl';
 
