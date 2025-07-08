@@ -16,7 +16,7 @@ const generateRssItems = (posts) => {
   let items = '';
   posts.forEach(post => {
     // BELANGRIJK: Pas de veldnamen hieronder aan jouw blog-index.json!
-    const postUrl = `${SITE_URL}/blog/${post.slug}.html`; // Neem aan dat je een 'slug' hebt voor elke post
+    const postUrl = `${SITE_URL}/${post.url}`; // Dit is de JUISTE regel
     const imageUrl = `${SITE_URL}${post.image}`; // Zorg dat het pad naar de afbeelding klopt
 
     items += `
