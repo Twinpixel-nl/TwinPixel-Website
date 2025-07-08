@@ -68,7 +68,12 @@
     "hero_title": "Jouw <span>unieke</span> website.<br>Snel, op maat & betaalbaar.",
     "hero_subtitle": "TwinPixel levert professionele websites die perfect aansluiten bij jouw bedrijf. Geen standaard templates, maar maatwerk met persoonlijke aandacht.",
     "hero_button": "Vraag een gratis consult aan",
-    "unique_cards_titles": ["Snelle levering", "100% maatwerk", "Scherpe prijzen", "Persoonlijke aanpak"],
+    "unique_cards_titles": [
+      "Snelle levering",
+      "100% maatwerk",
+      "Scherpe prijzen",
+      "Persoonlijke aanpak"
+    ],
     "about_section_title": "Over TwinPixel",
     "about_story_title": "Het verhaal achter TwinPixel",
     "about_story_text": "TwinPixel is opgericht door twee studenten met een passie voor webdesign en development. Wat begon als een hobby tijdens onze studie, is uitgegroeid tot een professioneel webdesignbureau met een duidelijke missie: betaalbare, hoogwaardige websites leveren aan ZZP'ers en MKB'ers.",
@@ -91,30 +96,85 @@
     "portfolio_section_title": "Ons Portfolio",
     "portfolio_intro": "Bij TwinPixel zijn we trots op de websites die we hebben ontworpen en ontwikkeld voor onze klanten. Elk project is uniek en op maat gemaakt om aan de specifieke behoeften en doelstellingen van onze klanten te voldoen.",
     "portfolio_items": [
-      { "title": "De wet van staal", "text": "Professioneel laswerk en technisch onderhoud.", "button": "Bekijk project" },
-      { "title": "De Socialmedia manager", "category": "Een high-end website & branding voor socialmediamanager.", "button": "Bekijk project" },
-      { "title": "By Britt Nails", "text": "Een stijlvolle nagelstudio website.", "button": "Bekijk project" },
-      { "title": "studievereniging NULL", "category": "Website met database en CMS systeem","button": "Bekijk project"  }
+      {
+        "title": "De wet van staal",
+        "text": "Professioneel laswerk en technisch onderhoud.",
+        "button": "Bekijk project"
+      },
+      {
+        "title": "De Socialmedia manager",
+        "category": "Een high-end website & branding voor socialmediamanager.",
+        "button": "Bekijk project"
+      },
+      {
+        "title": "By Britt Nails",
+        "text": "Een stijlvolle nagelstudio website.",
+        "button": "Bekijk project"
+      },
+      {
+        "title": "studievereniging NULL",
+        "category": "Website met database en CMS systeem",
+        "button": "Bekijk project"
+      }
     ],
     "portfolio_button": "Bekijk ons volledige portfolio",
     "pricing_section_title": "Onze Prijzen",
     "pricing_intro": "Bij TwinPixel werken we met een hybride prijsmodel: een eenmalig bedrag voor het maken van je website, en daarna een maandelijks bedrag voor hosting en kleine updates. Zo weet je precies waar je aan toe bent, zonder verrassingen achteraf.",
     "pricing_cards": [
-      { "title": "Starter", "price": "€299", "features": ["One-page website", "Responsive design", "Basis-SEO", "Contactformulier"] },
-      { "title": "Standaard", "price": "€499", "features": ["Meerdere pagina's", "Responsive design", "SEO-optimalisatie", "Contactformulier"] },
-      { "title": "Premium", "price": "€749", "features": ["Maatwerk design", "Basis support", "Geavanceerde SEO", "Content management systeem"] }
+      {
+        "title": "Starter",
+        "price": "€299",
+        "features": [
+          "One-page website",
+          "Responsive design",
+          "Basis-SEO",
+          "Contactformulier"
+        ]
+      },
+      {
+        "title": "Standaard",
+        "price": "€499",
+        "features": [
+          "Meerdere pagina's",
+          "Responsive design",
+          "SEO-optimalisatie",
+          "Contactformulier"
+        ]
+      },
+      {
+        "title": "Premium",
+        "price": "€749",
+        "features": [
+          "Maatwerk design",
+          "Basis support",
+          "Geavanceerde SEO",
+          "Content management systeem"
+        ]
+      }
     ],
     "pricing_hosting_info": [
-       "+ €5/maand voor hosting",
-       "+ €10/maand voor hosting & updates",
-       "+ €20/maand voor hosting & updates"
-      ],
+      "+ €5/maand voor hosting",
+      "+ €10/maand voor hosting & updates",
+      "+ €20/maand voor hosting & updates"
+    ],
     "pricing_button": "Bekijk alle prijzen en pakketten",
     "testimonials_section_title": "Wat Klanten Zeggen",
     "testimonials": [
-      { "text": "\"TwinPixel heeft mijn verwachtingen overtroffen. Ze hebben niet alleen een prachtige website opgeleverd, maar dit ook binnen een week gedaan! De website is snel, gebruiksvriendelijk en ziet er fantastisch uit!\"", "author": "Harvey Meurs", "company": "Eigenaar, De wet van staal" },
-      { "text": "\"Wij hadden een super fijne samenwerking met Twinpixel. Snelle levering, goede service, hoge kwaliteit en vooral ook een persoonlijke aanpak. Voor maatwerk ben je hier aan het juiste adres. Een aanrader!\"", "author": "Julian van Beek", "company": "Eigenaar, Rocket Agency" },
-      { "text": "\"Twinpixel heeft mij geholpen met het bouwen van mijn eerste website.Door de professionele hulp van Twan en Emma hebben zij mijn perfecte website gecreëerd! Doordat zij goede feedback momenten inplannen is er ruimte om mijn feedback met hun te delen en andersom. Ook leggen zij goed uit waarom ze bepaalde elementen in de website hebben verwerkt, omdat dit beter oogt, sneller werkt of door andere redenen. Kan niets anders zeggen dat ik een fijne samenwerking heb gehad wat heeft geleid tot een mooi resultaat.\"", "author": "Britt Leander", "company": "Eigenaar, By Britt Nails" }
+      {
+        "text": "\"TwinPixel heeft mijn verwachtingen overtroffen. Ze hebben niet alleen een prachtige website opgeleverd, maar dit ook binnen een week gedaan! De website is snel, gebruiksvriendelijk en ziet er fantastisch uit!\"",
+        "author": "Harvey Meurs",
+        "company": "Eigenaar, De wet van staal"
+      },
+      {
+        "text": "\"Wij hadden een super fijne samenwerking met Twinpixel. Snelle levering, goede service, hoge kwaliteit en vooral ook een persoonlijke aanpak. Voor maatwerk ben je hier aan het juiste adres. Een aanrader!\"",
+        "author": "Julian van Beek",
+        "company": "Eigenaar, Rocket Agency"
+      },
+      {
+        "text": "\"Twinpixel heeft mij geholpen met het bouwen van mijn eerste website.Door de professionele hulp van Twan en Emma hebben zij mijn perfecte website gecreëerd! Doordat zij goede feedback momenten inplannen is er ruimte om mijn feedback met hun te delen en andersom. Ook leggen zij goed uit waarom ze bepaalde elementen in de website hebben verwerkt, omdat dit beter oogt, sneller werkt of door andere redenen. Kan niets anders zeggen dat ik een fijne samenwerking heb gehad wat heeft geleid tot een mooi resultaat.\"",
+        "author": "Britt Leander",
+        "company": "Eigenaar, By Britt Nails"
+      }
     ]
   },
   "about": {
@@ -175,109 +235,172 @@
       {
         "title": "Webdesign",
         "desc": "Professionele, responsive websites die perfect aansluiten bij jouw merk en doelstellingen.",
-        "features": [ "Responsive design", "Unieke designs", "Gebruiksvriendelijke navigatie", "Snelle laadtijden" ],
+        "features": [
+          "Responsive design",
+          "Unieke designs",
+          "Gebruiksvriendelijke navigatie",
+          "Snelle laadtijden"
+        ],
         "price_amount": "vanaf €299"
       },
       {
         "title": "SEO-optimalisatie",
         "desc": "Verbeter je vindbaarheid in zoekmachines en trek meer relevante bezoekers aan.",
-        "features": [ "Keyword research", "On-page optimalisatie", "Technische SEO", "Lokale SEO" ],
+        "features": [
+          "Keyword research",
+          "On-page optimalisatie",
+          "Technische SEO",
+          "Lokale SEO"
+        ],
         "price_amount": "€99"
       },
       {
         "title": "E-commerce",
         "desc": "Gebruiksvriendelijke webshops met veilige betalingsintegraties en intuïtief beheer.",
-        "features": [ "Productcatalogus", "Betalingsintegratie", "Voorraadbeheer", "Mobiel-vriendelijk" ],
+        "features": [
+          "Productcatalogus",
+          "Betalingsintegratie",
+          "Voorraadbeheer",
+          "Mobiel-vriendelijk"
+        ],
         "price_amount": "vanaf €799"
       },
       {
         "title": "Webhosting & Onderhoud",
         "desc": "Betrouwbare hosting en regelmatig onderhoud voor een snelle, veilige website.",
-        "features": [ "Snelle servers", "SSL-certificaat", "Regelmatige updates", "Dagelijkse backups" ],
+        "features": [
+          "Snelle servers",
+          "SSL-certificaat",
+          "Regelmatige updates",
+          "Dagelijkse backups"
+        ],
         "price_amount": "€10",
         "price_period": "per maand"
       },
       {
         "title": "Logo & Branding",
         "desc": "Professioneel logo en branding ontwerp om je bedrijfsidentiteit te versterken.",
-        "features": [ "Logo", "Kleurenpalet", "Typografie", "Branding gids" ],
+        "features": ["Logo", "Kleurenpalet", "Typografie", "Branding gids"],
         "price_amount": "€199"
       },
       {
         "title": "Chatbots op maat",
         "desc": "Automatiseer je communicatie met slimme, toegankelijke en persoonlijke chatbots.",
-        "features": [ "Op maat ontworpen voor jouw bedrijf", "Gebouwd in Dialogflow of andere platforms", "Integratie op je website of app", "Uit te breiden met AI of CRM-koppeling" ],
+        "features": [
+          "Op maat ontworpen voor jouw bedrijf",
+          "Gebouwd in Dialogflow of andere platforms",
+          "Integratie op je website of app",
+          "Uit te breiden met AI of CRM-koppeling"
+        ],
         "price_amount": "vanaf €350"
       }
     ],
     "detailed_section_title": "Uitgelichte Diensten",
     "services_items": [
       {
-          "title": "Webdesign",
-          "desc": "Onze op maat gemaakte websites zijn niet alleen visueel aantrekkelijk, maar ook functioneel en gebruiksvriendelijk. We ontwerpen websites die perfect aansluiten bij jouw merk en doelstellingen.",
-          "offer_title": "Wat we bieden:",
-          "offer_items": [
-            "Volledig responsive websites die er geweldig uitzien op alle apparaten",
-            "Unieke designs die passen bij jouw merk en doelgroep",
-            "Gebruiksvriendelijke navigatie en intuïtieve interfaces",
-            "Snelle laadtijden voor een optimale gebruikerservaring",
-            "Content management systemen voor eenvoudige updates"
-          ],
-          "process_title": "Ons ontwerpproces:",
-          "process_items": [
-              "Onderzoek & Analyse - We beginnen met het begrijpen van jouw bedrijf, doelgroep en concurrenten.",
-              "Wireframing & Prototyping - We creëren een basisstructuur en navigatie voor je website.",
-              "Visueel Design - We ontwikkelen een uniek design dat past bij jouw merk.",
-              "Development - We bouwen je website met schone, efficiënte code.",
-              "Testen & Optimaliseren - We testen je website op verschillende apparaten en browsers.",
-              "Lancering - We lanceren je website en zorgen ervoor dat alles soepel verloopt."
-            ]
-        },
-        {
-          "title": "SEO-optimalisatie",
-          "desc": "Een prachtige website heeft weinig waarde als niemand hem kan vinden. Onze SEO-diensten zorgen ervoor dat je website goed scoort in zoekmachines, zodat potentiële klanten je gemakkelijk kunnen vinden.",
-          "offer_title": "Wat we bieden:",
-          "offer_items": [
-            "Technische SEO-optimalisatie voor betere zoekresultaten",
-            "Keyword research en implementatie",
-            "Optimalisatie van meta-tags, headers en content",
-            "Verbetering van laadtijden en mobiele prestaties",
-            "Lokale SEO voor bedrijven met een fysieke locatie",
-            "Regelmatige rapportages en analyses"
-          ],
-          "process_title": "Onze SEO-aanpak:",
-          "process_items": [
-            "Audit & Analyse - We analyseren je huidige website en identificeren verbeterpunten.",
-            "Keyword Research - We onderzoeken welke zoekwoorden relevant zijn voor jouw bedrijf.",
-            "On-page Optimalisatie - We optimaliseren je website-inhoud en structuur.",
-            "Technische Optimalisatie - We verbeteren de technische aspecten van je website.",
-            "Content Strategie - We ontwikkelen een strategie voor relevante en waardevolle content.",
-            "Monitoring & Rapportage - We houden je resultaten bij en passen onze strategie indien nodig aan."
-          ]
+        "title": "Webdesign",
+        "desc": "Onze op maat gemaakte websites zijn niet alleen visueel aantrekkelijk, maar ook functioneel en gebruiksvriendelijk. We ontwerpen websites die perfect aansluiten bij jouw merk en doelstellingen.",
+        "offer_title": "Wat we bieden:",
+        "offer_items": [
+          "Volledig responsive websites die er geweldig uitzien op alle apparaten",
+          "Unieke designs die passen bij jouw merk en doelgroep",
+          "Gebruiksvriendelijke navigatie en intuïtieve interfaces",
+          "Snelle laadtijden voor een optimale gebruikerservaring",
+          "Content management systemen voor eenvoudige updates"
+        ],
+        "process_title": "Ons ontwerpproces:",
+        "process_items": [
+          "Onderzoek & Analyse - We beginnen met het begrijpen van jouw bedrijf, doelgroep en concurrenten.",
+          "Wireframing & Prototyping - We creëren een basisstructuur en navigatie voor je website.",
+          "Visueel Design - We ontwikkelen een uniek design dat past bij jouw merk.",
+          "Development - We bouwen je website met schone, efficiënte code.",
+          "Testen & Optimaliseren - We testen je website op verschillende apparaten en browsers.",
+          "Lancering - We lanceren je website en zorgen ervoor dat alles soepel verloopt."
+        ]
+      },
+      {
+        "title": "SEO-optimalisatie",
+        "desc": "Een prachtige website heeft weinig waarde als niemand hem kan vinden. Onze SEO-diensten zorgen ervoor dat je website goed scoort in zoekmachines, zodat potentiële klanten je gemakkelijk kunnen vinden.",
+        "offer_title": "Wat we bieden:",
+        "offer_items": [
+          "Technische SEO-optimalisatie voor betere zoekresultaten",
+          "Keyword research en implementatie",
+          "Optimalisatie van meta-tags, headers en content",
+          "Verbetering van laadtijden en mobiele prestaties",
+          "Lokale SEO voor bedrijven met een fysieke locatie",
+          "Regelmatige rapportages en analyses"
+        ],
+        "process_title": "Onze SEO-aanpak:",
+        "process_items": [
+          "Audit & Analyse - We analyseren je huidige website en identificeren verbeterpunten.",
+          "Keyword Research - We onderzoeken welke zoekwoorden relevant zijn voor jouw bedrijf.",
+          "On-page Optimalisatie - We optimaliseren je website-inhoud en structuur.",
+          "Technische Optimalisatie - We verbeteren de technische aspecten van je website.",
+          "Content Strategie - We ontwikkelen een strategie voor relevante en waardevolle content.",
+          "Monitoring & Rapportage - We houden je resultaten bij en passen onze strategie indien nodig aan."
+        ]
       }
-
     ],
     "local_seo_link_paragraph": "<strong>Lokale ondernemers:</strong> Bekijk onze speciale pagina over <a href=\"webdesign-wageningen.html\" data-no-translate=\"true\">lokale SEO voor bedrijven in Wageningen</a> om te zien hoe we je kunnen helpen beter gevonden te worden in jouw regio.",
     "process_section_title": "Ons Werkproces",
     "process_section_subtitle": "Onze gestructureerde aanpak zorgt voor een soepel proces en een eindresultaat dat aan al je verwachtingen voldoet.",
     "process_steps": [
-        { "title": "Kennismaking & Analyse", "desc": "We beginnen met een uitgebreid gesprek om je bedrijf, doelstellingen en verwachtingen te begrijpen. We analyseren je huidige online aanwezigheid, je doelgroep en je concurrenten om een solide basis te leggen voor je project." },
-        { "title": "Strategie & Planning", "desc": "Op basis van onze analyse ontwikkelen we een strategie en planning die perfect aansluit bij jouw doelen. We bepalen de beste aanpak, technologieën en tijdlijn om je project succesvol te maken." },
-        { "title": "Design & Development", "desc": "We ontwerpen en ontwikkelen je website of digitale product met aandacht voor detail. Ons team zorgt voor een aantrekkelijk design, gebruiksvriendelijke interface en schone, efficiënte code die perfect werkt op alle apparaten." },
-        { "title": "Testen & Optimaliseren", "desc": "We testen je website grondig op verschillende apparaten en browsers om ervoor te zorgen dat alles perfect werkt. We optimaliseren de prestaties, laadtijden en gebruikerservaring om het beste resultaat te garanderen." },
-        { "title": "Lancering & Ondersteuning", "desc": "We lanceren je website en zorgen ervoor dat alles soepel verloopt. Na de lancering blijven we beschikbaar voor ondersteuning, updates en verdere optimalisaties om ervoor te zorgen dat je digitale aanwezigheid blijft groeien." }
-      ],
+      {
+        "title": "Kennismaking & Analyse",
+        "desc": "We beginnen met een uitgebreid gesprek om je bedrijf, doelstellingen en verwachtingen te begrijpen. We analyseren je huidige online aanwezigheid, je doelgroep en je concurrenten om een solide basis te leggen voor je project."
+      },
+      {
+        "title": "Strategie & Planning",
+        "desc": "Op basis van onze analyse ontwikkelen we een strategie en planning die perfect aansluit bij jouw doelen. We bepalen de beste aanpak, technologieën en tijdlijn om je project succesvol te maken."
+      },
+      {
+        "title": "Design & Development",
+        "desc": "We ontwerpen en ontwikkelen je website of digitale product met aandacht voor detail. Ons team zorgt voor een aantrekkelijk design, gebruiksvriendelijke interface en schone, efficiënte code die perfect werkt op alle apparaten."
+      },
+      {
+        "title": "Testen & Optimaliseren",
+        "desc": "We testen je website grondig op verschillende apparaten en browsers om ervoor te zorgen dat alles perfect werkt. We optimaliseren de prestaties, laadtijden en gebruikerservaring om het beste resultaat te garanderen."
+      },
+      {
+        "title": "Lancering & Ondersteuning",
+        "desc": "We lanceren je website en zorgen ervoor dat alles soepel verloopt. Na de lancering blijven we beschikbaar voor ondersteuning, updates en verdere optimalisaties om ervoor te zorgen dat je digitale aanwezigheid blijft groeien."
+      }
+    ],
     "faq_title": "Veelgestelde Vragen",
     "faq": [
-        { "question": "Zijn er verborgen kosten?", "answer": "Nee, bij TwinPixel geloven we in volledige transparantie. De prijs die we opgeven is de prijs die je betaalt. Er zijn geen verborgen kosten of verrassingen achteraf." },
-        { "question": "Wat als ik specifieke wensen heb die niet in een pakket passen?", "answer": "Geen probleem! We bieden ook op maat gemaakte oplossingen aan en aanvullende diensten die je altijd met pakketten kan combineren. Neem contact met ons op om je specifieke wensen te bespreken en we stellen een offerte op maat voor je op." },
-        { "question": "Hoe zit het met hosting en domeinregistratie?", "answer": "Hosting is inbegrepen in het maandelijkse bedrag van ons hybride prijsmodel. Domeinregistratie wordt apart gefactureerd tegen kostprijs. We kunnen je domein registreren of helpen bij het overzetten van een bestaand domein." },
-        { "question": "Kan ik later upgraden naar een ander pakket?", "answer": "Ja, je kunt altijd upgraden naar een uitgebreider pakket. We berekenen dan alleen het verschil tussen je huidige pakket en het nieuwe pakket, plus eventuele extra werkzaamheden die nodig zijn." },
-        { "question": "Hoe lang duurt het voordat mijn website klaar is?", "answer": "De doorlooptijd hangt af van het gekozen pakket en de complexiteit van je website. Een Starter website kan binnen 2-3 weken klaar zijn, terwijl een Enterprise website 4-6 weken kan duren. We stellen altijd een realistische tijdlijn op aan het begin van het project. Daarnaast kan je voor 99 euro extra snel de website opgeleverd krijgen." },
-        { "question": "Wat houdt het hybride prijsmodel precies in?", "answer": "Ons hybride prijsmodel bestaat uit twee delen: een eenmalig bedrag voor het ontwerpen en bouwen van je website, en een maandelijks bedrag voor hosting en kleine updates. Dit zorgt ervoor dat je website niet alleen professioneel wordt opgezet, maar ook goed blijft draaien en up-to-date blijft zonder onverwachte kosten." },
-        { "question": "Wat als ik nog geen logo of huisstijl heb?", "answer": "Geen zorgen! We bieden ook logo- en huisstijlontwerp aan als aparte dienst. We kunnen je helpen met het ontwerpen van een professioneel logo en bijpassende huisstijl die perfect aansluiten bij je merk en doelgroep." },
-        { "question": "Wat als ik zelf teksten, afbeeldingen of updates wil toevoegen?", "answer": "We bieden pakketten aan met een Content Management Systeem (CMS), zodat je zelf eenvoudig teksten, afbeeldingen en updates kan toevoegen. We geven je een korte training zodat je zelf aan de slag kan met je website." }
-      ]
+      {
+        "question": "Zijn er verborgen kosten?",
+        "answer": "Nee, bij TwinPixel geloven we in volledige transparantie. De prijs die we opgeven is de prijs die je betaalt. Er zijn geen verborgen kosten of verrassingen achteraf."
+      },
+      {
+        "question": "Wat als ik specifieke wensen heb die niet in een pakket passen?",
+        "answer": "Geen probleem! We bieden ook op maat gemaakte oplossingen aan en aanvullende diensten die je altijd met pakketten kan combineren. Neem contact met ons op om je specifieke wensen te bespreken en we stellen een offerte op maat voor je op."
+      },
+      {
+        "question": "Hoe zit het met hosting en domeinregistratie?",
+        "answer": "Hosting is inbegrepen in het maandelijkse bedrag van ons hybride prijsmodel. Domeinregistratie wordt apart gefactureerd tegen kostprijs. We kunnen je domein registreren of helpen bij het overzetten van een bestaand domein."
+      },
+      {
+        "question": "Kan ik later upgraden naar een ander pakket?",
+        "answer": "Ja, je kunt altijd upgraden naar een uitgebreider pakket. We berekenen dan alleen het verschil tussen je huidige pakket en het nieuwe pakket, plus eventuele extra werkzaamheden die nodig zijn."
+      },
+      {
+        "question": "Hoe lang duurt het voordat mijn website klaar is?",
+        "answer": "De doorlooptijd hangt af van het gekozen pakket en de complexiteit van je website. Een Starter website kan binnen 2-3 weken klaar zijn, terwijl een Enterprise website 4-6 weken kan duren. We stellen altijd een realistische tijdlijn op aan het begin van het project. Daarnaast kan je voor 99 euro extra snel de website opgeleverd krijgen."
+      },
+      {
+        "question": "Wat houdt het hybride prijsmodel precies in?",
+        "answer": "Ons hybride prijsmodel bestaat uit twee delen: een eenmalig bedrag voor het ontwerpen en bouwen van je website, en een maandelijks bedrag voor hosting en kleine updates. Dit zorgt ervoor dat je website niet alleen professioneel wordt opgezet, maar ook goed blijft draaien en up-to-date blijft zonder onverwachte kosten."
+      },
+      {
+        "question": "Wat als ik nog geen logo of huisstijl heb?",
+        "answer": "Geen zorgen! We bieden ook logo- en huisstijlontwerp aan als aparte dienst. We kunnen je helpen met het ontwerpen van een professioneel logo en bijpassende huisstijl die perfect aansluiten bij je merk en doelgroep."
+      },
+      {
+        "question": "Wat als ik zelf teksten, afbeeldingen of updates wil toevoegen?",
+        "answer": "We bieden pakketten aan met een Content Management Systeem (CMS), zodat je zelf eenvoudig teksten, afbeeldingen en updates kan toevoegen. We geven je een korte training zodat je zelf aan de slag kan met je website."
+      }
+    ]
   },
   "portfolio": {
     "meta_description": "Bekijk het portfolio van TwinPixel: moderne, op maat gemaakte websites voor diverse branches. Ontdek onze projecten en laat je inspireren.",
@@ -289,20 +412,19 @@
       "Bekijk hieronder een selectie van onze recente projecten en laat je inspireren door wat wij voor jou kunnen betekenen."
     ],
     "filters": [
-        "Alle projecten",
-        "Webshops",
-        "Zakelijke websites",
-        "Portfolio websites",
-        "Blogs"
-      ],
+      "Alle projecten",
+      "Webshops",
+      "Zakelijke websites",
+      "Portfolio websites",
+      "Blogs"
+    ],
     "section_title": "Ons Werk",
     "items": [
-      { 
+      {
         "title": "De wet van staal",
         "text": "Professioneel laswerk en technisch onderhoud."
-     
       },
-      { 
+      {
         "title": "De Socialmedia manager",
         "text": "Een high-end website & branding met blog voor socialmediamanager."
       },
@@ -310,25 +432,25 @@
         "title": "By Britt Nails",
         "text": "Een stijlvolle nagelstudio website."
       },
-      { 
+      {
         "title": "Studievereniging NULL",
         "text": "De vereniging die ergens voor staat!"
       },
-      { 
+      {
         "title": "VVD Wageningen",
         "text": "Lokale politieke partij met een sterke online aanwezigheid."
       },
       {
-      "title": "Twan Meurs",
-      "text": "Een persoonlijke website over IT, leiderschap en ambitie."
-    },
-    {
-      "title": "Emma de Heer",
-      "text": "UX portfolio en visie van Emma."
-    }
+        "title": "Twan Meurs",
+        "text": "Een persoonlijke website over IT, leiderschap en ambitie."
+      },
+      {
+        "title": "Emma de Heer",
+        "text": "UX portfolio en visie van Emma."
+      }
     ]
   },
-  
+
   "pricing": {
     "meta_description": "Bekijk de transparante prijzen van TwinPixel voor webdesign en development. Betaalbare pakketten voor ZZP'ers en MKB, zonder verborgen kosten.",
     "title": "Prijzen | TwinPixel",
@@ -410,22 +532,67 @@
     "disclaimer": "Alle prijzen zijn exclusief BTW. Ons hybride prijsmodel bestaat uit een eenmalig bedrag voor het ontwerp en de ontwikkeling van je website, plus een maandelijks bedrag voor hosting en kleine updates. Zo heb je geen onverwachte kosten en blijft je website altijd up-to-date.",
     "additional_title": "Aanvullende Diensten",
     "additional_services": [
-      { "title": "Basis Hosting", "desc": "Betrouwbare hosting met SSL-certificaat om je website snel en veilig online te houden.", "price": "€5 per maand" },
-      { "title": "Standaard Onderhoud", "desc": "Hosting, updates en kleine wijzigingen (1x per maand) om je website up-to-date te houden.", "price": "€10 per maand" },
-      { "title": "Premium Onderhoud", "desc": "Alles uit Standaard + SEO-optimalisatie + maandelijks een wijziging naar keuze.", "price": "€20 per maand" },
-      { "title": "SEO-optimalisatie", "desc": "Verbeter de vindbaarheid van je website in zoekmachines met onze SEO-optimalisatie.", "price": "€99 eenmalig" },
-      { "title": "Logo & Branding Ontwerp", "desc": "Professioneel logo en branding ontwerp om je bedrijfsidentiteit te versterken.", "price": "€199 eenmalig" },
-      { "title": "Snelle Oplevering", "desc": "Heb je haast? Wij kunnen je website binnen 5 dagen opleveren.", "price": "€99 eenmalig" }
+      {
+        "title": "Basis Hosting",
+        "desc": "Betrouwbare hosting met SSL-certificaat om je website snel en veilig online te houden.",
+        "price": "€5 per maand"
+      },
+      {
+        "title": "Standaard Onderhoud",
+        "desc": "Hosting, updates en kleine wijzigingen (1x per maand) om je website up-to-date te houden.",
+        "price": "€10 per maand"
+      },
+      {
+        "title": "Premium Onderhoud",
+        "desc": "Alles uit Standaard + SEO-optimalisatie + maandelijks een wijziging naar keuze.",
+        "price": "€20 per maand"
+      },
+      {
+        "title": "SEO-optimalisatie",
+        "desc": "Verbeter de vindbaarheid van je website in zoekmachines met onze SEO-optimalisatie.",
+        "price": "€99 eenmalig"
+      },
+      {
+        "title": "Logo & Branding Ontwerp",
+        "desc": "Professioneel logo en branding ontwerp om je bedrijfsidentiteit te versterken.",
+        "price": "€199 eenmalig"
+      },
+      {
+        "title": "Snelle Oplevering",
+        "desc": "Heb je haast? Wij kunnen je website binnen 5 dagen opleveren.",
+        "price": "€99 eenmalig"
+      }
     ],
     "faq_title": "Veelgestelde Vragen",
     "faq": [
-      { "question": "Zijn er verborgen kosten?", "answer": "Nee, bij TwinPixel geloven we in volledige transparantie. De prijs die we opgeven is de prijs die je betaalt. Er zijn geen verborgen kosten of verrassingen achteraf." },
-      { "question": "Wat als ik specifieke wensen heb die niet in een pakket passen?", "answer": "Geen probleem! We bieden ook op maat gemaakte oplossingen aan. Neem contact met ons op om je specifieke wensen te bespreken en we stellen een offerte op maat voor je op." },
-      { "question": "Hoe zit het met hosting en domeinregistratie?", "answer": "Hosting is inbegrepen in het maandelijkse bedrag van ons hybride prijsmodel. Domeinregistratie wordt apart gefactureerd tegen kostprijs. We kunnen je domein registreren of helpen bij het overzetten van een bestaand domein." },
-      { "question": "Kan ik later upgraden naar een ander pakket?", "answer": "Ja, je kunt altijd upgraden naar een uitgebreider pakket. We berekenen dan alleen het verschil tussen je huidige pakket en het nieuwe pakket, plus eventuele extra werkzaamheden die nodig zijn." },
-      { "question": "Hoe lang duurt het voordat mijn website klaar is?", "answer": "De doorlooptijd hangt af van het gekozen pakket en de complexiteit van je website. Een Starter website kan binnen 2-3 weken klaar zijn, terwijl een Enterprise website 4-6 weken kan duren. We stellen altijd een realistische tijdlijn op aan het begin van het project." },
-      { "question": "Wat zijn de betalingsvoorwaarden?", "answer": "We vragen een aanbetaling van 50% bij de start van het project. De resterende 50% wordt gefactureerd bij oplevering van de website. Het maandelijkse bedrag voor hosting en updates wordt maandelijks gefactureerd, beginnend vanaf de livegang van je website." },
-      { "question": "Wat houdt het hybride prijsmodel precies in?", "answer": "Ons hybride prijsmodel bestaat uit twee delen: een eenmalig bedrag voor het ontwerpen en bouwen van je website, en een maandelijks bedrag voor hosting en kleine updates. Dit zorgt ervoor dat je website niet alleen professioneel wordt opgezet, maar ook goed blijft draaien en up-to-date blijft zonder onverwachte kosten." }
+      {
+        "question": "Zijn er verborgen kosten?",
+        "answer": "Nee, bij TwinPixel geloven we in volledige transparantie. De prijs die we opgeven is de prijs die je betaalt. Er zijn geen verborgen kosten of verrassingen achteraf."
+      },
+      {
+        "question": "Wat als ik specifieke wensen heb die niet in een pakket passen?",
+        "answer": "Geen probleem! We bieden ook op maat gemaakte oplossingen aan. Neem contact met ons op om je specifieke wensen te bespreken en we stellen een offerte op maat voor je op."
+      },
+      {
+        "question": "Hoe zit het met hosting en domeinregistratie?",
+        "answer": "Hosting is inbegrepen in het maandelijkse bedrag van ons hybride prijsmodel. Domeinregistratie wordt apart gefactureerd tegen kostprijs. We kunnen je domein registreren of helpen bij het overzetten van een bestaand domein."
+      },
+      {
+        "question": "Kan ik later upgraden naar een ander pakket?",
+        "answer": "Ja, je kunt altijd upgraden naar een uitgebreider pakket. We berekenen dan alleen het verschil tussen je huidige pakket en het nieuwe pakket, plus eventuele extra werkzaamheden die nodig zijn."
+      },
+      {
+        "question": "Hoe lang duurt het voordat mijn website klaar is?",
+        "answer": "De doorlooptijd hangt af van het gekozen pakket en de complexiteit van je website. Een Starter website kan binnen 2-3 weken klaar zijn, terwijl een Enterprise website 4-6 weken kan duren. We stellen altijd een realistische tijdlijn op aan het begin van het project."
+      },
+      {
+        "question": "Wat zijn de betalingsvoorwaarden?",
+        "answer": "We vragen een aanbetaling van 50% bij de start van het project. De resterende 50% wordt gefactureerd bij oplevering van de website. Het maandelijkse bedrag voor hosting en updates wordt maandelijks gefactureerd, beginnend vanaf de livegang van je website."
+      },
+      {
+        "question": "Wat houdt het hybride prijsmodel precies in?",
+        "answer": "Ons hybride prijsmodel bestaat uit twee delen: een eenmalig bedrag voor het ontwerpen en bouwen van je website, en een maandelijks bedrag voor hosting en kleine updates. Dit zorgt ervoor dat je website niet alleen professioneel wordt opgezet, maar ook goed blijft draaien en up-to-date blijft zonder onverwachte kosten."
+      }
     ]
   },
   "contact": {
@@ -456,82 +623,158 @@
     "consult_title": "Vraag een gratis consult aan",
     "consult_text": "Wil je weten wat wij voor jou kunnen betekenen? Plan een gratis consult in en we bespreken je wensen en mogelijkheden.",
     "consult_steps": [
-      { "title": "Plan een afspraak", "desc": "Kies een datum en tijd die jou uitkomt voor een videogesprek of telefoongesprek. We zijn flexibel en kunnen ook buiten kantooruren afspreken als dat beter voor je werkt. Het gesprek duurt ongeveer 30 minuten en is volledig vrijblijvend." },
-      { "title": "Deel je wensen", "desc": "Vertel ons over je bedrijf, doelstellingen en wensen voor je website. We luisteren naar je ideeën, beantwoorden je vragen en denken met je mee. Heb je al voorbeelden van websites die je aanspreken? Deel ze gerust met ons tijdens het gesprek." },
-      { "title": "Ontvang advies", "desc": "Wij geven je vrijblijvend advies over de beste aanpak voor jouw project. We bespreken mogelijke oplossingen, technische mogelijkheden en een globale prijsindicatie. Na het gesprek sturen we een samenvatting van het besproken advies per e-mail, zodat je alles nog eens rustig kunt nalezen." }
+      {
+        "title": "Plan een afspraak",
+        "desc": "Kies een datum en tijd die jou uitkomt voor een videogesprek of telefoongesprek. We zijn flexibel en kunnen ook buiten kantooruren afspreken als dat beter voor je werkt. Het gesprek duurt ongeveer 30 minuten en is volledig vrijblijvend."
+      },
+      {
+        "title": "Deel je wensen",
+        "desc": "Vertel ons over je bedrijf, doelstellingen en wensen voor je website. We luisteren naar je ideeën, beantwoorden je vragen en denken met je mee. Heb je al voorbeelden van websites die je aanspreken? Deel ze gerust met ons tijdens het gesprek."
+      },
+      {
+        "title": "Ontvang advies",
+        "desc": "Wij geven je vrijblijvend advies over de beste aanpak voor jouw project. We bespreken mogelijke oplossingen, technische mogelijkheden en een globale prijsindicatie. Na het gesprek sturen we een samenvatting van het besproken advies per e-mail, zodat je alles nog eens rustig kunt nalezen."
+      }
     ],
     "consult_button": "Plan een gratis consult",
     "faq_title": "Veelgestelde Vragen",
     "faq": [
-      { "question": "Zijn er verborgen kosten?", "answer": "Nee, bij TwinPixel geloven we in volledige transparantie. De prijs die we opgeven is de prijs die je betaalt. Er zijn geen verborgen kosten of verrassingen achteraf." },
-      { "question": "Wat als ik specifieke wensen heb die niet in een pakket passen?", "answer": "Geen probleem! We bieden ook op maat gemaakte oplossingen aan en aanvullende diensten die je altijd met pakketten kan combineren. Neem contact met ons op om je specifieke wensen te bespreken en we stellen een offerte op maat voor je op." },
-      { "question": "Hoe zit het met hosting en domeinregistratie?", "answer": "Hosting is inbegrepen in het maandelijkse bedrag van ons hybride prijsmodel. Domeinregistratie wordt apart gefactureerd tegen kostprijs. We kunnen je domein registreren of helpen bij het overzetten van een bestaand domein." },
-      { "question": "Kan ik later upgraden naar een ander pakket?", "answer": "Ja, je kunt altijd upgraden naar een uitgebreider pakket. We berekenen dan alleen het verschil tussen je huidige pakket en het nieuwe pakket, plus eventuele extra werkzaamheden die nodig zijn." },
-      { "question": "Hoe lang duurt het voordat mijn website klaar is?", "answer": "De doorlooptijd hangt af van het gekozen pakket en de complexiteit van je website. Een Starter website kan binnen 2-3 weken klaar zijn, terwijl een Enterprise website 4-6 weken kan duren. We stellen altijd een realistische tijdlijn op aan het begin van het project. Daarnaast kan je voor 99 euro extra snel de website opgeleverd krijgen." },
-      { "question": "Wat houdt het hybride prijsmodel precies in?", "answer": "Ons hybride prijsmodel bestaat uit twee delen: een eenmalig bedrag voor het ontwerpen en bouwen van je website, en een maandelijks bedrag voor hosting en kleine updates. Dit zorgt ervoor dat je website niet alleen professioneel wordt opgezet, maar ook goed blijft draaien en up-to-date blijft zonder onverwachte kosten." },
-      { "question": "Wat als ik nog geen logo of huisstijl heb?", "answer": "Geen zorgen! We bieden ook logo- en huisstijlontwerp aan als aparte dienst. We kunnen je helpen met het ontwerpen van een professioneel logo en bijpassende huisstijl die perfect aansluiten bij je merk en doelgroep." },
-      { "question": "Wat als ik zelf teksten, afbeeldingen of updates wil toevoegen?", "answer": "We bieden pakketten aan met een Content Management Systeem (CMS), zodat je zelf eenvoudig teksten, afbeeldingen en updates kan toevoegen. We geven je een korte training zodat je zelf aan de slag kan met je website." }
+      {
+        "question": "Zijn er verborgen kosten?",
+        "answer": "Nee, bij TwinPixel geloven we in volledige transparantie. De prijs die we opgeven is de prijs die je betaalt. Er zijn geen verborgen kosten of verrassingen achteraf."
+      },
+      {
+        "question": "Wat als ik specifieke wensen heb die niet in een pakket passen?",
+        "answer": "Geen probleem! We bieden ook op maat gemaakte oplossingen aan en aanvullende diensten die je altijd met pakketten kan combineren. Neem contact met ons op om je specifieke wensen te bespreken en we stellen een offerte op maat voor je op."
+      },
+      {
+        "question": "Hoe zit het met hosting en domeinregistratie?",
+        "answer": "Hosting is inbegrepen in het maandelijkse bedrag van ons hybride prijsmodel. Domeinregistratie wordt apart gefactureerd tegen kostprijs. We kunnen je domein registreren of helpen bij het overzetten van een bestaand domein."
+      },
+      {
+        "question": "Kan ik later upgraden naar een ander pakket?",
+        "answer": "Ja, je kunt altijd upgraden naar een uitgebreider pakket. We berekenen dan alleen het verschil tussen je huidige pakket en het nieuwe pakket, plus eventuele extra werkzaamheden die nodig zijn."
+      },
+      {
+        "question": "Hoe lang duurt het voordat mijn website klaar is?",
+        "answer": "De doorlooptijd hangt af van het gekozen pakket en de complexiteit van je website. Een Starter website kan binnen 2-3 weken klaar zijn, terwijl een Enterprise website 4-6 weken kan duren. We stellen altijd een realistische tijdlijn op aan het begin van het project. Daarnaast kan je voor 99 euro extra snel de website opgeleverd krijgen."
+      },
+      {
+        "question": "Wat houdt het hybride prijsmodel precies in?",
+        "answer": "Ons hybride prijsmodel bestaat uit twee delen: een eenmalig bedrag voor het ontwerpen en bouwen van je website, en een maandelijks bedrag voor hosting en kleine updates. Dit zorgt ervoor dat je website niet alleen professioneel wordt opgezet, maar ook goed blijft draaien en up-to-date blijft zonder onverwachte kosten."
+      },
+      {
+        "question": "Wat als ik nog geen logo of huisstijl heb?",
+        "answer": "Geen zorgen! We bieden ook logo- en huisstijlontwerp aan als aparte dienst. We kunnen je helpen met het ontwerpen van een professioneel logo en bijpassende huisstijl die perfect aansluiten bij je merk en doelgroep."
+      },
+      {
+        "question": "Wat als ik zelf teksten, afbeeldingen of updates wil toevoegen?",
+        "answer": "We bieden pakketten aan met een Content Management Systeem (CMS), zodat je zelf eenvoudig teksten, afbeeldingen en updates kan toevoegen. We geven je een korte training zodat je zelf aan de slag kan met je website."
+      }
     ],
-     "weather_title": "🌦 Huidig weer in Wageningen"
+    "weather_title": "🌦 Huidig weer in Wageningen"
   },
   "success": {
-      "meta_description": "Bedankt voor uw bericht. TwinPixel in Wageningen neemt binnen 24 uur contact met u op.",
-      "title": "Bericht Verzonden | TwinPixel Webdesign Wageningen",
-      "header": "Bericht Verzonden",
-      "message_title": "Bedankt voor uw bericht!",
-      "message_body": "We hebben uw bericht ontvangen en zullen binnen 24 uur contact met u opnemen. Controleer uw e-mail voor een bevestiging van uw bericht."
-  
+    "meta_description": "Bedankt voor uw bericht. TwinPixel in Wageningen neemt binnen 24 uur contact met u op.",
+    "title": "Bericht Verzonden | TwinPixel Webdesign Wageningen",
+    "header": "Bericht Verzonden",
+    "message_title": "Bedankt voor uw bericht!",
+    "message_body": "We hebben uw bericht ontvangen en zullen binnen 24 uur contact met u opnemen. Controleer uw e-mail voor een bevestiging van uw bericht."
   },
   "error404": {
-      "meta_description": "Pagina niet gevonden - TwinPixel webdesign bureau in Wageningen",
-      "title": "Pagina Niet Gevonden | TwinPixel"
+    "meta_description": "Pagina niet gevonden - TwinPixel webdesign bureau in Wageningen",
+    "title": "Pagina Niet Gevonden | TwinPixel"
   },
   "wageningen": {
-      "meta_description": "Professionele webdesign in Wageningen voor ZZP'ers en MKB. TwinPixel biedt op maat gemaakte websites met SEO-optimalisatie voor lokale vindbaarheid in Wageningen en omgeving.",
-      "title": "Webdesign Wageningen | Lokale Websites voor ZZP & MKB | TwinPixel",
-      "header": "Webdesign in Wageningen",
-      "intro_title": "Lokale webdesign diensten voor ondernemers in Wageningen",
-      "intro_p1": "Ben je een ZZP'er of MKB-ondernemer in Wageningen of omgeving en zoek je een professionele website die jouw bedrijf echt op de kaart zet? TwinPixel is jouw lokale partner voor webdesign en online marketing in Wageningen.",
-      "intro_p2": "Als lokaal webdesignbureau begrijpen we de Wageningse markt en kunnen we je helpen om online beter gevonden te worden door potentiële klanten in Wageningen en omgeving. Onze op maat gemaakte websites zijn niet alleen visueel aantrekkelijk, maar ook geoptimaliseerd voor lokale zoekopdrachten.",
-      "benefits_title": "Waarom kiezen voor een lokaal webdesignbureau in Wageningen?",
-      "benefits": [
-          { "title": "Lokale kennis", "desc": "We kennen de lokale markt in Wageningen en omgeving en begrijpen wat werkt voor bedrijven in deze regio." },
-          { "title": "Lokale SEO", "desc": "We optimaliseren je website specifiek voor lokale zoekopdrachten, zodat je beter gevonden wordt door potentiële klanten in Wageningen." },
-          { "title": "Persoonlijk contact", "desc": "Als lokaal bedrijf zijn we altijd dichtbij voor een persoonlijk gesprek of overleg over je website." },
-          { "title": "Lokaal netwerk", "desc": "We hebben een sterk netwerk in Wageningen en kunnen je helpen verbinden met andere lokale ondernemers." }
-      ],
-      "local_seo_title": "Lokale SEO voor bedrijven in Wageningen",
-      "local_seo_desc": "Lokale SEO (Search Engine Optimization) is essentieel voor bedrijven die klanten in Wageningen en omgeving willen aantrekken. Wij zorgen ervoor dat je website geoptimaliseerd is voor lokale zoekopdrachten, zodat potentiële klanten je gemakkelijk kunnen vinden.",
-      "local_seo_list_title": "Onze lokale SEO-diensten omvatten:",
-      "local_seo_list": [
-          "Optimalisatie voor lokale zoekwoorden zoals \"webdesign Wageningen\" of \"[jouw branche] Wageningen\"",
-          "Google Mijn Bedrijf optimalisatie voor betere zichtbaarheid in Google Maps",
-          "Lokale backlink-strategie om je autoriteit in de regio te vergroten",
-          "Lokale content creatie die relevant is voor je doelgroep in Wageningen",
-          "Optimalisatie voor mobiele apparaten, essentieel voor lokale zoekopdrachten"
-      ],
-      "businesses_title": "Voor welke bedrijven in Wageningen maken wij websites?",
-      "businesses_desc": "Bij TwinPixel hebben we ervaring met het maken van websites voor diverse branches in Wageningen. Of je nu een winkel, horecazaak, adviesbureau of andere onderneming hebt, wij kunnen een website maken die perfect aansluit bij jouw bedrijf en doelgroep.",
-      "businesses": [
-          { "title": "Lokale winkels", "desc": "Aantrekkelijke websites voor winkels in Wageningen, met productoverzichten, openingstijden en contactinformatie." },
-          { "title": "Horeca", "desc": "Sfeervolle websites voor restaurants, cafés en andere horecazaken in Wageningen, met menu's, reserveringsmogelijkheden en foto's." },
-          { "title": "Zakelijke dienstverleners", "desc": "Professionele websites voor advocaten, accountants, consultants en andere zakelijke dienstverleners in Wageningen." },
-          { "title": "Ambachtslieden", "desc": "Praktische websites voor schilders, loodgieters, elektriciens en andere vakmensen in Wageningen, met portfolio en contactmogelijkheden." }
-      ],
-      "testimonials_title": "Wat klanten in Wageningen over ons zeggen",
-      "testimonials": [
-          { "text": "\"TwinPixel heeft een prachtige website voor mijn winkel in Wageningen gemaakt. De lokale SEO-optimalisatie heeft echt geholpen om meer klanten uit de regio aan te trekken. Ik krijg regelmatig complimenten over mijn website!\"", "author": "Lisa Jansen", "company": "Eigenaar, Bloemen & Zo Wageningen" },
-          { "text": "\"Als ZZP'er in Wageningen had ik een professionele website nodig die me zou helpen lokaal gevonden te worden. TwinPixel heeft precies geleverd wat ik nodig had, tegen een betaalbare prijs. Mijn klantenbestand is sindsdien flink gegroeid!\"", "author": "Mark de Vries", "company": "Freelance Fotograaf, Wageningen" }
-      ],
-      "faq_title": "Veelgestelde vragen over webdesign in Wageningen",
-      "faq": [
-          { "question": "Waarom is een lokale website belangrijk voor mijn bedrijf in Wageningen?", "answer": "Een lokale website helpt je om beter gevonden te worden door potentiële klanten in Wageningen en omgeving. Met lokale SEO-optimalisatie verschijn je hoger in de zoekresultaten wanneer mensen zoeken naar producten of diensten in jouw branche in Wageningen." },
-          { "question": "Hoe lang duurt het om een website voor mijn bedrijf in Wageningen te maken?", "answer": "De doorlooptijd hangt af van de complexiteit van je website. Een eenvoudige website kan binnen 2-3 weken klaar zijn, terwijl complexere projecten 4-6 weken of langer kunnen duren. We stellen altijd een realistische tijdlijn op aan het begin van het project." },
-          { "question": "Kan TwinPixel ook helpen met het verbeteren van mijn bestaande website voor lokale vindbaarheid?", "answer": "Absoluut! We kunnen je bestaande website analyseren en optimaliseren voor lokale zoekopdrachten. Dit omvat technische SEO-verbeteringen, content optimalisatie en lokale backlink-strategieën om je vindbaarheid in Wageningen te verbeteren." },
-          { "question": "Wat kost een lokaal geoptimaliseerde website voor mijn bedrijf in Wageningen?", "answer": "De kosten hangen af van je specifieke wensen en behoeften. We bieden verschillende pakketten aan, beginnend bij €299 voor een eenvoudige website. Voor een persoonlijke offerte kun je contact met ons opnemen." }
-      ],
-      "cta_title": "Klaar om je online zichtbaarheid in Wageningen te verbeteren?",
-      "cta_subtitle": "Neem contact met ons op voor een vrijblijvend gesprek over hoe wij je kunnen helpen met een professionele website die perfect aansluit bij jouw bedrijf in Wageningen.",
-      "cta_button": "Vraag een gratis consult aan"
+    "meta_description": "Professionele webdesign in Wageningen voor ZZP'ers en MKB. TwinPixel biedt op maat gemaakte websites met SEO-optimalisatie voor lokale vindbaarheid in Wageningen en omgeving.",
+    "title": "Webdesign Wageningen | Lokale Websites voor ZZP & MKB | TwinPixel",
+    "header": "Webdesign in Wageningen",
+    "intro_title": "Lokale webdesign diensten voor ondernemers in Wageningen",
+    "intro_p1": "Ben je een ZZP'er of MKB-ondernemer in Wageningen of omgeving en zoek je een professionele website die jouw bedrijf echt op de kaart zet? TwinPixel is jouw lokale partner voor webdesign en online marketing in Wageningen.",
+    "intro_p2": "Als lokaal webdesignbureau begrijpen we de Wageningse markt en kunnen we je helpen om online beter gevonden te worden door potentiële klanten in Wageningen en omgeving. Onze op maat gemaakte websites zijn niet alleen visueel aantrekkelijk, maar ook geoptimaliseerd voor lokale zoekopdrachten.",
+    "benefits_title": "Waarom kiezen voor een lokaal webdesignbureau in Wageningen?",
+    "benefits": [
+      {
+        "title": "Lokale kennis",
+        "desc": "We kennen de lokale markt in Wageningen en omgeving en begrijpen wat werkt voor bedrijven in deze regio."
+      },
+      {
+        "title": "Lokale SEO",
+        "desc": "We optimaliseren je website specifiek voor lokale zoekopdrachten, zodat je beter gevonden wordt door potentiële klanten in Wageningen."
+      },
+      {
+        "title": "Persoonlijk contact",
+        "desc": "Als lokaal bedrijf zijn we altijd dichtbij voor een persoonlijk gesprek of overleg over je website."
+      },
+      {
+        "title": "Lokaal netwerk",
+        "desc": "We hebben een sterk netwerk in Wageningen en kunnen je helpen verbinden met andere lokale ondernemers."
+      }
+    ],
+    "local_seo_title": "Lokale SEO voor bedrijven in Wageningen",
+    "local_seo_desc": "Lokale SEO (Search Engine Optimization) is essentieel voor bedrijven die klanten in Wageningen en omgeving willen aantrekken. Wij zorgen ervoor dat je website geoptimaliseerd is voor lokale zoekopdrachten, zodat potentiële klanten je gemakkelijk kunnen vinden.",
+    "local_seo_list_title": "Onze lokale SEO-diensten omvatten:",
+    "local_seo_list": [
+      "Optimalisatie voor lokale zoekwoorden zoals \"webdesign Wageningen\" of \"[jouw branche] Wageningen\"",
+      "Google Mijn Bedrijf optimalisatie voor betere zichtbaarheid in Google Maps",
+      "Lokale backlink-strategie om je autoriteit in de regio te vergroten",
+      "Lokale content creatie die relevant is voor je doelgroep in Wageningen",
+      "Optimalisatie voor mobiele apparaten, essentieel voor lokale zoekopdrachten"
+    ],
+    "businesses_title": "Voor welke bedrijven in Wageningen maken wij websites?",
+    "businesses_desc": "Bij TwinPixel hebben we ervaring met het maken van websites voor diverse branches in Wageningen. Of je nu een winkel, horecazaak, adviesbureau of andere onderneming hebt, wij kunnen een website maken die perfect aansluit bij jouw bedrijf en doelgroep.",
+    "businesses": [
+      {
+        "title": "Lokale winkels",
+        "desc": "Aantrekkelijke websites voor winkels in Wageningen, met productoverzichten, openingstijden en contactinformatie."
+      },
+      {
+        "title": "Horeca",
+        "desc": "Sfeervolle websites voor restaurants, cafés en andere horecazaken in Wageningen, met menu's, reserveringsmogelijkheden en foto's."
+      },
+      {
+        "title": "Zakelijke dienstverleners",
+        "desc": "Professionele websites voor advocaten, accountants, consultants en andere zakelijke dienstverleners in Wageningen."
+      },
+      {
+        "title": "Ambachtslieden",
+        "desc": "Praktische websites voor schilders, loodgieters, elektriciens en andere vakmensen in Wageningen, met portfolio en contactmogelijkheden."
+      }
+    ],
+    "testimonials_title": "Wat klanten in Wageningen over ons zeggen",
+    "testimonials": [
+      {
+        "text": "\"TwinPixel heeft een prachtige website voor mijn winkel in Wageningen gemaakt. De lokale SEO-optimalisatie heeft echt geholpen om meer klanten uit de regio aan te trekken. Ik krijg regelmatig complimenten over mijn website!\"",
+        "author": "Lisa Jansen",
+        "company": "Eigenaar, Bloemen & Zo Wageningen"
+      },
+      {
+        "text": "\"Als ZZP'er in Wageningen had ik een professionele website nodig die me zou helpen lokaal gevonden te worden. TwinPixel heeft precies geleverd wat ik nodig had, tegen een betaalbare prijs. Mijn klantenbestand is sindsdien flink gegroeid!\"",
+        "author": "Mark de Vries",
+        "company": "Freelance Fotograaf, Wageningen"
+      }
+    ],
+    "faq_title": "Veelgestelde vragen over webdesign in Wageningen",
+    "faq": [
+      {
+        "question": "Waarom is een lokale website belangrijk voor mijn bedrijf in Wageningen?",
+        "answer": "Een lokale website helpt je om beter gevonden te worden door potentiële klanten in Wageningen en omgeving. Met lokale SEO-optimalisatie verschijn je hoger in de zoekresultaten wanneer mensen zoeken naar producten of diensten in jouw branche in Wageningen."
+      },
+      {
+        "question": "Hoe lang duurt het om een website voor mijn bedrijf in Wageningen te maken?",
+        "answer": "De doorlooptijd hangt af van de complexiteit van je website. Een eenvoudige website kan binnen 2-3 weken klaar zijn, terwijl complexere projecten 4-6 weken of langer kunnen duren. We stellen altijd een realistische tijdlijn op aan het begin van het project."
+      },
+      {
+        "question": "Kan TwinPixel ook helpen met het verbeteren van mijn bestaande website voor lokale vindbaarheid?",
+        "answer": "Absoluut! We kunnen je bestaande website analyseren en optimaliseren voor lokale zoekopdrachten. Dit omvat technische SEO-verbeteringen, content optimalisatie en lokale backlink-strategieën om je vindbaarheid in Wageningen te verbeteren."
+      },
+      {
+        "question": "Wat kost een lokaal geoptimaliseerde website voor mijn bedrijf in Wageningen?",
+        "answer": "De kosten hangen af van je specifieke wensen en behoeften. We bieden verschillende pakketten aan, beginnend bij €299 voor een eenvoudige website. Voor een persoonlijke offerte kun je contact met ons opnemen."
+      }
+    ],
+    "cta_title": "Klaar om je online zichtbaarheid in Wageningen te verbeteren?",
+    "cta_subtitle": "Neem contact met ons op voor een vrijblijvend gesprek over hoe wij je kunnen helpen met een professionele website die perfect aansluit bij jouw bedrijf in Wageningen.",
+    "cta_button": "Vraag een gratis consult aan"
   }
 }
