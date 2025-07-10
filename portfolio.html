@@ -77,7 +77,7 @@
     <div class="mobile-menu-overlay"></div>
 
     <!-- Header -->
-    <header>
+     <header>
       <div class="container">
         <nav class="navbar">
           <a href="index.html" class="logo-container">
@@ -88,29 +88,30 @@
             />
           </a>
 
-                    <ul class="nav-links">
-            <li><a href="index.html"  data-i18n="common.nav_home">Home</a></li>
+          <ul class="nav-links">
+            <li><a href="index.html" class="active" data-i18n="common.nav_home">Home</a></li>
             <li><a href="about.html" data-i18n="common.nav_about">Over ons</a></li>
-             <li><a href="pricing.html" data-i18n="common.nav_pricing">Prijzen</a></li>
-            <li><a href="portfolio.html" class="active" data-i18n="common.nav_portfolio">Portfolio</a></li>
+          <li><a href="pricing.html" data-i18n="common.nav_pricing">Prijzen</a></li>
+            <li><a href="portfolio.html" data-i18n="common.nav_portfolio">Portfolio</a></li>
             <li><a href="blog.html" data-i18n="common.nav_blog">Blog</a></li>
             <li><a href="contact.html" data-i18n="common.nav_contact">Contact</a></li>
           </ul>
 
           <div class="language-switcher">
             <div class="language-buttons">
-              <!-- Removed inline onclick -->
+              <!-- Text NL/EN is static, class change handles visual state -->
               <a href="#nl" class="lang-btn active">NL</a>
               <a href="#en" class="lang-btn">EN</a>
             </div>
           </div>
 
-          <button class="mobile-menu-btn" aria-label="Toggle menu">
+          <button class="mobile-menu-btn" aria-label="Toggle menu"> <!-- Added aria-label -->
             <i class="fas fa-bars"></i>
           </button>
         </nav>
       </div>
     </header>
+
 
     <!-- Page Header -->
     <section class="page-header">
