@@ -1,10 +1,11 @@
 {
   "name": "twinpixel-website",
   "version": "1.0.0",
-  "scripts": {
-    "build": "npm run generate && npm run sitemap",
+    "scripts": {
+    "build": "npm run generate && npm run sitemap && npm run rss",
     "generate": "node js/generate-blog.js",
-    "sitemap": "node js/sitemapgenerator.js"
+    "sitemap": "node js/sitemapgenerator.js",
+    "rss": "node js/rss-generator.js"
   },
   "dependencies": {
     "fs-extra": "^11.2.0",
