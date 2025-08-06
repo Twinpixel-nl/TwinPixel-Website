@@ -1,58 +1,52 @@
 /* ===================================================================
-   STIJLEN VOOR BLOG-OVERZICHT (V2 - UX Designer Editie)
+   STIJLEN VOOR BLOG-OVERZICHT (V2.1 - Grotere Afbeeldingen)
    =================================================================== */
 
 /* Het grid dat alle kaarten vasthoudt */
 .blog-grid {
     display: grid;
-    /* We gebruiken auto-fit om de kolommen flexibeler te maken.
-       minmax zorgt ervoor dat een kaart nooit smaller is dan 320px. */
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2.5rem; /* Royale ruimte tussen de kaarten */
+    gap: 2.5rem;
     padding: 3rem 0;
 }
 
-/* De blogkaart zelf. Dit is de kern van het design. */
+/* De blogkaart zelf */
 .blog-card {
-    /* UX Keuze: Een diepe, donkerblauwe kleur voelt professioneler dan hard zwart. */
     background-color: #0D1B2A; 
-    border-radius: 12px; /* Iets subtielere afronding */
-    overflow: hidden; /* Zorgt dat de afbeelding netjes binnen de kaart blijft */
+    border-radius: 12px;
+    overflow: hidden;
     text-decoration: none;
     display: flex;
     flex-direction: column;
-    /* UX Keuze: Een zachte, diffuse schaduw geeft diepte zonder opdringerig te zijn. */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .blog-card:hover {
-    transform: translateY(-6px); /* Subtiele 'lift' bij hover */
+    transform: translateY(-6px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
 }
 
 /* De uitgelichte afbeelding */
 .blog-card-image {
     width: 100%;
-    height: 200px; /* Iets minder hoge afbeelding voor meer focus op content */
+    /* === AANPASSING: Hoogte vergroot voor meer impact === */
+    height: 260px; 
     object-fit: cover;
-    /* TECHNISCHE EIS: Lijn de afbeelding aan de bovenkant uit. */
     object-position: top; 
     display: block;
 }
 
 /* De container voor alle tekst */
 .blog-card-content {
-    /* UX Keuze: Flinke padding geeft de tekst ademruimte en een 'premium' gevoel. */
     padding: 1.75rem; 
     display: flex;
     flex-direction: column;
-    flex-grow: 1; /* Zorgt dat deze sectie altijd de resterende ruimte vult */
+    flex-grow: 1;
 }
 
 /* De titel van de post */
 .blog-card-title {
-    /* UX Keuze: De titel is nu de primaire eyecatcher met een heldere accentkleur. */
     color: #5E97D1;
     font-size: 1.4rem;
     font-weight: 600;
@@ -67,10 +61,9 @@
 
 /* De publicatiedatum */
 .blog-card-date {
-    /* UX Keuze: De datum is secundaire info en krijgt een subtiele kleur en kleine font. */
     color: #8D99AE;
     font-size: 0.8rem;
-    margin-top: 0.5rem; /* Ruimte tussen titel en datum */
+    margin-top: 0.5rem;
     margin-bottom: 1rem;
 }
 
@@ -80,23 +73,22 @@
     font-size: 0.95rem;
     line-height: 1.6;
     margin: 0;
-    /* Zorgt dat de omschrijving de beschikbare ruimte opvult, zodat 'Lees meer' altijd onderaan staat. */
     flex-grow: 1; 
 }
 
 /* De 'Lees meer' link */
 .blog-card-readmore {
-    color: #5E97D1; /* Consistent met de titel */
+    color: #5E97D1;
     font-weight: 500;
     font-size: 0.9rem;
-    margin-top: 1.5rem; /* Ruimte boven de link */
+    margin-top: 1.5rem;
     text-decoration: none;
     transition: color 0.2s ease;
 }
 
 .blog-card:hover .blog-card-readmore {
     color: #8cb8e4;
-    text-decoration: underline; /* Extra duidelijkheid bij hover */
+    text-decoration: underline;
 }
 
 /* Aanpassing voor mobiele schermen */
@@ -104,6 +96,12 @@
     .blog-grid {
         gap: 2rem;
     }
+
+    /* Ook op mobiel de afbeelding iets groter maken voor consistentie */
+    .blog-card-image {
+        height: 220px;
+    }
+
     .blog-card-title {
         font-size: 1.3rem;
     }
