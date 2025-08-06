@@ -1,95 +1,110 @@
-/* ======================================================
-   STIJLEN VOOR HET BLOG-OVERZICHT (blog-overview.css)
-   ====================================================== */
+/* ===================================================================
+   STIJLEN VOOR BLOG-OVERZICHT (V2 - UX Designer Editie)
+   =================================================================== */
 
-/* Het grid dat alle blogkaarten bevat */
+/* Het grid dat alle kaarten vasthoudt */
 .blog-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Standaard 2 kolommen op grotere schermen */
-    gap: 2.5rem; /* Ruimte tussen de kaarten */
+    /* We gebruiken auto-fit om de kolommen flexibeler te maken.
+       minmax zorgt ervoor dat een kaart nooit smaller is dan 320px. */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem; /* Royale ruimte tussen de kaarten */
     padding: 3rem 0;
 }
 
-/* De individuele blogkaart */
+/* De blogkaart zelf. Dit is de kern van het design. */
 .blog-card {
-    background-color: #1a1a2e; /* Een iets andere donkerblauw voor contrast */
-    border-radius: 1rem; /* Mooie afgeronde hoeken */
-    overflow: hidden; /* Zorgt dat de afbeelding netjes binnen de hoeken blijft */
-    text-decoration: none; /* Verwijdert onderstreping van de link */
+    /* UX Keuze: Een diepe, donkerblauwe kleur voelt professioneler dan hard zwart. */
+    background-color: #0D1B2A; 
+    border-radius: 12px; /* Iets subtielere afronding */
+    overflow: hidden; /* Zorgt dat de afbeelding netjes binnen de kaart blijft */
+    text-decoration: none;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    /* UX Keuze: Een zachte, diffuse schaduw geeft diepte zonder opdringerig te zijn. */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .blog-card:hover {
-    transform: translateY(-8px); /* Lift de kaart op bij hover */
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+    transform: translateY(-6px); /* Subtiele 'lift' bij hover */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
 }
 
-/* De afbeelding van de blogkaart */
+/* De uitgelichte afbeelding */
 .blog-card-image {
     width: 100%;
-    height: 220px;
-    object-fit: cover; /* Zorgt dat de afbeelding de ruimte vult zonder te vervormen */
+    height: 200px; /* Iets minder hoge afbeelding voor meer focus op content */
+    object-fit: cover;
+    /* TECHNISCHE EIS: Lijn de afbeelding aan de bovenkant uit. */
+    object-position: top; 
     display: block;
-    border-bottom: 3px solid #4a90e2; /* Blauwe accentlijn */
 }
 
-/* De container voor de tekstinhoud */
+/* De container voor alle tekst */
 .blog-card-content {
-    padding: 1.5rem;
+    /* UX Keuze: Flinke padding geeft de tekst ademruimte en een 'premium' gevoel. */
+    padding: 1.75rem; 
     display: flex;
     flex-direction: column;
-    flex-grow: 1; /* Zorgt dat deze content de resterende ruimte vult */
+    flex-grow: 1; /* Zorgt dat deze sectie altijd de resterende ruimte vult */
 }
 
-/* De titel van de blogkaart */
+/* De titel van de post */
 .blog-card-title {
-    color: #f1f5f9;
-    font-size: 1.5rem; /* Groter en duidelijker */
+    /* UX Keuze: De titel is nu de primaire eyecatcher met een heldere accentkleur. */
+    color: #5E97D1;
+    font-size: 1.4rem;
     font-weight: 600;
-    margin: 0 0 0.5rem 0;
-    line-height: 1.3;
+    line-height: 1.4;
+    margin: 0;
+    transition: color 0.2s ease;
 }
 
-/* De datum van de blogkaart */
+.blog-card:hover .blog-card-title {
+    color: #8cb8e4;
+}
+
+/* De publicatiedatum */
 .blog-card-date {
-    color: #94a3b8;
-    font-size: 0.85rem;
+    /* UX Keuze: De datum is secundaire info en krijgt een subtiele kleur en kleine font. */
+    color: #8D99AE;
+    font-size: 0.8rem;
+    margin-top: 0.5rem; /* Ruimte tussen titel en datum */
     margin-bottom: 1rem;
 }
 
-/* De omschrijving op de kaart */
+/* De omschrijving */
 .blog-card-description {
-    color: #cbd5e1;
-    font-size: 1rem;
+    color: #E0E1E1;
+    font-size: 0.95rem;
     line-height: 1.6;
-    flex-grow: 1; /* Zorgt dat de omschrijving de ruimte opvult */
+    margin: 0;
+    /* Zorgt dat de omschrijving de beschikbare ruimte opvult, zodat 'Lees meer' altijd onderaan staat. */
+    flex-grow: 1; 
 }
 
-/* Stijl voor de 'Lees meer' knop/link */
+/* De 'Lees meer' link */
 .blog-card-readmore {
-    color: #7dd3fc;
+    color: #5E97D1; /* Consistent met de titel */
     font-weight: 500;
+    font-size: 0.9rem;
     margin-top: 1.5rem; /* Ruimte boven de link */
-    align-self: flex-start; /* Lijn de knop links uit */
     text-decoration: none;
-}
-.blog-card-readmore:after {
-    content: ' →';
-    transition: transform 0.2s ease;
-    display: inline-block;
-}
-.blog-card:hover .blog-card-readmore:after {
-    transform: translateX(5px);
+    transition: color 0.2s ease;
 }
 
+.blog-card:hover .blog-card-readmore {
+    color: #8cb8e4;
+    text-decoration: underline; /* Extra duidelijkheid bij hover */
+}
 
-/* Media Query voor mobiele apparaten */
+/* Aanpassing voor mobiele schermen */
 @media (max-width: 768px) {
     .blog-grid {
-        grid-template-columns: 1fr; /* 1 kolom op schermen kleiner dan 768px */
         gap: 2rem;
+    }
+    .blog-card-title {
+        font-size: 1.3rem;
     }
 }
