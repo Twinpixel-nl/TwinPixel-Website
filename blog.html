@@ -1,171 +1,157 @@
-<!-- blog.html -->
 <!DOCTYPE html>
 <html lang="nl">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <!-- Meta Description for SEO -->
-        <meta
-          name="description"
-          content="TwinPixel - Modern webdesignbureau in Wageningen voor ZZP'ers en MKB. Professionele websites met SEO-optimalisatie, op maat gemaakt en betaalbaar."
-          data-i18n="common.meta_description"
-        />
-        <meta
-          name="keywords"
-          content="webdesign Wageningen, website laten maken, webdevelopment, SEO-optimalisatie, responsive website, maatwerk website, betaalbare website, ZZP website, MKB website"
-        />
-        <title data-i18n="common.meta_title"> 
-          TwinPixel | Blog
-        </title>
-    
-        <!-- Open Graph / Facebook (Generally keep static or handle server-side for optimal sharing) -->
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://twinpixel.nl/" />
-        <meta
-          property="og:title"
-          content="TwinPixel | Professionele Websites & SEO-optimalisatie in Wageningen"
-        />
-        <meta
-          property="og:description"
-          content="Modern webdesignbureau in Wageningen voor ZZP'ers en MKB. Professionele websites met SEO-optimalisatie, op maat gemaakt en betaalbaar."
-        />
-        <meta
-          property="og:image"
-          content="https://twinpixel.nl/Images/Logo%20donkere%20achtergrond.png"
-        />
-    
-        <!-- Twitter (Generally keep static or handle server-side) -->
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://twinpixel.nl/" />
-        <meta
-          property="twitter:title"
-          content="TwinPixel | Professionele Websites & SEO-optimalisatie in Wageningen"
-        />
-        <meta
-          property="twitter:description"
-          content="Modern webdesignbureau in Wageningen voor ZZP'ers en MKB. Professionele websites met SEO-optimalisatie, op maat gemaakt en betaalbaar."
-        />
-        <meta
-          property="twitter:image"
-          content="https://twinpixel.nl/Images/Logo%20donkere%20achtergrond.png"
-        />
-    
-        <!-- Canonical URL -->
-        <link rel="canonical" href="https://twinpixel.nl/" />
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Meta Description for SEO -->
+    <meta
+      name="description"
+      content="TwinPixel - Modern webdesignbureau in Wageningen voor ZZP'ers en MKB. Professionele websites met SEO-optimalisatie, op maat gemaakt en betaalbaar."
+      data-i18n="common.meta_description"
+    />
+    <meta
+      name="keywords"
+      content="webdesign Wageningen, website laten maken, webdevelopment, SEO-optimalisatie, responsive website, maatwerk website, betaalbare website, ZZP website, MKB website"
+    />
+    <title data-i18n="common.meta_title"> 
+      TwinPixel | Blog
+    </title>
 
-        <!--RRS link for automazation-->
-        <link rel="alternate" type="application/rss+xml" title="TwinPixel Blog RSS Feed" href="/rss.xml">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://twinpixel.nl/blog.html" />
+    <meta
+      property="og:title"
+      content="TwinPixel | Blog"
+    />
+    <meta
+      property="og:description"
+      content="Ontdek de laatste inzichten, tips en verhalen van TwinPixel over webdesign, development en online strategie."
+    />
+    <meta
+      property="og:image"
+      content="https://twinpixel.nl/Images/Logo%20donkere%20achtergrond.png"
+    />
 
-        <!-- Stylesheets -->
-        <link rel="stylesheet" href="css/style.css" />
-        <link rel="stylesheet" href="css/language-switcher.css" />
-    
-        <!-- Font Awesome for icons -->
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-        />
-    
-        <!-- Google Fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
+    <!-- Twitter Card -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://twinpixel.nl/blog.html" />
+    <meta
+      property="twitter:title"
+      content="TwinPixel | Blog"
+    />
+    <meta
+      property="twitter:description"
+      content="Ontdek de laatste inzichten, tips en verhalen van TwinPixel over webdesign, development en online strategie."
+    />
+    <meta
+      property="twitter:image"
+      content="https://twinpixel.nl/Images/Logo%20donkere%20achtergrond.png"
+    />
 
-        <!-- Fav icons -->
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="Icons/apple-touch-icon.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="Icons/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="Icons/favicon-16x16.png"
-        />
-        <link rel="manifest" href="/site.webmanifest" />
-    
-     
-    
-        <!-- Google Tag Manager -->
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://twinpixel.nl/blog.html" />
+
+    <!-- RSS link for automation -->
+    <link rel="alternate" type="application/rss+xml" title="TwinPixel Blog RSS Feed" href="/rss.xml">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/language-switcher.css" />
+    <!-- === DE NIEUWE STYLESHEET VOOR HET BLOG-OVERZICHT === -->
+    <link rel="stylesheet" href="css/blog-overview.css" />
+
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Fav icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="Icons/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="Icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="Icons/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
       new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
       j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
       })(window,document,'script','dataLayer','GTM-WGPWS2SM');</script>
-      <!-- End Google Tag Manager -->
-    
-      </head>
-    
-    
-      <body>
-        <!-- Google Tag Manager (noscript) -->
+    <!-- End Google Tag Manager -->
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WGPWS2SM"
       height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-      <!-- End Google Tag Manager (noscript) -->
-    
-        <!-- Mobile Menu Overlay -->
-        <div class="mobile-menu-overlay"></div>
-    
-        <!-- Header -->
-        <header>
-          <div class="container">
-            <nav class="navbar">
-              <a href="index.html" class="logo-container">
-                <img
-                  src="Images/Logo donkere achtergrond.png"
-                  alt="TwinPixel Logo"
-                  class="logo"
-                />
-              </a>
-    
-            <ul class="nav-links">
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay"></div>
+
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <nav class="navbar">
+          <a href="index.html" class="logo-container">
+            <img
+              src="Images/Logo donkere achtergrond.png"
+              alt="TwinPixel Logo"
+              class="logo"
+            />
+          </a>
+
+          <ul class="nav-links">
             <li><a href="index.html"  data-i18n="common.nav_home">Home</a></li>
             <li><a href="about.html" data-i18n="common.nav_about">Over ons</a></li>
-          <li><a href="pricing.html" data-i18n="common.nav_pricing">Prijzen</a></li>
+            <li><a href="pricing.html" data-i18n="common.nav_pricing">Prijzen</a></li>
             <li><a href="portfolio.html" data-i18n="common.nav_portfolio">Portfolio</a></li>
-            <li><a href="blog.html" class="active"data-i18n="common.nav_blog">Blog</a></li>
+            <li><a href="blog.html" class="active" data-i18n="common.nav_blog">Blog</a></li>
             <li><a href="contact.html" data-i18n="common.nav_contact">Contact</a></li>
           </ul>
-    
-              <div class="language-switcher">
-                <div class="language-buttons">
-                  <!-- Text NL/EN is static, class change handles visual state -->
-                  <a href="#nl" class="lang-btn active">NL</a>
-                  <a href="#en" class="lang-btn">EN</a>
-                </div>
-              </div>
-    
-              <button class="mobile-menu-btn" aria-label="Toggle menu"> <!-- Added aria-label -->
-                <i class="fas fa-bars"></i>
-              </button>
-            </nav>
-          </div>
-        </header>
 
-     <section class="page-header">
+          <div class="language-switcher">
+            <div class="language-buttons">
+              <a href="#nl" class="lang-btn active">NL</a>
+              <a href="#en" class="lang-btn">EN</a>
+            </div>
+          </div>
+
+          <button class="mobile-menu-btn" aria-label="Toggle menu">
+            <i class="fas fa-bars"></i>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- === AANGEPASTE PAGINAKOP === -->
+    <section class="page-header">
       <div class="container">
-        <h1 class="fade-in">Blog</h1>
+        <h1 class="fade-in">Ons Blog</h1>
+        <p class="fade-in delay-1" style="color: #cbd5e1; margin-top: 1rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+            Ontdek onze laatste inzichten, tips en verhalen over webdesign, development en online strategie.
+        </p>
       </div>
     </section>
 
+    <!-- === OPGESCHOONDE MAIN-SECTIE VOOR DE BLOGPOSTS === -->
     <main class="container">
-      <section id="blog-list" class="blog-grid mt-10 mb-20 px-4 sm:px-10 grid gap-8 grid-cols-1 sm:grid-cols-2">
-        <!-- Blogposts worden hier automatisch geladen -->
+      <section id="blog-list" class="blog-grid">
+        <!-- Blogposts worden hier automatisch geladen door blog.js -->
       </section>
     </main>
-    
-    
 
+    <!-- Footer -->
     <footer>
       <div class="container">
         <img src="Images/Logo donkere achtergrond.png" alt="TwinPixel Footer Logo" class="footer-logo" />
@@ -186,7 +172,8 @@
       </div>
     </footer>
 
+    <!-- Scripts -->
     <script src="js/main.js"></script>
     <script src="js/blog.js"></script>
-  </body>
+</body>
 </html>
