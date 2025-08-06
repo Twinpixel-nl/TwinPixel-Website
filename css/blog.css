@@ -20,6 +20,7 @@
     flex-direction: column;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 260px !important;
 }
 
 .blog-card:hover {
