@@ -1,22 +1,14 @@
 /* ===================================================================
-   STIJLEN VOOR BLOG-OVERZICHT (V2.3 - CSS-Only Responsive Fix)
+   STIJLEN VOOR BLOG-OVERZICHT (V2.4 - Simpele Center-Fix)
    =================================================================== */
 
 /* Het grid dat alle kaarten vasthoudt */
 .blog-grid {
     display: grid;
-    /* Gebruik auto-fit voor een natuurlijke overgang van kolommen */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2.5rem;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    /* 
-      BELANGRIJKE FIX:
-      Overschrijf de 'px-4' utility class uit de HTML die op mobiel voor 
-      dubbele padding en slechte uitlijning zorgt.
-    */
-    padding-left: 0;
-    padding-right: 0;
+    grid-template-columns: 1fr; /* Op mobiel is er altijd maar één kolom */
+    justify-items: center;      /* DIT IS DE MAGISCHE REGEL: Centreer de kaart */
+    gap: 2rem;
+    padding: 3rem 0;
 }
 
 /* De blogkaart zelf */
@@ -29,12 +21,9 @@
     flex-direction: column;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* 
-      BELANGRIJKE FIX:
-      Verwijder de vaste hoogte. De kaart past zich nu aan de inhoud aan.
-      Dit is essentieel voor een goede weergave op alle schermen.
-    */
-    height: 100%; /* Zorgt dat kaarten in een grid-rij even hoog worden */
+    width: 100%;           /* Zorg dat de kaart de ruimte vult */
+    max-width: 400px;      /* Maar nooit breder dan dit (ziet er beter uit) */
+    /* DE VASTE HOOGTE IS VERWIJDERD, dit is cruciaal! */
 }
 
 .blog-card:hover {
@@ -45,37 +34,27 @@
 /* De uitgelichte afbeelding */
 .blog-card-image {
     width: 100%;
-    /* BELANGRIJKE FIX: Gebruik aspect-ratio i.p.v. een vaste hoogte */
-    aspect-ratio: 16 / 10;
-    height: auto; /* Zorgt dat aspect-ratio de hoogte bepaalt */
+    aspect-ratio: 16 / 10; /* Zorgt dat alle afbeeldingen dezelfde vorm hebben */
     object-fit: cover;
-    object-position: top; 
-    display: block;
 }
 
-/* De container voor alle tekst */
+/* --- De rest van je styling blijft grotendeels hetzelfde --- */
+
 .blog-card-content {
-    padding: 1.5rem; /* Iets minder padding voor een strakkere look */
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
-    flex-grow: 1; /* Zorgt dat deze content de resterende ruimte vult */
+    flex-grow: 1;
 }
 
-/* De titel van de post */
 .blog-card-title {
     color: #5E97D1;
     font-size: 1.3rem;
     font-weight: 600;
     line-height: 1.4;
     margin: 0;
-    transition: color 0.2s ease;
 }
 
-.blog-card:hover .blog-card-title {
-    color: #8cb8e4;
-}
-
-/* De publicatiedatum */
 .blog-card-date {
     color: #8D99AE;
     font-size: 0.8rem;
@@ -83,7 +62,6 @@
     margin-bottom: 1rem;
 }
 
-/* De omschrijving (behoudt flex-grow om de link onderaan te duwen) */
 .blog-card-description {
     color: #E0E1E1;
     font-size: 0.95rem;
@@ -92,25 +70,18 @@
     flex-grow: 1; 
 }
 
-/* De 'Lees meer' link */
 .blog-card-readmore {
     color: #5E97D1;
     font-weight: 500;
-    font-size: 0.9rem;
     margin-top: 1.5rem;
     text-decoration: none;
-    transition: color 0.2s ease;
 }
 
-.blog-card:hover .blog-card-readmore {
-    color: #8cb8e4;
-    text-decoration: underline;
-}
-
-/* Aanpassing voor mobiele schermen */
-@media (max-width: 768px) {
+/* Op grotere schermen, maak meerdere kolommen */
+@media (min-width: 768px) {
     .blog-grid {
-        gap: 1.5rem; /* Iets minder ruimte tussen de kaarten op mobiel */
+        /* Gebruik auto-fit voor 2 of meer kolommen op desktop */
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 2.5rem;
     }
-    /* De oude vaste hoogte-regel is hier niet meer nodig en verwijderd. */
 }
