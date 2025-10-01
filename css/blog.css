@@ -1,13 +1,14 @@
 /* ===================================================================
-   STIJLEN VOOR BLOG-OVERZICHT (V2.1 - Grotere Afbeeldingen)
+   STIJLEN VOOR BLOG-OVERZICHT (V2.2 - Verbeterd & Responsive)
    =================================================================== */
 
 /* Het grid dat alle kaarten vasthoudt */
 .blog-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    /* Past zich automatisch aan: 1 kolom op mobiel, meer op desktop */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
     gap: 2.5rem;
-    padding: 3rem 0;
+    padding: 3rem 0; /* Voegt ruimte boven en onder de sectie toe */
 }
 
 /* De blogkaart zelf */
@@ -20,7 +21,10 @@
     flex-direction: column;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 460px !important;
+    /* 
+      VERWIJDERD: De vaste hoogte is verwijderd. De kaart past zich nu aan de inhoud aan.
+      Dit is essentieel voor een goede weergave op alle schermformaten.
+    */
 }
 
 .blog-card:hover {
@@ -31,8 +35,9 @@
 /* De uitgelichte afbeelding */
 .blog-card-image {
     width: 100%;
-    /* === AANPASSING: Hoogte vergroot voor meer impact === */
-    height: 260px; 
+    /* Aspect ratio zorgt voor een consistente hoogte die meeschaalt */
+    aspect-ratio: 16 / 10;
+    height: auto; /* Zorgt ervoor dat aspect-ratio de hoogte bepaalt */
     object-fit: cover;
     object-position: top; 
     display: block;
@@ -40,16 +45,16 @@
 
 /* De container voor alle tekst */
 .blog-card-content {
-    padding: 1.75rem; 
+    padding: 1.5rem; /* Iets minder padding voor een strakkere look */
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
+    flex-grow: 1; /* Zorgt dat deze content de resterende ruimte vult */
 }
 
 /* De titel van de post */
 .blog-card-title {
     color: #5E97D1;
-    font-size: 1.4rem;
+    font-size: 1.3rem; /* Iets verkleind voor betere balans */
     font-weight: 600;
     line-height: 1.4;
     margin: 0;
@@ -92,18 +97,10 @@
     text-decoration: underline;
 }
 
-/* Aanpassing voor mobiele schermen */
+/* De @media query is niet meer strikt nodig omdat auto-fit dit al regelt,
+   maar kan behouden blijven voor specifieke aanpassingen zoals de gap. */
 @media (max-width: 768px) {
     .blog-grid {
-        gap: 2rem;
-    }
-
-    /* Ook op mobiel de afbeelding iets groter maken voor consistentie */
-    .blog-card-image {
-        height: 220px;
-    }
-
-    .blog-card-title {
-        font-size: 1.3rem;
+        gap: 1.5rem; /* Iets minder ruimte tussen kaarten op mobiel */
     }
 }

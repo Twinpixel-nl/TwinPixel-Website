@@ -136,7 +136,6 @@
             <li><a href="blog.html" class="active"data-i18n="common.nav_blog">Blog</a></li>
             <li><a href="contact.html" data-i18n="common.nav_contact">Contact</a></li>
           </ul>
-    
               <div class="language-switcher">
                 <div class="language-buttons">
                   <!-- Text NL/EN is static, class change handles visual state -->
@@ -158,11 +157,15 @@
       </div>
     </section>
 
-    <main class="container">
-      <section id="blog-list" class="blog-grid mt-10 mb-20 px-4 sm:px-10 grid gap-8 grid-cols-1 sm:grid-cols-2">
-        <!-- Blogposts worden hier automatisch geladen -->
-      </section>
-    </main>
+<main class="container">
+  <!-- 
+    We verwijderen de layout-classes zoals 'grid', 'gap', 'px-4', etc. 
+    Deze worden nu volledig door de CSS-class 'blog-grid' afgehandeld.
+  -->
+  <section id="blog-list" class="blog-grid">
+    <!-- Blogposts worden hier automatisch geladen -->
+  </section>
+</main>
     
     
 
