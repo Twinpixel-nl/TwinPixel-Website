@@ -4078,3 +4078,23 @@ body.blog-post-detail-page {
   /* Behoud je standaard tekstkleur als die goed is, anders hier instellen */
   color: #e5e7eb; /* Bijvoorbeeld lichtgrijs voor tekst */
 }
+/* --- Blog Post Full Width --- */
+/* Zorgt ervoor dat op de blog detailpagina de content de volledige breedte vult */
+body.blog-post-detail-page .blog-post-page-container,
+body.blog-post-detail-page .blog-post-full {
+  max-width: 100%; /* Verwijder de breedtebeperking */
+}
+
+/* Behoud wel de padding aan de zijkanten op de hoofdcontainer, anders plakt de tekst tegen de rand */
+body.blog-post-detail-page .blog-post-page-container {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* Pas de padding aan op kleinere schermen */
+@media (max-width: 480px) {
+  body.blog-post-detail-page .blog-post-page-container {
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+  }
+}
