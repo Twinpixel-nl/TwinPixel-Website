@@ -1,14 +1,18 @@
 /* ===================================================================
-   STIJLEN VOOR BLOG-OVERZICHT (V2.4 - Simpele Center-Fix)
+   STIJLEN VOOR BLOG-OVERZICHT (V2.5 - Mobiel-geoptimaliseerd)
    =================================================================== */
 
 /* Het grid dat alle kaarten vasthoudt */
 .blog-grid {
     display: grid;
     grid-template-columns: 1fr; /* Op mobiel is er altijd maar één kolom */
-    justify-items: center;      /* DIT IS DE MAGISCHE REGEL: Centreer de kaart */
+    justify-items: center;      /* Centreert de kaart in de kolom */
     gap: 2rem;
-    padding: 3rem 0;
+    
+    /* AANGEPAST: Padding toegevoegd voor mobiele weergave.
+       3rem boven/onder, 1rem (16px) links/rechts. 
+       Dit voorkomt dat de kaart tegen de schermrand plakt. */
+    padding: 3rem 1rem; 
 }
 
 /* De blogkaart zelf */
@@ -21,9 +25,8 @@
     flex-direction: column;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 100%;           /* Zorg dat de kaart de ruimte vult */
-    max-width: 400px;      /* Maar nooit breder dan dit (ziet er beter uit) */
-    /* DE VASTE HOOGTE IS VERWIJDERD, dit is cruciaal! */
+    width: 100%;           /* Vult de ruimte die beschikbaar is in de grid-kolom */
+    max-width: 400px;      /* Maar nooit breder dan 400px, wat er op mobiel goed uitziet */
 }
 
 .blog-card:hover {
@@ -38,8 +41,7 @@
     object-fit: cover;
 }
 
-/* --- De rest van je styling blijft grotendeels hetzelfde --- */
-
+/* De content in de kaart */
 .blog-card-content {
     padding: 1.5rem;
     display: flex;
@@ -77,11 +79,16 @@
     text-decoration: none;
 }
 
-/* Op grotere schermen, maak meerdere kolommen */
+/* --- Media Queries voor grotere schermen --- */
+
+/* Tablet-weergave en groter */
 @media (min-width: 768px) {
     .blog-grid {
-        /* Gebruik auto-fit voor 2 of meer kolommen op desktop */
+        /* Gebruik auto-fit voor 2 of meer kolommen */
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
         gap: 2.5rem;
+        
+        /* AANGEPAST: Geef ook op grotere schermen wat meer padding */
+        padding: 3rem 2.5rem;
     }
 }
