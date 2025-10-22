@@ -14,7 +14,26 @@
        Dit voorkomt dat de kaart tegen de schermrand plakt. */
     padding: 3rem 1rem; 
 }
+/* Deze code is GOED en moet je BEHOUDEN */
 
+/* Nieuwe styling voor Blogkaartjes */
+.blog-grid article {
+  background-color: #1f2937;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border: 1px solid #374151;
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* BELANGRIJK: Zorgt dat kaarten in dezelfde rij even hoog zijn */
+}
+
+.blog-grid article:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3), 0 0 15px rgba(59, 130, 246, 0.15);
+}
+
+/* ... de rest van je '.blog-grid article' styling is ook correct ... */
 /* De blogkaart zelf */
 .blog-card {
     background-color: #0D1B2A; 

@@ -3669,128 +3669,6 @@ body.inner-page .page-header .container {
   box-shadow: 0 0 20px var(--primary-color);
 }
 
-/* Index Blog Section */
-#index-blog-section {
-  background-color: var(--dark-surface);
-  display: none; /* Hidden by default, shown by JS if posts exist */
-}
-
-.blog-card {
-  background-color: rgba(18, 18, 18, 0.5);
-  border-radius: var(--border-radius);
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  transition: all 0.4s ease;
-  position: relative;
-}
-
-.blog-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, rgba(0, 102, 255, 0.1), transparent);
-  opacity: 0;
-  transition: opacity var(--transition-speed) ease;
-  z-index: 1;
-}
-
-.blog-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 102, 255, 0.2);
-  border-color: rgba(0, 102, 255, 0.3);
-}
-
-.blog-card:hover::before {
-  opacity: 1;
-}
-
-.blog-card-link {
-  display: block;
-  text-decoration: none;
-  color: inherit;
-  height: 100%;
-  position: relative;
-  z-index: 2;
-}
-
-.blog-card-image {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.blog-card:hover .blog-card-image {
-  transform: scale(1.05);
-}
-
-.blog-card-content {
-  padding: 1.5rem;
-}
-
-.blog-card-title {
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  color: var(--text-primary);
-  transition: color 0.3s ease;
-}
-
-.blog-card:hover .blog-card-title {
-  color: var(--primary-color);
-}
-
-.blog-card-date {
-  font-size: 0.9rem;
-  color: var(--primary-color);
-  margin-bottom: 0.75rem;
-}
-
-.blog-card-description {
-  color: var(--text-secondary);
-  line-height: 1.6;
-  margin-bottom: 0;
-}
-
-/* Responsive adjustments for index blog section */
-@media (max-width: 768px) {
-  .index-blog-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  
-  .blog-card-content {
-    padding: 1.25rem;
-  }
-}
-
-/* Nieuwe styling voor Blogkaartjes */
-.blog-grid article {
-  background-color: #1f2937; /* Donkergrijs/blauw, iets lichter dan de pagina achtergrond */
-  border-radius: 0.75rem;   /* Afgeronde hoeken (12px) */
-  overflow: hidden;         /* Zorgt dat de afbeelding netjes binnen de afgeronde hoeken blijft */
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  border: 1px solid #374151; /* Subtiele rand rond de kaart */
-  display: flex;            /* Voor interne layout consistentie */
-  flex-direction: column;
-}
-
-.blog-grid article:hover {
-  transform: translateY(-6px); /* Lift effect bij hover */
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3), 0 0 15px rgba(59, 130, 246, 0.15); /* Schaduw en subtiele blauwe gloed */
-}
-
-/* De link die de hele kaart omvat */
-.blog-grid article a {
-  text-decoration: none;
-  display: flex;
-  flex-direction: column; /* Afbeelding boven content */
-  height: 100%;           /* Zorgt dat de link de hele kaart vult */
-  color: inherit;         /* Tekstkleur overerven */
-}
 
 /* Styling voor de afbeelding */
 .blog-grid article .blog-post-image {
@@ -3874,8 +3752,6 @@ body.dark-bg {
 .blog-post-header .author-name {
   margin-bottom: 0;
 }
-
-/* ... (de rest van je blog post styling) ... */
 
 /* Container voor de blog post pagina content */
 .blog-post-page-container {
