@@ -1,74 +1,87 @@
 /* ===================================================================
-   DEFINITIEVE STIJLEN VOOR BLOG-OVERZICHT (V3.0 - Schoon)
+   STIJLEN VOOR BLOG-OVERZICHT (V2.4 - Simpele Center-Fix)
    =================================================================== */
 
-/* OPMERKING: De layout (het grid, aantal kolommen, padding, etc.)
-   wordt nu volledig geregeld door de Tailwind-classes in je blog.html bestand.
-   Deze CSS is ALLEEN voor de visuele styling van de kaarten zelf. */
-
-/* De blogkaart (die in de HTML een <article> tag is) */
-.blog-grid article {
-  background-color: #1f2937; /* Donkergrijs/blauw */
-  border-radius: 0.75rem;   /* Afgeronde hoeken (12px) */
-  overflow: hidden;         /* Zorgt dat de afbeelding netjes binnen de hoeken blijft */
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  border: 1px solid #374151; /* Subtiele rand */
-  display: flex;
-  flex-direction: column;
-  height: 100%;             /* BELANGRIJK: Maakt kaarten in dezelfde rij even hoog */
+/* Het grid dat alle kaarten vasthoudt */
+.blog-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Op mobiel is er altijd maar één kolom */
+    justify-items: center;      /* DIT IS DE MAGISCHE REGEL: Centreer de kaart */
+    gap: 2rem;
+    padding: 3rem 0;
 }
 
-.blog-grid article:hover {
-  transform: translateY(-6px); /* Lift effect bij hover */
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3), 0 0 15px rgba(59, 130, 246, 0.15); /* Schaduw en gloed */
+/* De blogkaart zelf */
+.blog-card {
+    background-color: #0D1B2A; 
+    border-radius: 12px;
+    overflow: hidden;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;           /* Zorg dat de kaart de ruimte vult */
+    max-width: 400px;      /* Maar nooit breder dan dit (ziet er beter uit) */
+    /* DE VASTE HOOGTE IS VERWIJDERD, dit is cruciaal! */
 }
 
-/* De link die de hele kaart omvat */
-.blog-grid article a {
-  text-decoration: none;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  color: inherit;
+.blog-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
 }
 
 /* De uitgelichte afbeelding */
-.blog-grid article .blog-post-image {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  display: block;
+.blog-card-image {
+    width: 100%;
+    aspect-ratio: 16 / 10; /* Zorgt dat alle afbeeldingen dezelfde vorm hebben */
+    object-fit: cover;
 }
 
-/* De container voor de tekst in de kaart */
-.blog-grid article .blog-post-content-wrapper {
-  padding: 1.25rem; /* 20px */
-  flex-grow: 1;     /* Zorgt dat dit deel groeit om de kaart op te vullen */
-  display: flex;
-  flex-direction: column;
+/* --- De rest van je styling blijft grotendeels hetzelfde --- */
+
+.blog-card-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
-/* De titel van de blogpost */
-.blog-grid article .blog-post-title {
-  font-size: 1.25rem;     /* 20px */
-  font-weight: 600;
-  color: #f3f4f6;
-  margin: 0 0 0.5rem 0;
-  line-height: 1.4;
+.blog-card-title {
+    color: #5E97D1;
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin: 0;
 }
 
-/* De datum */
-.blog-grid article .blog-post-date {
-  font-size: 0.875rem;    /* 14px */
-  color: #9ca3af;
-  margin: 0 0 0.75rem 0;
+.blog-card-date {
+    color: #8D99AE;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
 }
 
-/* De samenvatting */
-.blog-grid article .blog-post-excerpt {
-  font-size: 1rem;        /* 16px */
-  color: #d1d5db;
-  margin: 0;
-  line-height: 1.6;
-  flex-grow: 1;           /* Zorgt dat de samenvatting de resterende ruimte opvult */
+.blog-card-description {
+    color: #E0E1E1;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+    flex-grow: 1; 
+}
+
+.blog-card-readmore {
+    color: #5E97D1;
+    font-weight: 500;
+    margin-top: 1.5rem;
+    text-decoration: none;
+}
+
+/* Op grotere schermen, maak meerdere kolommen */
+@media (min-width: 768px) {
+    .blog-grid {
+        /* Gebruik auto-fit voor 2 of meer kolommen op desktop */
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 2.5rem;
+    }
 }
