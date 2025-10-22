@@ -1,113 +1,74 @@
 /* ===================================================================
-   STIJLEN VOOR BLOG-OVERZICHT (V2.5 - Mobiel-geoptimaliseerd)
+   DEFINITIEVE STIJLEN VOOR BLOG-OVERZICHT (V3.0 - Schoon)
    =================================================================== */
 
-/* Het grid dat alle kaarten vasthoudt */
-.blog-grid {
-    display: grid;
-    grid-template-columns: 1fr; /* Op mobiel is er altijd maar één kolom */
-    justify-items: center;      /* Centreert de kaart in de kolom */
-    gap: 2rem;
-    
-    /* AANGEPAST: Padding toegevoegd voor mobiele weergave.
-       3rem boven/onder, 1rem (16px) links/rechts. 
-       Dit voorkomt dat de kaart tegen de schermrand plakt. */
-    padding: 3rem 1rem; 
-}
-/* Deze code is GOED en moet je BEHOUDEN */
+/* OPMERKING: De layout (het grid, aantal kolommen, padding, etc.)
+   wordt nu volledig geregeld door de Tailwind-classes in je blog.html bestand.
+   Deze CSS is ALLEEN voor de visuele styling van de kaarten zelf. */
 
-/* Nieuwe styling voor Blogkaartjes */
+/* De blogkaart (die in de HTML een <article> tag is) */
 .blog-grid article {
-  background-color: #1f2937;
-  border-radius: 0.75rem;
-  overflow: hidden;
+  background-color: #1f2937; /* Donkergrijs/blauw */
+  border-radius: 0.75rem;   /* Afgeronde hoeken (12px) */
+  overflow: hidden;         /* Zorgt dat de afbeelding netjes binnen de hoeken blijft */
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  border: 1px solid #374151;
+  border: 1px solid #374151; /* Subtiele rand */
   display: flex;
   flex-direction: column;
-  height: 100%; /* BELANGRIJK: Zorgt dat kaarten in dezelfde rij even hoog zijn */
+  height: 100%;             /* BELANGRIJK: Maakt kaarten in dezelfde rij even hoog */
 }
 
 .blog-grid article:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3), 0 0 15px rgba(59, 130, 246, 0.15);
+  transform: translateY(-6px); /* Lift effect bij hover */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3), 0 0 15px rgba(59, 130, 246, 0.15); /* Schaduw en gloed */
 }
 
-/* ... de rest van je '.blog-grid article' styling is ook correct ... */
-/* De blogkaart zelf */
-.blog-card {
-    background-color: #0D1B2A; 
-    border-radius: 12px;
-    overflow: hidden;
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    width: 100%;           /* Vult de ruimte die beschikbaar is in de grid-kolom */
-    max-width: 400px;      /* Maar nooit breder dan 400px, wat er op mobiel goed uitziet */
-}
-
-.blog-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+/* De link die de hele kaart omvat */
+.blog-grid article a {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  color: inherit;
 }
 
 /* De uitgelichte afbeelding */
-.blog-card-image {
-    width: 100%;
-    aspect-ratio: 16 / 10; /* Zorgt dat alle afbeeldingen dezelfde vorm hebben */
-    object-fit: cover;
+.blog-grid article .blog-post-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
 }
 
-/* De content in de kaart */
-.blog-card-content {
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
+/* De container voor de tekst in de kaart */
+.blog-grid article .blog-post-content-wrapper {
+  padding: 1.25rem; /* 20px */
+  flex-grow: 1;     /* Zorgt dat dit deel groeit om de kaart op te vullen */
+  display: flex;
+  flex-direction: column;
 }
 
-.blog-card-title {
-    color: #5E97D1;
-    font-size: 1.3rem;
-    font-weight: 600;
-    line-height: 1.4;
-    margin: 0;
+/* De titel van de blogpost */
+.blog-grid article .blog-post-title {
+  font-size: 1.25rem;     /* 20px */
+  font-weight: 600;
+  color: #f3f4f6;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.4;
 }
 
-.blog-card-date {
-    color: #8D99AE;
-    font-size: 0.8rem;
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
+/* De datum */
+.blog-grid article .blog-post-date {
+  font-size: 0.875rem;    /* 14px */
+  color: #9ca3af;
+  margin: 0 0 0.75rem 0;
 }
 
-.blog-card-description {
-    color: #E0E1E1;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    margin: 0;
-    flex-grow: 1; 
-}
-
-.blog-card-readmore {
-    color: #5E97D1;
-    font-weight: 500;
-    margin-top: 1.5rem;
-    text-decoration: none;
-}
-
-/* --- Media Queries voor grotere schermen --- */
-
-/* Tablet-weergave en groter */
-@media (min-width: 768px) {
-    .blog-grid {
-        /* Gebruik auto-fit voor 2 of meer kolommen */
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        gap: 2.5rem;
-        
-        /* AANGEPAST: Geef ook op grotere schermen wat meer padding */
-        padding: 3rem 2.5rem;
-    }
+/* De samenvatting */
+.blog-grid article .blog-post-excerpt {
+  font-size: 1rem;        /* 16px */
+  color: #d1d5db;
+  margin: 0;
+  line-height: 1.6;
+  flex-grow: 1;           /* Zorgt dat de samenvatting de resterende ruimte opvult */
 }
