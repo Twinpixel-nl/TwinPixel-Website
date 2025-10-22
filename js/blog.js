@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       posts.forEach(post => {
         const card = document.createElement("article");
-        card.className = "unique-card";
+        card.className = "unique-card" + "sst";
         card.innerHTML = `
           <a href="blog/${post.slug}.html" class="unique-card-inner">
             <img src="${post.image || 'Images/uploads/placeholder.jpg'}" alt="${post.title}" class="w-full object-cover h-48 rounded-t-[20px]" />
