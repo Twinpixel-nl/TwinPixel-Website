@@ -3675,13 +3675,6 @@ body.inner-page .page-header .container {
   display: none; /* Hidden by default, shown by JS if posts exist */
 }
 
-.index-blog-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-bottom: 2rem;
-}
-
 .blog-card {
   background-color: rgba(18, 18, 18, 0.5);
   border-radius: var(--border-radius);
@@ -3843,19 +3836,6 @@ body.inner-page .page-header .container {
   margin: 0;              /* Geen margin */
   line-height: 1.6;
   flex-grow: 1;           /* Als de kaart een vaste hoogte heeft, duwt dit de content naar beneden */
-}
-
-/* Grid setup - behouden en lichtjes verfijnd */
-.blog-grid {
-  display: grid;
-  grid-template-columns: 1fr; /* Standaard één kolom */
-  gap: 2rem;                  /* Ruimte tussen de kaarten (32px) */
-}
-
-@media (min-width: 640px) { /* Voor schermen breder dan 640px (Tailwind 'sm' breakpoint) */
-  .blog-grid {
-    grid-template-columns: repeat(2, 1fr); /* Twee kolommen naast elkaar */
-  }
 }
 
 /* Zorg dat de body achtergrond donker is (deze class was al aanwezig) */
