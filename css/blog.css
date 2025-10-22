@@ -98,3 +98,18 @@
         max-width: none;
     }
 }
+/* --- Blog Post Full Width (FORCEERDE Versie) --- */
+body.blog-post-detail-page .container,
+body.blog-post-detail-page .blog-post-full {
+  max-width: none !important;
+}
+
+body.blog-post-detail-page main.container {
+  padding: 0 1.5rem !important;
+}
+
+@media (max-width: 480px) {
+  body.blog-post-detail-page main.container {
+    padding: 0 0.8rem !important;
+  }
+}
