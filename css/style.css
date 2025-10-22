@@ -12,6 +12,12 @@
   --transition-speed: 0.3s;
   --border-radius: 8px;
 }
+@media (max-width: 639px) {
+  .blog-grid article .blog-post-image {
+    height: 150px; /* Verlaagde hoogte voor kleinere schermen */
+    width: 100%;  /* Zorgt dat de afbeelding de volledige breedte behoudt */
+  }
+}
 /* Stijl voor de afbeelding die rechts moet floaten */
 .blog-post-image-right {
   float: right; /* Laat de afbeelding naar rechts verplaatsen */
@@ -3857,6 +3863,8 @@ body.inner-page .page-header .container {
     grid-template-columns: repeat(2, 1fr); /* Twee kolommen naast elkaar */
   }
 }
+
+
 
 /* Zorg dat de body achtergrond donker is (deze class was al aanwezig) */
 body.dark-bg {
