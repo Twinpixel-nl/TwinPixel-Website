@@ -2504,7 +2504,69 @@ footer {
   content: "-";
   transform: rotate(180deg);
 }
+/* --- USP Grid (Homepage "Waarom wij uniek zijn") --- */
 
+.usp-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.usp-card {
+  background-image: linear-gradient(
+    163deg,
+    var(--secondary-color) 0%,
+    #3700ff 100%
+  );
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  padding: 3px; /* Creëert de rand-illusie */
+}
+
+.usp-card-inner {
+  width: 100%;
+  height: 100%;
+  background-color: #1a1a1a;
+  border-radius: 17px; /* Iets minder dan de ouder voor de rand */
+  padding: 1.5rem;
+  text-align: left; /* Tekst links uitlijnen voor betere leesbaarheid */
+  transition: all 0.2s ease;
+}
+
+.usp-card:hover {
+  box-shadow: 0px 0px 30px 1px rgba(0, 21, 255, 0.3);
+  transform: translateY(-5px);
+}
+
+/* De .feature-icon styling wordt hergebruikt, maar we specificeren hem hier voor duidelijkheid */
+.usp-card-inner .feature-icon {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.usp-card-inner h4 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+  color: var(--text-primary);
+  text-align: left;
+}
+
+.usp-card-inner p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  text-align: left;
+  margin-bottom: 0; /* Verwijder extra marge onder de paragraaf */
+}
+
+/* Responsive aanpassing voor de USP Grid */
+@media (max-width: 576px) {
+  .usp-grid-container {
+    grid-template-columns: 1fr; /* Eén kolom op kleine schermen */
+  }
+}
 /* Unique Features Grid */
 .unique-title .unique-title1 {
   margin-top: 4rem; /* Niet nodig als deze gecentreerd is */
