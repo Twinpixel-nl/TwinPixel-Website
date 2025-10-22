@@ -77,11 +77,24 @@
     text-decoration: none;
 }
 
-/* Op grotere schermen, maak meerdere kolommen */
 @media (min-width: 768px) {
     .blog-grid {
-        /* Gebruik auto-fit voor 2 of meer kolommen op desktop */
+        /* Maak meerdere kolommen */
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        
+        /* DE BELANGRIJKSTE AANPASSING: 
+           Zet justify-items op 'stretch'. Dit zorgt ervoor dat de kaarten 
+           de VOLLEDIGE breedte van hun kolom opvullen. */
+        justify-items: stretch;
+        
+        /* Pas de gap en padding aan voor grotere schermen */
         gap: 2.5rem;
+        padding: 3rem 2.5rem;
+    }
+
+    .blog-card {
+        /* Op grotere schermen is de max-width niet meer nodig, 
+           omdat de kolombreedte de grootte al bepaalt. */
+        max-width: none;
     }
 }
