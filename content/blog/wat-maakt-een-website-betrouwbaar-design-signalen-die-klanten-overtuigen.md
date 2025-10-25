@@ -3,7 +3,7 @@ title: Wat maakt een website betrouwbaar? (Design-signalen die klanten overtuige
 date: 2025-10-25T23:31:17.543+02:00
 description: Wat zorgt ervoor dat bezoekers jouw website vertrouwen? In dit
   artikel lees je welke visuele en inhoudelijke signalen bepalen of mensen
-  blijven of afhaken — en hoe goed design daarbij helpt.
+  blijven of afhaken, en hoe goed design daarbij helpt.
 image: /Images/uploads/screenshot-2025-10-25-234339.png
 ---
 <!--StartFragment-->
